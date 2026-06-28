@@ -52,14 +52,15 @@
   .topbar {
     background: var(--navy-deep);
     color: var(--bg);
-    font-size: 10.5px;
-    letter-spacing: 0.3em;
+    font-size: 10px;
+    letter-spacing: 0.32em;
     text-transform: uppercase;
-    padding: 11px 24px;
+    padding: 10px 24px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
+    opacity: 0.96;
   }
-  .topbar span { color: var(--gold-light); margin: 0 14px; }
+  .topbar span { color: var(--gold-light); margin: 0 16px; opacity: 0.7; }
 
   /* ============ HEADER ============ */
   header {
@@ -302,34 +303,46 @@
   .intro {
     background: var(--navy);
     text-align: center;
+    position: relative;
   }
-  .intro .inner { max-width: 820px; margin: 0 auto; }
+  .intro::before {
+    content: '';
+    position: absolute;
+    top: 64px; left: 50%;
+    transform: translateX(-50%);
+    width: 1px; height: 38px;
+    background: var(--gold-light);
+    opacity: 0.45;
+  }
+  .intro .inner { max-width: 760px; margin: 0 auto; padding-top: 18px; }
   .intro .eyebrow {
     font-size: 11px;
-    letter-spacing: 0.34em;
+    letter-spacing: 0.36em;
     text-transform: uppercase;
     color: var(--gold-light);
-    margin-bottom: 30px;
+    margin-bottom: 34px;
+    opacity: 0.92;
   }
   .intro h2 {
-    font-size: clamp(28px, 2.4vw + 14px, 52px);
-    line-height: 1.3;
-    margin-bottom: 34px;
+    font-size: clamp(28px, 2.2vw + 14px, 48px);
+    line-height: 1.32;
+    margin-bottom: 36px;
     color: var(--surface);
+    font-weight: 400;
   }
   .intro h2 em { font-style: normal; color: var(--gold-light); }
   .intro p {
     font-family: 'Noto Serif JP', serif;
-    font-size: 15px;
-    line-height: 2.3;
+    font-size: 14.5px;
+    line-height: 2.25;
     color: var(--surface);
-    opacity: 0.88;
+    opacity: 0.84;
     font-weight: 300;
   }
 
   /* ============ MARQUEE ============ */
   .marquee {
-    padding: 30px 0;
+    padding: 22px 0;
     overflow: hidden;
     background: var(--bg-2);
     border-top: 1px solid var(--line);
@@ -337,19 +350,21 @@
   }
   .marquee-track {
     display: flex;
-    gap: 66px;
-    animation: scroll 54s linear infinite;
+    gap: 72px;
+    animation: scroll 72s linear infinite;
     white-space: nowrap;
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    letter-spacing: 0.05em;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 0.04em;
     font-style: normal;
     color: var(--ink);
+    opacity: 0.86;
   }
   .marquee-track span { flex-shrink: 0; }
   .marquee-track span::after {
     content: '·';
-    margin-left: 66px;
+    margin-left: 72px;
     color: var(--gold);
     font-style: normal;
     vertical-align: middle;
@@ -410,8 +425,8 @@
   /* ============ FEATURED — two-column edit ============ */
   .featured {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 96px;
     align-items: center;
     background: var(--surface);
   }
@@ -429,41 +444,58 @@
     top: 22px; left: 22px;
     background: var(--surface);
     color: var(--navy);
-    padding: 7px 16px;
+    padding: 8px 18px;
     font-size: 10px;
-    letter-spacing: 0.26em;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
+  }
+  .featured-text .featured-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    color: var(--gold-deep);
+    margin-bottom: 22px;
+    font-feature-settings: 'lnum' 1;
+  }
+  .featured-text .featured-num::before {
+    content: '';
+    display: inline-block;
+    width: 22px; height: 1px;
+    background: var(--gold);
+    vertical-align: middle;
+    margin-right: 14px;
+    opacity: 0.7;
   }
   .featured-text .eyebrow {
     font-size: 11px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--gold-deep);
-    margin-bottom: 22px;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
     font-weight: 500;
   }
   .featured-text h2 {
     font-size: clamp(30px, 2.6vw + 14px, 56px);
     line-height: 1.14;
-    margin-bottom: 26px;
+    margin-bottom: 30px;
   }
   .featured-text h2 em { font-style: normal; color: var(--gold-deep); }
   .featured-text p {
     font-family: 'Noto Serif JP', serif;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 14.5px;
     line-height: 2.2;
     color: var(--ink-2);
-    margin-bottom: 36px;
+    margin-bottom: 38px;
     max-width: 460px;
   }
 
   /* ============ HERITAGE ============ */
   .heritage {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 96px;
     align-items: center;
     background: var(--bg-2);
   }
@@ -476,27 +508,44 @@
     width: 100%; height: 100%;
     object-fit: cover;
   }
+  .heritage-text .featured-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    letter-spacing: 0.22em;
+    color: var(--gold-deep);
+    margin-bottom: 22px;
+    font-feature-settings: 'lnum' 1;
+  }
+  .heritage-text .featured-num::before {
+    content: '';
+    display: inline-block;
+    width: 22px; height: 1px;
+    background: var(--gold);
+    vertical-align: middle;
+    margin-right: 14px;
+    opacity: 0.7;
+  }
   .heritage-text .eyebrow {
     font-size: 11px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--gold-deep);
-    margin-bottom: 24px;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
     font-weight: 500;
   }
   .heritage-text h2 {
     font-size: clamp(30px, 2.8vw + 14px, 60px);
     line-height: 1.14;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
   }
   .heritage-text h2 em { font-style: normal; color: var(--gold-deep); }
   .heritage-text p {
     font-family: 'Noto Serif JP', serif;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 14.5px;
     line-height: 2.2;
     color: var(--ink-2);
-    margin-bottom: 28px;
+    margin-bottom: 32px;
     max-width: 500px;
   }
   .heritage-signature {
@@ -504,7 +553,7 @@
     font-style: normal;
     font-size: 20px;
     color: var(--gold-deep);
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
   .heritage-signature small {
     display: block;
@@ -513,7 +562,7 @@
     text-transform: uppercase;
     font-style: normal;
     color: var(--ink-soft);
-    margin-top: 5px;
+    margin-top: 6px;
     font-family: 'Inter', sans-serif;
   }
 
@@ -845,8 +894,8 @@
   @media (max-width: 1100px) {
     .collection-grid { grid-template-columns: repeat(6, 1fr); }
     .cc-1, .cc-2, .cc-3, .cc-4, .cc-5 { grid-column: span 6; height: 380px; }
-    .featured { grid-template-columns: 1fr; gap: 44px; }
-    .heritage { grid-template-columns: 1fr; gap: 44px; }
+    .featured { grid-template-columns: 1fr; gap: 56px; }
+    .heritage { grid-template-columns: 1fr; gap: 56px; }
     .journal-grid { grid-template-columns: 1fr; }
     .store-strip { grid-template-columns: 1fr; }
     .footer-top { grid-template-columns: 1fr 1fr; }
@@ -964,7 +1013,8 @@
     <div class="tag">Editor's Pick</div>
   </div>
   <div class="featured-text reveal">
-    <div class="eyebrow">02 — Resort Edit</div>
+    <div class="featured-num">No. 02</div>
+    <div class="eyebrow">Resort Edit · SS 26</div>
     <h2>海辺で纏う、<br><em>今季のリゾートピース。</em></h2>
     <p>Marni Resort 26 を中心に、地中海の光のもとで選んだ一着を、オーナーバイヤーの視点でひとつのストーリーに束ねました。</p>
     <a href="#" class="btn btn-ink">View the Resort Edit <span class="arrow">→</span></a>
@@ -977,7 +1027,8 @@
     <img src="pellicano-lamp.jpg" alt="Coastal terrace">
   </div>
   <div class="heritage-text reveal">
-    <div class="eyebrow">Since 2007 — Hayama, Shonan</div>
+    <div class="featured-num">Est. 2007</div>
+    <div class="eyebrow">Hayama, Shonan</div>
     <h2>一軒家から、<br><em>海辺の三店舗へ。</em></h2>
     <p>湘南の国道134号線。葉山から江ノ島へと続く、海沿いの一本道。私たちは、この道の名を店に刻みました。流行に追われず、時の流れがゆっくりと進む——その空気ごと届けることが、Studio Route 134 の約束です。</p>
     <div class="heritage-signature">Takayuki Torii<small>Founder / Buyer</small></div>
