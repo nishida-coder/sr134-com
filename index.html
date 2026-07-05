@@ -11,7 +11,7 @@
 <title>Studio Route 134</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;700&family=Bodoni+Moda:ital,wght@0,700;0,800;0,900;1,700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #F7F5EF;
@@ -566,6 +566,78 @@
     font-family: 'Inter', sans-serif;
   }
 
+  /* ============ PRESS — media logos ticker ============ */
+  .press {
+    background: var(--surface);
+    padding: 84px 0 92px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .press-eyebrow {
+    text-align: center;
+    font-size: 10.5px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin-bottom: 44px;
+  }
+  .press-eyebrow::before,
+  .press-eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 26px; height: 1px;
+    background: var(--line);
+    vertical-align: middle;
+    margin: 0 18px;
+  }
+  .press-track-wrap { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); }
+  .press-track {
+    display: flex;
+    align-items: center;
+    gap: 96px;
+    animation: press-scroll 44s linear infinite;
+    white-space: nowrap;
+    color: var(--ink);
+  }
+  .press-track .logo {
+    flex-shrink: 0;
+    opacity: 0.72;
+    transition: opacity .35s ease;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+  }
+  .press-track .logo:hover { opacity: 1; }
+  /* Safari — bold slab-ish serif set solid */
+  .logo-safari {
+    font-family: 'Bodoni Moda', 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 38px;
+    letter-spacing: -0.01em;
+  }
+  /* LEON — bold Italian serif, tight caps */
+  .logo-leon {
+    font-family: 'Bodoni Moda', 'Playfair Display', serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 42px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  /* MEN'S NON-NO — condensed sans caps */
+  .logo-nonno {
+    font-family: 'Oswald', 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  @keyframes press-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
   /* ============ BRANDS — plain grid ============ */
   .brands-grid {
     display: grid;
@@ -1033,6 +1105,27 @@
     <p>湘南の国道134号線。葉山から江ノ島へと続く、海沿いの一本道。私たちは、この道の名を店に刻みました。流行に追われず、時の流れがゆっくりと進む——その空気ごと届けることが、Studio Route 134 の約束です。</p>
     <div class="heritage-signature">Takayuki Torii<small>Founder / Buyer</small></div>
     <a href="#" class="btn btn-ink">Read Our Story <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ============ PRESS ============ -->
+<section class="press" id="press">
+  <div class="press-eyebrow reveal">Featured In · Press</div>
+  <div class="press-track-wrap">
+    <div class="press-track">
+      <span class="logo logo-safari">Safari</span>
+      <span class="logo logo-leon">LEON</span>
+      <span class="logo logo-nonno">MEN&rsquo;S NON-NO</span>
+      <span class="logo logo-safari">Safari</span>
+      <span class="logo logo-leon">LEON</span>
+      <span class="logo logo-nonno">MEN&rsquo;S NON-NO</span>
+      <span class="logo logo-safari">Safari</span>
+      <span class="logo logo-leon">LEON</span>
+      <span class="logo logo-nonno">MEN&rsquo;S NON-NO</span>
+      <span class="logo logo-safari">Safari</span>
+      <span class="logo logo-leon">LEON</span>
+      <span class="logo logo-nonno">MEN&rsquo;S NON-NO</span>
+    </div>
   </div>
 </section>
 
