@@ -253,41 +253,31 @@
   /* ============ SECTION HEAD ============ */
   section { padding: var(--space-section) 56px; }
   .section-head {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 44px;
-    align-items: start;
     margin-bottom: 72px;
-    padding-top: 12px;
-    border-top: 1px solid var(--line);
+    padding-top: 26px;
+    position: relative;
+    max-width: 900px;
   }
-  .section-head .num {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: clamp(40px, 3.4vw, 64px);
-    line-height: 1;
-    color: var(--gold-deep);
-    letter-spacing: -0.01em;
-    font-feature-settings: 'lnum' 1;
-    padding-top: 4px;
-  }
-  .section-head .num::after {
+  .section-head::before {
     content: '';
-    display: block;
-    width: 28px; height: 1px;
+    position: absolute;
+    top: 0; left: 0;
+    width: 56px; height: 1px;
     background: var(--gold);
-    margin-top: 14px;
-    opacity: 0.6;
+    opacity: 0.75;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 1.2s var(--ease) .1s;
   }
-  .section-head .titles { padding-top: 6px; }
+  .section-head.visible::before,
+  .reveal.visible.section-head::before { transform: scaleX(1); }
   .section-head .eyebrow {
     font-size: 11px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--ink-soft);
     font-weight: 500;
-    margin-bottom: 16px;
+    margin-bottom: 22px;
   }
   .section-head h2 {
     font-size: var(--text-h2);
@@ -295,9 +285,7 @@
     letter-spacing: -0.02em;
   }
   .section-head h2 em { font-style: normal; color: var(--gold-deep); }
-  .journal .section-head { border-top-color: rgba(255,255,255,0.18); }
-  .journal .section-head .num { color: var(--gold-light); }
-  .journal .section-head .num::after { background: var(--gold-light); }
+  .journal .section-head::before { background: var(--gold-light); }
 
   /* ============ INTRO — quiet, on navy ============ */
   .intro {
@@ -386,9 +374,14 @@
   .col-card img {
     width: 100%; height: 100%;
     object-fit: cover;
-    transition: transform 1.5s var(--ease);
+    transition: transform 1.8s var(--ease);
+    animation: kenburns-slow 40s ease-in-out infinite alternate;
   }
-  .col-card:hover img { transform: scale(1.04); }
+  .col-card:hover img { transform: scale(1.06); animation-play-state: paused; }
+  @keyframes kenburns-slow {
+    from { transform: scale(1.02) translate3d(0,0,0); }
+    to   { transform: scale(1.09) translate3d(-1%, -1%, 0); }
+  }
   .col-card::after {
     content: '';
     position: absolute;
@@ -438,6 +431,8 @@
   .featured-visual img {
     width: 100%; height: 100%;
     object-fit: cover;
+    animation: kenburns-slow 44s ease-in-out infinite alternate;
+    will-change: transform;
   }
   .featured-visual .tag {
     position: absolute;
@@ -507,6 +502,8 @@
   .heritage-visual img {
     width: 100%; height: 100%;
     object-fit: cover;
+    animation: kenburns-slow 46s ease-in-out infinite alternate;
+    will-change: transform;
   }
   .heritage-text .featured-num {
     font-family: 'Playfair Display', serif;
@@ -703,9 +700,10 @@
   .journal-card .jc-visual img {
     width: 100%; height: 100%;
     object-fit: cover;
-    transition: transform 1.5s var(--ease);
+    transition: transform 1.8s var(--ease);
+    animation: kenburns-slow 42s ease-in-out infinite alternate;
   }
-  .journal-card:hover .jc-visual img { transform: scale(1.04); }
+  .journal-card:hover .jc-visual img { transform: scale(1.06); animation-play-state: paused; }
   .jc-tag {
     position: absolute;
     top: 16px; left: 16px;
@@ -764,9 +762,10 @@
     inset: 0;
     width: 100%; height: 100%;
     object-fit: cover;
-    transition: transform 1.8s var(--ease);
+    transition: transform 2.2s var(--ease);
+    animation: kenburns-slow 50s ease-in-out infinite alternate;
   }
-  .store:hover img { transform: scale(1.05); }
+  .store:hover img { transform: scale(1.07); animation-play-state: paused; }
   .store::after {
     content: '';
     position: absolute;
@@ -957,10 +956,38 @@
   /* ============ REVEAL ============ */
   .reveal {
     opacity: 0;
-    transform: translateY(36px);
-    transition: opacity 1.1s var(--ease), transform 1.1s var(--ease);
+    transform: translateY(42px);
+    transition: opacity 1.2s var(--ease), transform 1.2s var(--ease);
   }
   .reveal.visible { opacity: 1; transform: translateY(0); }
+  .stagger > * {
+    opacity: 0;
+    transform: translateY(38px);
+    transition: opacity 1.1s var(--ease), transform 1.1s var(--ease);
+  }
+  .stagger.visible > * { opacity: 1; transform: translateY(0); }
+  .stagger.visible > *:nth-child(1) { transition-delay: .05s; }
+  .stagger.visible > *:nth-child(2) { transition-delay: .18s; }
+  .stagger.visible > *:nth-child(3) { transition-delay: .31s; }
+  .stagger.visible > *:nth-child(4) { transition-delay: .44s; }
+  .stagger.visible > *:nth-child(5) { transition-delay: .57s; }
+  .stagger.visible > *:nth-child(6) { transition-delay: .70s; }
+  .hero-eyebrow, .hero-ctas, .hero-masthead {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: hero-lift 1.4s var(--ease) forwards;
+  }
+  .hero-masthead { animation-delay: .35s; }
+  .hero-eyebrow { animation-delay: .7s; }
+  .hero-ctas { animation-delay: .95s; }
+  @keyframes hero-lift {
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .parallax { will-change: transform; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal, .stagger > * { opacity: 1 !important; transform: none !important; }
+  }
 
   /* ============ RESPONSIVE ============ */
   @media (max-width: 1100px) {
@@ -1069,30 +1096,27 @@
 <!-- ============ COLLECTION ============ -->
 <section id="collection">
   <div class="section-head reveal">
-    <div class="num">01</div>
-    <div class="titles">
-      <div class="eyebrow">Seasonal Curation</div>
-      <h2>この季節の、<em>選び抜いた佇まい。</em></h2>
-    </div>
+    <div class="eyebrow">Seasonal Curation</div>
+    <h2>この季節の、<em>選び抜いた佇まい。</em></h2>
   </div>
-  <div class="collection-grid">
-    <a class="col-card cc-1 reveal" href="#">
+  <div class="collection-grid stagger">
+    <a class="col-card cc-1" href="#">
       <img referrerpolicy="no-referrer" src="https://sr134.com/uploads/slideshow/20241220100522_slide_38_image.jpg" alt="Marni" onerror="this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&q=85'">
       <div class="label"><span class="code">Featured · FW26</span><div class="name">Marni</div><div class="season">New Arrivals</div></div>
     </a>
-    <a class="col-card cc-2 reveal" href="#">
+    <a class="col-card cc-2" href="#">
       <img referrerpolicy="no-referrer" src="https://sr134.com/uploads/slideshow/20241220092858_slide_35_image.jpg" alt="Moncler" onerror="this.src='https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=1200&q=85'">
       <div class="label"><span class="code">Outerwear</span><div class="name">Moncler</div></div>
     </a>
-    <a class="col-card cc-3 reveal" href="#">
+    <a class="col-card cc-3" href="#">
       <img referrerpolicy="no-referrer" src="https://sr134.com/uploads/slideshow/20241220100350_slide_36_image.jpg" alt="Maison Margiela" onerror="this.src='https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1000&q=85'">
       <div class="label"><span class="code">Icons</span><div class="name">Margiela</div></div>
     </a>
-    <a class="col-card cc-4 reveal" href="#">
+    <a class="col-card cc-4" href="#">
       <img referrerpolicy="no-referrer" src="https://sr134.com/uploads/slideshow/20241220092636_slide_34_image.jpg" alt="Dsquared2" onerror="this.src='https://images.unsplash.com/photo-1542060748-10c28b62716f?w=1000&q=85'">
       <div class="label"><span class="code">Denim</span><div class="name">Dsquared2</div></div>
     </a>
-    <a class="col-card cc-5 reveal" href="#">
+    <a class="col-card cc-5" href="#">
       <img referrerpolicy="no-referrer" src="https://sr134.com/uploads/slideshow/20241220100448_slide_37_image.jpg" alt="MM6" onerror="this.src='https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=1200&q=85'">
       <div class="label"><span class="code">Essentials</span><div class="name">MM6</div></div>
     </a>
@@ -1102,11 +1126,10 @@
 <!-- ============ FEATURED ============ -->
 <section class="featured" id="featured">
   <div class="featured-visual reveal">
-    <img src="pellicano-deck.jpg" alt="Resort edit">
-    <div class="tag">Editor's Pick</div>
+    <img class="parallax" data-parallax="0.12" src="pellicano-deck.jpg" alt="Resort edit">
+    <div class="tag">Editor&rsquo;s Pick</div>
   </div>
   <div class="featured-text reveal">
-    <div class="featured-num">No. 02</div>
     <div class="eyebrow">Resort Edit · SS 26</div>
     <h2>海辺で纏う、<br><em>今季のリゾートピース。</em></h2>
     <p>Marni Resort 26 を中心に、地中海の光のもとで選んだ一着を、オーナーバイヤーの視点でひとつのストーリーに束ねました。</p>
@@ -1117,11 +1140,10 @@
 <!-- ============ HERITAGE ============ -->
 <section class="heritage" id="heritage">
   <div class="heritage-visual reveal">
-    <img src="pellicano-lamp.jpg" alt="Coastal terrace">
+    <img class="parallax" data-parallax="0.10" src="pellicano-lamp.jpg" alt="Coastal terrace">
   </div>
   <div class="heritage-text reveal">
-    <div class="featured-num">Est. 2007</div>
-    <div class="eyebrow">Hayama, Shonan</div>
+    <div class="eyebrow">Est. 2007 · Hayama, Shonan</div>
     <h2>藤沢の一室から、<br><em>羨望のセレクトへ。</em></h2>
     <p>湘南の国道134号線。葉山から江ノ島へと続く、海沿いの一本道。私たちは、この道の名を店に刻みました。世界の一流メゾンを、海辺の空気とともにお届けする——それが、Studio Route 134 の約束です。</p>
     <div class="heritage-signature">Takayuki Torii<small>Founder / Buyer</small></div>
@@ -1132,13 +1154,10 @@
 <!-- ============ BRANDS ============ -->
 <section id="brands">
   <div class="section-head reveal">
-    <div class="num">03</div>
-    <div class="titles">
-      <div class="eyebrow">Houses & Maisons</div>
-      <h2>世界の20メゾンを、<em>ひとつの通りに。</em></h2>
-    </div>
+    <div class="eyebrow">Houses &amp; Maisons</div>
+    <h2>世界の20メゾンを、<em>ひとつの通りに。</em></h2>
   </div>
-  <div class="brands-grid reveal">
+  <div class="brands-grid stagger">
     <div class="brand-cell"><span class="bnew">New</span><div class="bname">Maison Margiela</div><div class="bcountry">Paris, France</div></div>
     <div class="brand-cell"><div class="bname">MM6</div><div class="bcountry">Paris, France</div></div>
     <div class="brand-cell"><div class="bname">Marni</div><div class="bcountry">Milano, Italy</div></div>
@@ -1157,14 +1176,11 @@
 <!-- ============ JOURNAL ============ -->
 <section class="journal" id="journal">
   <div class="section-head reveal">
-    <div class="num">04</div>
-    <div class="titles">
-      <div class="eyebrow">Route 134 Journal</div>
-      <h2>海から届く、<em>静かな便り。</em></h2>
-    </div>
+    <div class="eyebrow">Route 134 Journal</div>
+    <h2>海から届く、<em>静かな便り。</em></h2>
   </div>
-  <div class="journal-grid">
-    <article class="journal-card feat reveal">
+  <div class="journal-grid stagger">
+    <article class="journal-card feat">
       <div class="jc-visual">
         <img src="pellicano-club.jpg" alt="">
         <span class="jc-tag">Editorial</span>
@@ -1173,7 +1189,7 @@
       <h3 class="jc-title">陽に褪せた色 —— Marni Resort 26 が描く、地中海のくすみ。</h3>
       <p class="jc-excerpt">ミラノのアトリエから届いた新作を、オーナーバイヤー視点から解きほぐします。今季の見どころとは。</p>
     </article>
-    <article class="journal-card reveal">
+    <article class="journal-card">
       <div class="jc-visual">
         <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=85" alt="">
         <span class="jc-tag">Store</span>
@@ -1182,7 +1198,7 @@
       <h3 class="jc-title">葉山店、籐椅子のある午後。</h3>
       <p class="jc-excerpt">海を目の前に望む二階の店。常連のお客様とともに刻んできた、静かな日々。</p>
     </article>
-    <article class="journal-card reveal">
+    <article class="journal-card">
       <div class="jc-visual">
         <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800&q=85" alt="">
         <span class="jc-tag">Craft</span>
@@ -1198,15 +1214,12 @@
 <!-- ============ STORES ============ -->
 <section class="stores" id="stores">
   <div class="section-head reveal">
-    <div class="num">05</div>
-    <div class="titles">
-      <div class="eyebrow">Our Stores</div>
-      <h2>三つの海辺の、<em>三つの店。</em></h2>
-    </div>
+    <div class="eyebrow">Our Stores</div>
+    <h2>湘南の海と、<em>青山の路地に。</em></h2>
   </div>
-  <div class="store-strip">
-    <a href="#" class="store reveal">
-      <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1200&q=85" alt="Hayama">
+  <div class="store-strip stagger">
+    <a href="#" class="store">
+      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=85" alt="Hayama exterior placeholder">
       <div class="store-content">
         <div>
           <div class="roman">Flagship</div>
@@ -1217,8 +1230,8 @@
         <div class="visit">Visit →</div>
       </div>
     </a>
-    <a href="#" class="store reveal">
-      <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?w=1200&q=85" alt="Aoyama">
+    <a href="#" class="store">
+      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1400&q=85" alt="Aoyama exterior placeholder">
       <div class="store-content">
         <div>
           <div class="roman">Concept</div>
@@ -1229,8 +1242,8 @@
         <div class="visit">Visit →</div>
       </div>
     </a>
-    <a href="#" class="store reveal">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=85" alt="Enoshima">
+    <a href="#" class="store">
+      <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1523419409543-a5e549c1faa8?w=1400&q=85" alt="Enoshima exterior placeholder">
       <div class="store-content">
         <div>
           <div class="roman">Seasonal</div>
@@ -1289,15 +1302,32 @@
 
 <script>
   const header = document.getElementById('header');
+  const parallaxEls = document.querySelectorAll('.parallax');
+  let lastScroll = 0, ticking = false;
+  function onScroll() {
+    header.classList.toggle('scrolled', lastScroll > 60);
+    const vh = window.innerHeight;
+    parallaxEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.bottom < 0 || rect.top > vh) return;
+      const rate = parseFloat(el.dataset.parallax || '0.1');
+      const center = rect.top + rect.height / 2;
+      const offset = (center - vh / 2) * -rate;
+      el.style.transform = 'translate3d(0,' + offset.toFixed(1) + 'px,0)';
+    });
+    ticking = false;
+  }
   window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 60);
-  });
+    lastScroll = window.scrollY;
+    if (!ticking) { requestAnimationFrame(onScroll); ticking = true; }
+  }, { passive: true });
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -70px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal, .stagger, .section-head').forEach(el => observer.observe(el));
+  onScroll();
 </script>
 </body>
 </html>
