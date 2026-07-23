@@ -105,6 +105,7 @@
     width: auto;
     display: inline-block;
     transition: height .4s var(--ease);
+    mix-blend-mode: multiply;
   }
   header.scrolled .logo-center img { height: 35px; }
   .header-right {
@@ -399,16 +400,26 @@
     letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--gold-light);
-    margin-bottom: 7px;
+    margin-bottom: 8px;
     display: inline-block;
   }
   .col-card .label .name {
     font-family: 'Playfair Display', serif;
-    font-size: 32px;
+    font-size: 26px;
     font-style: normal;
-    line-height: 1.06;
+    line-height: 1.14;
+    margin-bottom: 6px;
+    max-width: 92%;
   }
-  .col-card .label .season { font-size: 11px; letter-spacing: 0.16em; opacity: 0.8; margin-top: 4px; }
+  .col-card.cc-1 .label .name { font-size: 34px; }
+  .col-card .label .price {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--gold-light);
+    font-weight: 500;
+    font-feature-settings: 'lnum' 1;
+  }
+  .col-card .label .price small { font-size: 9.5px; opacity: 0.75; letter-spacing: 0.24em; margin-left: 4px; }
   .cc-1 { grid-column: span 7; height: 560px; }
   .cc-2 { grid-column: span 5; height: 560px; }
   .cc-3 { grid-column: span 4; height: 400px; }
@@ -485,6 +496,62 @@
     margin-bottom: 38px;
     max-width: 460px;
   }
+
+  /* ============ RESORT STRIP — 3 product cards ============ */
+  .resort-strip {
+    background: var(--surface);
+    padding: 0 56px var(--space-section);
+  }
+  .resort-strip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .resort-card {
+    display: block;
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+    transition: transform .6s var(--ease);
+  }
+  .resort-card:hover { transform: translateY(-4px); }
+  .resort-card .rc-visual {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    position: relative;
+  }
+  .resort-card .rc-visual img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    background: var(--bg);
+    transition: transform 1.4s var(--ease);
+  }
+  .resort-card:hover .rc-visual img { transform: scale(1.05); }
+  .resort-card .rc-text {
+    padding: 22px 24px 28px;
+  }
+  .resort-card .rc-brand {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .resort-card .rc-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    line-height: 1.24;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .resort-card .rc-price {
+    font-size: 12.5px;
+    letter-spacing: 0.14em;
+    color: var(--ink-2);
+    font-feature-settings: 'lnum' 1;
+  }
+  .resort-card .rc-price small { font-size: 9.5px; opacity: 0.7; letter-spacing: 0.22em; margin-left: 4px; }
 
   /* ============ HERITAGE ============ */
   .heritage {
@@ -896,7 +963,8 @@
   .footer-logo img {
     height: 54px;
     width: auto;
-    filter: invert(1) brightness(1.6);
+    filter: invert(1) brightness(1.15);
+    mix-blend-mode: lighten;
   }
   .footer-desc {
     font-family: 'Noto Serif JP', serif;
@@ -995,6 +1063,7 @@
     .cc-1, .cc-2, .cc-3, .cc-4, .cc-5 { grid-column: span 6; height: 380px; }
     .featured { grid-template-columns: 1fr; gap: 56px; }
     .heritage { grid-template-columns: 1fr; gap: 56px; }
+    .resort-strip-grid { grid-template-columns: 1fr; gap: 32px; }
     .journal-grid { grid-template-columns: 1fr; }
     .store-strip { grid-template-columns: 1fr; }
     .footer-top { grid-template-columns: 1fr 1fr; }
@@ -1100,25 +1169,45 @@
     <h2>この季節の、<em>選び抜いた佇まい。</em></h2>
   </div>
   <div class="collection-grid stagger">
-    <a class="col-card cc-1" href="#">
-      <img referrerpolicy="no-referrer" src="https://sr134.com/uploads/slideshow/20241220100522_slide_38_image.jpg" alt="Marni" onerror="this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&q=85'">
-      <div class="label"><span class="code">Featured · FW26</span><div class="name">Marni</div><div class="season">New Arrivals</div></div>
+    <a class="col-card cc-1" href="https://item.rakuten.co.jp/studio-route134/d2102s71lb1384/" target="_blank" rel="noopener">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/d2102s71lb1384-s.jpg" alt="Dsquared2 Skater Jean">
+      <div class="label">
+        <span class="code">Dsquared2 · Denim</span>
+        <div class="name">Skater Jean, Tapered Indigo</div>
+        <div class="price">¥100,100 <small>tax incl.</small></div>
+      </div>
     </a>
-    <a class="col-card cc-2" href="#">
-      <img referrerpolicy="no-referrer" src="https://sr134.com/uploads/slideshow/20241220092858_slide_35_image.jpg" alt="Moncler" onerror="this.src='https://images.unsplash.com/photo-1551232864-3f0890e580d9?w=1200&q=85'">
-      <div class="label"><span class="code">Outerwear</span><div class="name">Moncler</div></div>
+    <a class="col-card cc-2" href="https://item.rakuten.co.jp/studio-route134/amr102xmjt003/" target="_blank" rel="noopener">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/aloha/amr102xmjt003-1.jpg" alt="Amiri Monogram Crew Tee">
+      <div class="label">
+        <span class="code">Amiri · Jersey</span>
+        <div class="name">Monogram Crew Tee</div>
+        <div class="price">¥70,400 <small>tax incl.</small></div>
+      </div>
     </a>
-    <a class="col-card cc-3" href="#">
-      <img referrerpolicy="no-referrer" src="https://sr134.com/uploads/slideshow/20241220100350_slide_36_image.jpg" alt="Maison Margiela" onerror="this.src='https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1000&q=85'">
-      <div class="label"><span class="code">Icons</span><div class="name">Margiela</div></div>
+    <a class="col-card cc-3" href="https://item.rakuten.co.jp/studio-route134/bob133074753133/" target="_blank" rel="noopener">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/12745348/074753133-1top.jpg" alt="Bob Italy Cotton Blazer">
+      <div class="label">
+        <span class="code">Bob Italy · Tailored</span>
+        <div class="name">Cotton Blazer, Bianco</div>
+        <div class="price">¥70,400 <small>tax incl.</small></div>
+      </div>
     </a>
-    <a class="col-card cc-4" href="#">
-      <img referrerpolicy="no-referrer" src="https://sr134.com/uploads/slideshow/20241220092636_slide_34_image.jpg" alt="Dsquared2" onerror="this.src='https://images.unsplash.com/photo-1542060748-10c28b62716f?w=1000&q=85'">
-      <div class="label"><span class="code">Denim</span><div class="name">Dsquared2</div></div>
+    <a class="col-card cc-4" href="https://item.rakuten.co.jp/studio-route134/d2102s82qad7b64/" target="_blank" rel="noopener">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsquared2accessory2/s82qad7b64-top.jpg" alt="Dsquared2 ICON Swim Trunks">
+      <div class="label">
+        <span class="code">Dsquared2 · Swim</span>
+        <div class="name">ICON Swim Trunks</div>
+        <div class="price">¥50,500 <small>tax incl.</small></div>
+      </div>
     </a>
-    <a class="col-card cc-5" href="#">
-      <img referrerpolicy="no-referrer" src="https://sr134.com/uploads/slideshow/20241220100448_slide_37_image.jpg" alt="MM6" onerror="this.src='https://images.unsplash.com/photo-1581044777550-4cfa60707c03?w=1200&q=85'">
-      <div class="label"><span class="code">Essentials</span><div class="name">MM6</div></div>
+    <a class="col-card cc-5" href="https://item.rakuten.co.jp/studio-route134/aut180wwlwrm01/" target="_blank" rel="noopener">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/aut180wwlwrm01-t.jpg" alt="Autry Reelwind Suede Sneakers">
+      <div class="label">
+        <span class="code">Autry · Footwear</span>
+        <div class="name">Reelwind Suede Sneakers</div>
+        <div class="price">¥35,200 <small>tax incl.</small></div>
+      </div>
     </a>
   </div>
 </section>
@@ -1132,8 +1221,38 @@
   <div class="featured-text reveal">
     <div class="eyebrow">Resort Edit · SS 26</div>
     <h2>海辺で纏う、<br><em>今季のリゾートピース。</em></h2>
-    <p>Marni Resort 26 を中心に、地中海の光のもとで選んだ一着を、オーナーバイヤーの視点でひとつのストーリーに束ねました。</p>
-    <a href="#" class="btn btn-ink">View the Resort Edit <span class="arrow">→</span></a>
+    <p>海辺のライフスタイルに寄り添う、Amiri・Dsquared2・Bob・Barba のスイムピース。オーナーバイヤーの目利きで束ねた、この夏の主役たち。</p>
+    <a href="https://item.rakuten.co.jp/studio-route134/amr102swtk1006/" target="_blank" rel="noopener" class="btn btn-ink">View the Resort Edit <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ============ RESORT EDIT STRIP ============ -->
+<section class="resort-strip">
+  <div class="resort-strip-grid stagger">
+    <a class="resort-card" href="https://item.rakuten.co.jp/studio-route134/amr102swtk1006/" target="_blank" rel="noopener">
+      <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/imgrc0170327001.jpg" alt="Amiri Swim Shorts"></div>
+      <div class="rc-text">
+        <div class="rc-brand">Amiri</div>
+        <div class="rc-name">All-Over Logo Swim Shorts</div>
+        <div class="rc-price">¥88,000 <small>tax incl.</small></div>
+      </div>
+    </a>
+    <a class="resort-card" href="https://item.rakuten.co.jp/studio-route134/bab12748778622n-b/" target="_blank" rel="noopener">
+      <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/bab12748778622n-bs.jpg" alt="Barba Swim Shorts"></div>
+      <div class="rc-text">
+        <div class="rc-brand">Barba</div>
+        <div class="rc-name">Handcrafted Swim Shorts</div>
+        <div class="rc-price">¥25,850 <small>tax incl.</small></div>
+      </div>
+    </a>
+    <a class="resort-card" href="https://item.rakuten.co.jp/studio-route134/bob133072713312/" target="_blank" rel="noopener">
+      <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/bob133072713312-sale.jpg" alt="Bob Swim Shorts"></div>
+      <div class="rc-text">
+        <div class="rc-brand">Bob</div>
+        <div class="rc-name">Beach Print Swim Shorts</div>
+        <div class="rc-price">¥14,300 <small>tax incl.</small></div>
+      </div>
+    </a>
   </div>
 </section>
 
