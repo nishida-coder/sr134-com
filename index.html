@@ -1229,62 +1229,70 @@
     font-size: 20px; line-height: 1.25; color: var(--ink);
   }
 
-  /* ============ STORE TEASER (single card) ============ */
+  /* ============ STORE TEASER — 3-image split (no obscuring text overlay) ============ */
   .store-teaser {
     background: var(--surface);
     padding: 0;
   }
-  .store-teaser a {
-    display: block;
+  .store-teaser-head {
+    padding: var(--space-section) 56px 40px;
+    max-width: 900px;
+  }
+  .store-teaser-head .eyebrow {
+    font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase;
+    color: var(--ink-soft); font-weight: 500;
+    margin-bottom: 14px;
+  }
+  .store-teaser-head h2 {
+    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-size: clamp(30px, 2.6vw + 14px, 54px);
+    line-height: 1.1;
+  }
+  .store-teaser-head h2 em { font-style: normal; color: var(--gold-deep); }
+  .store-teaser-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+  .st-cell {
     position: relative;
-    aspect-ratio: 16/7;
+    aspect-ratio: 3/4;
     overflow: hidden;
+    display: block;
     background: var(--navy-deep);
   }
-  .store-teaser img {
-    width: 100%; height: 100%; object-fit: cover;
-    animation: kenburns-slow 60s ease-in-out infinite alternate;
-    transition: transform 1.4s var(--ease);
+  .st-cell img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.6s var(--ease);
   }
-  .store-teaser a:hover img { transform: scale(1.04); animation-play-state: paused; }
-  .store-teaser::after {
+  .st-cell:hover img { transform: scale(1.05); }
+  .st-cell::after {
     content: '';
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(17,32,59,0.15) 0%, rgba(17,32,59,0.7) 100%);
+    background: linear-gradient(180deg, transparent 45%, rgba(17,32,59,0.72));
     pointer-events: none;
   }
-  .store-teaser .st-inner {
-    position: absolute; inset: 0; z-index: 2;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    color: var(--surface);
+  .st-cell .st-label {
+    position: absolute;
+    left: 0; right: 0; bottom: 32px;
+    z-index: 2;
     text-align: center;
-    padding: 24px;
+    color: var(--surface);
     pointer-events: none;
   }
-  .store-teaser .st-eyebrow {
-    font-size: 10.5px; letter-spacing: 0.34em; text-transform: uppercase;
-    color: var(--gold-light); margin-bottom: 20px; font-weight: 500;
+  .st-cell .st-city {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 1.4vw + 14px, 34px);
+    line-height: 1;
+    margin-bottom: 6px;
   }
-  .store-teaser h2 {
-    font-family: 'Playfair Display', serif; font-weight: 400;
-    font-size: clamp(28px, 2.4vw + 14px, 52px);
-    line-height: 1.1; letter-spacing: -0.01em;
-    margin-bottom: 24px;
+  .st-cell .st-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--gold-light);
   }
-  .store-teaser .st-meta {
-    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold-light); margin-bottom: 26px;
-  }
-  .store-teaser .st-link {
-    display: inline-flex; align-items: center; gap: 12px;
-    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--surface); padding-bottom: 6px;
-    border-bottom: 1px solid var(--gold);
-    font-weight: 500;
-    pointer-events: auto;
-    transition: gap .4s var(--ease);
-  }
-  .store-teaser a:hover .st-link { gap: 20px; }
 
   /* ============ BRAND FILTER — active state on brands cells + filtered collection ============ */
   .brand-cell.active { background: var(--navy); color: var(--surface); }
@@ -1701,80 +1709,7 @@
     <div>Filtering by <strong data-filter-name></strong></div>
     <button class="brand-filter-clear" data-filter-clear>Show All ×</button>
   </div>
-  <div class="collection-grid stagger">
-    <article class="col-card cc-1" data-id="d2102s71lb1384" data-brand="Dsquared2" data-name="Skater Jean, Tapered Indigo" data-price="100100" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/d2102s71lb1384-s.jpg">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/d2102s71lb1384-s.jpg" alt="Dsquared2 Skater Jean">
-      <div class="label">
-        <span class="code">Dsquared2 · Denim</span>
-        <div class="name">Skater Jean, Tapered Indigo</div>
-        <div class="price">¥100,100 <small>tax incl.</small></div>
-        <button class="add-btn">Add to Cart</button>
-      </div>
-    </article>
-    <article class="col-card cc-2" data-id="mmm435sb3wg0025" data-brand="Maison Margiela" data-name="5AC Baby Bag" data-price="222200" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mmm435sb3wg0025-s.jpg">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mmm435sb3wg0025-s.jpg" alt="Maison Margiela 5AC Baby Bag">
-      <div class="label">
-        <span class="code">Maison Margiela · Bag</span>
-        <div class="name">5AC Baby Bag</div>
-        <div class="price">¥222,200 <small>tax incl.</small></div>
-        <button class="add-btn">Add to Cart</button>
-      </div>
-    </article>
-    <article class="col-card cc-3" data-id="marn155cvmg0091" data-brand="Marni" data-name="Destroy Knit Vest" data-price="104500" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/marn155cvmg0091-t.jpg">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/marn155cvmg0091-t.jpg" alt="Marni Destroy Knit Vest">
-      <div class="label">
-        <span class="code">Marni · Knit</span>
-        <div class="name">Destroy Knit Vest</div>
-        <div class="price">¥104,500 <small>tax incl.</small></div>
-        <button class="add-btn">Add to Cart</button>
-      </div>
-    </article>
-    <article class="col-card cc-4" data-id="mm6135sh0dt0025" data-brand="MM6 Maison Margiela" data-name="Asymmetric Piece" data-price="121000" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mm6135sh0dt0025-s.jpg">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mm6135sh0dt0025-s.jpg" alt="MM6 Asymmetric Piece">
-      <div class="label">
-        <span class="code">MM6 · Ready-to-Wear</span>
-        <div class="name">Asymmetric Piece</div>
-        <div class="price">¥121,000 <small>tax incl.</small></div>
-        <button class="add-btn">Add to Cart</button>
-      </div>
-    </article>
-    <article class="col-card cc-5" data-id="marn2550096l1" data-brand="Marni" data-name="Tropicalia Basket Bag" data-price="104500" data-image="https://shop.r10s.jp/studio-route134/cabinet/image/02003077/marn2550096l1-1.jpg">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/02003077/marn2550096l1-1.jpg" alt="Marni Tropicalia Basket Bag">
-      <div class="label">
-        <span class="code">Marni · Bag</span>
-        <div class="name">Tropicalia Basket Bag</div>
-        <div class="price">¥104,500 <small>tax incl.</small></div>
-        <button class="add-btn">Add to Cart</button>
-      </div>
-    </article>
-    <article class="col-card cc-6" data-id="d2102s74kb1142" data-brand="Dsquared2" data-name="Track Denim Pant" data-price="132000" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s74kb1142-s.jpg">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s74kb1142-s.jpg" alt="Dsquared2 Track Denim Pant">
-      <div class="label">
-        <span class="code">Dsquared2 · Denim</span>
-        <div class="name">Track Denim Pant</div>
-        <div class="price">¥132,000 <small>tax incl.</small></div>
-        <button class="add-btn">Add to Cart</button>
-      </div>
-    </article>
-    <article class="col-card cc-7" data-id="amr102xmjt003" data-brand="Amiri" data-name="Monogram Crew Tee" data-price="70400" data-image="https://shop.r10s.jp/studio-route134/cabinet/image/aloha/amr102xmjt003-1.jpg">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/aloha/amr102xmjt003-1.jpg" alt="Amiri Monogram Crew Tee">
-      <div class="label">
-        <span class="code">Amiri · Jersey</span>
-        <div class="name">Monogram Crew Tee</div>
-        <div class="price">¥70,400 <small>tax incl.</small></div>
-        <button class="add-btn">Add to Cart</button>
-      </div>
-    </article>
-    <article class="col-card cc-8" data-id="aut180wwlwrm01" data-brand="Autry" data-name="Reelwind Suede Sneakers" data-price="35200" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/aut180wwlwrm01-t.jpg">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/aut180wwlwrm01-t.jpg" alt="Autry Reelwind Suede Sneakers">
-      <div class="label">
-        <span class="code">Autry · Footwear</span>
-        <div class="name">Reelwind Suede Sneakers</div>
-        <div class="price">¥35,200 <small>tax incl.</small></div>
-        <button class="add-btn">Add to Cart</button>
-      </div>
-    </article>
-  </div>
+  <div class="collection-grid stagger" data-collection></div>
 </section>
 
 <!-- ============ LOOKBOOK ============ -->
@@ -1799,33 +1734,30 @@
     <h2>海辺の、<em>スイムピース。</em></h2>
   </div>
   <div class="resort-strip-grid stagger">
-    <article class="resort-card" data-id="amr102swtk1006" data-brand="Amiri" data-name="All-Over Logo Swim Shorts" data-price="88000" data-image="https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/imgrc0170327001.jpg">
+    <a class="resort-card" href="product.html?id=amr102swtk1006">
       <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/imgrc0170327001.jpg" alt="Amiri Swim Shorts"></div>
       <div class="rc-text">
         <div class="rc-brand">Amiri</div>
         <div class="rc-name">All-Over Logo Swim Shorts</div>
         <div class="rc-price">¥88,000 <small>tax incl.</small></div>
-        <button class="add-btn">Add to Cart</button>
       </div>
-    </article>
-    <article class="resort-card" data-id="bab12748778622n-b" data-brand="Barba" data-name="Handcrafted Swim Shorts" data-price="25850" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/bab12748778622n-bs.jpg">
+    </a>
+    <a class="resort-card" href="product.html?id=bab12748778622n-b">
       <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/bab12748778622n-bs.jpg" alt="Barba Swim Shorts"></div>
       <div class="rc-text">
         <div class="rc-brand">Barba</div>
         <div class="rc-name">Handcrafted Swim Shorts</div>
         <div class="rc-price">¥25,850 <small>tax incl.</small></div>
-        <button class="add-btn">Add to Cart</button>
       </div>
-    </article>
-    <article class="resort-card" data-id="bob133072713312" data-brand="Bob" data-name="Beach Print Swim Shorts" data-price="14300" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/bob133072713312-sale.jpg">
+    </a>
+    <a class="resort-card" href="product.html?id=bob133072713312">
       <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/bob133072713312-sale.jpg" alt="Bob Swim Shorts"></div>
       <div class="rc-text">
         <div class="rc-brand">Bob</div>
         <div class="rc-name">Beach Print Swim Shorts</div>
         <div class="rc-price">¥14,300 <small>tax incl.</small></div>
-        <button class="add-btn">Add to Cart</button>
       </div>
-    </article>
+    </a>
   </div>
 </section>
 
@@ -1875,17 +1807,26 @@
   </div>
 </section>
 
-<!-- ============ STORES (single teaser → /stores.html) ============ -->
+<!-- ============ STORES (3-image split → /stores.html) ============ -->
 <section class="store-teaser" id="stores">
-  <a href="stores.html">
-    <img src="photos/hayama-store.jpg" alt="Studio Route 134 Stores">
-    <div class="st-inner">
-      <div class="st-eyebrow">Our Stores</div>
-      <h2>Hayama · Aoyama · Enoshima</h2>
-      <div class="st-meta">3 Locations</div>
-      <span class="st-link">View All Stores <span class="arrow">→</span></span>
-    </div>
-  </a>
+  <div class="store-teaser-head reveal">
+    <div class="eyebrow">Our Stores</div>
+    <h2>三つの店。<em>ひとつの海岸線。</em></h2>
+  </div>
+  <div class="store-teaser-strip">
+    <a href="stores.html#hayama" class="st-cell">
+      <img src="photos/stores-atmos.jpg" alt="Hayama">
+      <div class="st-label"><div class="st-city">Hayama</div><div class="st-jp">湘南・葉山店</div></div>
+    </a>
+    <a href="stores.html#aoyama" class="st-cell">
+      <img src="photos/aoyama-1f.jpg" alt="Aoyama" style="object-position: 55% center;">
+      <div class="st-label"><div class="st-city">Aoyama</div><div class="st-jp">東京・南青山店</div></div>
+    </a>
+    <a href="stores.html#enoshima" class="st-cell">
+      <img src="photos/enoshima-outside-1.jpg" alt="Enoshima">
+      <div class="st-label"><div class="st-city">Enoshima</div><div class="st-jp">湘南・江ノ島店</div></div>
+    </a>
+  </div>
 </section>
 
 <!-- ============ NEWSLETTER ============ -->
@@ -2008,6 +1949,30 @@
       </div>
     `).join('') + '</div>';
   }
+  // === Render Pick Up dynamically from products.json ===
+  async function renderCollection() {
+    const grid = $('[data-collection]');
+    if (!grid) return;
+    let products = [];
+    try { products = await (await fetch('products.json')).json(); }
+    catch { grid.innerHTML = '<p style="padding:40px;color:#6E7A8E">商品データを読み込めませんでした。</p>'; return; }
+    // Render as varied cc-1..cc-8 pattern
+    grid.innerHTML = products.map((p, i) => {
+      const cc = (i % 8) + 1;
+      return `
+        <a class="col-card cc-${cc}" data-brand="${p.brand}" href="product.html?id=${p.id}">
+          <img referrerpolicy="no-referrer" src="${p.image}" alt="${p.brand} ${p.name}">
+          <div class="label">
+            <span class="code">${p.brand}</span>
+            <div class="name">${p.name}</div>
+            <div class="price">${p.price ? '¥' + p.price.toLocaleString('en-US') : ''}${p.price ? ' <small>tax incl.</small>' : ''}</div>
+          </div>
+        </a>`;
+    }).join('');
+    // Trigger reveal stagger
+    grid.classList.add('visible');
+  }
+
   // === Brand filter ===
   function filterByBrand(brand) {
     const cards = $$('.col-card');
@@ -2027,8 +1992,10 @@
     history.replaceState({}, '', url);
     document.getElementById('collection').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-  const initial = new URLSearchParams(location.search).get('brand');
-  if (initial) filterByBrand(initial);
+  renderCollection().then(() => {
+    const initial = new URLSearchParams(location.search).get('brand');
+    if (initial) filterByBrand(initial);
+  });
 
   document.addEventListener('click', (e) => {
     const bc = e.target.closest('.brand-cell[data-brand]');
