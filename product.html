@@ -77,6 +77,26 @@
     font-size: 14px; line-height: 2; color: var(--ink-2);
     margin-bottom: 32px;
   }
+  .p-option { margin-bottom: 22px; }
+  .p-option-label {
+    font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--ink-soft); margin-bottom: 12px; font-weight: 500;
+  }
+  .p-option-label span {
+    color: var(--ink); margin-left: 8px; letter-spacing: 0.08em; text-transform: none;
+  }
+  .p-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .p-chip {
+    min-width: 48px; padding: 12px 16px;
+    background: var(--surface); border: 1px solid var(--line);
+    font-size: 12px; letter-spacing: 0.1em; color: var(--ink);
+    cursor: pointer; text-align: center; font-family: inherit;
+    transition: all .25s;
+  }
+  .p-chip:hover { border-color: var(--gold-deep); color: var(--gold-deep); }
+  .p-chip.selected { background: var(--navy); color: var(--surface); border-color: var(--navy); }
+  .p-chip[data-color] { min-width: 84px; }
+
   .p-actions { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
   .p-add {
     width: 100%; padding: 18px 24px;
@@ -178,12 +198,25 @@
     <h1 class="p-name" data-p-name></h1>
     <div class="p-price"><span data-p-price></span><small>tax incl.</small></div>
     <div class="p-desc" data-p-desc></div>
+
+    <div class="p-option" data-p-color-block style="display:none">
+      <div class="p-option-label">Color <span data-p-color-selected></span></div>
+      <div class="p-chips" data-p-colors></div>
+    </div>
+    <div class="p-option">
+      <div class="p-option-label">Size <span data-p-size-selected></span></div>
+      <div class="p-chips" data-p-sizes></div>
+    </div>
+
     <div class="p-actions">
       <button class="p-add" data-p-add>Add to Cart</button>
       <button class="p-fav">Add to Wishlist ♡</button>
     </div>
     <div class="p-meta">
       <div><strong>Item</strong>: <span data-p-id></span></div>
+      <div data-p-origin-row style="display:none"><strong>Origin</strong>: <span data-p-origin></span></div>
+      <div data-p-material-row style="display:none"><strong>Material</strong>: <span data-p-material></span></div>
+      <div data-p-gender-row style="display:none"><strong>Category</strong>: <span data-p-gender></span></div>
       <div><strong>Availability</strong>: 在庫確認中 · Contact for stock</div>
       <div><strong>Shipping</strong>: ¥30,000以上で送料無料 (国内)</div>
       <div><strong>Note</strong>: 表示価格は国内正規販売店の販売価格です。</div>
@@ -286,11 +319,47 @@ document.addEventListener('click', (e) => {
   $('[data-crumb-name]').textContent = p.name;
   $('[data-p-name]').textContent = p.name;
   $('[data-p-price]').textContent = yen(p.price);
-  $('[data-p-desc]').textContent = `${p.brand} の一着を、Studio Route 134 の目利きで。正規販売店として、確かな品質と共にお届けします。詳細な仕様・サイズ・カラーバリエーションはお問い合わせください。`;
+  $('[data-p-desc]').textContent = p.description || `${p.brand} の${p.category}。`;
   $('[data-p-id]').textContent = p.id.toUpperCase();
+  if (p.origin) { $('[data-p-origin]').textContent = p.origin; $('[data-p-origin-row]').style.display = ''; }
+  if (p.material) { $('[data-p-material]').textContent = p.material; $('[data-p-material-row]').style.display = ''; }
+  if (p.gender) { $('[data-p-gender]').textContent = `${p.gender} · ${p.category}`; $('[data-p-gender-row]').style.display = ''; }
+
+  // Color chips
+  const colorBlock = $('[data-p-color-block]');
+  const colorSel = $('[data-p-color-selected]');
+  let selectedColor = null;
+  if (p.colors && p.colors.length) {
+    colorBlock.style.display = '';
+    $('[data-p-colors]').innerHTML = p.colors.map(c => `<button class="p-chip" data-color="${c}">${c}</button>`).join('');
+    $$('[data-color]').forEach(btn => btn.addEventListener('click', () => {
+      $$('[data-color]').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedColor = btn.dataset.color;
+      colorSel.textContent = selectedColor;
+    }));
+  }
+  // Size chips
+  const sizeSel = $('[data-p-size-selected]');
+  let selectedSize = null;
+  $('[data-p-sizes]').innerHTML = (p.sizes || []).map(s => `<button class="p-chip" data-size="${s}">${s}</button>`).join('');
+  $$('[data-size]').forEach(btn => btn.addEventListener('click', () => {
+    $$('[data-size]').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    selectedSize = btn.dataset.size;
+    sizeSel.textContent = selectedSize;
+  }));
+
   const add = $('[data-p-add]');
   add.addEventListener('click', () => {
-    addToCart({ id: p.id, brand: p.brand, name: p.name, price: p.price, image: p.image });
+    if (p.sizes && p.sizes.length > 1 && !selectedSize) {
+      sizeSel.textContent = '(サイズを選択してください)'; sizeSel.style.color = 'var(--gold-deep)';
+      return;
+    }
+    const variant = [selectedColor, selectedSize].filter(Boolean).join(' / ');
+    const name = variant ? `${p.name} — ${variant}` : p.name;
+    const cartId = variant ? `${p.id}:${variant}` : p.id;
+    addToCart({ id: cartId, brand: p.brand, name, price: p.price, image: p.image });
     add.classList.add('added'); add.textContent = 'Added to Cart ✓';
     setTimeout(() => { add.classList.remove('added'); add.textContent = 'Add to Cart'; }, 1500);
   });

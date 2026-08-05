@@ -450,30 +450,32 @@
     z-index: 2;
   }
   .col-card .label .code {
-    font-size: 10px;
-    letter-spacing: 0.28em;
+    font-size: 11px;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
     color: var(--gold-light);
-    margin-bottom: 8px;
-    display: inline-block;
-  }
-  .col-card .label .name {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    font-style: normal;
-    line-height: 1.14;
     margin-bottom: 6px;
-    max-width: 92%;
-  }
-  .col-card.cc-1 .label .name { font-size: 34px; }
-  .col-card .label .price {
-    font-size: 12px;
-    letter-spacing: 0.18em;
-    color: var(--gold-light);
+    display: inline-block;
     font-weight: 500;
-    font-feature-settings: 'lnum' 1;
   }
-  .col-card .label .price small { font-size: 9.5px; opacity: 0.75; letter-spacing: 0.24em; margin-left: 4px; }
+  .col-card .label .price {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--surface);
+    font-feature-settings: 'lnum' 1;
+    letter-spacing: 0;
+  }
+  .view-all-wrap { text-align: center; margin-top: 64px; }
+  .view-all-link {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink); padding: 14px 32px;
+    border: 1px solid var(--ink); font-weight: 500;
+    transition: all .4s var(--ease);
+  }
+  .view-all-link span { transition: transform .4s var(--ease); }
+  .view-all-link:hover { background: var(--navy); color: var(--surface); border-color: var(--navy); }
+  .view-all-link:hover span { transform: translateX(6px); }
   .cc-1 { grid-column: span 7; height: 620px; }
   .cc-2 { grid-column: span 5; height: 520px; }
   .cc-3 { grid-column: span 4; height: 460px; }
@@ -1949,28 +1951,42 @@
       </div>
     `).join('') + '</div>';
   }
-  // === Render Pick Up dynamically from products.json ===
+  // === Render Pick Up dynamically from products.json (curated top 12) ===
   async function renderCollection() {
     const grid = $('[data-collection]');
     if (!grid) return;
     let products = [];
     try { products = await (await fetch('products.json')).json(); }
     catch { grid.innerHTML = '<p style="padding:40px;color:#6E7A8E">商品データを読み込めませんでした。</p>'; return; }
-    // Render as varied cc-1..cc-8 pattern
-    grid.innerHTML = products.map((p, i) => {
+    // Curate: one per brand for the top position, then higher-price items to fill 12
+    const seen = new Set();
+    const curated = [];
+    for (const p of products) {
+      if (!seen.has(p.brand)) { curated.push(p); seen.add(p.brand); }
+      if (curated.length >= 8) break;
+    }
+    // fill remaining with next highest-priced items not yet in curated
+    for (const p of products) {
+      if (curated.length >= 12) break;
+      if (!curated.includes(p)) curated.push(p);
+    }
+    grid.innerHTML = curated.map((p, i) => {
       const cc = (i % 8) + 1;
       return `
         <a class="col-card cc-${cc}" data-brand="${p.brand}" href="product.html?id=${p.id}">
           <img referrerpolicy="no-referrer" src="${p.image}" alt="${p.brand} ${p.name}">
           <div class="label">
-            <span class="code">${p.brand}</span>
-            <div class="name">${p.name}</div>
-            <div class="price">${p.price ? '¥' + p.price.toLocaleString('en-US') : ''}${p.price ? ' <small>tax incl.</small>' : ''}</div>
+            <span class="code">${p.brand} · ${p.category}</span>
+            <div class="price">${p.price ? '¥' + p.price.toLocaleString('en-US') : ''}</div>
           </div>
         </a>`;
     }).join('');
-    // Trigger reveal stagger
     grid.classList.add('visible');
+    // Append "View All Products" link
+    const viewAll = document.createElement('div');
+    viewAll.className = 'view-all-wrap reveal visible';
+    viewAll.innerHTML = '<a href="shop.html" class="view-all-link">View All Products <span>→</span></a>';
+    grid.after(viewAll);
   }
 
   // === Brand filter ===
