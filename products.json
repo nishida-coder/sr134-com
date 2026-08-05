@@ -24,7 +24,13 @@
     "gender": "Men",
     "description": "Marni の knit。 Italy製、確かな仕立て。 素材：や色使いに対する実験的なアプローチと、プリントやフォルムの組み合わせ方です。エレガントで巧妙なMarniのデザインは、型破りでありながらも厳格なグラフィックとい。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/marn155cvmg0091/",
-    "brand_priority": 1
+    "brand_priority": 1,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Tops"
   },
   {
     "id": "marn2550096l1",
@@ -49,10 +55,14 @@
     ],
     "material": "のバランスが大人好み♪トロピカリアバスケットバッグ TROPICALIA BASKET BAG ショルダーバッグ バケツバッグ ハンドバッグ TROPICALI",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "Marni の denim。 Italy製、確かな仕立て。 素材：のバランスが大人好み♪トロピカリアバスケットバッグ TROPICALIA BASKET BAG ショルダーバッグ バケツバッグ ハンドバッグ TROPICALI。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/marn2550096l1/",
-    "brand_priority": 1
+    "brand_priority": 1,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Bottoms"
   },
   {
     "id": "marn155aszc0005-ice",
@@ -72,10 +82,14 @@
     ],
     "material": "感と相まって上品な大人の佇まいを演出するブラッシュドアルパカ マフラー。",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Unisex",
     "description": "Marni の scarf。 Italy製、確かな仕立て。 素材：感と相まって上品な大人の佇まいを演出するブラッシュドアルパカ マフラー。。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/marn155aszc0005-ice/",
-    "brand_priority": 1
+    "brand_priority": 1,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Accessories"
   },
   {
     "id": "marn155humu0223-h",
@@ -101,7 +115,11 @@
     "gender": "Men",
     "description": "Marni の tee。 Italy製、確かな仕立て。 素材：で仕立てた、ラグジュアリーな１着！レトロ感漂わせるロゴプリントの表情がイマドキな一枚！縫製は今日の最高技術で仕立てられており、ややゆったりとした美しい大人シルエ。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/marn155humu0223-h/",
-    "brand_priority": 1
+    "brand_priority": 1,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Tops"
   },
   {
     "id": "marn255thjet49-ib",
@@ -127,7 +145,11 @@
     "gender": "Women",
     "description": "Marni の tee。 Italy製、確かな仕立て。 素材：や色使いに対する実験的なアプローチと、プリントやフォルムの組み合わせ方です。エレガントで巧妙なMarniのデザインは、型破りでありながらも厳格なグラフィックとい。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/marn255thjet49-ib/",
-    "brand_priority": 1
+    "brand_priority": 1,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Tops"
   },
   {
     "id": "mmm535s56wg0082-pt",
@@ -150,7 +172,13 @@
     "gender": "Women",
     "description": "Maison Margiela の bag。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/mmm535s56wg0082-pt/",
-    "brand_priority": 2
+    "brand_priority": 2,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "200k+",
+    "group": "Bags"
   },
   {
     "id": "mmm435sb3wg0025",
@@ -168,10 +196,14 @@
     "colors": [],
     "material": "▼-->",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Unisex",
     "description": "Maison Margiela の bag。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/mmm435sb3wg0025/",
-    "brand_priority": 2
+    "brand_priority": 2,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "200k+",
+    "group": "Bags"
   },
   {
     "id": "mm6135sh0dt0025",
@@ -195,7 +227,13 @@
     "gender": "Men",
     "description": "MM6 Maison Margiela の shirt。 Italy製、確かな仕立て。 素材：を採用しており、ハリがありながらも肌当たりは滑らかで、主役を張れる存在感は周囲を魅了します。。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/mm6135sh0dt0025/",
-    "brand_priority": 3
+    "brand_priority": 3,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Tops"
   },
   {
     "id": "mm6135sh0dt025m",
@@ -221,7 +259,11 @@
     "gender": "Men",
     "description": "MM6 Maison Margiela の shirt。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/mm6135sh0dt025m/",
-    "brand_priority": 3
+    "brand_priority": 3,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Tops"
   },
   {
     "id": "mm6202s32ct0912",
@@ -247,7 +289,11 @@
     "gender": "Women",
     "description": "MM6 Maison Margiela の knit。 Italy製、確かな仕立て。 素材：には妥協しない。上質なウール素材を贅沢に使用し、イタリアの職人技術によって編み上げられたニットは、ふんわりと柔らかく、身体を優しく包み込むような着心地。 カラー。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/mm6202s32ct0912/",
-    "brand_priority": 3
+    "brand_priority": 3,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "60-100k",
+    "group": "Tops"
   },
   {
     "id": "mm6135s52gc0360",
@@ -271,7 +317,11 @@
     "gender": "Women",
     "description": "MM6 Maison Margiela の tee。 Italy製、確かな仕立て。 素材：感が生み出す滑らかなドレープと、計算され尽くしたクリーンなシルエットが、大人の休日にふさわしい「ノーブルな佇まい」をしっかりとキープします。バックネックには、ブ。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/mm6135s52gc0360/",
-    "brand_priority": 3
+    "brand_priority": 3,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Tops"
   },
   {
     "id": "monc12818g00010",
@@ -297,7 +347,13 @@
     "gender": "Men",
     "description": "Moncler の selection。 Italy製、確かな仕立て。 素材：使用したテーラードジャケット ブルーグレー ペールグリーン ミルク CARVICO CLASSIC JKT メンズ MIKE DON'T DO IT イタリア製。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/monc12818g00010/",
-    "brand_priority": 4
+    "brand_priority": 4,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "60-100k",
+    "group": "Accessories"
   },
   {
     "id": "monc1288c00059",
@@ -324,7 +380,13 @@
     "gender": "Men",
     "description": "Moncler の tee。 Italy製、確かな仕立て。 素材：使用したテーラードジャケット ブルーグレー ペールグリーン ミルク CARVICO CLASSIC JKT メンズ MIKE DON'T DO IT イタリア製。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/monc1288c00059/",
-    "brand_priority": 4
+    "brand_priority": 4,
+    "tags": [
+      "SOLD_OUT"
+    ],
+    "inStock": false,
+    "priceTier": "30-60k",
+    "group": "Tops"
   },
   {
     "id": "monc4283b00035",
@@ -350,7 +412,11 @@
     "gender": "Men",
     "description": "Moncler の hat。 Italy製、確かな仕立て。 素材：使用したテーラードジャケット ブルーグレー ペールグリーン ミルク CARVICO CLASSIC JKT メンズ MIKE DON'T DO IT イタリア製。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/monc4283b00035/",
-    "brand_priority": 4
+    "brand_priority": 4,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "10-30k",
+    "group": "Accessories"
   },
   {
     "id": "monc4283b00025",
@@ -379,7 +445,11 @@
     "gender": "Women",
     "description": "Moncler の knit。 Italy製、確かな仕立て。 素材：使用したテーラードジャケット ブルーグレー ペールグリーン ミルク CARVICO CLASSIC JKT メンズ MIKE DON'T DO IT イタリア製。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/monc4283b00025/",
-    "brand_priority": 4
+    "brand_priority": 4,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "10-30k",
+    "group": "Tops"
   },
   {
     "id": "d2202s75cv0769",
@@ -406,7 +476,13 @@
     "gender": "Women",
     "description": "Dsquared2 の shirt。 Italy製、確かな仕立て。 素材：とテイストを一つに凝縮したデザインは、まさにディースクエアードの真骨頂。。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2202s75cv0769/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "200k+",
+    "group": "Tops"
   },
   {
     "id": "d2102s74kb0900",
@@ -432,7 +508,13 @@
     "gender": "Men",
     "description": "Dsquared2 の pants。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s74kb0900/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [
+      "SOLD_OUT"
+    ],
+    "inStock": false,
+    "priceTier": "100-200k",
+    "group": "Bottoms"
   },
   {
     "id": "d2202s75cv0734",
@@ -458,7 +540,11 @@
     "gender": "Women",
     "description": "Dsquared2 の shirt。 Italy製、確かな仕立て。 素材：で、スポーティーなメッシュの軽快さはそのままに、レース特有の繊細な透け感が大人の色香を演出します。インナーとのレイヤード次第で、様々な表情を楽しめるのが魅力です。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2202s75cv0734/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Tops"
   },
   {
     "id": "d2102s74kb1142",
@@ -483,7 +569,11 @@
     "gender": "Men",
     "description": "Dsquared2 の denim。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s74kb1142/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Bottoms"
   },
   {
     "id": "d2102s74lb1594",
@@ -510,7 +600,11 @@
     "gender": "Men",
     "description": "Dsquared2 の denim。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s74lb1594/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Bottoms"
   },
   {
     "id": "d2102s78lb0105",
@@ -535,7 +629,11 @@
     "gender": "Men",
     "description": "Dsquared2 の denim。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s78lb0105/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Bottoms"
   },
   {
     "id": "d2102s78mu0062",
@@ -560,7 +658,11 @@
     "gender": "Men",
     "description": "Dsquared2 の denim。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s78mu0062/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Bottoms"
   },
   {
     "id": "d2202s72mu0491",
@@ -584,7 +686,11 @@
     "gender": "Women",
     "description": "Dsquared2 の bag。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2202s72mu0491/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Bags"
   },
   {
     "id": "d2102s78lb0111",
@@ -609,7 +715,11 @@
     "gender": "Men",
     "description": "Dsquared2 の denim。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s78lb0111/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Bottoms"
   },
   {
     "id": "d2102s71mu0773",
@@ -635,7 +745,11 @@
     "gender": "Men",
     "description": "Dsquared2 の pants。 Italy製、確かな仕立て。 素材：を使用、ウエストと裾のホワイトのパイピング、そして裾に大胆にあしらわれたブラックのレースのレイヤードが、スポーティーさとエレガンスを融合。。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s71mu0773/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Bottoms"
   },
   {
     "id": "d2502s74gu0664",
@@ -662,7 +776,11 @@
     "gender": "Men",
     "description": "Dsquared2 の selection。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2502s74gu0664/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Accessories"
   },
   {
     "id": "d2102s78gd0108c",
@@ -688,7 +806,11 @@
     "gender": "Men",
     "description": "Dsquared2 の tee。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s78gd0108c/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Tops"
   },
   {
     "id": "d2102s71gu0726",
@@ -715,7 +837,11 @@
     "gender": "Men",
     "description": "Dsquared2 の tee。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s71gu0726/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Tops"
   },
   {
     "id": "d2102s71lb1384",
@@ -743,7 +869,11 @@
     "gender": "Men",
     "description": "Dsquared2 の denim。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s71lb1384/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "100-200k",
+    "group": "Bottoms"
   },
   {
     "id": "d2102s82qad7bm5",
@@ -769,7 +899,11 @@
     "gender": "Men",
     "description": "Dsquared2 の swim。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s82qad7bm5/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "60-100k",
+    "group": "Swimwear"
   },
   {
     "id": "d2102s71gd1643",
@@ -793,7 +927,11 @@
     "gender": "Men",
     "description": "Dsquared2 の tee。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s71gd1643/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Tops"
   },
   {
     "id": "d2102s74gd1254",
@@ -822,7 +960,11 @@
     "gender": "Men",
     "description": "Dsquared2 の tee。 Italy製、確かな仕立て。 素材：とシルエットが、男の魅力を最大限に引き出す1着。。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s74gd1254/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Tops"
   },
   {
     "id": "d2102s82d7m2159",
@@ -846,7 +988,11 @@
     "gender": "Men",
     "description": "Dsquared2 の rash guard。 Italy製、確かな仕立て。 素材：なので、ジムでのワークアウトや夏のランニングなど、マチでのアクティビティ時の一枚着としても難なくフィットしてくれます。。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s82d7m2159/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Swimwear"
   },
   {
     "id": "d2102s82qad7m21",
@@ -870,7 +1016,13 @@
     "gender": "Men",
     "description": "Dsquared2 の rash guard。 Italy製、確かな仕立て。 素材：なので、ジムでのワークアウトや夏のランニングなど、マチでのアクティビティ時の一枚着としても難なくフィットしてくれます。。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s82qad7m21/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [
+      "SOLD_OUT"
+    ],
+    "inStock": false,
+    "priceTier": "10-30k",
+    "group": "Swimwear"
   },
   {
     "id": "d2102s82qad7n5c",
@@ -891,10 +1043,14 @@
     "colors": [],
     "material": "なので、ジムでのワークアウトや夏のランニングなど、マチでのアクティビティにも難なくフィットしてくれます。",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "Dsquared2 の rash guard。 Italy製、確かな仕立て。 素材：なので、ジムでのワークアウトや夏のランニングなど、マチでのアクティビティにも難なくフィットしてくれます。。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/d2102s82qad7n5c/",
-    "brand_priority": 5
+    "brand_priority": 5,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "10-30k",
+    "group": "Swimwear"
   },
   {
     "id": "amr102xmjt003",
@@ -921,7 +1077,14 @@
     "gender": "Men",
     "description": "Amiri の tee。 Italy製、確かな仕立て。 素材：にこだわっており、滑らかな肌触りと適度な光沢感を備えた上質なコットン生地を採用。デニムに合わせれば無骨な色気が、スラックスに合わせればリッチな休日スタイルが完成。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/amr102xmjt003/",
-    "brand_priority": 6
+    "brand_priority": 6,
+    "tags": [
+      "NEW",
+      "SOLD_OUT"
+    ],
+    "inStock": false,
+    "priceTier": "60-100k",
+    "group": "Tops"
   },
   {
     "id": "pes241ld1214113",
@@ -947,7 +1110,13 @@
     "gender": "Women",
     "description": "Pescali の coat。 Italy製、確かな仕立て。 素材：を使用し1枚羽織るだけででラグジュアリーカジュアルを演出する！チェック柄アルパカノーカラーコート 1214113 アルパカ ウール ブラック チェック イタリア。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/pes241ld1214113/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "200k+",
+    "group": "Outerwear"
   },
   {
     "id": "abr167abjk00",
@@ -975,7 +1144,14 @@
     "gender": "Men",
     "description": "Abronson の jacket。 Italy製、確かな仕立て。 素材：使用したテーラードジャケット ブルーグレー ペールグリーン ミルク CARVICO CLASSIC JKT メンズ MIKE DON'T DO IT イタリア製。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/abr167abjk00/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW",
+      "SOLD_OUT"
+    ],
+    "inStock": false,
+    "priceTier": "60-100k",
+    "group": "Outerwear"
   },
   {
     "id": "gcr183grt237",
@@ -1003,7 +1179,13 @@
     "gender": "Men",
     "description": "GCR の jacket。 Italy製、確かな仕立て。 素材：には、コットンをベースにエラスタンをブレンドしたストレッチファブリックを採用。適度なハリ感を保ちながら驚くほど軽く、身体の動きにしなやかに追従するため、長時間着。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/gcr183grt237/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "60-100k",
+    "group": "Outerwear"
   },
   {
     "id": "cic106cn4823",
@@ -1030,7 +1212,13 @@
     "gender": "Men",
     "description": "Cinquanta の jacket。 Italy製、確かな仕立て。 素材：とニット素材を多用し、リラックスウエアとドレスウエアを融合した革新的なコレクションをリリースしています。。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/cic106cn4823/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "60-100k",
+    "group": "Outerwear"
   },
   {
     "id": "elev01142372002",
@@ -1057,7 +1245,13 @@
     "gender": "Men",
     "description": "ELEV の pants。 Italy製、確かな仕立て。 素材：感と、抜群のラクさ、この2つが同居しているからこそ、シンプルなカットソー1枚で合わせても格段に「サマになる」のです。。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/elev01142372002/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "60-100k",
+    "group": "Bottoms"
   },
   {
     "id": "st11430071237",
@@ -1084,7 +1278,13 @@
     "gender": "Men",
     "description": "ST の denim。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/st11430071237/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "60-100k",
+    "group": "Bottoms"
   },
   {
     "id": "mik567mik03",
@@ -1112,7 +1312,13 @@
     "gender": "Men",
     "description": "Mikio Sakabe の sneakers。 Italy製、確かな仕立て。 素材：から生産まで一貫して100% イタリア製。同ファクトリーでは、《メ○ン マ○ジェラ》や《フィ○ップ モ○ル》も手がけており、クオリティは折り紙付き。！この機会に。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/mik567mik03/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Shoes"
   },
   {
     "id": "mik567mike01-l",
@@ -1138,7 +1344,11 @@
     "gender": "Women",
     "description": "Mikio Sakabe の sneakers。 Italy製、確かな仕立て。 素材：から生産まで一貫して100% イタリア製。同ファクトリーでは、《メ○ン マ○ジェラ》や《フィ○ップ モ○ル》も手がけており、クオリティは折り紙付き。！この機会に。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/mik567mike01-l/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Shoes"
   },
   {
     "id": "mmy572a14fw703",
@@ -1163,10 +1373,16 @@
     ],
     "material": "使用したテーラードジャケット ブルーグレー ペールグリーン ミルク CARVICO CLASSIC JKT メンズ MIKE DON'T DO IT イタリア製",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "Mihara Yasuhiro の sneakers。 Italy製、確かな仕立て。 素材：使用したテーラードジャケット ブルーグレー ペールグリーン ミルク CARVICO CLASSIC JKT メンズ MIKE DON'T DO IT イタリア製。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/mmy572a14fw703/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Shoes"
   },
   {
     "id": "inst172i16ct091",
@@ -1190,10 +1406,16 @@
     ],
     "material": "▼-->",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "INST の jacket。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/inst172i16ct091/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Outerwear"
   },
   {
     "id": "pmd12231059014",
@@ -1220,7 +1442,14 @@
     "gender": "Men",
     "description": "Premiata の denim。 Italy製、確かな仕立て。 素材：で差をつけるシャカ素材パンツ♪。【定価42,900円(税込)】PREMIUM MOOD DENIM SUPERIOR-プレミアムムードデニムスペリオール- P.。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/pmd12231059014/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW",
+      "SOLD_OUT"
+    ],
+    "inStock": false,
+    "priceTier": "30-60k",
+    "group": "Bottoms"
   },
   {
     "id": "mmy572a08fw735-blk",
@@ -1246,10 +1475,14 @@
     ],
     "material": "のアッパー",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "Mihara Yasuhiro の sneakers。 Italy製、確かな仕立て。 素材：のアッパー。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/mmy572a08fw735-blk/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Shoes"
   },
   {
     "id": "mmy572a01fw702",
@@ -1275,10 +1508,16 @@
     ],
     "material": "のアッパー",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "Mihara Yasuhiro の sneakers。 Italy製、確かな仕立て。 素材：のアッパー。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/mmy572a01fw702/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "SOLD_OUT"
+    ],
+    "inStock": false,
+    "priceTier": "30-60k",
+    "group": "Shoes"
   },
   {
     "id": "bob133074721720",
@@ -1306,7 +1545,13 @@
     "gender": "Men",
     "description": "Bob の denim。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/bob133074721720/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "30-60k",
+    "group": "Bottoms"
   },
   {
     "id": "bob133074743208",
@@ -1333,7 +1578,13 @@
     "gender": "Men",
     "description": "Bob の shirt。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/bob133074743208/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "SOLD_OUT"
+    ],
+    "inStock": false,
+    "priceTier": "30-60k",
+    "group": "Tops"
   },
   {
     "id": "bob133074721756",
@@ -1360,7 +1611,11 @@
     "gender": "Men",
     "description": "Bob の knit。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/bob133074721756/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "10-30k",
+    "group": "Tops"
   },
   {
     "id": "pmd12231059018-bl",
@@ -1382,10 +1637,14 @@
     "colors": [],
     "material": "を用いたコレクションが登場。抜群の伸縮性と、日本の夏にもサラリとした質感が続くドライタッチのナイロンパンツ。イタリアンメイドのたるみの出無い様シャープに仕上げた",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "Premiata の denim。 Italy製、確かな仕立て。 素材：を用いたコレクションが登場。抜群の伸縮性と、日本の夏にもサラリとした質感が続くドライタッチのナイロンパンツ。イタリアンメイドのたるみの出無い様シャープに仕上げた。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/pmd12231059018-bl/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "10-30k",
+    "group": "Bottoms"
   },
   {
     "id": "pmd12251059172",
@@ -1412,7 +1671,11 @@
     "gender": "Men",
     "description": "Premiata の denim。 Italy製、確かな仕立て。 素材：や生地選びに余念がなく、過激にも映るウォッシュ加工は、最先端の技術を持つ専門家によりレーザー・3次元処理・樹脂処理などを用いて加工されております。それぞれのアイ。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/pmd12251059172/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "10-30k",
+    "group": "Bottoms"
   },
   {
     "id": "pmd12251059173",
@@ -1440,7 +1703,13 @@
     "gender": "Men",
     "description": "Premiata の denim。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/pmd12251059173/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "SOLD_OUT"
+    ],
+    "inStock": false,
+    "priceTier": "10-30k",
+    "group": "Bottoms"
   },
   {
     "id": "bob133072713312",
@@ -1465,10 +1734,14 @@
     ],
     "material": "▼-->",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "Bob の swim。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/bob133072713312/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [],
+    "inStock": true,
+    "priceTier": "10-30k",
+    "group": "Swimwear"
   },
   {
     "id": "bob133072713320",
@@ -1491,10 +1764,16 @@
     ],
     "material": "▼-->",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "Bob の swim。 Italy製、確かな仕立て。 素材：▼-->。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/bob133072713320/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "SOLD_OUT"
+    ],
+    "inStock": false,
+    "priceTier": "10-30k",
+    "group": "Swimwear"
   },
   {
     "id": "vro12723874494",
@@ -1515,10 +1794,16 @@
     "colors": [],
     "material": "はシンプルな天然素材だけでなくコットン/カシミヤやシルク/カシミア、シルク/コットンなどの他、ナイロンやテンセルをコットンと混ぜたり、着心地を重視した素材選びを",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "VRO の tee。 Italy製、確かな仕立て。 素材：はシンプルな天然素材だけでなくコットン/カシミヤやシルク/カシミア、シルク/コットンなどの他、ナイロンやテンセルをコットンと混ぜたり、着心地を重視した素材選びを。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/vro12723874494/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "10-30k",
+    "group": "Tops"
   },
   {
     "id": "laf418039r003u",
@@ -1539,10 +1824,16 @@
     "colors": [],
     "material": "使用したテーラードジャケット ブルーグレー ペールグリーン ミルク CARVICO CLASSIC JKT メンズ MIKE DON'T DO IT イタリア製",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "LAF の selection。 Italy製、確かな仕立て。 素材：使用したテーラードジャケット ブルーグレー ペールグリーン ミルク CARVICO CLASSIC JKT メンズ MIKE DON'T DO IT イタリア製。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/laf418039r003u/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "10-30k",
+    "group": "Accessories"
   },
   {
     "id": "ta484craj",
@@ -1565,10 +1856,16 @@
     "colors": [],
     "material": "が快適な履き心地を提供します。",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "TA の sandals。 Italy製、確かな仕立て。 素材：が快適な履き心地を提供します。。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/ta484craj/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "under-10k",
+    "group": "Shoes"
   },
   {
     "id": "cg565c210306",
@@ -1597,10 +1894,16 @@
     ],
     "material": "を使用したリカバリーサンダル C210306。【26春夏新作/定価7,480円】CARIGA -カリガ- 高い反発力で衝撃を吸収して足へのストレスを緩和する D",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "Coastal の sandals。 Italy製、確かな仕立て。 素材：を使用したリカバリーサンダル C210306。【26春夏新作/定価7,480円】CARIGA -カリガ- 高い反発力で衝撃を吸収して足へのストレスを緩和する D。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/cg565c210306/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "under-10k",
+    "group": "Shoes"
   },
   {
     "id": "mk1499ss17u857",
@@ -1621,9 +1924,15 @@
     "colors": [],
     "material": "を使用し、ブランドアイコンのキツネと、袋に入ったクロワッサンを表現。存在感あるポップな一品に仕上げられています。 ブランドの世界感をそのままに、シンプルながらも",
     "origin": "Made in Italy",
-    "gender": null,
+    "gender": "Men",
     "description": "MK の selection。 Italy製、確かな仕立て。 素材：を使用し、ブランドアイコンのキツネと、袋に入ったクロワッサンを表現。存在感あるポップな一品に仕上げられています。 ブランドの世界感をそのままに、シンプルながらも。 国内正規販売店取扱の一着として、Studio Route 134 の目利きでお届けします。詳しい仕様やサイズ・カラー在庫はお問い合わせください。",
     "rakuten": "https://item.rakuten.co.jp/studio-route134/mk1499ss17u857/",
-    "brand_priority": 10
+    "brand_priority": 10,
+    "tags": [
+      "NEW"
+    ],
+    "inStock": true,
+    "priceTier": "under-10k",
+    "group": "Accessories"
   }
 ]
