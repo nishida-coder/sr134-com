@@ -124,6 +124,23 @@
     transition: all .3s;
   }
   .header-right .icon svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+  .header-right .icon-cart { position: relative; }
+  .cart-badge {
+    position: absolute;
+    top: -4px; right: -4px;
+    min-width: 18px; height: 18px; padding: 0 5px;
+    border-radius: 9px;
+    background: var(--gold);
+    color: var(--surface);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-feature-settings: 'lnum' 1;
+  }
+  .cart-badge.active { display: inline-flex; }
   .header-right .icon:hover {
     background: var(--navy);
     border-color: var(--navy);
@@ -1182,6 +1199,207 @@
     .footer-bottom > :last-child { text-align: center; }
   }
 
+  /* ============ CART DRAWER ============ */
+  .cart-scrim {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(17,32,59,0.42);
+    opacity: 0; pointer-events: none;
+    transition: opacity .45s var(--ease);
+    backdrop-filter: blur(3px);
+  }
+  .cart-scrim.open { opacity: 1; pointer-events: auto; }
+  .cart-drawer {
+    position: fixed; top: 0; right: 0; z-index: 210;
+    width: 100%; max-width: 460px; height: 100vh;
+    background: var(--surface);
+    box-shadow: -20px 0 60px -20px rgba(17,32,59,0.28);
+    transform: translateX(105%);
+    transition: transform .55s var(--ease);
+    display: flex; flex-direction: column;
+  }
+  .cart-drawer.open { transform: translateX(0); }
+  .cd-head {
+    padding: 22px 28px 18px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+  }
+  .cd-head h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--ink);
+    font-weight: 400;
+  }
+  .cd-close {
+    width: 34px; height: 34px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    cursor: pointer;
+    background: none;
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1;
+    transition: all .3s;
+  }
+  .cd-close:hover { background: var(--navy); color: var(--surface); border-color: var(--navy); }
+  .cd-body { flex: 1; overflow-y: auto; padding: 22px 28px; }
+  .cd-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--ink-soft);
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    line-height: 2;
+  }
+  .cd-empty small {
+    display: block;
+    margin-top: 6px;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    font-family: 'Inter', sans-serif;
+  }
+  .cd-items { display: flex; flex-direction: column; gap: 18px; }
+  .cd-item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 16px;
+    align-items: start;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .cd-item-visual {
+    width: 80px; aspect-ratio: 4/5;
+    background: var(--bg-2);
+    overflow: hidden;
+  }
+  .cd-item-visual img { width: 100%; height: 100%; object-fit: contain; padding: 6%; background: var(--surface); }
+  .cd-item-info { display: flex; flex-direction: column; gap: 4px; padding-top: 2px; }
+  .cd-item-brand {
+    font-size: 9.5px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    font-weight: 500;
+  }
+  .cd-item-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 14.5px;
+    line-height: 1.25;
+    color: var(--ink);
+  }
+  .cd-item-qty {
+    display: flex; align-items: center; gap: 8px;
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--ink-2);
+    font-feature-settings: 'lnum' 1;
+  }
+  .cd-qty-btn {
+    width: 22px; height: 22px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    padding: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    transition: all .2s;
+  }
+  .cd-qty-btn:hover { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+  .cd-item-price {
+    text-align: right;
+    display: flex; flex-direction: column; gap: 6px; align-items: flex-end;
+    font-size: 13px;
+    color: var(--ink);
+    font-feature-settings: 'lnum' 1;
+  }
+  .cd-item-remove {
+    background: none; border: none;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .cd-item-remove:hover { color: var(--navy); }
+  .cd-foot {
+    padding: 22px 28px 28px;
+    border-top: 1px solid var(--line);
+    background: var(--bg);
+  }
+  .cd-total {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-bottom: 14px;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .cd-total-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--ink);
+    letter-spacing: 0;
+    text-transform: none;
+    font-feature-settings: 'lnum' 1;
+  }
+  .cd-checkout {
+    width: 100%;
+    padding: 16px 24px;
+    background: var(--navy);
+    color: var(--surface);
+    border: none;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .3s;
+  }
+  .cd-checkout:hover { background: var(--gold-deep); }
+  .cd-checkout:disabled { background: var(--ink-soft); cursor: not-allowed; }
+  .cd-note {
+    margin-top: 10px;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+  /* Add-to-Cart button on product cards */
+  .col-card, .resort-card { cursor: pointer; }
+  .add-btn {
+    background: none;
+    border: 1px solid rgba(247,245,239,0.75);
+    color: var(--surface);
+    padding: 7px 14px;
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    transition: all .3s;
+    margin-top: 8px;
+    align-self: flex-start;
+  }
+  .add-btn:hover { background: var(--surface); color: var(--navy); }
+  .add-btn.added { background: var(--gold); border-color: var(--gold); color: var(--navy); pointer-events: none; }
+  .resort-card .add-btn {
+    color: var(--ink);
+    border-color: var(--line);
+    margin-top: 12px;
+    align-self: flex-start;
+  }
+  .resort-card .add-btn:hover { background: var(--navy); color: var(--surface); border-color: var(--navy); }
+  .col-card .label .add-btn { display: inline-block; margin-top: 10px; }
+
   /* ============ REVEAL ============ */
   .reveal {
     opacity: 0;
@@ -1264,7 +1482,7 @@
   <div class="header-right">
     <a href="#" class="icon" title="Search" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke-linecap="round"/></svg></a>
     <a href="#" class="icon" title="Account" aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20.5c1.4-3.6 4.4-5.8 7.5-5.8s6.1 2.2 7.5 5.8" stroke-linecap="round"/></svg></a>
-    <a href="#" class="icon" title="Cart" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M5 6h15l-1.6 9.4a2 2 0 0 1-2 1.6H9.2a2 2 0 0 1-2-1.6L5 6z" stroke-linejoin="round"/><path d="M3 3h2l0.6 3" stroke-linecap="round"/><circle cx="10" cy="20" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+    <a href="#" class="icon icon-cart" title="Cart" aria-label="Cart" data-cart-toggle><svg viewBox="0 0 24 24"><path d="M5 6h15l-1.6 9.4a2 2 0 0 1-2 1.6H9.2a2 2 0 0 1-2-1.6L5 6z" stroke-linejoin="round"/><path d="M3 3h2l0.6 3" stroke-linecap="round"/><circle cx="10" cy="20" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.2" fill="currentColor" stroke="none"/></svg><span class="cart-badge" data-cart-count></span></a>
   </div>
 </header>
 
@@ -1360,70 +1578,78 @@
     <h2>Pick <em>Up.</em></h2>
   </div>
   <div class="collection-grid stagger">
-    <a class="col-card cc-1" href="https://item.rakuten.co.jp/studio-route134/d2102s71lb1384/" target="_blank" rel="noopener">
+    <article class="col-card cc-1" data-id="d2102s71lb1384" data-brand="Dsquared2" data-name="Skater Jean, Tapered Indigo" data-price="100100" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/d2102s71lb1384-s.jpg">
       <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/d2102s71lb1384-s.jpg" alt="Dsquared2 Skater Jean">
       <div class="label">
         <span class="code">Dsquared2 · Denim</span>
         <div class="name">Skater Jean, Tapered Indigo</div>
         <div class="price">¥100,100 <small>tax incl.</small></div>
+        <button class="add-btn">Add to Cart</button>
       </div>
-    </a>
-    <a class="col-card cc-2" href="https://item.rakuten.co.jp/studio-route134/amr102xmjt003/" target="_blank" rel="noopener">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/aloha/amr102xmjt003-1.jpg" alt="Amiri Monogram Crew Tee">
+    </article>
+    <article class="col-card cc-2" data-id="mmm435sb3wg0025" data-brand="Maison Margiela" data-name="5AC Baby Bag" data-price="222200" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mmm435sb3wg0025-s.jpg">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mmm435sb3wg0025-s.jpg" alt="Maison Margiela 5AC Baby Bag">
       <div class="label">
-        <span class="code">Amiri · Jersey</span>
-        <div class="name">Monogram Crew Tee</div>
-        <div class="price">¥70,400 <small>tax incl.</small></div>
+        <span class="code">Maison Margiela · Bag</span>
+        <div class="name">5AC Baby Bag</div>
+        <div class="price">¥222,200 <small>tax incl.</small></div>
+        <button class="add-btn">Add to Cart</button>
       </div>
-    </a>
-    <a class="col-card cc-3" href="https://item.rakuten.co.jp/studio-route134/bob133074753133/" target="_blank" rel="noopener">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/12745348/074753133-1top.jpg" alt="Bob Italy Cotton Blazer">
+    </article>
+    <article class="col-card cc-3" data-id="marn155cvmg0091" data-brand="Marni" data-name="Destroy Knit Vest" data-price="104500" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/marn155cvmg0091-t.jpg">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/marn155cvmg0091-t.jpg" alt="Marni Destroy Knit Vest">
       <div class="label">
-        <span class="code">Bob Italy · Tailored</span>
-        <div class="name">Cotton Blazer, Bianco</div>
-        <div class="price">¥70,400 <small>tax incl.</small></div>
+        <span class="code">Marni · Knit</span>
+        <div class="name">Destroy Knit Vest</div>
+        <div class="price">¥104,500 <small>tax incl.</small></div>
+        <button class="add-btn">Add to Cart</button>
       </div>
-    </a>
-    <a class="col-card cc-4" href="https://item.rakuten.co.jp/studio-route134/d2102s82qad7b64/" target="_blank" rel="noopener">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsquared2accessory2/s82qad7b64-top.jpg" alt="Dsquared2 ICON Swim Trunks">
+    </article>
+    <article class="col-card cc-4" data-id="mm6135sh0dt0025" data-brand="MM6 Maison Margiela" data-name="Asymmetric Piece" data-price="121000" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mm6135sh0dt0025-s.jpg">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mm6135sh0dt0025-s.jpg" alt="MM6 Asymmetric Piece">
       <div class="label">
-        <span class="code">Dsquared2 · Swim</span>
-        <div class="name">ICON Swim Trunks</div>
-        <div class="price">¥50,500 <small>tax incl.</small></div>
+        <span class="code">MM6 · Ready-to-Wear</span>
+        <div class="name">Asymmetric Piece</div>
+        <div class="price">¥121,000 <small>tax incl.</small></div>
+        <button class="add-btn">Add to Cart</button>
       </div>
-    </a>
-    <a class="col-card cc-5" href="https://item.rakuten.co.jp/studio-route134/aut180wwlwrm01/" target="_blank" rel="noopener">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/aut180wwlwrm01-t.jpg" alt="Autry Reelwind Suede Sneakers">
+    </article>
+    <article class="col-card cc-5" data-id="marn2550096l1" data-brand="Marni" data-name="Tropicalia Basket Bag" data-price="104500" data-image="https://shop.r10s.jp/studio-route134/cabinet/image/02003077/marn2550096l1-1.jpg">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/02003077/marn2550096l1-1.jpg" alt="Marni Tropicalia Basket Bag">
       <div class="label">
-        <span class="code">Autry · Footwear</span>
-        <div class="name">Reelwind Suede Sneakers</div>
-        <div class="price">¥35,200 <small>tax incl.</small></div>
+        <span class="code">Marni · Bag</span>
+        <div class="name">Tropicalia Basket Bag</div>
+        <div class="price">¥104,500 <small>tax incl.</small></div>
+        <button class="add-btn">Add to Cart</button>
       </div>
-    </a>
-    <a class="col-card cc-6" href="https://item.rakuten.co.jp/studio-route134/d2102s74kb1142/" target="_blank" rel="noopener">
+    </article>
+    <article class="col-card cc-6" data-id="d2102s74kb1142" data-brand="Dsquared2" data-name="Track Denim Pant" data-price="132000" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s74kb1142-s.jpg">
       <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s74kb1142-s.jpg" alt="Dsquared2 Track Denim Pant">
       <div class="label">
         <span class="code">Dsquared2 · Denim</span>
         <div class="name">Track Denim Pant</div>
         <div class="price">¥132,000 <small>tax incl.</small></div>
+        <button class="add-btn">Add to Cart</button>
       </div>
-    </a>
-    <a class="col-card cc-7" href="https://item.rakuten.co.jp/studio-route134/bob133074721720/" target="_blank" rel="noopener">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/02003077/imgrc0131663464.jpg" alt="Bob KOON Knit Cardigan">
+    </article>
+    <article class="col-card cc-7" data-id="amr102xmjt003" data-brand="Amiri" data-name="Monogram Crew Tee" data-price="70400" data-image="https://shop.r10s.jp/studio-route134/cabinet/image/aloha/amr102xmjt003-1.jpg">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/aloha/amr102xmjt003-1.jpg" alt="Amiri Monogram Crew Tee">
       <div class="label">
-        <span class="code">Bob · Knit</span>
-        <div class="name">KOON Denim-Repair Cardigan</div>
-        <div class="price">¥37,400 <small>tax incl.</small></div>
+        <span class="code">Amiri · Jersey</span>
+        <div class="name">Monogram Crew Tee</div>
+        <div class="price">¥70,400 <small>tax incl.</small></div>
+        <button class="add-btn">Add to Cart</button>
       </div>
-    </a>
-    <a class="col-card cc-8" href="https://item.rakuten.co.jp/studio-route134/cg565c210306/" target="_blank" rel="noopener">
-      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/aloha/cg565c210306-1.jpg" alt="Double-Strap Recovery Sandals">
+    </article>
+    <article class="col-card cc-8" data-id="aut180wwlwrm01" data-brand="Autry" data-name="Reelwind Suede Sneakers" data-price="35200" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/aut180wwlwrm01-t.jpg">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/aut180wwlwrm01-t.jpg" alt="Autry Reelwind Suede Sneakers">
       <div class="label">
-        <span class="code">Coastal · Footwear</span>
-        <div class="name">Double-Strap Sandals</div>
-        <div class="price">¥7,480 <small>tax incl.</small></div>
+        <span class="code">Autry · Footwear</span>
+        <div class="name">Reelwind Suede Sneakers</div>
+        <div class="price">¥35,200 <small>tax incl.</small></div>
+        <button class="add-btn">Add to Cart</button>
       </div>
-    </a>
+    </article>
   </div>
 </section>
 
@@ -1449,30 +1675,33 @@
     <h2>海辺の、<em>スイムピース。</em></h2>
   </div>
   <div class="resort-strip-grid stagger">
-    <a class="resort-card" href="https://item.rakuten.co.jp/studio-route134/amr102swtk1006/" target="_blank" rel="noopener">
+    <article class="resort-card" data-id="amr102swtk1006" data-brand="Amiri" data-name="All-Over Logo Swim Shorts" data-price="88000" data-image="https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/imgrc0170327001.jpg">
       <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/imgrc0170327001.jpg" alt="Amiri Swim Shorts"></div>
       <div class="rc-text">
         <div class="rc-brand">Amiri</div>
         <div class="rc-name">All-Over Logo Swim Shorts</div>
         <div class="rc-price">¥88,000 <small>tax incl.</small></div>
+        <button class="add-btn">Add to Cart</button>
       </div>
-    </a>
-    <a class="resort-card" href="https://item.rakuten.co.jp/studio-route134/bab12748778622n-b/" target="_blank" rel="noopener">
+    </article>
+    <article class="resort-card" data-id="bab12748778622n-b" data-brand="Barba" data-name="Handcrafted Swim Shorts" data-price="25850" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/bab12748778622n-bs.jpg">
       <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/bab12748778622n-bs.jpg" alt="Barba Swim Shorts"></div>
       <div class="rc-text">
         <div class="rc-brand">Barba</div>
         <div class="rc-name">Handcrafted Swim Shorts</div>
         <div class="rc-price">¥25,850 <small>tax incl.</small></div>
+        <button class="add-btn">Add to Cart</button>
       </div>
-    </a>
-    <a class="resort-card" href="https://item.rakuten.co.jp/studio-route134/bob133072713312/" target="_blank" rel="noopener">
+    </article>
+    <article class="resort-card" data-id="bob133072713312" data-brand="Bob" data-name="Beach Print Swim Shorts" data-price="14300" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/bob133072713312-sale.jpg">
       <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/bob133072713312-sale.jpg" alt="Bob Swim Shorts"></div>
       <div class="rc-text">
         <div class="rc-brand">Bob</div>
         <div class="rc-name">Beach Print Swim Shorts</div>
         <div class="rc-price">¥14,300 <small>tax incl.</small></div>
+        <button class="add-btn">Add to Cart</button>
       </div>
-    </a>
+    </article>
   </div>
 </section>
 
@@ -1517,7 +1746,7 @@
       </div>
     </a>
     <a href="#" class="store">
-      <img src="photos/aoyama-store-from-postcard.jpg" alt="Studio Route 134 Aoyama storefront">
+      <img src="photos/aoyama-1f.jpg" alt="Studio Route 134 Aoyama 1F interior">
       <div class="store-content">
         <div>
           <div class="roman">Concept</div>
@@ -1585,7 +1814,106 @@
   </div>
 </footer>
 
+<!-- ============ CART DRAWER ============ -->
+<div class="cart-scrim" data-cart-scrim></div>
+<aside class="cart-drawer" data-cart-drawer aria-label="Shopping cart">
+  <div class="cd-head">
+    <h3>Your Cart</h3>
+    <button class="cd-close" data-cart-close aria-label="Close cart">×</button>
+  </div>
+  <div class="cd-body" data-cart-body>
+    <div class="cd-empty">カートはまだ空です。<br>お気に入りの一着を、ここに。<small>Add to Cart</small></div>
+  </div>
+  <div class="cd-foot">
+    <div class="cd-total"><span>Subtotal</span><span class="cd-total-amount" data-cart-total>¥0</span></div>
+    <button class="cd-checkout" data-cart-checkout disabled>Checkout</button>
+    <div class="cd-note">Shopify統合準備中 · ご案内は近日</div>
+  </div>
+</aside>
+
 <script>
+  // === Cart (Shopify Buy Button 統合前提の骨組み) ===
+  const CART_KEY = 'sr134_cart_v1';
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => r.querySelectorAll(s);
+  const yen = n => '¥' + n.toLocaleString('en-US');
+  function getCart() { try { return JSON.parse(localStorage.getItem(CART_KEY) || '[]'); } catch { return []; } }
+  function saveCart(items) { localStorage.setItem(CART_KEY, JSON.stringify(items)); renderCart(); }
+  function addToCart(p) {
+    const items = getCart();
+    const ex = items.find(i => i.id === p.id);
+    if (ex) ex.qty++; else items.push({ ...p, qty: 1 });
+    saveCart(items); openCart();
+  }
+  function changeQty(id, delta) {
+    const items = getCart();
+    const it = items.find(i => i.id === id);
+    if (!it) return;
+    it.qty = Math.max(0, it.qty + delta);
+    saveCart(items.filter(i => i.qty > 0));
+  }
+  function removeFromCart(id) { saveCart(getCart().filter(i => i.id !== id)); }
+  function openCart() { $('[data-cart-drawer]').classList.add('open'); $('[data-cart-scrim]').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeCart() { $('[data-cart-drawer]').classList.remove('open'); $('[data-cart-scrim]').classList.remove('open'); document.body.style.overflow = ''; }
+  function renderCart() {
+    const items = getCart();
+    const count = items.reduce((s, i) => s + i.qty, 0);
+    const total = items.reduce((s, i) => s + i.price * i.qty, 0);
+    const badge = $('[data-cart-count]');
+    badge.textContent = count || '';
+    badge.classList.toggle('active', count > 0);
+    $('[data-cart-total]').textContent = yen(total);
+    $('[data-cart-checkout]').disabled = count === 0;
+    const body = $('[data-cart-body]');
+    if (!items.length) {
+      body.innerHTML = '<div class="cd-empty">カートはまだ空です。<br>お気に入りの一着を、ここに。<small>Add to Cart</small></div>';
+      return;
+    }
+    body.innerHTML = '<div class="cd-items">' + items.map(i => `
+      <div class="cd-item">
+        <div class="cd-item-visual"><img src="${i.image}" alt=""></div>
+        <div class="cd-item-info">
+          <div class="cd-item-brand">${i.brand}</div>
+          <div class="cd-item-name">${i.name}</div>
+          <div class="cd-item-qty">
+            <button class="cd-qty-btn" data-qty="-1" data-id="${i.id}">−</button>
+            <span>${i.qty}</span>
+            <button class="cd-qty-btn" data-qty="1" data-id="${i.id}">+</button>
+          </div>
+        </div>
+        <div class="cd-item-price">
+          <span>${yen(i.price * i.qty)}</span>
+          <button class="cd-item-remove" data-remove="${i.id}">Remove</button>
+        </div>
+      </div>
+    `).join('') + '</div>';
+  }
+  document.addEventListener('click', (e) => {
+    const add = e.target.closest('.add-btn');
+    if (add) {
+      e.preventDefault(); e.stopPropagation();
+      const c = add.closest('[data-id]'); if (!c) return;
+      addToCart({
+        id: c.dataset.id,
+        brand: c.dataset.brand,
+        name: c.dataset.name,
+        price: +c.dataset.price,
+        image: c.dataset.image,
+      });
+      add.classList.add('added'); add.textContent = 'Added ✓';
+      setTimeout(() => { add.classList.remove('added'); add.textContent = 'Add to Cart'; }, 1400);
+      return;
+    }
+    if (e.target.closest('[data-cart-toggle]')) { e.preventDefault(); openCart(); return; }
+    if (e.target.closest('[data-cart-close]') || e.target.matches('[data-cart-scrim]')) { closeCart(); return; }
+    const qb = e.target.closest('[data-qty]');
+    if (qb) { changeQty(qb.dataset.id, +qb.dataset.qty); return; }
+    const rm = e.target.closest('[data-remove]');
+    if (rm) { removeFromCart(rm.dataset.remove); return; }
+    if (e.target.closest('[data-cart-checkout]')) { alert('Shopify統合後、ここでチェックアウトへ遷移します。'); return; }
+  });
+  renderCart();
+
   const header = document.getElementById('header');
   const parallaxEls = document.querySelectorAll('.parallax');
   let lastScroll = 0, ticking = false;
