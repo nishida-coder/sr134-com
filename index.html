@@ -1012,6 +1012,7 @@
     animation: kenburns-slow 50s ease-in-out infinite alternate;
   }
   .store:hover img { transform: scale(1.07); animation-play-state: paused; }
+  .store.store-landscape img { animation: kenburns-slow 80s ease-in-out infinite alternate; }
   .store::after {
     content: '';
     position: absolute;
@@ -1745,8 +1746,8 @@
         <div class="visit">Visit →</div>
       </div>
     </a>
-    <a href="#" class="store">
-      <img src="photos/aoyama-1f.jpg" alt="Studio Route 134 Aoyama 1F interior">
+    <a href="#" class="store store-landscape">
+      <img src="photos/aoyama-1f.jpg" alt="Studio Route 134 Aoyama 1F interior" style="object-position: 55% center;">
       <div class="store-content">
         <div>
           <div class="roman">Concept</div>
