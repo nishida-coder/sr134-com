@@ -171,7 +171,6 @@ function renderCatalog(){
       <div class="pv"><img referrerpolicy="no-referrer" src="${p.image}" alt="${p.brand} ${p.name}"></div>
       <div class="pb">${p.brand}</div>
       <div class="pn">${p.name}</div>
-      <div class="pp">${yen(p.price)}</div>
     </a>`).join('');
   $('[data-count]').textContent = `${list.length} products${CURRENT_FILTER ? ' · ' + CURRENT_FILTER : ''}`;
 }

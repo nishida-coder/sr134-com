@@ -458,12 +458,12 @@
     display: inline-block;
     font-weight: 500;
   }
-  .col-card .label .price {
+  .col-card .label .cat {
     font-family: 'Playfair Display', serif;
     font-size: 20px;
     color: var(--surface);
-    font-feature-settings: 'lnum' 1;
     letter-spacing: 0;
+    line-height: 1.15;
   }
   .view-all-wrap { text-align: center; margin-top: 64px; }
   .view-all-link {
@@ -1741,7 +1741,6 @@
       <div class="rc-text">
         <div class="rc-brand">Amiri</div>
         <div class="rc-name">All-Over Logo Swim Shorts</div>
-        <div class="rc-price">¥88,000 <small>tax incl.</small></div>
       </div>
     </a>
     <a class="resort-card" href="product.html?id=bab12748778622n-b">
@@ -1749,7 +1748,6 @@
       <div class="rc-text">
         <div class="rc-brand">Barba</div>
         <div class="rc-name">Handcrafted Swim Shorts</div>
-        <div class="rc-price">¥25,850 <small>tax incl.</small></div>
       </div>
     </a>
     <a class="resort-card" href="product.html?id=bob133072713312">
@@ -1757,7 +1755,6 @@
       <div class="rc-text">
         <div class="rc-brand">Bob</div>
         <div class="rc-name">Beach Print Swim Shorts</div>
-        <div class="rc-price">¥14,300 <small>tax incl.</small></div>
       </div>
     </a>
   </div>
@@ -1976,8 +1973,8 @@
         <a class="col-card cc-${cc}" data-brand="${p.brand}" href="product.html?id=${p.id}">
           <img referrerpolicy="no-referrer" src="${p.image}" alt="${p.brand} ${p.name}">
           <div class="label">
-            <span class="code">${p.brand} · ${p.category}</span>
-            <div class="price">${p.price ? '¥' + p.price.toLocaleString('en-US') : ''}</div>
+            <span class="code">${p.brand}</span>
+            <div class="cat">${p.category}</div>
           </div>
         </a>`;
     }).join('');
