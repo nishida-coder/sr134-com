@@ -96,6 +96,29 @@
   .p-chip:hover { border-color: var(--gold-deep); color: var(--gold-deep); }
   .p-chip.selected { background: var(--navy); color: var(--surface); border-color: var(--navy); }
   .p-chip[data-color] { min-width: 84px; }
+  .p-chip.unavailable {
+    color: var(--ink-soft); background: var(--bg-2); cursor: not-allowed;
+    text-decoration: line-through;
+    position: relative; opacity: 0.6;
+    pointer-events: none;
+  }
+  .p-chip.unavailable::after {
+    content: '×'; position: absolute; top: -6px; right: -6px;
+    background: var(--ink-soft); color: var(--surface);
+    width: 16px; height: 16px; border-radius: 50%;
+    font-size: 11px; display: flex; align-items: center; justify-content: center;
+    line-height: 1;
+  }
+  .size-guide-link {
+    float: right; font-size: 10.5px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-deep); text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .size-guide-link:hover { color: var(--navy); }
+  .p-size-note {
+    margin-top: 12px; font-size: 11px; color: var(--ink-soft);
+    font-family: 'Noto Serif JP', serif; line-height: 1.7;
+  }
 
   .p-actions { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
   .p-add {
@@ -204,8 +227,9 @@
       <div class="p-chips" data-p-colors></div>
     </div>
     <div class="p-option">
-      <div class="p-option-label">Size <span data-p-size-selected></span></div>
+      <div class="p-option-label">Size <span data-p-size-selected></span> <a href="size-guide.html" class="size-guide-link">サイズガイド →</a></div>
       <div class="p-chips" data-p-sizes></div>
+      <div class="p-size-note" data-p-size-note style="display:none">×印は在庫切れまたはこのモデルで展開のないサイズです。</div>
     </div>
 
     <div class="p-actions">
@@ -339,10 +363,27 @@ document.addEventListener('click', (e) => {
       colorSel.textContent = selectedColor;
     }));
   }
-  // Size chips
+  // Size chips — show canonical size universe per category; × for unavailable
+  const SIZE_UNIVERSE = {
+    'Denim': ['44','46','48','50','52'],
+    'Pants': ['44','46','48','50','52'],
+    'Sneakers': ['24','25','26','27','28','29'],
+    'Sandals': ['24','25','26','27','28','29'],
+    'Boots': ['24','25','26','27','28','29'],
+    'Bag': ['One Size'], 'Hat': ['One Size'], 'Belt': ['One Size'],
+    'Scarf': ['One Size'], 'Accessory': ['One Size'], 'Eyewear': ['One Size'],
+    'Selection': ['One Size'],
+  };
+  const universe = SIZE_UNIVERSE[p.category] || ['XS','S','M','L','XL','XXL'];
+  const available = new Set(p.sizes || []);
   const sizeSel = $('[data-p-size-selected]');
   let selectedSize = null;
-  $('[data-p-sizes]').innerHTML = (p.sizes || []).map(s => `<button class="p-chip" data-size="${s}">${s}</button>`).join('');
+  const hasUnavailable = universe.some(s => !available.has(s));
+  if (hasUnavailable) $('[data-p-size-note]').style.display = '';
+  $('[data-p-sizes]').innerHTML = universe.map(s => {
+    const ok = available.has(s);
+    return `<button class="p-chip ${ok?'':'unavailable'}" ${ok?`data-size="${s}"`:'disabled aria-disabled="true"'}>${s}</button>`;
+  }).join('');
   $$('[data-size]').forEach(btn => btn.addEventListener('click', () => {
     $$('[data-size]').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
