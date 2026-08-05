@@ -146,14 +146,48 @@
     z-index: 1;
   }
   .hero .window img {
+    position: absolute; inset: 0;
     width: 100%; height: 100%;
     object-fit: cover;
     filter: saturate(0.88) brightness(0.97);
-    animation: kenburns 30s ease-in-out infinite alternate;
+  }
+  .hero .window .slide {
+    opacity: 0;
+    animation: heroFade 21s infinite ease-in-out, kenburns 21s infinite alternate;
+  }
+  .hero .window .slide:nth-child(1) { animation-delay: 0s, 0s; }
+  .hero .window .slide:nth-child(2) { animation-delay: 7s, 7s; }
+  .hero .window .slide:nth-child(3) { animation-delay: 14s, 14s; }
+  @keyframes heroFade {
+    0% { opacity: 0; }
+    4% { opacity: 1; }
+    30% { opacity: 1; }
+    38% { opacity: 0; }
+    100% { opacity: 0; }
   }
   @keyframes kenburns {
-    from { transform: scale(1.04); }
-    to { transform: scale(1.10); }
+    0% { transform: scale(1.04); }
+    50% { transform: scale(1.10); }
+    100% { transform: scale(1.04); }
+  }
+  .hero-dots {
+    position: absolute;
+    z-index: 5;
+    bottom: 32px; left: 0; right: 0;
+    display: flex; justify-content: center; gap: 12px;
+  }
+  .hero-dots .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(247,245,239,0.4);
+    animation: dotHi 21s infinite;
+  }
+  .hero-dots .dot:nth-child(1) { animation-delay: 0s; }
+  .hero-dots .dot:nth-child(2) { animation-delay: 7s; }
+  .hero-dots .dot:nth-child(3) { animation-delay: 14s; }
+  @keyframes dotHi {
+    0%, 4%, 33% { background: var(--gold-light); }
+    34%, 100% { background: rgba(247,245,239,0.4); }
   }
   .hero .window::after {
     content: '';
@@ -501,6 +535,53 @@
     color: var(--ink-2);
     margin-bottom: 38px;
     max-width: 460px;
+  }
+
+  /* ============ NEWS — 6 cards grid ============ */
+  .news { background: var(--bg); padding-top: var(--space-section); padding-bottom: calc(var(--space-section) - 24px); }
+  .news-head { max-width: 900px; padding-top: 20px; margin-bottom: 44px; position: relative; }
+  .news-head .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 26px;
+  }
+  .news-card {
+    display: block;
+    transition: transform .5s var(--ease);
+  }
+  .news-card:hover { transform: translateY(-3px); }
+  .news-card .nc-visual {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background: var(--bg-2);
+    margin-bottom: 16px;
+  }
+  .news-card .nc-visual img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.4s var(--ease);
+  }
+  .news-card:hover .nc-visual img { transform: scale(1.04); }
+  .news-card .nc-date {
+    font-size: 10.5px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .news-card .nc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    line-height: 1.24;
+    color: var(--ink);
   }
 
   /* ============ LOOKBOOK — 3 large editorial images ============ */
@@ -1136,6 +1217,7 @@
     .cc-1, .cc-2, .cc-3, .cc-4, .cc-5, .cc-6, .cc-7, .cc-8 { grid-column: span 6; height: 380px; }
     .lookbook-grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 22px; }
     .lb-card { height: 420px; }
+    .news-grid { grid-template-columns: 1fr 1fr; gap: 24px 18px; }
     .resort-strip-head { padding: 0 20px; }
     .featured { grid-template-columns: 1fr; gap: 56px; }
     .heritage { grid-template-columns: 1fr; gap: 56px; }
@@ -1182,21 +1264,25 @@
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="window">
-    <img src="photos/hayama-store.jpg" alt="Studio Route 134 Hayama — sunset terrace with palms and flags">
+    <img class="slide" src="photos/hayama-store.jpg" alt="Studio Route 134 Hayama terrace">
+    <img class="slide" src="photos/enoshima-outside-2.jpg" alt="Enoshima view">
+    <img class="slide" src="photos/enoshima-store.jpg" alt="Enoshima store interior">
   </div>
   <div class="awning">
     <div class="awning-body"></div>
   </div>
   <div class="hero-masthead">
     <div class="mh-l"><span>Studio Route 134</span><span class="mh-rule"></span><span>Est. 2007</span></div>
-    <div class="mh-r"><span>Hayama · Aoyama · Enoshima</span><span class="mh-rule"></span><span>No. XVII</span></div>
+    <div class="mh-r"><span>Hayama · Aoyama · Enoshima</span></div>
   </div>
   <div class="hero-content">
     <div class="hero-eyebrow">2026 Spring &amp; Summer Collection</div>
     <div class="hero-ctas">
       <a href="#collection" class="btn btn-primary">View the Collection <span class="arrow">→</span></a>
-      <a href="#stores" class="hero-link">Visit the Stores</a>
     </div>
+  </div>
+  <div class="hero-dots">
+    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
   </div>
 </section>
 
@@ -1221,21 +1307,44 @@
   </div>
 </section>
 
-<!-- ============ INTRO ============ -->
-<section class="intro">
-  <div class="inner reveal">
-    <div class="eyebrow">Studio Route134</div>
-    <h2>国道134号、<em>海沿いのメインストリート。</em></h2>
+<!-- ============ NEWS ============ -->
+<section class="news" id="news">
+  <div class="news-head reveal">
+    <div class="eyebrow">News</div>
+  </div>
+  <div class="news-grid stagger">
+    <a class="news-card" href="#">
+      <div class="nc-visual"><img src="photos/enoshima-before.jpg" alt=""></div>
+      <div class="nc-date">2026.07.20 — Enoshima</div>
+      <div class="nc-title">New Store, Opening Soon</div>
+    </a>
+    <a class="news-card" href="https://item.rakuten.co.jp/studio-route134/amr102swtk1006/" target="_blank" rel="noopener">
+      <div class="nc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/imgrc0170327001.jpg" alt=""></div>
+      <div class="nc-date">2026.07.15 — Amiri</div>
+      <div class="nc-title">SS 26 Collection Arrived</div>
+    </a>
+    <a class="news-card" href="#">
+      <div class="nc-visual"><img src="photos/hayama-store.jpg" alt=""></div>
+      <div class="nc-date">2026.07.10 — Hayama</div>
+      <div class="nc-title">Summer Hours Begin</div>
+    </a>
+    <a class="news-card" href="https://item.rakuten.co.jp/studio-route134/d2102s74kb1142/" target="_blank" rel="noopener">
+      <div class="nc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s74kb1142-s.jpg" alt=""></div>
+      <div class="nc-date">2026.07.05 — Dsquared2</div>
+      <div class="nc-title">Track Denim Story</div>
+    </a>
+    <a class="news-card" href="#">
+      <div class="nc-visual"><img src="photos/hayama-beach-2.jpg" alt=""></div>
+      <div class="nc-date">2026.06.28 — Beach</div>
+      <div class="nc-title">Season by the Sea</div>
+    </a>
+    <a class="news-card" href="https://item.rakuten.co.jp/studio-route134/bob133074721720/" target="_blank" rel="noopener">
+      <div class="nc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/02003077/imgrc0131663464.jpg" alt=""></div>
+      <div class="nc-date">2026.06.20 — Bob</div>
+      <div class="nc-title">KOON Denim-Repair Series</div>
+    </a>
   </div>
 </section>
-
-<!-- ============ MARQUEE ============ -->
-<div class="marquee">
-  <div class="marquee-track">
-    <span>Maison Margiela</span><span>MM6</span><span>Marni</span><span>Moncler</span><span>Dsquared2</span><span>Y's</span><span>Mihara Yasuhiro</span><span>Ballantyne</span><span>Autry</span>
-    <span>Maison Margiela</span><span>MM6</span><span>Marni</span><span>Moncler</span><span>Dsquared2</span><span>Y's</span><span>Mihara Yasuhiro</span><span>Ballantyne</span><span>Autry</span>
-  </div>
-</div>
 
 <!-- ============ COLLECTION ============ -->
 <section id="collection">
@@ -1313,22 +1422,15 @@
 
 <!-- ============ LOOKBOOK ============ -->
 <section class="lookbook">
-  <div class="section-head reveal">
-    <div class="eyebrow">Lookbook</div>
-    <h2>Editorial <em>SS 26.</em></h2>
-  </div>
   <div class="lookbook-grid stagger">
     <a href="#" class="lb-card lb-tall">
-      <img src="photos/hayama-store.jpg" alt="Hayama flagship dusk">
-      <div class="lb-caption"><span class="lb-date">2026.07 · Hayama</span><span class="lb-title">Sunset at the Terrace</span></div>
+      <img src="photos/enoshima-inside.jpg" alt="">
     </a>
     <a href="#" class="lb-card">
-      <img src="photos/enoshima-outside-2.jpg" alt="Enoshima view">
-      <div class="lb-caption"><span class="lb-date">2026.06 · Enoshima</span><span class="lb-title">The Island in View</span></div>
+      <img src="photos/hayama-beach-1.jpg" alt="">
     </a>
     <a href="#" class="lb-card">
-      <img src="photos/hayama-beach-1.jpg" alt="Hayama beach sunset">
-      <div class="lb-caption"><span class="lb-date">2026.05 · Beach</span><span class="lb-title">Golden Hour</span></div>
+      <img src="photos/postcard.jpg" alt="">
     </a>
   </div>
 </section>
@@ -1367,23 +1469,10 @@
   </div>
 </section>
 
-<!-- ============ HERITAGE ============ -->
-<section class="heritage" id="heritage">
-  <div class="heritage-visual reveal">
-    <img class="parallax" data-parallax="0.10" src="photos/enoshima-outside-2.jpg" alt="View of Enoshima island from the terrace">
-  </div>
-  <div class="heritage-text reveal">
-    <div class="eyebrow">Est. 2007 · Hayama, Shonan</div>
-    <h2>藤沢の一室から、<em>いまへ。</em></h2>
-    <div class="heritage-signature">T. TORY<small>Founder / Buyer</small></div>
-  </div>
-</section>
-
 <!-- ============ BRANDS ============ -->
 <section id="brands">
   <div class="section-head reveal">
-    <div class="eyebrow">Houses &amp; Maisons</div>
-    <h2>世界の20メゾンを、<em>ひとつの通りに。</em></h2>
+    <h2>Our <em>Brands.</em></h2>
   </div>
   <div class="brands-grid stagger">
     <div class="brand-cell"><span class="bnew">New</span><div class="bname">Maison Margiela</div><div class="bcountry">Paris, France</div></div>
@@ -1401,46 +1490,11 @@
   </div>
 </section>
 
-<!-- ============ JOURNAL ============ -->
-<section class="journal" id="journal">
-  <div class="section-head reveal">
-    <div class="eyebrow">Route 134 Journal</div>
-    <h2>メゾンから届く、<em>静かな便り。</em></h2>
-  </div>
-  <div class="journal-grid stagger">
-    <article class="journal-card feat">
-      <div class="jc-visual">
-        <img src="photos/enoshima-inside.jpg" alt="">
-        <span class="jc-tag">Editorial</span>
-      </div>
-      <div class="jc-date">2026.07.20 — Marni Resort 26</div>
-      <h3 class="jc-title">陽に褪せた色。</h3>
-    </article>
-    <article class="journal-card">
-      <div class="jc-visual">
-        <img src="photos/enoshima-before.jpg" alt="">
-        <span class="jc-tag">Store</span>
-      </div>
-      <div class="jc-date">2026.07.02 — Enoshima</div>
-      <h3 class="jc-title">開店前の、静かな一階。</h3>
-    </article>
-    <article class="journal-card">
-      <div class="jc-visual">
-        <img src="photos/hayama-beach-2.jpg" alt="">
-        <span class="jc-tag">Journal</span>
-      </div>
-      <div class="jc-date">2026.06.24 — Hayama</div>
-      <h3 class="jc-title">籐椅子のある午後。</h3>
-    </article>
-  </div>
-  <div class="journal-more"><a href="#">All Stories →</a></div>
-</section>
 
 <!-- ============ STORES ============ -->
 <section class="stores" id="stores">
   <div class="section-head reveal">
     <div class="eyebrow">Our Stores</div>
-    <h2>湘南の海と、<em>青山の路地に。</em></h2>
   </div>
   <div class="store-strip stagger">
     <a href="#" class="store">
