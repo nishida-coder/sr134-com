@@ -428,6 +428,9 @@
   .cc-3 { grid-column: span 4; height: 400px; }
   .cc-4 { grid-column: span 4; height: 400px; }
   .cc-5 { grid-column: span 4; height: 400px; }
+  .cc-6 { grid-column: span 4; height: 400px; }
+  .cc-7 { grid-column: span 4; height: 400px; }
+  .cc-8 { grid-column: span 4; height: 400px; }
 
   /* ============ FEATURED — two-column edit ============ */
   .featured {
@@ -499,6 +502,73 @@
     margin-bottom: 38px;
     max-width: 460px;
   }
+
+  /* ============ LOOKBOOK — 3 large editorial images ============ */
+  .lookbook { background: var(--bg); }
+  .lookbook-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-rows: 620px;
+    gap: 22px;
+  }
+  .lb-card {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    background: var(--bg-2);
+  }
+  .lb-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.6s var(--ease);
+    animation: kenburns-slow 42s ease-in-out infinite alternate;
+  }
+  .lb-card:hover img { transform: scale(1.05); animation-play-state: paused; }
+  .lb-card::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 55%, rgba(17,32,59,0.68));
+    pointer-events: none;
+  }
+  .lb-caption {
+    position: absolute;
+    bottom: 24px; left: 26px; right: 26px;
+    color: var(--surface);
+    z-index: 2;
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .lb-date {
+    font-size: 10.5px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+  .lb-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    line-height: 1.16;
+  }
+  .resort-strip-head {
+    padding: 0 56px;
+    margin-bottom: 48px;
+    position: relative;
+    max-width: 900px;
+    padding-top: 26px;
+  }
+  .resort-strip-head .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .resort-strip-head h2 {
+    font-size: clamp(24px, 1.4vw + 14px, 34px);
+    line-height: 1.22;
+  }
+  .resort-strip-head h2 em { font-style: normal; color: var(--gold-deep); }
 
   /* ============ RESORT STRIP — 3 product cards ============ */
   .resort-strip {
@@ -1063,7 +1133,10 @@
   /* ============ RESPONSIVE ============ */
   @media (max-width: 1100px) {
     .collection-grid { grid-template-columns: repeat(6, 1fr); }
-    .cc-1, .cc-2, .cc-3, .cc-4, .cc-5 { grid-column: span 6; height: 380px; }
+    .cc-1, .cc-2, .cc-3, .cc-4, .cc-5, .cc-6, .cc-7, .cc-8 { grid-column: span 6; height: 380px; }
+    .lookbook-grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 22px; }
+    .lb-card { height: 420px; }
+    .resort-strip-head { padding: 0 20px; }
     .featured { grid-template-columns: 1fr; gap: 56px; }
     .heritage { grid-template-columns: 1fr; gap: 56px; }
     .resort-strip-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -1152,8 +1225,7 @@
 <section class="intro">
   <div class="inner reveal">
     <div class="eyebrow">Studio Route134</div>
-    <h2>国道134号は、湘南・鎌倉の<br>海沿いを走る<em>メインストリート</em>。</h2>
-    <p>小さな倉庫から始まった一軒のセレクトメゾン。<br>それが私たち Studio Route134。<br>いまは海を望める葉山と江ノ島、<br>そして、東京・青山にセレクトメゾンを構える。</p>
+    <h2>国道134号、<em>海沿いのメインストリート。</em></h2>
   </div>
 </section>
 
@@ -1212,25 +1284,61 @@
         <div class="price">¥35,200 <small>tax incl.</small></div>
       </div>
     </a>
+    <a class="col-card cc-6" href="https://item.rakuten.co.jp/studio-route134/d2102s74kb1142/" target="_blank" rel="noopener">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s74kb1142-s.jpg" alt="Dsquared2 Track Denim Pant">
+      <div class="label">
+        <span class="code">Dsquared2 · Denim</span>
+        <div class="name">Track Denim Pant</div>
+        <div class="price">¥132,000 <small>tax incl.</small></div>
+      </div>
+    </a>
+    <a class="col-card cc-7" href="https://item.rakuten.co.jp/studio-route134/bob133074721720/" target="_blank" rel="noopener">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/02003077/imgrc0131663464.jpg" alt="Bob KOON Knit Cardigan">
+      <div class="label">
+        <span class="code">Bob · Knit</span>
+        <div class="name">KOON Denim-Repair Cardigan</div>
+        <div class="price">¥37,400 <small>tax incl.</small></div>
+      </div>
+    </a>
+    <a class="col-card cc-8" href="https://item.rakuten.co.jp/studio-route134/cg565c210306/" target="_blank" rel="noopener">
+      <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/aloha/cg565c210306-1.jpg" alt="Double-Strap Recovery Sandals">
+      <div class="label">
+        <span class="code">Coastal · Footwear</span>
+        <div class="name">Double-Strap Sandals</div>
+        <div class="price">¥7,480 <small>tax incl.</small></div>
+      </div>
+    </a>
   </div>
 </section>
 
-<!-- ============ FEATURED ============ -->
-<section class="featured" id="featured">
-  <div class="featured-visual reveal">
-    <img class="parallax" data-parallax="0.12" src="photos/enoshima-store.jpg" alt="Enoshima store interior">
-    <div class="tag">Editor&rsquo;s Pick</div>
+<!-- ============ LOOKBOOK ============ -->
+<section class="lookbook">
+  <div class="section-head reveal">
+    <div class="eyebrow">Lookbook</div>
+    <h2>Editorial <em>SS 26.</em></h2>
   </div>
-  <div class="featured-text reveal">
-    <div class="eyebrow">Resort Edit · SS 26</div>
-    <h2>海辺で纏う、<br><em>今季のリゾートピース。</em></h2>
-    <p>海辺のライフスタイルに寄り添う、Amiri・Dsquared2・Bob・Barba のスイムピース。オーナーバイヤーの目利きで束ねた、この夏の主役たち。</p>
-    <a href="https://item.rakuten.co.jp/studio-route134/amr102swtk1006/" target="_blank" rel="noopener" class="btn btn-ink">View the Resort Edit <span class="arrow">→</span></a>
+  <div class="lookbook-grid stagger">
+    <a href="#" class="lb-card lb-tall">
+      <img src="photos/hayama-store.jpg" alt="Hayama flagship dusk">
+      <div class="lb-caption"><span class="lb-date">2026.07 · Hayama</span><span class="lb-title">Sunset at the Terrace</span></div>
+    </a>
+    <a href="#" class="lb-card">
+      <img src="photos/enoshima-outside-2.jpg" alt="Enoshima view">
+      <div class="lb-caption"><span class="lb-date">2026.06 · Enoshima</span><span class="lb-title">The Island in View</span></div>
+    </a>
+    <a href="#" class="lb-card">
+      <img src="photos/hayama-beach-1.jpg" alt="Hayama beach sunset">
+      <div class="lb-caption"><span class="lb-date">2026.05 · Beach</span><span class="lb-title">Golden Hour</span></div>
+    </a>
   </div>
 </section>
 
 <!-- ============ RESORT EDIT STRIP ============ -->
 <section class="resort-strip">
+  <div class="resort-strip-head reveal">
+    <div class="eyebrow">Resort Edit · SS 26</div>
+    <h2>海辺の、<em>スイムピース。</em></h2>
+  </div>
   <div class="resort-strip-grid stagger">
     <a class="resort-card" href="https://item.rakuten.co.jp/studio-route134/amr102swtk1006/" target="_blank" rel="noopener">
       <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/imgrc0170327001.jpg" alt="Amiri Swim Shorts"></div>
@@ -1267,9 +1375,7 @@
   <div class="heritage-text reveal">
     <div class="eyebrow">Est. 2007 · Hayama, Shonan</div>
     <h2>藤沢の一室から、<em>いまへ。</em></h2>
-    <p>海沿いの一本道、国道134号。私たちは、その道の名を店に刻みました。</p>
     <div class="heritage-signature">T. TORY<small>Founder / Buyer</small></div>
-    <a href="#" class="btn btn-ink">Read Our Story <span class="arrow">→</span></a>
   </div>
 </section>
 
@@ -1307,27 +1413,24 @@
         <img src="photos/enoshima-inside.jpg" alt="">
         <span class="jc-tag">Editorial</span>
       </div>
-      <div class="jc-date">2026.04.15 — By T. Torii</div>
-      <h3 class="jc-title">陽に褪せた色 —— Marni Resort 26 が描く、地中海のくすみ。</h3>
-      <p class="jc-excerpt">ミラノのアトリエから届いた新作を、オーナーバイヤー視点から解きほぐします。今季の見どころとは。</p>
+      <div class="jc-date">2026.07.20 — Marni Resort 26</div>
+      <h3 class="jc-title">陽に褪せた色。</h3>
     </article>
     <article class="journal-card">
       <div class="jc-visual">
-        <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=85" alt="">
+        <img src="photos/enoshima-before.jpg" alt="">
         <span class="jc-tag">Store</span>
       </div>
-      <div class="jc-date">2026.04.02 — Hayama</div>
-      <h3 class="jc-title">葉山店、籐椅子のある午後。</h3>
-      <p class="jc-excerpt">海を目の前に望む二階の店。常連のお客様とともに刻んできた、静かな日々。</p>
+      <div class="jc-date">2026.07.02 — Enoshima</div>
+      <h3 class="jc-title">開店前の、静かな一階。</h3>
     </article>
     <article class="journal-card">
       <div class="jc-visual">
-        <img referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800&q=85" alt="">
-        <span class="jc-tag">Craft</span>
+        <img src="photos/hayama-beach-2.jpg" alt="">
+        <span class="jc-tag">Journal</span>
       </div>
-      <div class="jc-date">2026.03.24 — Scotland</div>
-      <h3 class="jc-title">Ballantyne、100年を越える糸の物語。</h3>
-      <p class="jc-excerpt">スコットランドのニットハウスが1921年から守り続ける、フルファッション技法の現在地。</p>
+      <div class="jc-date">2026.06.24 — Hayama</div>
+      <h3 class="jc-title">籐椅子のある午後。</h3>
     </article>
   </div>
   <div class="journal-more"><a href="#">All Stories →</a></div>
@@ -1383,7 +1486,6 @@
 <section class="newsletter reveal">
   <div class="eyebrow">Newsletter</div>
   <h2>Letters from <em>the coast.</em></h2>
-  <p>会員様限定のコレクション先行案内、葉山ラウンジへの招待、<br>ひと月に一度、オーナー自ら綴るジャーナル。</p>
   <form onsubmit="event.preventDefault(); alert('デモ版です');">
     <input type="email" placeholder="your@email.com" required>
     <button type="submit">Sign Up →</button>
