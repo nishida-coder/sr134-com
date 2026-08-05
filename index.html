@@ -474,14 +474,14 @@
     font-feature-settings: 'lnum' 1;
   }
   .col-card .label .price small { font-size: 9.5px; opacity: 0.75; letter-spacing: 0.24em; margin-left: 4px; }
-  .cc-1 { grid-column: span 7; height: 560px; }
-  .cc-2 { grid-column: span 5; height: 560px; }
-  .cc-3 { grid-column: span 4; height: 400px; }
-  .cc-4 { grid-column: span 4; height: 400px; }
-  .cc-5 { grid-column: span 4; height: 400px; }
-  .cc-6 { grid-column: span 4; height: 400px; }
-  .cc-7 { grid-column: span 4; height: 400px; }
-  .cc-8 { grid-column: span 4; height: 400px; }
+  .cc-1 { grid-column: span 7; height: 620px; }
+  .cc-2 { grid-column: span 5; height: 520px; }
+  .cc-3 { grid-column: span 4; height: 460px; }
+  .cc-4 { grid-column: span 4; height: 380px; }
+  .cc-5 { grid-column: span 4; height: 440px; }
+  .cc-6 { grid-column: span 5; height: 540px; }
+  .cc-7 { grid-column: span 3; height: 420px; }
+  .cc-8 { grid-column: span 4; height: 480px; }
 
   /* ============ FEATURED — two-column edit ============ */
   .featured {
@@ -1200,6 +1200,121 @@
     .footer-bottom > :last-child { text-align: center; }
   }
 
+  /* ============ JOURNAL ============ */
+  .journal { background: var(--bg); }
+  .journal-head { max-width: 900px; padding-top: 20px; margin-bottom: 44px; }
+  .journal-head .eyebrow {
+    font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase;
+    color: var(--ink-soft); font-weight: 500;
+  }
+  .journal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 30px; }
+  .journal-card { display: block; }
+  .journal-card .jc-visual {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background: var(--bg-2);
+    margin-bottom: 18px;
+  }
+  .journal-card .jc-visual img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 1.4s var(--ease);
+  }
+  .journal-card:hover .jc-visual img { transform: scale(1.04); }
+  .journal-card .jc-date {
+    font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--gold-deep); font-weight: 500; margin-bottom: 8px;
+  }
+  .journal-card .jc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; line-height: 1.25; color: var(--ink);
+  }
+
+  /* ============ STORE TEASER (single card) ============ */
+  .store-teaser {
+    background: var(--surface);
+    padding: 0;
+  }
+  .store-teaser a {
+    display: block;
+    position: relative;
+    aspect-ratio: 16/7;
+    overflow: hidden;
+    background: var(--navy-deep);
+  }
+  .store-teaser img {
+    width: 100%; height: 100%; object-fit: cover;
+    animation: kenburns-slow 60s ease-in-out infinite alternate;
+    transition: transform 1.4s var(--ease);
+  }
+  .store-teaser a:hover img { transform: scale(1.04); animation-play-state: paused; }
+  .store-teaser::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(17,32,59,0.15) 0%, rgba(17,32,59,0.7) 100%);
+    pointer-events: none;
+  }
+  .store-teaser .st-inner {
+    position: absolute; inset: 0; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: var(--surface);
+    text-align: center;
+    padding: 24px;
+    pointer-events: none;
+  }
+  .store-teaser .st-eyebrow {
+    font-size: 10.5px; letter-spacing: 0.34em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 20px; font-weight: 500;
+  }
+  .store-teaser h2 {
+    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-size: clamp(28px, 2.4vw + 14px, 52px);
+    line-height: 1.1; letter-spacing: -0.01em;
+    margin-bottom: 24px;
+  }
+  .store-teaser .st-meta {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 26px;
+  }
+  .store-teaser .st-link {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--surface); padding-bottom: 6px;
+    border-bottom: 1px solid var(--gold);
+    font-weight: 500;
+    pointer-events: auto;
+    transition: gap .4s var(--ease);
+  }
+  .store-teaser a:hover .st-link { gap: 20px; }
+
+  /* ============ BRAND FILTER — active state on brands cells + filtered collection ============ */
+  .brand-cell.active { background: var(--navy); color: var(--surface); }
+  .brand-cell.active .bname { color: var(--gold-light); }
+  .brand-filter-bar {
+    display: none;
+    align-items: center; justify-content: space-between;
+    gap: 20px;
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    padding: 14px 22px;
+    margin-bottom: 36px;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .brand-filter-bar.active { display: flex; }
+  .brand-filter-bar strong { color: var(--gold-deep); font-weight: 600; }
+  .brand-filter-clear {
+    background: none; border: 1px solid var(--line); color: var(--ink);
+    padding: 8px 16px;
+    font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+    cursor: pointer; font-family: inherit;
+    transition: all .3s;
+  }
+  .brand-filter-clear:hover { background: var(--navy); color: var(--surface); border-color: var(--navy); }
+  .col-card.brand-hidden { display: none; }
+  html { scroll-padding-top: 100px; }
+
   /* ============ CART DRAWER ============ */
   .cart-scrim {
     position: fixed; inset: 0; z-index: 200;
@@ -1441,6 +1556,10 @@
   @media (max-width: 1100px) {
     .collection-grid { grid-template-columns: repeat(6, 1fr); }
     .cc-1, .cc-2, .cc-3, .cc-4, .cc-5, .cc-6, .cc-7, .cc-8 { grid-column: span 6; height: 380px; }
+    .journal-grid { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+    .journal-head { padding-left: 20px; padding-right: 20px; }
+    .store-teaser a { aspect-ratio: 4/5; }
+    .store-teaser h2 { font-size: 28px; }
     .lookbook-grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 22px; }
     .lb-card { height: 420px; }
     .news-grid { grid-template-columns: 1fr 1fr; gap: 24px 18px; }
@@ -1578,6 +1697,10 @@
     <div class="eyebrow">Selected for You</div>
     <h2>Pick <em>Up.</em></h2>
   </div>
+  <div class="brand-filter-bar" data-filter-bar>
+    <div>Filtering by <strong data-filter-name></strong></div>
+    <button class="brand-filter-clear" data-filter-clear>Show All ×</button>
+  </div>
   <div class="collection-grid stagger">
     <article class="col-card cc-1" data-id="d2102s71lb1384" data-brand="Dsquared2" data-name="Skater Jean, Tapered Indigo" data-price="100100" data-image="https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/d2102s71lb1384-s.jpg">
       <img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/d2102s71lb1384-s.jpg" alt="Dsquared2 Skater Jean">
@@ -1712,65 +1835,57 @@
     <h2>Our <em>Brands.</em></h2>
   </div>
   <div class="brands-grid stagger">
-    <div class="brand-cell"><span class="bnew">New</span><div class="bname">Maison Margiela</div><div class="bcountry">Paris, France</div></div>
-    <div class="brand-cell"><div class="bname">MM6</div><div class="bcountry">Paris, France</div></div>
-    <div class="brand-cell"><div class="bname">Marni</div><div class="bcountry">Milano, Italy</div></div>
-    <div class="brand-cell"><span class="bnew">FW26</span><div class="bname">Moncler</div><div class="bcountry">Grenoble / Milano</div></div>
-    <div class="brand-cell"><div class="bname">Dsquared2</div><div class="bcountry">Milano, Italy</div></div>
-    <div class="brand-cell"><div class="bname">Y's</div><div class="bcountry">Tokyo, Japan</div></div>
-    <div class="brand-cell"><div class="bname">Mihara Yasuhiro</div><div class="bcountry">Tokyo, Japan</div></div>
-    <div class="brand-cell"><div class="bname">Ballantyne</div><div class="bcountry">Scotland, UK</div></div>
-    <div class="brand-cell"><div class="bname">Autry</div><div class="bcountry">USA / Italy</div></div>
-    <div class="brand-cell"><div class="bname">MMY</div><div class="bcountry">Tokyo, Japan</div></div>
-    <div class="brand-cell"><div class="bname">Mikio Sakabe</div><div class="bcountry">Tokyo, Japan</div></div>
+    <div class="brand-cell" data-brand="Maison Margiela"><span class="bnew">New</span><div class="bname">Maison Margiela</div><div class="bcountry">Paris, France</div></div>
+    <div class="brand-cell" data-brand="MM6 Maison Margiela"><div class="bname">MM6</div><div class="bcountry">Paris, France</div></div>
+    <div class="brand-cell" data-brand="Marni"><div class="bname">Marni</div><div class="bcountry">Milano, Italy</div></div>
+    <div class="brand-cell" data-brand="Moncler"><span class="bnew">FW26</span><div class="bname">Moncler</div><div class="bcountry">Grenoble / Milano</div></div>
+    <div class="brand-cell" data-brand="Dsquared2"><div class="bname">Dsquared2</div><div class="bcountry">Milano, Italy</div></div>
+    <div class="brand-cell" data-brand="Amiri"><div class="bname">Amiri</div><div class="bcountry">Los Angeles, USA</div></div>
+    <div class="brand-cell" data-brand="Bob"><div class="bname">Bob Italy</div><div class="bcountry">Milano, Italy</div></div>
+    <div class="brand-cell" data-brand="Barba"><div class="bname">Barba</div><div class="bcountry">Napoli, Italy</div></div>
+    <div class="brand-cell" data-brand="Autry"><div class="bname">Autry</div><div class="bcountry">USA / Italy</div></div>
+    <div class="brand-cell" data-brand="Ballantyne"><div class="bname">Ballantyne</div><div class="bcountry">Scotland, UK</div></div>
+    <div class="brand-cell" data-brand="Y's"><div class="bname">Y&rsquo;s</div><div class="bcountry">Tokyo, Japan</div></div>
     <div class="brand-cell viewall"><div class="bname">View All →</div><div class="bcountry">20 Houses</div></div>
   </div>
 </section>
 
 
-<!-- ============ STORES ============ -->
-<section class="stores" id="stores">
-  <div class="section-head reveal">
-    <div class="eyebrow">Our Stores</div>
+<!-- ============ JOURNAL ============ -->
+<section class="journal" id="journal">
+  <div class="journal-head reveal">
+    <div class="eyebrow">Journal</div>
   </div>
-  <div class="store-strip stagger">
-    <a href="#" class="store">
-      <img src="photos/hayama-beach-2.jpg" alt="Studio Route 134 Hayama beach">
-      <div class="store-content">
-        <div>
-          <div class="roman">Flagship</div>
-          <div class="name">Hayama</div>
-          <div class="jp">湘南・葉山店</div>
-          <div class="meta">神奈川県葉山町堀内997-19<br>11:30 – 20:00 / 定休 火曜<br>046 874 7434</div>
-        </div>
-        <div class="visit">Visit →</div>
-      </div>
+  <div class="journal-grid stagger">
+    <a class="journal-card" href="#">
+      <div class="jc-visual"><img src="photos/enoshima-inside.jpg" alt=""></div>
+      <div class="jc-date">2026.07.18 — Enoshima</div>
+      <div class="jc-title">Skate Wall, One-Off Editions</div>
     </a>
-    <a href="#" class="store store-landscape">
-      <img src="photos/aoyama-1f.jpg" alt="Studio Route 134 Aoyama 1F interior" style="object-position: 55% center;">
-      <div class="store-content">
-        <div>
-          <div class="roman">Concept</div>
-          <div class="name">Aoyama</div>
-          <div class="jp">東京・南青山店</div>
-          <div class="meta">東京都港区南青山6-6-20<br>11:30 – 20:00 / 不定休<br>03 6712 5134</div>
-        </div>
-        <div class="visit">Visit →</div>
-      </div>
+    <a class="journal-card" href="#">
+      <div class="jc-visual"><img src="photos/aoyama-leon-shoot.jpg" alt=""></div>
+      <div class="jc-date">2026.07.10 — Aoyama</div>
+      <div class="jc-title">LEON Shoot at the Store</div>
     </a>
-    <a href="#" class="store">
-      <img src="photos/enoshima-outside-1.jpg" alt="Studio Route 134 Enoshima seafront">
-      <div class="store-content">
-        <div>
-          <div class="roman">Seaside</div>
-          <div class="name">Enoshima</div>
-          <div class="jp">湘南・江ノ島店</div>
-          <div class="meta">神奈川県藤沢市鵠沼海岸4-4-1<br>11:00 – 19:30 / 定休 火曜<br>0466 96 0506</div>
-        </div>
-        <div class="visit">Visit →</div>
-      </div>
+    <a class="journal-card" href="#">
+      <div class="jc-visual"><img src="photos/aoyama-alberto-bressi.jpg" alt=""></div>
+      <div class="jc-date">2026.06.28 — Aoyama</div>
+      <div class="jc-title">Alberto Bressi Visits</div>
     </a>
   </div>
+</section>
+
+<!-- ============ STORES (single teaser → /stores.html) ============ -->
+<section class="store-teaser" id="stores">
+  <a href="stores.html">
+    <img src="photos/hayama-store.jpg" alt="Studio Route 134 Stores">
+    <div class="st-inner">
+      <div class="st-eyebrow">Our Stores</div>
+      <h2>Hayama · Aoyama · Enoshima</h2>
+      <div class="st-meta">3 Locations</div>
+      <span class="st-link">View All Stores <span class="arrow">→</span></span>
+    </div>
+  </a>
 </section>
 
 <!-- ============ NEWSLETTER ============ -->
@@ -1789,7 +1904,11 @@
     <div>
       <div class="footer-logo"><img src="sr134_logo.png" alt="Studio Route 134"></div>
       <p class="footer-desc">国道134号線沿いの湘南・葉山と江ノ島、都心の南青山。世界の一流メゾンを揃えた、三つのセレクト。</p>
-      <div class="footer-social"><a href="#">◉</a><a href="#">☰</a><a href="#">✉</a></div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/studioroute134/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/studioroute134/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="1.8"><path d="M14 9V7a1.5 1.5 0 0 1 1.5-1.5H17V3h-2.5A4 4 0 0 0 10.5 7v2H8v3h2.5v9H14v-9h2.5L17 9z" stroke-linejoin="round"/></svg></a>
+        <a href="mailto:info@sr134.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
     </div>
     <div class="footer-col">
       <h4>Shop</h4>
@@ -1889,7 +2008,32 @@
       </div>
     `).join('') + '</div>';
   }
+  // === Brand filter ===
+  function filterByBrand(brand) {
+    const cards = $$('.col-card');
+    if (!brand) {
+      cards.forEach(c => c.classList.remove('brand-hidden'));
+      $('[data-filter-bar]').classList.remove('active');
+      $$('.brand-cell').forEach(b => b.classList.remove('active'));
+      history.replaceState({}, '', location.pathname + location.hash);
+      return;
+    }
+    cards.forEach(c => c.classList.toggle('brand-hidden', c.dataset.brand !== brand));
+    $('[data-filter-bar]').classList.add('active');
+    $('[data-filter-name]').textContent = brand;
+    $$('.brand-cell').forEach(b => b.classList.toggle('active', b.dataset.brand === brand));
+    const url = new URL(location);
+    url.searchParams.set('brand', brand);
+    history.replaceState({}, '', url);
+    document.getElementById('collection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  const initial = new URLSearchParams(location.search).get('brand');
+  if (initial) filterByBrand(initial);
+
   document.addEventListener('click', (e) => {
+    const bc = e.target.closest('.brand-cell[data-brand]');
+    if (bc) { e.preventDefault(); filterByBrand(bc.dataset.brand); return; }
+    if (e.target.closest('[data-filter-clear]')) { e.preventDefault(); filterByBrand(null); return; }
     const add = e.target.closest('.add-btn');
     if (add) {
       e.preventDefault(); e.stopPropagation();

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Studio Route 134 直営3店舗 — 湘南・葉山、東京・南青山、湘南・江ノ島。">
+<title>Stores — Studio Route 134</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+JP:wght@300;400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F7F5EF;
+    --bg-2: #ECE9DF;
+    --surface: #FFFFFF;
+    --ink: #15233F;
+    --ink-2: #2B3E5E;
+    --ink-soft: #6E7A8E;
+    --navy: #1B2F52;
+    --navy-deep: #11203B;
+    --gold: #B89A5C;
+    --gold-deep: #977C42;
+    --gold-light: #D8C28C;
+    --line: #DAD5C7;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3 { font-family: 'Playfair Display', 'Noto Serif JP', serif; font-weight: 400; letter-spacing: -0.01em; }
+
+  /* Header — simple */
+  .topbar { background: var(--navy-deep); color: var(--bg); font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; padding: 10px; text-align: center; }
+  header {
+    padding: 22px 56px;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  header .back {
+    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--ink); font-weight: 500;
+  }
+  header .back:hover { color: var(--gold-deep); }
+  header .logo img { height: 40px; width: auto; }
+
+  /* Hero */
+  .page-hero {
+    padding: 100px 56px 60px;
+    text-align: center;
+  }
+  .page-hero .eyebrow {
+    font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase;
+    color: var(--ink-soft); font-weight: 500; margin-bottom: 26px;
+  }
+  .page-hero h1 {
+    font-size: clamp(38px, 4vw + 12px, 78px);
+    line-height: 1.08;
+    margin-bottom: 22px;
+  }
+  .page-hero h1 em { font-style: normal; color: var(--gold-deep); }
+  .page-hero p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: var(--ink-2);
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  /* Stores */
+  .stores-list {
+    padding: 40px 56px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+  }
+  .store-block {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+  .store-block:nth-child(even) { grid-template-columns: 1fr 1.15fr; }
+  .store-block:nth-child(even) .sb-visual { order: 2; }
+  .store-block .sb-visual {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background: var(--bg-2);
+    position: relative;
+  }
+  .store-block .sb-visual img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 1.6s var(--ease);
+  }
+  .store-block .sb-visual:hover img { transform: scale(1.04); }
+  .store-block .sb-visual .tag {
+    position: absolute;
+    top: 22px; left: 22px;
+    background: var(--surface);
+    color: var(--navy);
+    padding: 8px 18px;
+    font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+    font-weight: 500;
+  }
+  .sb-info .eyebrow {
+    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold-deep); font-weight: 500; margin-bottom: 20px;
+  }
+  .sb-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 3vw + 14px, 60px);
+    line-height: 1.06;
+    margin-bottom: 8px;
+  }
+  .sb-info .jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    color: var(--ink-soft);
+    margin-bottom: 30px;
+  }
+  .sb-details {
+    border-top: 1px solid var(--line);
+    padding-top: 26px;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    row-gap: 14px;
+    column-gap: 20px;
+    font-size: 13.5px;
+    color: var(--ink-2);
+    margin-bottom: 32px;
+  }
+  .sb-details dt {
+    font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-soft); padding-top: 2px;
+    font-weight: 500;
+  }
+  .sb-details dd {
+    font-family: 'Noto Serif JP', serif; font-weight: 300;
+    line-height: 1.7;
+  }
+  .sb-details dd a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; }
+  .sb-map {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase;
+    padding: 14px 26px;
+    background: var(--navy); color: var(--surface);
+    border: 1px solid var(--navy);
+    transition: all .3s var(--ease);
+    font-weight: 500;
+  }
+  .sb-map:hover { background: var(--gold-deep); border-color: var(--gold-deep); }
+  .sb-map svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+
+  footer {
+    background: var(--navy-deep);
+    color: var(--surface);
+    padding: 44px 56px;
+    text-align: center;
+    font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase;
+    opacity: 0.65;
+  }
+
+  @media (max-width: 900px) {
+    header, .page-hero, .stores-list, footer { padding-left: 20px; padding-right: 20px; }
+    .stores-list { gap: 64px; padding-bottom: 80px; }
+    .store-block, .store-block:nth-child(even) { grid-template-columns: 1fr; gap: 32px; }
+    .store-block:nth-child(even) .sb-visual { order: 0; }
+    .sb-details { grid-template-columns: 90px 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Complimentary Shipping over ¥30,000 &nbsp;·&nbsp; 国内正規販売店</div>
+
+<header>
+  <a href="index.html" class="back">← Back to Home</a>
+  <a href="index.html" class="logo"><img src="sr134_logo.png" alt="Studio Route 134"></a>
+  <span style="width: 120px"></span>
+</header>
+
+<section class="page-hero">
+  <div class="eyebrow">Our Stores</div>
+  <h1>Three Stores,<br><em>One Coastline.</em></h1>
+  <p>Hayama, Aoyama, Enoshima. Studio Route 134 の直営3店舗。</p>
+</section>
+
+<section class="stores-list">
+
+  <div class="store-block">
+    <div class="sb-visual">
+      <img src="photos/hayama-store.jpg" alt="Studio Route 134 Hayama">
+      <span class="tag">Flagship</span>
+    </div>
+    <div class="sb-info">
+      <div class="eyebrow">Est. 2007 · Shonan</div>
+      <h2>Hayama</h2>
+      <div class="jp">湘南・葉山店</div>
+      <dl class="sb-details">
+        <dt>Address</dt><dd>神奈川県葉山町堀内 997-19</dd>
+        <dt>Hours</dt><dd>11:30 – 20:00</dd>
+        <dt>Closed</dt><dd>火曜</dd>
+        <dt>Tel</dt><dd><a href="tel:0468747434">046 874 7434</a></dd>
+      </dl>
+      <a href="https://maps.google.com/?q=神奈川県葉山町堀内997-19" target="_blank" rel="noopener" class="sb-map">
+        <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Google Maps で見る
+      </a>
+    </div>
+  </div>
+
+  <div class="store-block">
+    <div class="sb-visual">
+      <img src="photos/aoyama-1f.jpg" alt="Studio Route 134 Aoyama" style="object-position: 55% center;">
+      <span class="tag">Concept</span>
+    </div>
+    <div class="sb-info">
+      <div class="eyebrow">Concept · Tokyo</div>
+      <h2>Aoyama</h2>
+      <div class="jp">東京・南青山店</div>
+      <dl class="sb-details">
+        <dt>Address</dt><dd>東京都港区南青山 6-6-20</dd>
+        <dt>Hours</dt><dd>11:30 – 20:00</dd>
+        <dt>Closed</dt><dd>不定休</dd>
+        <dt>Tel</dt><dd><a href="tel:0367125134">03 6712 5134</a></dd>
+      </dl>
+      <a href="https://maps.google.com/?q=東京都港区南青山6-6-20" target="_blank" rel="noopener" class="sb-map">
+        <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Google Maps で見る
+      </a>
+    </div>
+  </div>
+
+  <div class="store-block">
+    <div class="sb-visual">
+      <img src="photos/enoshima-store.jpg" alt="Studio Route 134 Enoshima">
+      <span class="tag">Seaside</span>
+    </div>
+    <div class="sb-info">
+      <div class="eyebrow">Seaside · Shonan</div>
+      <h2>Enoshima</h2>
+      <div class="jp">湘南・江ノ島店</div>
+      <dl class="sb-details">
+        <dt>Address</dt><dd>神奈川県藤沢市鵠沼海岸 4-4-1</dd>
+        <dt>Hours</dt><dd>11:00 – 19:30</dd>
+        <dt>Closed</dt><dd>火曜</dd>
+        <dt>Tel</dt><dd><a href="tel:0466960506">0466 96 0506</a></dd>
+      </dl>
+      <a href="https://maps.google.com/?q=神奈川県藤沢市鵠沼海岸4-4-1" target="_blank" rel="noopener" class="sb-map">
+        <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Google Maps で見る
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<footer>© 2026 Studio Route 134 / Office T3 Inc.</footer>
+
+</body>
+</html>
