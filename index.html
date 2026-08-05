@@ -81,9 +81,9 @@
     padding: 12px 56px;
     border-bottom: 1px solid var(--line);
   }
-  .header-left { display: flex; gap: 36px; }
+  .header-left { display: flex; gap: 44px; align-items: center; }
   .header-left a {
-    font-size: 10.5px;
+    font-size: 12.5px;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     font-weight: 500;
@@ -105,26 +105,25 @@
     width: auto;
     display: inline-block;
     transition: height .4s var(--ease);
-    mix-blend-mode: multiply;
   }
   header.scrolled .logo-center img { height: 35px; }
   .header-right {
     display: flex;
     justify-content: flex-end;
-    gap: 18px;
+    gap: 12px;
     align-items: center;
   }
   .header-right .icon {
-    width: 38px; height: 38px;
+    width: 46px; height: 46px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border: 1px solid currentColor;
     border-radius: 50%;
-    font-size: 13px;
-    opacity: 0.65;
+    opacity: 0.85;
     transition: all .3s;
   }
+  .header-right .icon svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.6; }
   .header-right .icon:hover {
     background: var(--navy);
     border-color: var(--navy);
@@ -374,11 +373,13 @@
   }
   .col-card img {
     width: 100%; height: 100%;
-    object-fit: cover;
-    transition: transform 1.8s var(--ease);
-    animation: kenburns-slow 40s ease-in-out infinite alternate;
+    object-fit: contain;
+    object-position: center 35%;
+    background: var(--surface);
+    padding: 6% 6% 24% 6%;
+    transition: transform 1.2s var(--ease);
   }
-  .col-card:hover img { transform: scale(1.06); animation-play-state: paused; }
+  .col-card:hover img { transform: scale(1.03); }
   @keyframes kenburns-slow {
     from { transform: scale(1.02) translate3d(0,0,0); }
     to   { transform: scale(1.09) translate3d(-1%, -1%, 0); }
@@ -386,12 +387,14 @@
   .col-card::after {
     content: '';
     position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 50%, rgba(17,32,59,0.78));
+    left: 0; right: 0; bottom: 0;
+    height: 24%;
+    background: linear-gradient(180deg, transparent 0%, var(--navy) 55%);
+    pointer-events: none;
   }
   .col-card .label {
     position: absolute;
-    bottom: 28px; left: 30px; right: 30px;
+    bottom: 22px; left: 28px; right: 28px;
     color: var(--surface);
     z-index: 2;
   }
@@ -522,11 +525,12 @@
   }
   .resort-card .rc-visual img {
     width: 100%; height: 100%;
-    object-fit: cover;
-    background: var(--bg);
-    transition: transform 1.4s var(--ease);
+    object-fit: contain;
+    background: var(--surface);
+    padding: 8%;
+    transition: transform 1.2s var(--ease);
   }
-  .resort-card:hover .rc-visual img { transform: scale(1.05); }
+  .resort-card:hover .rc-visual img { transform: scale(1.03); }
   .resort-card .rc-text {
     padding: 22px 24px 28px;
   }
@@ -598,9 +602,9 @@
     font-weight: 500;
   }
   .heritage-text h2 {
-    font-size: clamp(30px, 2.8vw + 14px, 60px);
-    line-height: 1.14;
-    margin-bottom: 30px;
+    font-size: clamp(24px, 1.4vw + 16px, 36px);
+    line-height: 1.28;
+    margin-bottom: 26px;
   }
   .heritage-text h2 em { font-style: normal; color: var(--gold-deep); }
   .heritage-text p {
@@ -747,7 +751,7 @@
 
   /* ============ JOURNAL ============ */
   .journal { background: var(--navy-deep); color: var(--surface); }
-  .journal .section-head h2 { color: var(--surface); }
+  .journal .section-head h2 { color: var(--surface); font-size: clamp(24px, 1.4vw + 14px, 34px); }
   .journal .section-head h2 em { color: var(--gold-light); }
   .journal .section-head .eyebrow { color: rgba(255,255,255,0.5); }
   .journal .section-head .num { color: var(--gold-light); }
@@ -963,8 +967,7 @@
   .footer-logo img {
     height: 54px;
     width: auto;
-    filter: invert(1) brightness(1.15);
-    mix-blend-mode: lighten;
+    filter: invert(1) brightness(1.4);
   }
   .footer-desc {
     font-family: 'Noto Serif JP', serif;
@@ -1095,11 +1098,11 @@
     <a href="#journal">Journal</a>
     <a href="#stores">Stores</a>
   </div>
-  <a href="#" class="logo-center"><img src="sr134_logo.jpg" alt="Studio Route 134"></a>
+  <a href="#" class="logo-center"><img src="sr134_logo.png" alt="Studio Route 134"></a>
   <div class="header-right">
-    <a href="#" class="icon" title="Search">⌕</a>
-    <a href="#" class="icon" title="Account">◯</a>
-    <a href="#" class="icon" title="Cart">⌂</a>
+    <a href="#" class="icon" title="Search" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="21" y2="21" stroke-linecap="round"/></svg></a>
+    <a href="#" class="icon" title="Account" aria-label="Account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20.5c1.4-3.6 4.4-5.8 7.5-5.8s6.1 2.2 7.5 5.8" stroke-linecap="round"/></svg></a>
+    <a href="#" class="icon" title="Cart" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M5 6h15l-1.6 9.4a2 2 0 0 1-2 1.6H9.2a2 2 0 0 1-2-1.6L5 6z" stroke-linejoin="round"/><path d="M3 3h2l0.6 3" stroke-linecap="round"/><circle cx="10" cy="20" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.2" fill="currentColor" stroke="none"/></svg></a>
   </div>
 </header>
 
@@ -1148,9 +1151,9 @@
 <!-- ============ INTRO ============ -->
 <section class="intro">
   <div class="inner reveal">
-    <div class="eyebrow">Our Philosophy</div>
-    <h2>世界の一流メゾンに、<br>海の<em>空気を。</em></h2>
-    <p>藤沢の小さな倉庫兼店舗と、ネット通販から始まった一軒。<br>いまは湘南・葉山、海を目の前に望む二階の店から、<br>Maison Margiela、Marni、Moncler ——<br>世界の一流メゾンを、海辺の光とともにお届けしています。</p>
+    <div class="eyebrow">Studio Route134</div>
+    <h2>国道134号は、湘南・鎌倉の<br>海沿いを走る<em>メインストリート</em>。</h2>
+    <p>小さな倉庫から始まった一軒のセレクトメゾン。<br>それが私たち Studio Route134。<br>いまは海を望める葉山と江ノ島、<br>そして、東京・青山にセレクトメゾンを構える。</p>
   </div>
 </section>
 
@@ -1165,8 +1168,8 @@
 <!-- ============ COLLECTION ============ -->
 <section id="collection">
   <div class="section-head reveal">
-    <div class="eyebrow">Seasonal Curation</div>
-    <h2>この季節の、<em>選び抜いた佇まい。</em></h2>
+    <div class="eyebrow">Selected for You</div>
+    <h2>Pick <em>Up.</em></h2>
   </div>
   <div class="collection-grid stagger">
     <a class="col-card cc-1" href="https://item.rakuten.co.jp/studio-route134/d2102s71lb1384/" target="_blank" rel="noopener">
@@ -1263,9 +1266,9 @@
   </div>
   <div class="heritage-text reveal">
     <div class="eyebrow">Est. 2007 · Hayama, Shonan</div>
-    <h2>藤沢の一室から、<br><em>羨望のセレクトへ。</em></h2>
-    <p>湘南の国道134号線。葉山から江ノ島へと続く、海沿いの一本道。私たちは、この道の名を店に刻みました。世界の一流メゾンを、海辺の空気とともにお届けする——それが、Studio Route 134 の約束です。</p>
-    <div class="heritage-signature">Takayuki Torii<small>Founder / Buyer</small></div>
+    <h2>藤沢の一室から、<em>いまへ。</em></h2>
+    <p>海沿いの一本道、国道134号。私たちは、その道の名を店に刻みました。</p>
+    <div class="heritage-signature">T. TORY<small>Founder / Buyer</small></div>
     <a href="#" class="btn btn-ink">Read Our Story <span class="arrow">→</span></a>
   </div>
 </section>
@@ -1296,7 +1299,7 @@
 <section class="journal" id="journal">
   <div class="section-head reveal">
     <div class="eyebrow">Route 134 Journal</div>
-    <h2>海から届く、<em>静かな便り。</em></h2>
+    <h2>メゾンから届く、<em>静かな便り。</em></h2>
   </div>
   <div class="journal-grid stagger">
     <article class="journal-card feat">
@@ -1391,7 +1394,7 @@
 <footer>
   <div class="footer-top">
     <div>
-      <div class="footer-logo"><img src="sr134_logo.jpg" alt="Studio Route 134"></div>
+      <div class="footer-logo"><img src="sr134_logo.png" alt="Studio Route 134"></div>
       <p class="footer-desc">国道134号線沿いの湘南・葉山と江ノ島、都心の南青山。世界の一流メゾンを揃えた、三つのセレクト。</p>
       <div class="footer-social"><a href="#">◉</a><a href="#">☰</a><a href="#">✉</a></div>
     </div>
