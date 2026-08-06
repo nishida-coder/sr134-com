@@ -810,10 +810,10 @@
   }
   .resort-strip-head {
     padding: 0 56px;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
     position: relative;
     max-width: 900px;
-    padding-top: 26px;
+    padding-top: 10px;
   }
   .resort-strip-head .eyebrow {
     font-size: 11px;
@@ -821,11 +821,12 @@
     text-transform: uppercase;
     color: var(--ink-soft);
     font-weight: 500;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
   .resort-strip-head h2 {
     font-size: clamp(24px, 1.4vw + 14px, 34px);
     line-height: 1.22;
+    margin-bottom: 0;
   }
   .resort-strip-head h2 em { font-style: normal; color: var(--gold-deep); }
 
@@ -1097,59 +1098,7 @@
   .journal .section-head h2 em { color: var(--gold-light); }
   .journal .section-head .eyebrow { color: rgba(255,255,255,0.5); }
   .journal .section-head .num { color: var(--gold-light); }
-  .journal-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 38px;
-  }
-  .journal-card { cursor: pointer; }
-  .journal-card .jc-visual {
-    aspect-ratio: 4/5;
-    overflow: hidden;
-    margin-bottom: 22px;
-    position: relative;
-  }
-  .journal-card.feat .jc-visual { aspect-ratio: 5/6; }
-  .journal-card .jc-visual img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    transition: transform 1.8s var(--ease);
-    animation: kenburns-slow 42s ease-in-out infinite alternate;
-  }
-  .journal-card:hover .jc-visual img { transform: scale(1.06); animation-play-state: paused; }
-  .jc-tag {
-    position: absolute;
-    top: 16px; left: 16px;
-    background: var(--navy-deep);
-    color: var(--gold-light);
-    padding: 5px 13px;
-    font-size: 9.5px;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-  }
-  .jc-date {
-    font-size: 10.5px;
-    letter-spacing: 0.24em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-    margin-bottom: 9px;
-  }
-  .jc-title {
-    font-family: var(--font-sans);
-    font-size: 23px;
-    line-height: 1.34;
-    margin-bottom: 11px;
-    transition: color .3s;
-  }
-  .journal-card.feat .jc-title { font-size: 30px; }
-  .journal-card:hover .jc-title { color: var(--gold-light); }
-  .jc-excerpt {
-    font-family: var(--font-sans);
-    font-size: 13px;
-    color: rgba(255,255,255,0.75);
-    font-weight: 300;
-    line-height: 1.95;
-  }
+  /* (deprecated journal-grid CSS removed — carousel styles below take over) */
   .journal-more { text-align: center; margin-top: 54px; }
   .journal-more a {
     font-size: 11px;
