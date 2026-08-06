@@ -1988,27 +1988,54 @@
 </section>
 
 
-<!-- ============ JOURNAL ============ -->
+<!-- ============ JOURNAL — carousel ============ -->
 <section class="journal" id="journal">
   <div class="journal-head reveal">
     <div class="eyebrow">Journal</div>
+    <div class="journal-nav">
+      <button class="nn-btn" data-jour-prev aria-label="Prev">←</button>
+      <button class="nn-btn" data-jour-next aria-label="Next">→</button>
+    </div>
   </div>
-  <div class="journal-grid stagger">
-    <a class="journal-card" href="#">
-      <div class="jc-visual"><img src="photos/enoshima-inside.jpg" alt=""></div>
-      <div class="jc-date">2026.07.18 — Enoshima</div>
-      <div class="jc-title">Skate Wall, One-Off Editions</div>
-    </a>
-    <a class="journal-card" href="#">
-      <div class="jc-visual"><img src="photos/aoyama-leon-shoot.jpg" alt=""></div>
-      <div class="jc-date">2026.07.10 — Aoyama</div>
-      <div class="jc-title">LEON Shoot at the Store</div>
-    </a>
-    <a class="journal-card" href="#">
-      <div class="jc-visual"><img src="photos/aoyama-alberto-bressi.jpg" alt=""></div>
-      <div class="jc-date">2026.06.28 — Aoyama</div>
-      <div class="jc-title">Alberto Bressi Visits</div>
-    </a>
+  <div class="journal-carousel-wrap">
+    <div class="journal-carousel" data-jour-carousel>
+      <div class="journal-track" data-jour-track>
+        <a class="journal-card" href="#">
+          <div class="jc-visual"><img src="photos/enoshima-inside.jpg" alt=""></div>
+          <div class="jc-date">2026.07.18 — Enoshima</div>
+          <div class="jc-title">Skate Wall, One-Off Editions</div>
+        </a>
+        <a class="journal-card" href="#">
+          <div class="jc-visual"><img src="photos/aoyama-leon-shoot.jpg" alt=""></div>
+          <div class="jc-date">2026.07.10 — Aoyama</div>
+          <div class="jc-title">LEON Shoot at the Store</div>
+        </a>
+        <a class="journal-card" href="#">
+          <div class="jc-visual"><img src="photos/aoyama-alberto-bressi.jpg" alt=""></div>
+          <div class="jc-date">2026.06.28 — Aoyama</div>
+          <div class="jc-title">Alberto Bressi Visits</div>
+        </a>
+        <a class="journal-card" href="story.html">
+          <div class="jc-visual"><img src="photos/story-fujisawa.jpg" alt=""></div>
+          <div class="jc-date">2026.08 — Story</div>
+          <div class="jc-title">Our Story, from Fujisawa</div>
+        </a>
+        <a class="journal-card" href="#">
+          <div class="jc-visual"><img src="photos/hayama-view-out.jpg" alt=""></div>
+          <div class="jc-date">2026.07 — Hayama</div>
+          <div class="jc-title">A View Out to the Sea</div>
+        </a>
+        <a class="journal-card" href="#">
+          <div class="jc-visual"><img src="photos/enoshima-sea-view.jpg" alt=""></div>
+          <div class="jc-date">2026.06 — Enoshima</div>
+          <div class="jc-title">Windows on the Coastline</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="journal-hint">
+    <span>← Swipe / Click →</span>
+    <span class="dots" data-jour-dots></span>
   </div>
 </section>
 
@@ -2287,6 +2314,61 @@
     renderDots(); updateButtons();
   }
   setTimeout(initNewsCarousel, 100);
+
+  // Journal carousel (same pattern, dedicated selectors)
+  function initJournalCarousel() {
+    const track = $('[data-jour-track]');
+    if (!track) return;
+    const dotsWrap = $('[data-jour-dots]');
+    const prevBtn = $('[data-jour-prev]');
+    const nextBtn = $('[data-jour-next]');
+    let pos = 0; let currentIdx = 0;
+    const step = () => {
+      const c = track.children;
+      if (!c.length) return 0;
+      return c[0].getBoundingClientRect().width + 26;
+    };
+    const visibleCount = () => {
+      const w = track.parentElement.clientWidth;
+      const cw = track.children[0].getBoundingClientRect().width;
+      return Math.max(1, Math.round(w / (cw + 26)));
+    };
+    const totalPages = () => Math.max(1, track.children.length - visibleCount() + 1);
+    function renderDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = Array.from({length: totalPages()}, (_, i) =>
+        `<span class="dot ${i===currentIdx?'active':''}" data-jour-dot="${i}"></span>`).join('');
+    }
+    function updateButtons() {
+      const maxPos = -(track.scrollWidth - track.parentElement.clientWidth);
+      if (prevBtn) prevBtn.disabled = pos >= 0;
+      if (nextBtn) nextBtn.disabled = pos <= maxPos + 1;
+    }
+    function goTo(idx) {
+      currentIdx = Math.max(0, Math.min(totalPages() - 1, idx));
+      pos = -currentIdx * step();
+      track.style.transform = `translateX(${pos}px)`;
+      renderDots(); updateButtons();
+    }
+    function shift(d) { goTo(currentIdx - d); }
+    prevBtn?.addEventListener('click', () => shift(1));
+    nextBtn?.addEventListener('click', () => shift(-1));
+    dotsWrap?.addEventListener('click', (e) => {
+      const d = e.target.closest('[data-jour-dot]');
+      if (d) goTo(+d.dataset.jourDot);
+    });
+    let ts = null;
+    track.addEventListener('touchstart', (e) => { ts = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener('touchend', (e) => {
+      if (ts == null) return;
+      const dx = e.changedTouches[0].clientX - ts;
+      if (Math.abs(dx) > 40) shift(dx > 0 ? 1 : -1);
+      ts = null;
+    });
+    window.addEventListener('resize', () => { renderDots(); updateButtons(); });
+    renderDots(); updateButtons();
+  }
+  setTimeout(initJournalCarousel, 100);
 
   // === Brand filter ===
   function filterByBrand(brand) {
