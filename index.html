@@ -29,7 +29,7 @@
     --text-body: clamp(14px, 0.82vw + 12px, 16px);
     --text-display: clamp(48px, 7vw + 8px, 132px);
     --text-h2: clamp(30px, 2.6vw + 16px, 60px);
-    --space-section: clamp(110px, 9vw, 190px);
+    --space-section: clamp(56px, 5vw, 96px);
     --ease: cubic-bezier(0.16, 1, 0.3, 1);
     --font-sans: "Helvetica Neue", "Helvetica", "Arial", "Noto Sans JP", "Yu Gothic", "游ゴシック", "Hiragino Sans", "ヒラギノ角ゴ ProN", "Meiryo", sans-serif;
     --font-display: "Helvetica Neue", "Helvetica", "Arial", "Noto Sans JP", "Yu Gothic", "游ゴシック", "Hiragino Sans", sans-serif;
@@ -1367,19 +1367,32 @@
     .footer-bottom > :last-child { text-align: center; }
   }
 
-  /* ============ JOURNAL ============ */
+  /* ============ JOURNAL — horizontal carousel (NEWS-style) ============ */
   .journal { background: var(--bg); }
-  .journal-head { max-width: 900px; padding-top: 20px; margin-bottom: 44px; }
+  .journal-head {
+    padding-top: 20px; margin-bottom: 44px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
   .journal-head .eyebrow {
     font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase;
     color: var(--ink-soft); font-weight: 500;
   }
-  .journal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 30px; }
-  .journal-card { display: block; }
+  .journal-nav { display: flex; gap: 10px; }
+  .journal-carousel-wrap { position: relative; }
+  .journal-carousel { overflow: hidden; margin: 0 -56px; padding: 0 56px; }
+  .journal-track {
+    display: flex; gap: 26px;
+    transition: transform .7s var(--ease); will-change: transform;
+  }
+  .journal-card {
+    flex: 0 0 calc((100% - 52px) / 3);
+    min-width: 0; display: block;
+    transition: transform .5s var(--ease);
+  }
+  .journal-card:hover { transform: translateY(-3px); }
   .journal-card .jc-visual {
-    aspect-ratio: 4/5;
-    overflow: hidden;
-    background: var(--bg-2);
+    aspect-ratio: 16/10;
+    overflow: hidden; background: var(--bg-2);
     margin-bottom: 18px;
   }
   .journal-card .jc-visual img {
@@ -1394,6 +1407,18 @@
   .journal-card .jc-title {
     font-family: var(--font-sans);
     font-size: 20px; line-height: 1.25; color: var(--ink);
+  }
+  .journal-hint {
+    text-align: center; margin-top: 22px;
+    display: flex; justify-content: center; align-items: center; gap: 16px;
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-soft);
+  }
+  .journal-hint .dots { display: inline-flex; gap: 6px; }
+  .journal-hint .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--line); transition: all .3s; }
+  .journal-hint .dot.active { background: var(--navy); width: 20px; border-radius: 3px; }
+  @media (max-width: 720px) {
+    .journal-carousel { margin: 0 -20px; padding: 0 20px; }
+    .journal-card { flex-basis: calc(100vw - 40px); }
   }
 
   /* ============ STORE TEASER — 3-image split (no obscuring text overlay) ============ */
