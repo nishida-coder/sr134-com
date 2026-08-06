@@ -5,9 +5,9 @@
     "category": "Jacket",
     "name": "Alberto Bresci  Top",
     "price": 99000,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/aloha/abr167abjk00-21.jpg",
+    "image": "photos/products/abr167abjk00.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/aloha/abr167abjk00-21.jpg"
+      "photos/products/abr167abjk00.jpg"
     ],
     "sizes": [
       "S",
@@ -40,9 +40,9 @@
     "category": "Tee",
     "name": "Tee",
     "price": 70400,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/aloha/amr102xmjt003-1.jpg",
+    "image": "photos/products/amr102xmjt003.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/aloha/amr102xmjt003-1.jpg"
+      "photos/products/amr102xmjt003.jpg"
     ],
     "sizes": [
       "S",
@@ -74,9 +74,9 @@
     "category": "Denim",
     "name": "Denim",
     "price": 37400,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/02003077/imgrc0131663464.jpg",
+    "image": "photos/products/bob133074721720.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/02003077/imgrc0131663464.jpg"
+      "photos/products/bob133074721720.jpg"
     ],
     "sizes": [
       "44",
@@ -108,9 +108,9 @@
     "category": "Shirt",
     "name": "Bob Italy",
     "price": 35200,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/aloha/bob13307474320-11.jpg",
+    "image": "photos/products/bob133074743208.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/aloha/bob13307474320-11.jpg"
+      "photos/products/bob133074743208.jpg"
     ],
     "sizes": [
       "S",
@@ -141,9 +141,9 @@
     "category": "Knit",
     "name": "Knit",
     "price": 29700,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/02003077/bob133074721756-1.jpg",
+    "image": "photos/products/bob133074721756.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/02003077/bob133074721756-1.jpg"
+      "photos/products/bob133074721756.jpg"
     ],
     "sizes": [
       "S",
@@ -174,9 +174,9 @@
     "category": "Swim",
     "name": "Swim",
     "price": 14300,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/bob133072713312-sale.jpg",
+    "image": "photos/products/bob133072713312.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/bob133072713312-sale.jpg"
+      "photos/products/bob133072713312.jpg"
     ],
     "sizes": [
       "S",
@@ -206,9 +206,9 @@
     "category": "Swim",
     "name": "Swim",
     "price": 14300,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/08664893/072713320-top.jpg",
+    "image": "photos/products/bob133072713320.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/08664893/072713320-top.jpg"
+      "photos/products/bob133072713320.jpg"
     ],
     "sizes": [
       "S",
@@ -238,9 +238,9 @@
     "category": "Jacket",
     "name": "Circolo",
     "price": 80300,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/cn4823-top.jpg",
+    "image": "photos/products/cic106cn4823.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/cn4823-top.jpg"
+      "photos/products/cic106cn4823.jpg"
     ],
     "sizes": [
       "S",
@@ -271,9 +271,9 @@
     "category": "Sandals",
     "name": "Cariga",
     "price": 7480,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/aloha/cg565c210306-1.jpg",
+    "image": "photos/products/cg565c210306.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/aloha/cg565c210306-1.jpg"
+      "photos/products/cg565c210306.jpg"
     ],
     "sizes": [
       "24",
@@ -309,9 +309,9 @@
     "category": "Shirt",
     "name": "Shirt",
     "price": 261800,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsqwshirt/d2202s75cv0769-1.jpg",
+    "image": "photos/products/d2202s75cv0769.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsqwshirt/d2202s75cv0769-1.jpg"
+      "photos/products/d2202s75cv0769.jpg"
     ],
     "sizes": [
       "S",
@@ -342,9 +342,9 @@
     "category": "Pants",
     "name": "Pants",
     "price": 180400,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsquared2mensdenim3/d2102s74kb0900-1.jpg",
+    "image": "photos/products/d2102s74kb0900.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsquared2mensdenim3/d2102s74kb0900-1.jpg"
+      "photos/products/d2102s74kb0900.jpg"
     ],
     "sizes": [
       "S",
@@ -374,9 +374,9 @@
     "category": "Shirt",
     "name": "Shirt",
     "price": 160600,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsqwshirt/imgrc0167690069.jpg",
+    "image": "photos/products/d2202s75cv0734.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsqwshirt/imgrc0167690069.jpg"
+      "photos/products/d2202s75cv0734.jpg"
     ],
     "sizes": [
       "S",
@@ -404,9 +404,9 @@
     "category": "Denim",
     "name": "Denim",
     "price": 132000,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s78mu0062-f.jpg",
+    "image": "photos/products/d2102s78mu0062.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s78mu0062-f.jpg"
+      "photos/products/d2102s78mu0062.jpg"
     ],
     "sizes": [
       "44",
@@ -435,9 +435,9 @@
     "category": "Bag",
     "name": "Bag",
     "price": 132000,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsquaed2womendenim/d2202s72mu0491-1.jpg",
+    "image": "photos/products/d2202s72mu0491.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsquaed2womendenim/d2202s72mu0491-1.jpg"
+      "photos/products/d2202s72mu0491.jpg"
     ],
     "sizes": [
       "One Size"
@@ -463,9 +463,9 @@
     "category": "Denim",
     "name": "Loose Jean",
     "price": 132000,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s78lb0105f.jpg",
+    "image": "photos/products/d2102s78lb0105.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s78lb0105f.jpg"
+      "photos/products/d2102s78lb0105.jpg"
     ],
     "sizes": [
       "44",
@@ -492,9 +492,9 @@
     "category": "Denim",
     "name": "Denim",
     "price": 132000,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s74kb1142-s.jpg",
+    "image": "photos/products/d2102s74kb1142.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s74kb1142-s.jpg"
+      "photos/products/d2102s74kb1142.jpg"
     ],
     "sizes": [
       "44",
@@ -521,9 +521,9 @@
     "category": "Denim",
     "name": "Skater Jean",
     "price": 132000,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/d2102s74lb1594-s.jpg",
+    "image": "photos/products/d2102s74lb1594.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/d2102s74lb1594-s.jpg"
+      "photos/products/d2102s74lb1594.jpg"
     ],
     "sizes": [
       "44",
@@ -552,9 +552,9 @@
     "category": "Denim",
     "name": "Denim",
     "price": 123200,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s78lb0111f.jpg",
+    "image": "photos/products/d2102s78lb0111.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s78lb0111f.jpg"
+      "photos/products/d2102s78lb0111.jpg"
     ],
     "sizes": [
       "44",
@@ -581,9 +581,9 @@
     "category": "Pants",
     "name": "Pants",
     "price": 119900,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsquared2mensdenim3/d2102s71mu0773-1.jpg",
+    "image": "photos/products/d2102s71mu0773.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsquared2mensdenim3/d2102s71mu0773-1.jpg"
+      "photos/products/d2102s71mu0773.jpg"
     ],
     "sizes": [
       "S",
@@ -611,9 +611,9 @@
     "category": "Selection",
     "name": "Selection",
     "price": 110000,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/d2menstshirt2/s74gu0664-1top.jpg",
+    "image": "photos/products/d2502s74gu0664.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/d2menstshirt2/s74gu0664-1top.jpg"
+      "photos/products/d2502s74gu0664.jpg"
     ],
     "sizes": [
       "S",
@@ -642,9 +642,9 @@
     "category": "Tee",
     "name": "Tee",
     "price": 104500,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s78gd0108c-s.jpg",
+    "image": "photos/products/d2102s78gd0108c.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s78gd0108c-s.jpg"
+      "photos/products/d2102s78gd0108c.jpg"
     ],
     "sizes": [
       "S",
@@ -672,9 +672,9 @@
     "category": "Tee",
     "name": "Tee",
     "price": 101200,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/d2102s71gu0726s.jpg",
+    "image": "photos/products/d2102s71gu0726.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/d2102s71gu0726s.jpg"
+      "photos/products/d2102s71gu0726.jpg"
     ],
     "sizes": [
       "S",
@@ -703,9 +703,9 @@
     "category": "Denim",
     "name": "Skater Jean",
     "price": 100100,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/d2102s71lb1384-s.jpg",
+    "image": "photos/products/d2102s71lb1384.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/d2102s71lb1384-s.jpg"
+      "photos/products/d2102s71lb1384.jpg"
     ],
     "sizes": [
       "44",
@@ -735,9 +735,9 @@
     "category": "Swim",
     "name": "Swim",
     "price": 67760,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsquared2accessory2/s82qad7bm5-top.jpg",
+    "image": "photos/products/d2102s82qad7bm5.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsquared2accessory2/s82qad7bm5-top.jpg"
+      "photos/products/d2102s82qad7bm5.jpg"
     ],
     "sizes": [
       "S",
@@ -765,9 +765,9 @@
     "category": "Tee",
     "name": "Tee",
     "price": 56100,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s71gd1643-s.jpg",
+    "image": "photos/products/d2102s71gd1643.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s71gd1643-s.jpg"
+      "photos/products/d2102s71gd1643.jpg"
     ],
     "sizes": [
       "S",
@@ -793,9 +793,9 @@
     "category": "Tee",
     "name": "Tee",
     "price": 45100,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/d2menstshirt2/d2102s74gd1254-1.jpg",
+    "image": "photos/products/d2102s74gd1254.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/d2menstshirt2/d2102s74gd1254-1.jpg"
+      "photos/products/d2102s74gd1254.jpg"
     ],
     "sizes": [
       "S",
@@ -826,9 +826,9 @@
     "category": "Rash Guard",
     "name": "Rash Guard",
     "price": 44330,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsquared2accessory2/d2102s82d7m2159-1.jpg",
+    "image": "photos/products/d2102s82d7m2159.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsquared2accessory2/d2102s82d7m2159-1.jpg"
+      "photos/products/d2102s82d7m2159.jpg"
     ],
     "sizes": [
       "S",
@@ -854,9 +854,9 @@
     "category": "Rash Guard",
     "name": "Rash Guard",
     "price": 26070,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/11401217/d2102s82qad7m21-8.jpg",
+    "image": "photos/products/d2102s82qad7m21.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/11401217/d2102s82qad7m21-8.jpg"
+      "photos/products/d2102s82qad7m21.jpg"
     ],
     "sizes": [
       "S",
@@ -884,9 +884,9 @@
     "category": "Rash Guard",
     "name": "Rash Guard",
     "price": 26070,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsqwswimwear/s82qad7n5c-1top.jpg",
+    "image": "photos/products/d2102s82qad7n5c.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/dsquared2/dsqwswimwear/s82qad7n5c-1top.jpg"
+      "photos/products/d2102s82qad7n5c.jpg"
     ],
     "sizes": [
       "S",
@@ -912,9 +912,9 @@
     "category": "Pants",
     "name": "Eleventy",
     "price": 64900,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/42372002-top2.jpg",
+    "image": "photos/products/elev01142372002.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/42372002-top2.jpg"
+      "photos/products/elev01142372002.jpg"
     ],
     "sizes": [
       "S",
@@ -945,9 +945,9 @@
     "category": "Jacket",
     "name": "Gian Carlo Rossi",
     "price": 97900,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/gr1237-top.jpg",
+    "image": "photos/products/gcr183grt237.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/gr1237-top.jpg"
+      "photos/products/gcr183grt237.jpg"
     ],
     "sizes": [
       "S",
@@ -979,9 +979,9 @@
     "category": "Jacket",
     "name": "Mihara",
     "price": 46200,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/inst172i16ct091-t.jpg",
+    "image": "photos/products/inst172i16ct091.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/inst172i16ct091-t.jpg"
+      "photos/products/inst172i16ct091.jpg"
     ],
     "sizes": [
       "S",
@@ -1013,9 +1013,9 @@
     "category": "Selection",
     "name": "Lafco New York",
     "price": 11000,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/02003077/imgrc0131720178.jpg",
+    "image": "photos/products/laf418039r003u.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/02003077/imgrc0131720178.jpg"
+      "photos/products/laf418039r003u.jpg"
     ],
     "sizes": [
       "S",
@@ -1043,9 +1043,9 @@
     "category": "Shirt",
     "name": "Shirt",
     "price": 121000,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mm6135sh0dt0025-s.jpg",
+    "image": "photos/products/mm6135sh0dt0025.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mm6135sh0dt0025-s.jpg"
+      "photos/products/mm6135sh0dt0025.jpg"
     ],
     "sizes": [
       "S",
@@ -1073,9 +1073,9 @@
     "category": "Shirt",
     "name": "Shirt",
     "price": 121000,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mm6135sh0dt025m-s.jpg",
+    "image": "photos/products/mm6135sh0dt025m.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mm6135sh0dt025m-s.jpg"
+      "photos/products/mm6135sh0dt025m.jpg"
     ],
     "sizes": [
       "S",
@@ -1103,9 +1103,9 @@
     "category": "Knit",
     "name": "S32Ct0912",
     "price": 61600,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/08098983/11164065/mm6202s32ct0912-1.jpg",
+    "image": "photos/products/mm6202s32ct0912.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/08098983/11164065/mm6202s32ct0912-1.jpg"
+      "photos/products/mm6202s32ct0912.jpg"
     ],
     "sizes": [
       "S",
@@ -1133,9 +1133,9 @@
     "category": "Tee",
     "name": "Tee",
     "price": 48400,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mm6135s52gc0360-s.jpg",
+    "image": "photos/products/mm6135s52gc0360.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mm6135s52gc0360-s.jpg"
+      "photos/products/mm6135s52gc0360.jpg"
     ],
     "sizes": [
       "S",
@@ -1161,9 +1161,9 @@
     "category": "Bag",
     "name": "T6313",
     "price": 358600,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mmm535s56wg0082-ptt.jpg",
+    "image": "photos/products/mmm535s56wg0082-pt.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mmm535s56wg0082-ptt.jpg"
+      "photos/products/mmm535s56wg0082-pt.jpg"
     ],
     "sizes": [
       "One Size"
@@ -1190,9 +1190,9 @@
     "category": "Bag",
     "name": "T8013",
     "price": 222200,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mmm435sb3wg0025-s.jpg",
+    "image": "photos/products/mmm435sb3wg0025.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mmm435sb3wg0025-s.jpg"
+      "photos/products/mmm435sb3wg0025.jpg"
     ],
     "sizes": [
       "One Size"
@@ -1217,9 +1217,9 @@
     "category": "Knit",
     "name": "Knit",
     "price": 104500,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/marn155cvmg0091-t.jpg",
+    "image": "photos/products/marn155cvmg0091.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/marn155cvmg0091-t.jpg"
+      "photos/products/marn155cvmg0091.jpg"
     ],
     "sizes": [
       "S",
@@ -1250,9 +1250,9 @@
     "category": "Denim",
     "name": "Denim",
     "price": 104500,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/02003077/marn2550096l1-1.jpg",
+    "image": "photos/products/marn2550096l1.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/02003077/marn2550096l1-1.jpg"
+      "photos/products/marn2550096l1.jpg"
     ],
     "sizes": [
       "44",
@@ -1282,9 +1282,9 @@
     "category": "Tee",
     "name": "Tee",
     "price": 59400,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/marn255thjet49-ibs.jpg",
+    "image": "photos/products/marn255thjet49-ib.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/marn255thjet49-ibs.jpg"
+      "photos/products/marn255thjet49-ib.jpg"
     ],
     "sizes": [
       "S",
@@ -1314,9 +1314,9 @@
     "category": "Tee",
     "name": "Tee",
     "price": 59400,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/marni/marni2/marn255humu0223-wt.jpg",
+    "image": "photos/products/marn155humu0223-h.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/marni/marni2/marn255humu0223-wt.jpg"
+      "photos/products/marn155humu0223-h.jpg"
     ],
     "sizes": [
       "S",
@@ -1344,9 +1344,9 @@
     "category": "Scarf",
     "name": "Scarf",
     "price": 59400,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/marn155aszc0005-ices.jpg",
+    "image": "photos/products/marn155aszc0005-ice.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/marn155aszc0005-ices.jpg"
+      "photos/products/marn155aszc0005-ice.jpg"
     ],
     "sizes": [
       "One Size"
@@ -1371,9 +1371,9 @@
     "category": "Sneakers",
     "name": "Sneakers",
     "price": 47300,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/mmy572a14fw703-t2.jpg",
+    "image": "photos/products/mmy572a14fw703.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/mmy572a14fw703-t2.jpg"
+      "photos/products/mmy572a14fw703.jpg"
     ],
     "sizes": [
       "24",
@@ -1405,9 +1405,9 @@
     "category": "Sneakers",
     "name": "Sneakers",
     "price": 40700,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/imgrc0143204451.jpg",
+    "image": "photos/products/mmy572a08fw735-blk.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/imgrc0143204451.jpg"
+      "photos/products/mmy572a08fw735-blk.jpg"
     ],
     "sizes": [
       "24",
@@ -1438,9 +1438,9 @@
     "category": "Sneakers",
     "name": "Sneakers",
     "price": 39600,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/mmy572a01fw702-wbt.jpg",
+    "image": "photos/products/mmy572a01fw702.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/mmy572a01fw702-wbt.jpg"
+      "photos/products/mmy572a01fw702.jpg"
     ],
     "sizes": [
       "24",
@@ -1474,9 +1474,9 @@
     "category": "Sneakers",
     "name": "Mike Don",
     "price": 53900,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mik567mik03-ts.jpg",
+    "image": "photos/products/mik567mik03.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/mik567mik03-ts.jpg"
+      "photos/products/mik567mik03.jpg"
     ],
     "sizes": [
       "24",
@@ -1508,9 +1508,9 @@
     "category": "Sneakers",
     "name": "Mike Don",
     "price": 49500,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/imgrc0152237234.jpg",
+    "image": "photos/products/mik567mike01-l.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/imgrc0152237234.jpg"
+      "photos/products/mik567mike01-l.jpg"
     ],
     "sizes": [
       "24",
@@ -1538,9 +1538,9 @@
     "category": "Selection",
     "name": "Selection",
     "price": 83600,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/02003077/monc12818g00010-1.jpg",
+    "image": "photos/products/monc12818g00010.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/02003077/monc12818g00010-1.jpg"
+      "photos/products/monc12818g00010.jpg"
     ],
     "sizes": [
       "S",
@@ -1571,9 +1571,9 @@
     "category": "Tee",
     "name": "Tee",
     "price": 59400,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/monc1288c00059-t.jpg",
+    "image": "photos/products/monc1288c00059.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/monc1288c00059-t.jpg"
+      "photos/products/monc1288c00059.jpg"
     ],
     "sizes": [
       "S",
@@ -1605,9 +1605,9 @@
     "category": "Hat",
     "name": "Hat",
     "price": 28600,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/monc4283b00035-1.jpg",
+    "image": "photos/products/monc4283b00035.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/monc4283b00035-1.jpg"
+      "photos/products/monc4283b00035.jpg"
     ],
     "sizes": [
       "One Size"
@@ -1635,9 +1635,9 @@
     "category": "Knit",
     "name": "Knit",
     "price": 25300,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/monc4283b00025-1.jpg",
+    "image": "photos/products/monc4283b00025.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/monc4283b00025-1.jpg"
+      "photos/products/monc4283b00025.jpg"
     ],
     "sizes": [
       "S",
@@ -1668,9 +1668,9 @@
     "category": "Coat",
     "name": "Peserico",
     "price": 313500,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/ld1214113-top.jpg",
+    "image": "photos/products/pes241ld1214113.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/ld1214113-top.jpg"
+      "photos/products/pes241ld1214113.jpg"
     ],
     "sizes": [
       "S",
@@ -1700,9 +1700,9 @@
     "category": "Denim",
     "name": "Premium Mood Denim",
     "price": 42900,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/10339074/31059014-top.jpg",
+    "image": "photos/products/pmd12231059014.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/10339074/31059014-top.jpg"
+      "photos/products/pmd12231059014.jpg"
     ],
     "sizes": [
       "44",
@@ -1734,9 +1734,9 @@
     "category": "Denim",
     "name": "Premium Mood Denim",
     "price": 29700,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/01948453/imgrc0135308649.jpg",
+    "image": "photos/products/pmd12231059018-bl.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/01948453/imgrc0135308649.jpg"
+      "photos/products/pmd12231059018-bl.jpg"
     ],
     "sizes": [
       "44",
@@ -1763,9 +1763,9 @@
     "category": "Denim",
     "name": "Premium Mood Denim",
     "price": 26400,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/imgrc0168414924.jpg",
+    "image": "photos/products/pmd12251059172.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/imgrc0168414924.jpg"
+      "photos/products/pmd12251059172.jpg"
     ],
     "sizes": [
       "44",
@@ -1796,9 +1796,9 @@
     "category": "Denim",
     "name": "Premium Mood Denim",
     "price": 24200,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/pmds/pmd12251059173-21.jpg",
+    "image": "photos/products/pmd12251059173.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/pmds/pmd12251059173-21.jpg"
+      "photos/products/pmd12251059173.jpg"
     ],
     "sizes": [
       "44",
@@ -1830,9 +1830,9 @@
     "category": "Denim",
     "name": "Tramarossa",
     "price": 64900,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/tramarossa/30071237-top.jpg",
+    "image": "photos/products/st11430071237.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/tramarossa/30071237-top.jpg"
+      "photos/products/st11430071237.jpg"
     ],
     "sizes": [
       "44",
@@ -1863,9 +1863,9 @@
     "category": "Sandals",
     "name": "Sandals",
     "price": 8800,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/ta574880633510-ct.jpg",
+    "image": "photos/products/ta484craj.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/06688764/06715396/ta574880633510-ct.jpg"
+      "photos/products/ta484craj.jpg"
     ],
     "sizes": [
       "24",
@@ -1896,9 +1896,9 @@
     "category": "Tee",
     "name": "Tee",
     "price": 13750,
-    "image": "https://shop.r10s.jp/studio-route134/cabinet/image/01948453/vro12723874494-31.jpg",
+    "image": "photos/products/vro12723874494.jpg",
     "images": [
-      "https://shop.r10s.jp/studio-route134/cabinet/image/01948453/vro12723874494-31.jpg"
+      "photos/products/vro12723874494.jpg"
     ],
     "sizes": [
       "S",
