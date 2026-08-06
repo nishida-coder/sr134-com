@@ -1039,16 +1039,23 @@
   }
   .brand-cell:hover { background: var(--navy); color: var(--surface); }
   .brand-cell:hover .bname { color: var(--gold-light); }
-  .brand-cell .blogo {
-    max-width: 140px; max-height: 44px; width: auto; height: auto;
-    margin: 0 auto 14px; display: block; object-fit: contain;
+  .brand-cell {
+    min-height: 180px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
   }
+  .brand-cell .blogo {
+    width: 160px; height: 60px;
+    object-fit: contain; object-position: center;
+    margin: 0 auto 14px; display: block;
+  }
+  .brand-cell .blogo[src=""], .brand-cell .blogo:not([src]) { display: none; }
   .brand-cell .bname {
     font-family: var(--font-sans);
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     margin-bottom: 6px;
     transition: color .3s;
   }
