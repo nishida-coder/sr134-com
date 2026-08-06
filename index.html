@@ -700,52 +700,66 @@
     .pu-tall { grid-column: 1; grid-row: auto; aspect-ratio: 3/4; }
   }
 
-  /* ============ MEDIA — Featured in press ============ */
+  /* ============ MEDIA — horizontal carousel (same UX as NEWS/Journal) ============ */
   .media { background: var(--bg-2); }
-  .media-head { max-width: 900px; padding-top: 20px; margin-bottom: 44px; }
+  .media-head {
+    padding-top: 20px; margin-bottom: 44px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
   .media-head .eyebrow {
     font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase;
-    color: var(--ink-soft); font-weight: 500; margin-bottom: 14px;
+    color: var(--ink-soft); font-weight: 500;
   }
-  .media-head h2 { font-size: clamp(30px, 2.4vw + 14px, 52px); line-height: 1.1; }
-  .media-head h2 em { font-style: normal; color: var(--gold-deep); }
-  .media-grid {
-    display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px;
-    align-items: center;
+  .media-nav { display: flex; gap: 10px; }
+  .media-carousel-wrap { position: relative; }
+  .media-carousel { overflow: hidden; margin: 0 -56px; padding: 0 56px; }
+  .media-track {
+    display: flex; gap: 26px;
+    transition: transform .7s var(--ease); will-change: transform;
   }
-  .media-visual { aspect-ratio: 4/5; overflow: hidden; background: var(--bg); }
-  .media-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.6s var(--ease); }
-  .media-visual:hover img { transform: scale(1.03); }
-  .media-copy .brand-badge {
-    display: inline-block; font-family: var(--font-sans); font-size: 42px;
-    color: var(--ink); letter-spacing: -0.01em; margin-bottom: 20px;
-    padding: 4px 20px; border: 1px solid var(--ink);
-    font-weight: 500;
+  .media-card {
+    flex: 0 0 calc((100% - 52px) / 3);
+    min-width: 0; display: block;
+    transition: transform .5s var(--ease);
   }
-  .media-copy .m-eyebrow {
-    font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--gold-deep); font-weight: 500; margin-bottom: 12px;
+  .media-card:hover { transform: translateY(-3px); }
+  .media-card .mc-visual {
+    aspect-ratio: 16/10;
+    overflow: hidden; background: var(--bg);
+    margin-bottom: 16px;
   }
-  .media-copy h3 {
-    font-family: var(--font-sans); font-weight: 400;
-    font-size: clamp(22px, 1.6vw + 14px, 30px); line-height: 1.24;
-    margin-bottom: 22px;
+  .media-card .mc-visual img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 1.4s var(--ease);
   }
-  .media-copy p {
-    font-family: var(--font-sans); font-weight: 300;
-    font-size: 14px; line-height: 2; color: var(--ink-2);
-    margin-bottom: 22px; max-width: 480px;
+  .media-card:hover .mc-visual img { transform: scale(1.04); }
+  .media-card .mc-badge {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 20px; font-weight: 500;
+    letter-spacing: 0.02em; color: var(--ink);
+    padding: 3px 12px; border: 1px solid var(--ink);
+    margin-bottom: 10px;
   }
-  .media-copy .m-link {
-    display: inline-flex; align-items: center; gap: 12px;
-    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ink); padding-bottom: 6px; border-bottom: 1px solid var(--gold);
-    font-weight: 500; transition: gap .4s var(--ease);
+  .media-card .mc-date {
+    font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--gold-deep); font-weight: 500; margin-bottom: 6px;
   }
-  .media-copy .m-link:hover { gap: 20px; }
-  @media (max-width: 900px) {
-    .media-grid { grid-template-columns: 1fr; gap: 24px; }
-    .media-copy .brand-badge { font-size: 32px; }
+  .media-card .mc-title {
+    font-family: var(--font-sans);
+    font-size: 16px; line-height: 1.35; color: var(--ink); font-weight: 500;
+  }
+  .media-hint {
+    text-align: center; margin-top: 22px;
+    display: flex; justify-content: center; align-items: center; gap: 16px;
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-soft);
+  }
+  .media-hint .dots { display: inline-flex; gap: 6px; }
+  .media-hint .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--line); transition: all .3s; }
+  .media-hint .dot.active { background: var(--navy); width: 20px; border-radius: 3px; }
+  @media (max-width: 720px) {
+    .media-carousel { margin: 0 -20px; padding: 0 20px; }
+    .media-card { flex-basis: calc(100vw - 40px); }
   }
 
   /* ============ LOOKBOOK — 3 large editorial images ============ */
@@ -2046,23 +2060,60 @@
   </div>
 </section>
 
-<!-- ============ MEDIA ============ -->
+<!-- ============ MEDIA — carousel ============ -->
 <section class="media" id="media">
   <div class="media-head reveal">
     <div class="eyebrow">Media</div>
-    <h2>As Featured <em>in Press.</em></h2>
+    <div class="media-nav">
+      <button class="nn-btn" data-med-prev aria-label="Prev">←</button>
+      <button class="nn-btn" data-med-next aria-label="Next">→</button>
+    </div>
   </div>
-  <div class="media-grid stagger">
-    <div class="media-visual reveal">
-      <img src="photos/aoyama-leon-shoot-2.jpg" alt="LEON magazine shoot at Studio Route 134 Aoyama">
+  <div class="media-carousel-wrap">
+    <div class="media-carousel" data-med-carousel>
+      <div class="media-track" data-med-track>
+        <a class="media-card" href="#">
+          <div class="mc-visual"><img src="photos/aoyama-leon-shoot-2.jpg" alt=""></div>
+          <div class="mc-badge">LEON</div>
+          <div class="mc-date">2026 — Aoyama Shoot</div>
+          <div class="mc-title">誌面撮影の舞台として。</div>
+        </a>
+        <a class="media-card" href="#">
+          <div class="mc-visual"><img src="photos/aoyama-alberto-bressi.jpg" alt=""></div>
+          <div class="mc-badge">HYDROGEN</div>
+          <div class="mc-date">2026 — Aoyama</div>
+          <div class="mc-title">Alberto Bressi 来店。</div>
+        </a>
+        <a class="media-card" href="#">
+          <div class="mc-visual"><img src="photos/aoyama-leon-shoot.jpg" alt=""></div>
+          <div class="mc-badge">LEON</div>
+          <div class="mc-date">2026 — Location</div>
+          <div class="mc-title">スタイリング撮影記録。</div>
+        </a>
+        <a class="media-card" href="#">
+          <div class="mc-visual"><img src="photos/aoyama-1f.jpg" alt="" style="object-position: 55% center;"></div>
+          <div class="mc-badge">Safari</div>
+          <div class="mc-date">継続掲載</div>
+          <div class="mc-title">青山店 店内特集。</div>
+        </a>
+        <a class="media-card" href="#">
+          <div class="mc-visual"><img src="photos/aoyama-basement.jpg" alt=""></div>
+          <div class="mc-badge">MEN&rsquo;S NON-NO</div>
+          <div class="mc-date">継続掲載</div>
+          <div class="mc-title">地下フロアの世界観。</div>
+        </a>
+        <a class="media-card" href="#">
+          <div class="mc-visual"><img src="photos/hayama-store.jpg" alt=""></div>
+          <div class="mc-badge">Press</div>
+          <div class="mc-date">2026 — Hayama</div>
+          <div class="mc-title">葉山店 テラスにて。</div>
+        </a>
+      </div>
     </div>
-    <div class="media-copy reveal">
-      <div class="brand-badge">LEON</div>
-      <div class="m-eyebrow">2026 — Aoyama Location Shoot</div>
-      <h3>誌面撮影の舞台として。</h3>
-      <p>雑誌 LEON の撮影が青山店にて行われました。イタリア ブランド HYDROGEN の創業者 Alberto Bressi 氏 も来店。「大人のスタイル」を撮る場として、Studio Route 134 の店内が選ばれています。他 Safari、MEN&rsquo;S NON-NO 等でも継続的にご紹介いただいております。</p>
-      <a href="#" class="m-link">View All Press <span>→</span></a>
-    </div>
+  </div>
+  <div class="media-hint">
+    <span>← Swipe / Click →</span>
+    <span class="dots" data-med-dots></span>
   </div>
 </section>
 
@@ -2376,6 +2427,61 @@
     renderDots(); updateButtons();
   }
   setTimeout(initJournalCarousel, 100);
+
+  // Media carousel (same pattern)
+  function initMediaCarousel() {
+    const track = $('[data-med-track]');
+    if (!track) return;
+    const dotsWrap = $('[data-med-dots]');
+    const prevBtn = $('[data-med-prev]');
+    const nextBtn = $('[data-med-next]');
+    let pos = 0; let currentIdx = 0;
+    const step = () => {
+      const c = track.children;
+      if (!c.length) return 0;
+      return c[0].getBoundingClientRect().width + 26;
+    };
+    const visibleCount = () => {
+      const w = track.parentElement.clientWidth;
+      const cw = track.children[0].getBoundingClientRect().width;
+      return Math.max(1, Math.round(w / (cw + 26)));
+    };
+    const totalPages = () => Math.max(1, track.children.length - visibleCount() + 1);
+    function renderDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = Array.from({length: totalPages()}, (_, i) =>
+        `<span class="dot ${i===currentIdx?'active':''}" data-med-dot="${i}"></span>`).join('');
+    }
+    function updateButtons() {
+      const maxPos = -(track.scrollWidth - track.parentElement.clientWidth);
+      if (prevBtn) prevBtn.disabled = pos >= 0;
+      if (nextBtn) nextBtn.disabled = pos <= maxPos + 1;
+    }
+    function goTo(idx) {
+      currentIdx = Math.max(0, Math.min(totalPages() - 1, idx));
+      pos = -currentIdx * step();
+      track.style.transform = `translateX(${pos}px)`;
+      renderDots(); updateButtons();
+    }
+    function shift(d) { goTo(currentIdx - d); }
+    prevBtn?.addEventListener('click', () => shift(1));
+    nextBtn?.addEventListener('click', () => shift(-1));
+    dotsWrap?.addEventListener('click', (e) => {
+      const d = e.target.closest('[data-med-dot]');
+      if (d) goTo(+d.dataset.medDot);
+    });
+    let ts = null;
+    track.addEventListener('touchstart', (e) => { ts = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener('touchend', (e) => {
+      if (ts == null) return;
+      const dx = e.changedTouches[0].clientX - ts;
+      if (Math.abs(dx) > 40) shift(dx > 0 ? 1 : -1);
+      ts = null;
+    });
+    window.addEventListener('resize', () => { renderDots(); updateButtons(); });
+    renderDots(); updateButtons();
+  }
+  setTimeout(initMediaCarousel, 100);
 
   // === Brand filter ===
   function filterByBrand(brand) {
