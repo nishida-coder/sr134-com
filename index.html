@@ -1067,25 +1067,60 @@
   .brand-cell:hover { background: var(--navy); color: var(--surface); }
   .brand-cell:hover .bname { color: var(--gold-light); }
   .brand-cell {
-    min-height: 180px;
+    min-height: 200px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
+    padding: 24px 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    text-align: center;
   }
+  .brand-cell:hover {
+    background: var(--navy);
+    border-color: var(--navy);
+  }
+  .brand-cell:hover .bname { color: var(--surface); }
+  .brand-cell:hover .bcountry { color: var(--gold-light); }
   .brand-cell .blogo {
     width: 160px; height: 60px;
     object-fit: contain; object-position: center;
-    margin: 0 auto 14px; display: block;
+    margin: 0 auto 12px; display: block;
   }
   .brand-cell .blogo[src=""], .brand-cell .blogo:not([src]) { display: none; }
   .brand-cell .bname {
     font-family: var(--font-sans);
-    font-size: 16px;
+    font-size: 22px;
     font-style: normal;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    margin-bottom: 6px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    line-height: 1.1;
     transition: color .3s;
   }
+  .brand-cell .bcountry {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    transition: color .3s;
+  }
+  .brand-cell .bnew {
+    position: absolute; top: 12px; right: 12px;
+    font-size: 9px; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--gold-deep); font-weight: 600;
+  }
+  .brand-cell[data-brand="Marni"] .bname { letter-spacing: 0.18em; font-weight: 700; }
+  .brand-cell[data-brand="Moncler"] .bname { font-weight: 700; letter-spacing: 0.14em; }
+  .brand-cell[data-brand="Maison Margiela"] .bname { font-weight: 300; letter-spacing: 0.2em; font-size: 18px; }
+  .brand-cell[data-brand="MM6 Maison Margiela"] .bname { font-weight: 400; letter-spacing: 0.24em; }
+  .brand-cell[data-brand="Dsquared2"] .bname { font-weight: 800; letter-spacing: 0.08em; }
+  .brand-cell[data-brand="Amiri"] .bname { font-weight: 700; letter-spacing: 0.24em; }
+  .brand-cell[data-brand="Bob"] .bname { font-weight: 500; letter-spacing: 0.2em; }
+  .brand-cell[data-brand="Barba"] .bname { font-weight: 300; letter-spacing: 0.28em; font-size: 20px; }
+  .brand-cell[data-brand="Autry"] .bname { font-weight: 800; letter-spacing: 0.16em; }
+  .brand-cell[data-brand="Ballantyne"] .bname { font-weight: 400; letter-spacing: 0.24em; font-size: 18px; }
+  .brand-cell[data-brand="Y's"] .bname { font-weight: 700; font-size: 30px; letter-spacing: 0.02em; }
   .brand-cell .bcountry {
     font-size: 10px;
     letter-spacing: 0.24em;
