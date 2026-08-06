@@ -558,22 +558,33 @@
 
   /* ============ NEWS — 6 cards grid ============ */
   .news { background: var(--bg); padding-top: var(--space-section); padding-bottom: calc(var(--space-section) - 24px); }
-  .news-head { max-width: 900px; padding-top: 20px; margin-bottom: 44px; position: relative; }
-  .news-head .eyebrow {
-    font-size: 12px;
-    letter-spacing: 0.34em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    font-weight: 500;
+  .news-head {
+    padding-top: 20px; margin-bottom: 44px;
+    display: flex; justify-content: space-between; align-items: center;
   }
-  .news-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px 26px;
+  .news-head .eyebrow {
+    font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase;
+    color: var(--ink-soft); font-weight: 500;
+  }
+  .news-nav { display: flex; gap: 10px; }
+  .nn-btn {
+    width: 42px; height: 42px; border-radius: 50%;
+    border: 1px solid var(--line); background: var(--surface);
+    color: var(--ink); font-size: 16px; cursor: pointer; font-family: inherit;
+    transition: all .3s;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .nn-btn:hover { background: var(--navy); color: var(--surface); border-color: var(--navy); }
+  .nn-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .news-carousel { overflow: hidden; margin: 0 -56px; padding: 0 56px; }
+  .news-track {
+    display: flex; gap: 26px;
+    transition: transform .7s var(--ease); will-change: transform;
   }
   .news-card {
-    display: block;
-    transition: transform .5s var(--ease);
+    flex: 0 0 calc((100% - 52px) / 3);
+    min-width: 0;
+    display: block; transition: transform .5s var(--ease);
   }
   .news-card:hover { transform: translateY(-3px); }
   .news-card .nc-visual {
@@ -608,6 +619,89 @@
     font-size: 20px;
     line-height: 1.24;
     color: var(--ink);
+  }
+
+  /* ============ PICK UP HERO — 1 tall left + 2 square right ============ */
+  .pickup-hero { background: var(--surface); }
+  .pickup-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 22px;
+  }
+  .pu-tall { grid-column: 1; grid-row: 1 / span 2; aspect-ratio: 1/2; overflow: hidden; background: var(--bg-2); position: relative; display: block; }
+  .pu-sq { aspect-ratio: 1/1; overflow: hidden; background: var(--bg-2); position: relative; display: block; }
+  .pu-tall img, .pu-sq img {
+    width: 100%; height: 100%; object-fit: contain;
+    padding: 8%;
+    background: var(--surface);
+    transition: transform 1.2s var(--ease);
+  }
+  .pu-tall:hover img, .pu-sq:hover img { transform: scale(1.03); }
+  .pu-label {
+    position: absolute; left: 20px; right: 20px; bottom: 18px;
+    z-index: 2; color: var(--ink); background: rgba(247,245,239,0.92);
+    padding: 12px 16px;
+  }
+  .pu-label .pu-brand {
+    font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold-deep); font-weight: 500; margin-bottom: 4px;
+  }
+  .pu-label .pu-name {
+    font-family: 'Playfair Display', serif; font-size: 15px; color: var(--ink);
+    line-height: 1.2;
+  }
+  @media (max-width: 900px) {
+    .pickup-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .pu-tall { grid-column: 1; grid-row: auto; aspect-ratio: 3/4; }
+  }
+
+  /* ============ MEDIA — Featured in press ============ */
+  .media { background: var(--bg-2); }
+  .media-head { max-width: 900px; padding-top: 20px; margin-bottom: 44px; }
+  .media-head .eyebrow {
+    font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase;
+    color: var(--ink-soft); font-weight: 500; margin-bottom: 14px;
+  }
+  .media-head h2 { font-size: clamp(30px, 2.4vw + 14px, 52px); line-height: 1.1; }
+  .media-head h2 em { font-style: normal; color: var(--gold-deep); }
+  .media-grid {
+    display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px;
+    align-items: center;
+  }
+  .media-visual { aspect-ratio: 4/5; overflow: hidden; background: var(--bg); }
+  .media-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.6s var(--ease); }
+  .media-visual:hover img { transform: scale(1.03); }
+  .media-copy .brand-badge {
+    display: inline-block; font-family: 'Playfair Display', serif; font-size: 42px;
+    color: var(--ink); letter-spacing: -0.01em; margin-bottom: 20px;
+    padding: 4px 20px; border: 1px solid var(--ink);
+    font-weight: 500;
+  }
+  .media-copy .m-eyebrow {
+    font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold-deep); font-weight: 500; margin-bottom: 12px;
+  }
+  .media-copy h3 {
+    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-size: clamp(22px, 1.6vw + 14px, 30px); line-height: 1.24;
+    margin-bottom: 22px;
+  }
+  .media-copy p {
+    font-family: 'Noto Serif JP', serif; font-weight: 300;
+    font-size: 14px; line-height: 2; color: var(--ink-2);
+    margin-bottom: 22px; max-width: 480px;
+  }
+  .media-copy .m-link {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ink); padding-bottom: 6px; border-bottom: 1px solid var(--gold);
+    font-weight: 500; transition: gap .4s var(--ease);
+  }
+  .media-copy .m-link:hover { gap: 20px; }
+  @media (max-width: 900px) {
+    .media-grid { grid-template-columns: 1fr; gap: 24px; }
+    .media-copy .brand-badge { font-size: 32px; }
   }
 
   /* ============ LOOKBOOK — 3 large editorial images ============ */
@@ -1572,7 +1666,8 @@
     .store-teaser h2 { font-size: 28px; }
     .lookbook-grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 22px; }
     .lb-card { height: 420px; }
-    .news-grid { grid-template-columns: 1fr 1fr; gap: 24px 18px; }
+    .news-carousel { margin: 0 -20px; padding: 0 20px; }
+    .news-card { flex-basis: calc(100vw - 40px); }
     .resort-strip-head { padding: 0 20px; }
     .featured { grid-template-columns: 1fr; gap: 56px; }
     .heritage { grid-template-columns: 1fr; gap: 56px; }
@@ -1619,9 +1714,9 @@
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="window">
-    <img class="slide" src="photos/hayama-store.jpg" alt="Studio Route 134 Hayama terrace">
-    <img class="slide" src="photos/enoshima-outside-2.jpg" alt="Enoshima view">
-    <img class="slide" src="photos/enoshima-store.jpg" alt="Enoshima store interior">
+    <img class="slide" src="photos/hayama-exterior-day.jpg" alt="Hayama storefront by day">
+    <img class="slide" src="photos/hayama-exterior-night.jpg" alt="Hayama storefront by night">
+    <img class="slide" src="photos/enoshima-sea-view.jpg" alt="Enoshima sea view from the store">
   </div>
   <div class="awning">
     <div class="awning-body"></div>
@@ -1662,56 +1757,91 @@
   </div>
 </section>
 
-<!-- ============ NEWS ============ -->
+<!-- ============ NEWS — horizontal carousel ============ -->
 <section class="news" id="news">
   <div class="news-head reveal">
     <div class="eyebrow">News</div>
+    <div class="news-nav">
+      <button class="nn-btn" data-news-prev aria-label="Prev">←</button>
+      <button class="nn-btn" data-news-next aria-label="Next">→</button>
+    </div>
   </div>
-  <div class="news-grid stagger">
-    <a class="news-card" href="#">
-      <div class="nc-visual"><img src="photos/enoshima-before.jpg" alt=""></div>
-      <div class="nc-date">2026.07.20 — Enoshima</div>
-      <div class="nc-title">New Store, Opening Soon</div>
-    </a>
-    <a class="news-card nc-product" href="https://item.rakuten.co.jp/studio-route134/amr102swtk1006/" target="_blank" rel="noopener">
-      <div class="nc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/imgrc0170327001.jpg" alt=""></div>
-      <div class="nc-date">2026.07.15 — Amiri</div>
-      <div class="nc-title">SS 26 Collection Arrived</div>
-    </a>
-    <a class="news-card" href="#">
-      <div class="nc-visual"><img src="photos/hayama-store.jpg" alt=""></div>
-      <div class="nc-date">2026.07.10 — Hayama</div>
-      <div class="nc-title">Summer Hours Begin</div>
-    </a>
-    <a class="news-card nc-product" href="https://item.rakuten.co.jp/studio-route134/d2102s74kb1142/" target="_blank" rel="noopener">
-      <div class="nc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s74kb1142-s.jpg" alt=""></div>
-      <div class="nc-date">2026.07.05 — Dsquared2</div>
-      <div class="nc-title">Track Denim Story</div>
-    </a>
-    <a class="news-card" href="#">
-      <div class="nc-visual"><img src="photos/hayama-beach-2.jpg" alt=""></div>
-      <div class="nc-date">2026.06.28 — Beach</div>
-      <div class="nc-title">Season by the Sea</div>
-    </a>
-    <a class="news-card nc-product" href="https://item.rakuten.co.jp/studio-route134/bob133074721720/" target="_blank" rel="noopener">
-      <div class="nc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/02003077/imgrc0131663464.jpg" alt=""></div>
-      <div class="nc-date">2026.06.20 — Bob</div>
-      <div class="nc-title">KOON Denim-Repair Series</div>
-    </a>
+  <div class="news-carousel">
+    <div class="news-track" data-news-track>
+      <a class="news-card" href="story.html">
+        <div class="nc-visual"><img src="photos/story-fujisawa.jpg" alt=""></div>
+        <div class="nc-date">2026.08 — Story</div>
+        <div class="nc-title">藤沢の一室から、いまへ。</div>
+      </a>
+      <a class="news-card" href="#">
+        <div class="nc-visual"><img src="photos/enoshima-before.jpg" alt=""></div>
+        <div class="nc-date">2026.07.20 — Enoshima</div>
+        <div class="nc-title">New Store, Opening Soon</div>
+      </a>
+      <a class="news-card" href="#">
+        <div class="nc-visual"><img src="photos/aoyama-leon-shoot-2.jpg" alt=""></div>
+        <div class="nc-date">2026.07.15 — Media</div>
+        <div class="nc-title">LEON Shoot at Aoyama</div>
+      </a>
+      <a class="news-card nc-product" href="product.html?id=amr102swtk1006">
+        <div class="nc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/imgrc0170327001.jpg" alt=""></div>
+        <div class="nc-date">2026.07.15 — Amiri</div>
+        <div class="nc-title">SS 26 Collection Arrived</div>
+      </a>
+      <a class="news-card" href="#">
+        <div class="nc-visual"><img src="photos/hayama-scenery.jpg" alt=""></div>
+        <div class="nc-date">2026.07.10 — Hayama</div>
+        <div class="nc-title">Summer Hours Begin</div>
+      </a>
+      <a class="news-card nc-product" href="product.html?id=d2102s74kb1142">
+        <div class="nc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/d2102s74kb1142-s.jpg" alt=""></div>
+        <div class="nc-date">2026.07.05 — Dsquared2</div>
+        <div class="nc-title">Track Denim Story</div>
+      </a>
+      <a class="news-card" href="#">
+        <div class="nc-visual"><img src="photos/hayama-beach-3.jpg" alt=""></div>
+        <div class="nc-date">2026.06.28 — Beach</div>
+        <div class="nc-title">Season by the Sea</div>
+      </a>
+      <a class="news-card" href="#">
+        <div class="nc-visual"><img src="photos/enoshima-beach.jpg" alt=""></div>
+        <div class="nc-date">2026.06.20 — Enoshima</div>
+        <div class="nc-title">Coastline &amp; Palms</div>
+      </a>
+      <a class="news-card nc-product" href="product.html?id=bob133074721720">
+        <div class="nc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/02003077/imgrc0131663464.jpg" alt=""></div>
+        <div class="nc-date">2026.06.15 — Bob</div>
+        <div class="nc-title">KOON Denim-Repair Series</div>
+      </a>
+      <a class="news-card" href="#">
+        <div class="nc-visual"><img src="photos/hayama-entrance.jpg" alt=""></div>
+        <div class="nc-date">2026.06.10 — Hayama</div>
+        <div class="nc-title">Studio Route 134, Est. 2007</div>
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- ============ COLLECTION ============ -->
-<section id="collection">
+<section id="category">
   <div class="section-head reveal">
-    <div class="eyebrow">Selected for You</div>
-    <h2>Pick <em>Up.</em></h2>
+    <div class="eyebrow">Category</div>
+    <h2>Explore by <em>Category.</em></h2>
   </div>
   <div class="brand-filter-bar" data-filter-bar>
     <div>Filtering by <strong data-filter-name></strong></div>
     <button class="brand-filter-clear" data-filter-clear>Show All ×</button>
   </div>
   <div class="collection-grid stagger" data-collection></div>
+</section>
+
+<!-- ============ PICK UP — RHC-style 1 tall + 2 square ============ -->
+<section class="pickup-hero">
+  <div class="section-head reveal">
+    <div class="eyebrow">Pick Up</div>
+    <h2>This <em>Week.</em></h2>
+  </div>
+  <div class="pickup-grid stagger" data-pickup></div>
 </section>
 
 <!-- ============ LOOKBOOK ============ -->
@@ -1803,6 +1933,26 @@
       <div class="jc-date">2026.06.28 — Aoyama</div>
       <div class="jc-title">Alberto Bressi Visits</div>
     </a>
+  </div>
+</section>
+
+<!-- ============ MEDIA ============ -->
+<section class="media" id="media">
+  <div class="media-head reveal">
+    <div class="eyebrow">Media</div>
+    <h2>As Featured <em>in Press.</em></h2>
+  </div>
+  <div class="media-grid stagger">
+    <div class="media-visual reveal">
+      <img src="photos/aoyama-leon-shoot-2.jpg" alt="LEON magazine shoot at Studio Route 134 Aoyama">
+    </div>
+    <div class="media-copy reveal">
+      <div class="brand-badge">LEON</div>
+      <div class="m-eyebrow">2026 — Aoyama Location Shoot</div>
+      <h3>誌面撮影の舞台として。</h3>
+      <p>雑誌 LEON の撮影が青山店にて行われました。イタリア ブランド HYDROGEN の創業者 Alberto Bressi 氏 も来店。「大人のスタイル」を撮る場として、Studio Route 134 の店内が選ばれています。他 Safari、MEN&rsquo;S NON-NO 等でも継続的にご紹介いただいております。</p>
+      <a href="#" class="m-link">View All Press <span>→</span></a>
+    </div>
   </div>
 </section>
 
@@ -1984,7 +2134,40 @@
     viewAll.className = 'view-all-wrap reveal visible';
     viewAll.innerHTML = '<a href="shop.html" class="view-all-link">View All Products <span>→</span></a>';
     grid.after(viewAll);
+    // Render Pick Up hero (1 tall + 2 sq)
+    const pickup = $('[data-pickup]');
+    if (pickup) {
+      const picks = products.slice(0, 3);
+      pickup.innerHTML = picks.map((p, i) => `
+        <a class="${i===0?'pu-tall':'pu-sq'}" href="product.html?id=${p.id}">
+          <img referrerpolicy="no-referrer" src="${p.image}" alt="${p.brand} ${p.name}">
+          <div class="pu-label"><div class="pu-brand">${p.brand}</div><div class="pu-name">${p.name}</div></div>
+        </a>`).join('');
+      pickup.classList.add('visible');
+    }
   }
+
+  // News carousel controls
+  function initNewsCarousel() {
+    const track = $('[data-news-track]');
+    if (!track) return;
+    let pos = 0;
+    const step = () => {
+      const cards = track.children;
+      if (!cards.length) return 0;
+      const cardW = cards[0].getBoundingClientRect().width;
+      const gap = 26;
+      return cardW + gap;
+    };
+    function shift(delta) {
+      const maxPos = -(track.scrollWidth - track.parentElement.clientWidth);
+      pos = Math.max(maxPos, Math.min(0, pos + delta * step()));
+      track.style.transform = `translateX(${pos}px)`;
+    }
+    $('[data-news-prev]')?.addEventListener('click', () => shift(1));
+    $('[data-news-next]')?.addEventListener('click', () => shift(-1));
+  }
+  initNewsCarousel();
 
   // === Brand filter ===
   function filterByBrand(brand) {

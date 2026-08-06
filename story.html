@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Studio Route 134 の物語 — 藤沢の一室から始まったセレクトメゾン。">
+<title>Story — Studio Route 134</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+JP:wght@200;300;400&family=Inter:wght@300;400;500&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#F7F5EF;--bg-2:#ECE9DF;--surface:#FFFFFF;
+    --ink:#15233F;--ink-2:#2B3E5E;--ink-soft:#6E7A8E;
+    --navy:#1B2F52;--navy-deep:#11203B;
+    --gold:#B89A5C;--gold-deep:#977C42;--gold-light:#D8C28C;
+    --line:#DAD5C7;
+    --ease:cubic-bezier(0.16,1,0.3,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html { scroll-behavior: smooth; }
+  body{background:var(--bg);color:var(--ink);font-family:'Inter','Noto Sans JP',sans-serif;font-size:15px;font-weight:300;line-height:1.85;-webkit-font-smoothing:antialiased;}
+  img{display:block;max-width:100%;height:auto;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{font-family:'Playfair Display','Noto Serif JP',serif;font-weight:400;letter-spacing:-0.01em;}
+
+  .topbar{background:var(--navy-deep);color:var(--bg);font-size:10px;letter-spacing:0.32em;text-transform:uppercase;padding:10px;text-align:center;}
+  header{padding:22px 48px;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;}
+  header .back{font-size:11px;letter-spacing:0.24em;text-transform:uppercase;font-weight:500;}
+  header .back:hover{color:var(--gold-deep);}
+  header .logo img{height:40px;width:auto;}
+
+  .story-hero {
+    aspect-ratio: 16/8;
+    overflow: hidden; position: relative;
+    background: var(--navy-deep);
+  }
+  .story-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    animation: kb 60s ease-in-out infinite alternate;
+  }
+  @keyframes kb { from { transform: scale(1.04); } to { transform: scale(1.10); } }
+  .story-hero::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(17,32,59,0.20) 0%, rgba(17,32,59,0.55) 100%);
+  }
+  .story-hero-inner {
+    position: absolute; inset: 0; z-index: 2;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: var(--surface); padding: 24px; text-align: center;
+  }
+  .story-hero .eyebrow {
+    font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 22px; font-weight: 500;
+  }
+  .story-hero h1 {
+    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-size: clamp(38px, 4vw + 12px, 78px);
+    line-height: 1.08; letter-spacing: -0.01em;
+  }
+  .story-hero h1 em { font-style: normal; color: var(--gold-light); }
+
+  .prose { max-width: 720px; margin: 0 auto; padding: 96px 40px 20px; }
+  .prose .kicker {
+    font-family: 'Cormorant Garamond', serif; font-size: 20px;
+    color: var(--gold-deep); margin-bottom: 32px; text-align: center;
+    letter-spacing: 0.12em;
+  }
+  .prose h2 {
+    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-size: clamp(28px, 2vw + 14px, 42px);
+    line-height: 1.2; margin: 48px 0 24px;
+  }
+  .prose h2 em { font-style: normal; color: var(--gold-deep); }
+  .prose p {
+    font-family: 'Noto Serif JP', serif; font-weight: 300;
+    font-size: 15.5px; line-height: 2.1; color: var(--ink-2);
+    margin-bottom: 22px;
+  }
+  .prose .divider {
+    width: 40px; height: 1px; background: var(--gold); margin: 60px auto;
+    opacity: 0.7;
+  }
+  .prose .signature {
+    text-align: right; font-family: 'Playfair Display', serif;
+    font-size: 22px; color: var(--gold-deep); margin-top: 40px;
+  }
+  .prose .signature small {
+    display: block; font-family: 'Inter', sans-serif;
+    font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--ink-soft); margin-top: 5px;
+  }
+
+  .story-images {
+    max-width: 1200px; margin: 80px auto 0;
+    padding: 0 40px 120px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  }
+  .story-images figure {
+    display: block;
+  }
+  .story-images figure img {
+    aspect-ratio: 4/5; object-fit: cover; background: var(--bg-2);
+    width: 100%; height: 100%;
+  }
+  .story-images figcaption {
+    margin-top: 10px; font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink-soft);
+  }
+
+  .back-cta {
+    text-align: center; padding: 40px 20px 100px;
+  }
+  .back-cta a {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+    padding: 14px 28px; border: 1px solid var(--ink); color: var(--ink);
+    font-weight: 500; transition: all .4s var(--ease);
+  }
+  .back-cta a:hover { background: var(--navy); color: var(--surface); border-color: var(--navy); }
+
+  footer{background:var(--navy-deep);color:var(--surface);padding:36px 48px;text-align:center;font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;opacity:0.65;}
+
+  @media (max-width:900px) {
+    header, .prose, .story-images, .back-cta, footer { padding-left: 20px; padding-right: 20px; }
+    .story-images { grid-template-columns: 1fr; }
+    .story-hero { aspect-ratio: 3/4; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Complimentary Shipping over ¥30,000 &nbsp;·&nbsp; 国内正規販売店</div>
+
+<header>
+  <a href="index.html" class="back">← Back to Home</a>
+  <a href="index.html" class="logo"><img src="sr134_logo.png" alt="Studio Route 134"></a>
+  <span style="width: 120px"></span>
+</header>
+
+<section class="story-hero">
+  <img src="photos/story-fujisawa.jpg" alt="Fujisawa origin">
+  <div class="story-hero-inner">
+    <div class="eyebrow">Our Story · Est. 2007</div>
+    <h1>藤沢の一室から、<br><em>いまへ。</em></h1>
+  </div>
+</section>
+
+<article class="prose">
+
+  <div class="kicker">Studio Route 134 の始まりの物語</div>
+
+  <p>Studio Route 134 の始まりは、湘南・藤沢の小さな倉庫兼店舗、そしてインターネット通販でした。決して大きな一歩ではなく、ただ「良い服を、確かな目利きで届けたい」という思いだけを頼りに、私たちの旅は始まりました。</p>
+
+  <p>創業者・T. TORY は、若い頃からヨーロッパの一流メゾンに触れ、その哲学と仕立ての美しさに惹かれ続けてきました。とりわけ、都市の一流と海辺の空気が同居する装いに、独自の可能性を見出していました。</p>
+
+  <h2>海のそばに、<em>店を構える。</em></h2>
+
+  <p>藤沢の一室で扱う商品数が増え、対面での接客を求められることが多くなった頃、私たちは湘南・葉山に一軒の店を構えました。海を目の前に望む、二階の店。国道134号線沿いの、静かな海辺の道の名を、そのまま店の名前に刻みました。</p>
+
+  <p>Maison Margiela、Marni、Moncler、Dsquared2、Amiri ——。世界の一流メゾンを、海辺の光のもとで手に取っていただく。それが、私たちが選んだ場のかたちでした。</p>
+
+  <h2>三つの店、<em>ひとつの海岸線。</em></h2>
+
+  <p>やがて、葉山の隣に江ノ島店を、そして東京・南青山に都心の一店を構えるに至りました。三つの店には、それぞれ違う空気が流れています。しかし共通するのは、「一流のメゾンを、確かな目利きで、静かに」お迎えするという姿勢です。</p>
+
+  <p>私たちは、これからも変わらず、海辺の空気とともに、装いをお届けします。</p>
+
+  <div class="divider"></div>
+
+  <div class="signature">
+    T. TORY
+    <small>Founder / Buyer</small>
+  </div>
+
+</article>
+
+<section class="story-images">
+  <figure>
+    <img src="photos/hayama-entrance.jpg" alt="Hayama store entrance">
+    <figcaption>Hayama Store, Entrance</figcaption>
+  </figure>
+  <figure>
+    <img src="photos/hayama-exterior-night.jpg" alt="Hayama at night">
+    <figcaption>Hayama Store, After Sunset</figcaption>
+  </figure>
+  <figure>
+    <img src="photos/enoshima-store.jpg" alt="Enoshima interior">
+    <figcaption>Enoshima Store, Interior</figcaption>
+  </figure>
+  <figure>
+    <img src="photos/aoyama-1f.jpg" alt="Aoyama 1F" style="object-position: 55% center;">
+    <figcaption>Aoyama Store, 1F Showroom</figcaption>
+  </figure>
+</section>
+
+<div class="back-cta">
+  <a href="index.html">Back to Home <span>→</span></a>
+</div>
+
+<footer>© 2026 Studio Route 134 / Office T3 Inc.</footer>
+
+</body>
+</html>
