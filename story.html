@@ -19,10 +19,10 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html { scroll-behavior: smooth; }
-  body{background:var(--bg);color:var(--ink);font-family:'Inter','Noto Sans JP',sans-serif;font-size:15px;font-weight:300;line-height:1.85;-webkit-font-smoothing:antialiased;}
+  body{background:var(--bg);color:var(--ink);font-family: var(--font-sans);font-size:15px;font-weight:300;line-height:1.85;-webkit-font-smoothing:antialiased;}
   img{display:block;max-width:100%;height:auto;}
   a{color:inherit;text-decoration:none;}
-  h1,h2,h3{font-family:'Playfair Display','Noto Serif JP',serif;font-weight:400;letter-spacing:-0.01em;}
+  h1,h2,h3{font-family: var(--font-sans);font-weight:400;letter-spacing:-0.01em;}
 
   .topbar{background:var(--navy-deep);color:var(--bg);font-size:10px;letter-spacing:0.32em;text-transform:uppercase;padding:10px;text-align:center;}
   header{padding:22px 48px;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;}
@@ -54,7 +54,7 @@
     color: var(--gold-light); margin-bottom: 22px; font-weight: 500;
   }
   .story-hero h1 {
-    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-family: var(--font-sans); font-weight: 400;
     font-size: clamp(38px, 4vw + 12px, 78px);
     line-height: 1.08; letter-spacing: -0.01em;
   }
@@ -62,18 +62,18 @@
 
   .prose { max-width: 720px; margin: 0 auto; padding: 96px 40px 20px; }
   .prose .kicker {
-    font-family: 'Cormorant Garamond', serif; font-size: 20px;
+    font-family: var(--font-sans); font-size: 20px;
     color: var(--gold-deep); margin-bottom: 32px; text-align: center;
     letter-spacing: 0.12em;
   }
   .prose h2 {
-    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-family: var(--font-sans); font-weight: 400;
     font-size: clamp(28px, 2vw + 14px, 42px);
     line-height: 1.2; margin: 48px 0 24px;
   }
   .prose h2 em { font-style: normal; color: var(--gold-deep); }
   .prose p {
-    font-family: 'Noto Serif JP', serif; font-weight: 300;
+    font-family: var(--font-sans); font-weight: 300;
     font-size: 15.5px; line-height: 2.1; color: var(--ink-2);
     margin-bottom: 22px;
   }
@@ -82,11 +82,11 @@
     opacity: 0.7;
   }
   .prose .signature {
-    text-align: right; font-family: 'Playfair Display', serif;
+    text-align: right; font-family: var(--font-sans);
     font-size: 22px; color: var(--gold-deep); margin-top: 40px;
   }
   .prose .signature small {
-    display: block; font-family: 'Inter', sans-serif;
+    display: block; font-family: var(--font-sans);
     font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase;
     color: var(--ink-soft); margin-top: 5px;
   }

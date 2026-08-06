@@ -11,7 +11,7 @@
 <title>Studio Route 134</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@500;700&family=Bodoni+Moda:ital,wght@0,700;0,800;0,900;1,700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Bodoni+Moda:wght@700;800;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #F7F5EF;
@@ -31,22 +31,25 @@
     --text-h2: clamp(30px, 2.6vw + 16px, 60px);
     --space-section: clamp(110px, 9vw, 190px);
     --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --font-sans: "Helvetica Neue", "Helvetica", "Arial", "Noto Sans JP", "Yu Gothic", "游ゴシック", "Hiragino Sans", "ヒラギノ角ゴ ProN", "Meiryo", sans-serif;
+    --font-display: "Helvetica Neue", "Helvetica", "Arial", "Noto Sans JP", "Yu Gothic", "游ゴシック", "Hiragino Sans", sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     background: var(--bg);
     color: var(--ink);
-    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-family: var(--font-sans);
     font-size: var(--text-body);
     font-weight: 300;
-    line-height: 1.85;
+    line-height: 1.75;
+    letter-spacing: 0.02em;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
   img { display: block; max-width: 100%; height: auto; }
   a { color: inherit; text-decoration: none; }
-  h1, h2, h3 { font-family: 'Playfair Display', 'Noto Serif JP', serif; font-weight: 400; letter-spacing: -0.01em; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 500; letter-spacing: 0.02em; }
 
   /* ============ TOPBAR ============ */
   .topbar {
@@ -261,7 +264,7 @@
     padding: 0 24px;
   }
   .hero-eyebrow {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-sans);
     font-style: normal;
     font-size: 18px;
     letter-spacing: 0.24em;
@@ -371,7 +374,7 @@
   }
   .intro h2 em { font-style: normal; color: var(--gold-light); }
   .intro p {
-    font-family: 'Noto Serif JP', serif;
+    font-family: var(--font-sans);
     font-size: 14.5px;
     line-height: 2.25;
     color: var(--surface);
@@ -392,7 +395,7 @@
     gap: 72px;
     animation: scroll 72s linear infinite;
     white-space: nowrap;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-weight: 400;
     font-size: 22px;
     letter-spacing: 0.04em;
@@ -409,6 +412,37 @@
     vertical-align: middle;
   }
   @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ============ CATEGORY TILES ============ */
+  .category-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .cat-tile {
+    display: block; position: relative;
+    aspect-ratio: 3/2;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: transform .6s var(--ease);
+  }
+  .cat-tile::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(17,32,59,0.05) 0%, rgba(17,32,59,0.55) 100%);
+    transition: background .4s;
+  }
+  .cat-tile:hover::before { background: linear-gradient(180deg, rgba(17,32,59,0.1) 0%, rgba(17,32,59,0.72) 100%); }
+  .cat-tile .cat-label {
+    position: absolute; left: 24px; bottom: 20px;
+    color: var(--surface); font-family: var(--font-display);
+    font-size: clamp(20px, 1.6vw + 8px, 30px);
+    font-weight: 500; letter-spacing: 0.06em;
+    z-index: 2;
+  }
+  @media (max-width: 900px) {
+    .category-tiles { grid-template-columns: 1fr 1fr; gap: 14px; }
+  }
 
   /* ============ COLLECTION — clean image grid ============ */
   .collection-grid {
@@ -459,7 +493,7 @@
     font-weight: 500;
   }
   .col-card .label .cat {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: 20px;
     color: var(--surface);
     letter-spacing: 0;
@@ -516,7 +550,7 @@
     font-weight: 500;
   }
   .featured-text .featured-num {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: 14px;
     letter-spacing: 0.22em;
     color: var(--gold-deep);
@@ -547,7 +581,7 @@
   }
   .featured-text h2 em { font-style: normal; color: var(--gold-deep); }
   .featured-text p {
-    font-family: 'Noto Serif JP', serif;
+    font-family: var(--font-sans);
     font-weight: 300;
     font-size: 14.5px;
     line-height: 2.2;
@@ -568,15 +602,17 @@
   }
   .news-nav { display: flex; gap: 10px; }
   .nn-btn {
-    width: 42px; height: 42px; border-radius: 50%;
-    border: 1px solid var(--line); background: var(--surface);
-    color: var(--ink); font-size: 16px; cursor: pointer; font-family: inherit;
+    width: 52px; height: 52px; border-radius: 50%;
+    border: 1px solid var(--ink); background: var(--surface);
+    color: var(--ink); font-size: 20px; cursor: pointer; font-family: inherit;
+    font-weight: 300;
     transition: all .3s;
     display: inline-flex; align-items: center; justify-content: center;
   }
   .nn-btn:hover { background: var(--navy); color: var(--surface); border-color: var(--navy); }
-  .nn-btn:disabled { opacity: 0.35; cursor: not-allowed; }
-  .news-carousel { overflow: hidden; margin: 0 -56px; padding: 0 56px; }
+  .nn-btn:disabled { opacity: 0.28; cursor: not-allowed; }
+  .news-carousel-wrap { position: relative; }
+  .news-carousel { overflow: hidden; margin: 0 -56px; padding: 0 56px; scroll-behavior: smooth; }
   .news-track {
     display: flex; gap: 26px;
     transition: transform .7s var(--ease); will-change: transform;
@@ -586,9 +622,17 @@
     min-width: 0;
     display: block; transition: transform .5s var(--ease);
   }
+  .news-hint {
+    text-align: center; margin-top: 22px;
+    display: flex; justify-content: center; align-items: center; gap: 16px;
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-soft);
+  }
+  .news-hint .dots { display: inline-flex; gap: 6px; }
+  .news-hint .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--line); transition: all .3s; }
+  .news-hint .dot.active { background: var(--navy); width: 20px; border-radius: 3px; }
   .news-card:hover { transform: translateY(-3px); }
   .news-card .nc-visual {
-    aspect-ratio: 4/5;
+    aspect-ratio: 16/10;
     overflow: hidden;
     background: var(--bg-2);
     margin-bottom: 16px;
@@ -615,7 +659,7 @@
     margin-bottom: 8px;
   }
   .news-card .nc-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: 20px;
     line-height: 1.24;
     color: var(--ink);
@@ -648,7 +692,7 @@
     color: var(--gold-deep); font-weight: 500; margin-bottom: 4px;
   }
   .pu-label .pu-name {
-    font-family: 'Playfair Display', serif; font-size: 15px; color: var(--ink);
+    font-family: var(--font-sans); font-size: 15px; color: var(--ink);
     line-height: 1.2;
   }
   @media (max-width: 900px) {
@@ -673,7 +717,7 @@
   .media-visual img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.6s var(--ease); }
   .media-visual:hover img { transform: scale(1.03); }
   .media-copy .brand-badge {
-    display: inline-block; font-family: 'Playfair Display', serif; font-size: 42px;
+    display: inline-block; font-family: var(--font-sans); font-size: 42px;
     color: var(--ink); letter-spacing: -0.01em; margin-bottom: 20px;
     padding: 4px 20px; border: 1px solid var(--ink);
     font-weight: 500;
@@ -683,12 +727,12 @@
     color: var(--gold-deep); font-weight: 500; margin-bottom: 12px;
   }
   .media-copy h3 {
-    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-family: var(--font-sans); font-weight: 400;
     font-size: clamp(22px, 1.6vw + 14px, 30px); line-height: 1.24;
     margin-bottom: 22px;
   }
   .media-copy p {
-    font-family: 'Noto Serif JP', serif; font-weight: 300;
+    font-family: var(--font-sans); font-weight: 300;
     font-size: 14px; line-height: 2; color: var(--ink-2);
     margin-bottom: 22px; max-width: 480px;
   }
@@ -746,7 +790,7 @@
     font-weight: 500;
   }
   .lb-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: 22px;
     line-height: 1.16;
   }
@@ -814,7 +858,7 @@
     font-weight: 500;
   }
   .resort-card .rc-name {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: 20px;
     line-height: 1.24;
     color: var(--ink);
@@ -848,7 +892,7 @@
     will-change: transform;
   }
   .heritage-text .featured-num {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: 14px;
     letter-spacing: 0.22em;
     color: var(--gold-deep);
@@ -879,7 +923,7 @@
   }
   .heritage-text h2 em { font-style: normal; color: var(--gold-deep); }
   .heritage-text p {
-    font-family: 'Noto Serif JP', serif;
+    font-family: var(--font-sans);
     font-weight: 300;
     font-size: 14.5px;
     line-height: 2.2;
@@ -888,7 +932,7 @@
     max-width: 500px;
   }
   .heritage-signature {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-style: normal;
     font-size: 20px;
     color: var(--gold-deep);
@@ -902,7 +946,7 @@
     font-style: normal;
     color: var(--ink-soft);
     margin-top: 6px;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
   }
 
   /* ============ PRESS — media logos ticker ============ */
@@ -995,10 +1039,16 @@
   }
   .brand-cell:hover { background: var(--navy); color: var(--surface); }
   .brand-cell:hover .bname { color: var(--gold-light); }
+  .brand-cell .blogo {
+    max-width: 140px; max-height: 44px; width: auto; height: auto;
+    margin: 0 auto 14px; display: block; object-fit: contain;
+  }
   .brand-cell .bname {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
+    font-family: var(--font-sans);
+    font-size: 18px;
     font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.08em;
     margin-bottom: 6px;
     transition: color .3s;
   }
@@ -1064,7 +1114,7 @@
     margin-bottom: 9px;
   }
   .jc-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: 23px;
     line-height: 1.34;
     margin-bottom: 11px;
@@ -1073,7 +1123,7 @@
   .journal-card.feat .jc-title { font-size: 30px; }
   .journal-card:hover .jc-title { color: var(--gold-light); }
   .jc-excerpt {
-    font-family: 'Noto Serif JP', serif;
+    font-family: var(--font-sans);
     font-size: 13px;
     color: rgba(255,255,255,0.75);
     font-weight: 300;
@@ -1126,7 +1176,7 @@
     color: var(--surface);
   }
   .store .roman {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-sans);
     font-style: normal;
     font-size: 14px;
     letter-spacing: 0.16em;
@@ -1134,13 +1184,13 @@
     margin-bottom: 6px;
   }
   .store .name {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: clamp(38px, 3.4vw, 68px);
     line-height: 1;
     margin-bottom: 8px;
   }
   .store .jp {
-    font-family: 'Noto Serif JP', serif;
+    font-family: var(--font-sans);
     font-size: 13px;
     letter-spacing: 0.16em;
     opacity: 0.85;
@@ -1176,7 +1226,7 @@
     color: var(--surface);
   }
   .newsletter .eyebrow {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-sans);
     font-style: normal;
     font-size: 17px;
     letter-spacing: 0.2em;
@@ -1190,7 +1240,7 @@
   }
   .newsletter h2 em { font-style: normal; color: var(--gold-light); }
   .newsletter p {
-    font-family: 'Noto Serif JP', serif;
+    font-family: var(--font-sans);
     font-weight: 300;
     margin-bottom: 38px;
     opacity: 0.9;
@@ -1242,7 +1292,7 @@
     filter: invert(1) brightness(1.4);
   }
   .footer-desc {
-    font-family: 'Noto Serif JP', serif;
+    font-family: var(--font-sans);
     font-size: 13px;
     font-weight: 300;
     opacity: 0.68;
@@ -1321,7 +1371,7 @@
     color: var(--gold-deep); font-weight: 500; margin-bottom: 8px;
   }
   .journal-card .jc-title {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: 20px; line-height: 1.25; color: var(--ink);
   }
 
@@ -1340,7 +1390,7 @@
     margin-bottom: 14px;
   }
   .store-teaser-head h2 {
-    font-family: 'Playfair Display', serif; font-weight: 400;
+    font-family: var(--font-sans); font-weight: 400;
     font-size: clamp(30px, 2.6vw + 14px, 54px);
     line-height: 1.1;
   }
@@ -1378,13 +1428,13 @@
     pointer-events: none;
   }
   .st-cell .st-city {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: clamp(24px, 1.4vw + 14px, 34px);
     line-height: 1;
     margin-bottom: 6px;
   }
   .st-cell .st-jp {
-    font-family: 'Noto Serif JP', serif;
+    font-family: var(--font-sans);
     font-size: 11px;
     letter-spacing: 0.22em;
     color: var(--gold-light);
@@ -1444,7 +1494,7 @@
     border-bottom: 1px solid var(--line);
   }
   .cd-head h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: 20px;
     color: var(--ink);
     font-weight: 400;
@@ -1467,7 +1517,7 @@
     text-align: center;
     padding: 60px 20px;
     color: var(--ink-soft);
-    font-family: 'Noto Serif JP', serif;
+    font-family: var(--font-sans);
     font-size: 14px;
     line-height: 2;
   }
@@ -1478,7 +1528,7 @@
     letter-spacing: 0.28em;
     text-transform: uppercase;
     color: var(--gold-deep);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
   }
   .cd-items { display: flex; flex-direction: column; gap: 18px; }
   .cd-item {
@@ -1504,7 +1554,7 @@
     font-weight: 500;
   }
   .cd-item-name {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: 14.5px;
     line-height: 1.25;
     color: var(--ink);
@@ -1562,7 +1612,7 @@
     color: var(--ink-soft);
   }
   .cd-total-amount {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: 22px;
     color: var(--ink);
     letter-spacing: 0;
@@ -1766,7 +1816,8 @@
       <button class="nn-btn" data-news-next aria-label="Next">→</button>
     </div>
   </div>
-  <div class="news-carousel">
+  <div class="news-carousel-wrap">
+  <div class="news-carousel" data-news-carousel>
     <div class="news-track" data-news-track>
       <a class="news-card" href="story.html">
         <div class="nc-visual"><img src="photos/story-fujisawa.jpg" alt=""></div>
@@ -1820,19 +1871,44 @@
       </a>
     </div>
   </div>
+  </div>
+  <div class="news-hint">
+    <span>← Swipe / Click →</span>
+    <span class="dots" data-news-dots></span>
+  </div>
 </section>
 
 <!-- ============ COLLECTION ============ -->
 <section id="category">
   <div class="section-head reveal">
     <div class="eyebrow">Category</div>
-    <h2>Explore by <em>Category.</em></h2>
+    <h2>Shop by <em>Category.</em></h2>
   </div>
-  <div class="brand-filter-bar" data-filter-bar>
+  <div class="category-tiles stagger">
+    <a href="shop.html?group=Outerwear" class="cat-tile" style="background-image:url('photos/hayama-exterior-night.jpg')">
+      <div class="cat-label">Outerwear</div>
+    </a>
+    <a href="shop.html?group=Tops" class="cat-tile" style="background-image:url('photos/enoshima-store.jpg')">
+      <div class="cat-label">Tops</div>
+    </a>
+    <a href="shop.html?group=Bottoms" class="cat-tile" style="background-image:url('photos/aoyama-1f.jpg');background-position:55% center;">
+      <div class="cat-label">Bottoms</div>
+    </a>
+    <a href="shop.html?group=Swimwear" class="cat-tile" style="background-image:url('photos/hayama-beach-3.jpg')">
+      <div class="cat-label">Swimwear</div>
+    </a>
+    <a href="shop.html?group=Shoes" class="cat-tile" style="background-image:url('photos/aoyama-basement.jpg')">
+      <div class="cat-label">Shoes</div>
+    </a>
+    <a href="shop.html?group=Bags" class="cat-tile" style="background-image:url('photos/aoyama-alberto-bressi.jpg')">
+      <div class="cat-label">Bags &amp; Accessories</div>
+    </a>
+  </div>
+  <div class="brand-filter-bar" data-filter-bar style="display:none">
     <div>Filtering by <strong data-filter-name></strong></div>
     <button class="brand-filter-clear" data-filter-clear>Show All ×</button>
   </div>
-  <div class="collection-grid stagger" data-collection></div>
+  <div class="collection-grid stagger" data-collection style="display:none"></div>
 </section>
 
 <!-- ============ PICK UP — RHC-style 1 tall + 2 square ============ -->
@@ -1896,18 +1972,18 @@
     <h2>Our <em>Brands.</em></h2>
   </div>
   <div class="brands-grid stagger">
-    <div class="brand-cell" data-brand="Maison Margiela"><span class="bnew">New</span><div class="bname">Maison Margiela</div><div class="bcountry">Paris, France</div></div>
-    <div class="brand-cell" data-brand="MM6 Maison Margiela"><div class="bname">MM6</div><div class="bcountry">Paris, France</div></div>
-    <div class="brand-cell" data-brand="Marni"><div class="bname">Marni</div><div class="bcountry">Milano, Italy</div></div>
-    <div class="brand-cell" data-brand="Moncler"><span class="bnew">FW26</span><div class="bname">Moncler</div><div class="bcountry">Grenoble / Milano</div></div>
-    <div class="brand-cell" data-brand="Dsquared2"><div class="bname">Dsquared2</div><div class="bcountry">Milano, Italy</div></div>
-    <div class="brand-cell" data-brand="Amiri"><div class="bname">Amiri</div><div class="bcountry">Los Angeles, USA</div></div>
-    <div class="brand-cell" data-brand="Bob"><div class="bname">Bob Italy</div><div class="bcountry">Milano, Italy</div></div>
-    <div class="brand-cell" data-brand="Barba"><div class="bname">Barba</div><div class="bcountry">Napoli, Italy</div></div>
-    <div class="brand-cell" data-brand="Autry"><div class="bname">Autry</div><div class="bcountry">USA / Italy</div></div>
-    <div class="brand-cell" data-brand="Ballantyne"><div class="bname">Ballantyne</div><div class="bcountry">Scotland, UK</div></div>
-    <div class="brand-cell" data-brand="Y's"><div class="bname">Y&rsquo;s</div><div class="bcountry">Tokyo, Japan</div></div>
-    <div class="brand-cell viewall"><div class="bname">View All →</div><div class="bcountry">20 Houses</div></div>
+    <a class="brand-cell" data-brand="Maison Margiela" href="shop.html?brand=Maison%20Margiela"><span class="bnew">New</span><img class="blogo" src="logos/maison-margiela.svg" alt="Maison Margiela" onerror="this.style.display='none'"><div class="bname">Maison Margiela</div><div class="bcountry">Paris, France</div></a>
+    <a class="brand-cell" data-brand="MM6 Maison Margiela" href="shop.html?brand=MM6%20Maison%20Margiela"><img class="blogo" src="logos/mm6.svg" alt="MM6" onerror="this.style.display='none'"><div class="bname">MM6</div><div class="bcountry">Paris, France</div></a>
+    <a class="brand-cell" data-brand="Marni" href="shop.html?brand=Marni"><img class="blogo" src="logos/marni.svg" alt="Marni" onerror="this.style.display='none'"><div class="bname">Marni</div><div class="bcountry">Milano, Italy</div></a>
+    <a class="brand-cell" data-brand="Moncler" href="shop.html?brand=Moncler"><span class="bnew">FW26</span><img class="blogo" src="logos/moncler.svg" alt="Moncler" onerror="this.style.display='none'"><div class="bname">Moncler</div><div class="bcountry">Grenoble / Milano</div></a>
+    <a class="brand-cell" data-brand="Dsquared2" href="shop.html?brand=Dsquared2"><img class="blogo" src="logos/dsquared2.svg" alt="Dsquared2" onerror="this.style.display='none'"><div class="bname">Dsquared2</div><div class="bcountry">Milano, Italy</div></a>
+    <a class="brand-cell" data-brand="Amiri" href="shop.html?brand=Amiri"><img class="blogo" src="logos/amiri.svg" alt="Amiri" onerror="this.style.display='none'"><div class="bname">Amiri</div><div class="bcountry">Los Angeles, USA</div></a>
+    <a class="brand-cell" data-brand="Bob" href="shop.html?brand=Bob"><img class="blogo" src="logos/bob-italy.svg" alt="Bob Italy" onerror="this.style.display='none'"><div class="bname">Bob Italy</div><div class="bcountry">Milano, Italy</div></a>
+    <a class="brand-cell" data-brand="Barba" href="shop.html?brand=Barba"><img class="blogo" src="logos/barba.svg" alt="Barba" onerror="this.style.display='none'"><div class="bname">Barba</div><div class="bcountry">Napoli, Italy</div></a>
+    <a class="brand-cell" data-brand="Autry" href="shop.html?brand=Autry"><img class="blogo" src="logos/autry.svg" alt="Autry" onerror="this.style.display='none'"><div class="bname">Autry</div><div class="bcountry">USA / Italy</div></a>
+    <a class="brand-cell" data-brand="Ballantyne" href="shop.html?brand=Ballantyne"><img class="blogo" src="logos/ballantyne.svg" alt="Ballantyne" onerror="this.style.display='none'"><div class="bname">Ballantyne</div><div class="bcountry">Scotland, UK</div></a>
+    <a class="brand-cell" data-brand="Y's" href="shop.html?brand=Y%27s"><img class="blogo" src="logos/ys.svg" alt="Y's" onerror="this.style.display='none'"><div class="bname">Y&rsquo;s</div><div class="bcountry">Tokyo, Japan</div></a>
+    <a class="brand-cell viewall" href="shop.html"><div class="bname">View All →</div><div class="bcountry">20+ Houses</div></a>
   </div>
 </section>
 
@@ -2147,27 +2223,70 @@
     }
   }
 
-  // News carousel controls
+  // News carousel controls + dots + touch swipe
   function initNewsCarousel() {
     const track = $('[data-news-track]');
     if (!track) return;
+    const dotsWrap = $('[data-news-dots]');
+    const prevBtn = $('[data-news-prev]');
+    const nextBtn = $('[data-news-next]');
     let pos = 0;
+    let currentIdx = 0;
+
     const step = () => {
       const cards = track.children;
       if (!cards.length) return 0;
       const cardW = cards[0].getBoundingClientRect().width;
-      const gap = 26;
-      return cardW + gap;
+      return cardW + 26;
     };
-    function shift(delta) {
-      const maxPos = -(track.scrollWidth - track.parentElement.clientWidth);
-      pos = Math.max(maxPos, Math.min(0, pos + delta * step()));
-      track.style.transform = `translateX(${pos}px)`;
+    const visibleCount = () => {
+      const wrap = track.parentElement;
+      const w = wrap.clientWidth;
+      const cardW = track.children[0].getBoundingClientRect().width;
+      return Math.max(1, Math.round(w / (cardW + 26)));
+    };
+    const totalPages = () => Math.max(1, track.children.length - visibleCount() + 1);
+
+    function renderDots() {
+      if (!dotsWrap) return;
+      const total = totalPages();
+      dotsWrap.innerHTML = Array.from({length: total}, (_, i) =>
+        `<span class="dot ${i===currentIdx?'active':''}" data-dot="${i}"></span>`).join('');
     }
-    $('[data-news-prev]')?.addEventListener('click', () => shift(1));
-    $('[data-news-next]')?.addEventListener('click', () => shift(-1));
+    function updateButtons() {
+      const maxPos = -(track.scrollWidth - track.parentElement.clientWidth);
+      if (prevBtn) prevBtn.disabled = pos >= 0;
+      if (nextBtn) nextBtn.disabled = pos <= maxPos + 1;
+    }
+    function goTo(idx) {
+      const total = totalPages();
+      currentIdx = Math.max(0, Math.min(total - 1, idx));
+      pos = -currentIdx * step();
+      track.style.transform = `translateX(${pos}px)`;
+      renderDots();
+      updateButtons();
+    }
+    function shift(delta) { goTo(currentIdx - delta); }
+
+    prevBtn?.addEventListener('click', () => shift(1));
+    nextBtn?.addEventListener('click', () => shift(-1));
+    dotsWrap?.addEventListener('click', (e) => {
+      const d = e.target.closest('[data-dot]');
+      if (d) goTo(+d.dataset.dot);
+    });
+    // Touch swipe
+    let touchStart = null;
+    track.addEventListener('touchstart', (e) => { touchStart = e.touches[0].clientX; }, {passive:true});
+    track.addEventListener('touchend', (e) => {
+      if (touchStart == null) return;
+      const dx = e.changedTouches[0].clientX - touchStart;
+      if (Math.abs(dx) > 40) shift(dx > 0 ? 1 : -1);
+      touchStart = null;
+    });
+    window.addEventListener('resize', () => { renderDots(); updateButtons(); });
+    renderDots(); updateButtons();
   }
-  initNewsCarousel();
+  setTimeout(initNewsCarousel, 100);
 
   // === Brand filter ===
   function filterByBrand(brand) {

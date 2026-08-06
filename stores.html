@@ -29,7 +29,7 @@
   body {
     background: var(--bg);
     color: var(--ink);
-    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+    font-family: var(--font-sans);
     font-size: 15px;
     font-weight: 300;
     line-height: 1.85;
@@ -37,7 +37,7 @@
   }
   img { display: block; max-width: 100%; height: auto; }
   a { color: inherit; text-decoration: none; }
-  h1, h2, h3 { font-family: 'Playfair Display', 'Noto Serif JP', serif; font-weight: 400; letter-spacing: -0.01em; }
+  h1, h2, h3 { font-family: var(--font-sans); font-weight: 400; letter-spacing: -0.01em; }
 
   /* Header — simple */
   .topbar { background: var(--navy-deep); color: var(--bg); font-size: 10px; letter-spacing: 0.32em; text-transform: uppercase; padding: 10px; text-align: center; }
@@ -70,7 +70,7 @@
   }
   .page-hero h1 em { font-style: normal; color: var(--gold-deep); }
   .page-hero p {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-sans);
     font-size: 18px;
     color: var(--ink-2);
     max-width: 620px;
@@ -118,13 +118,13 @@
     color: var(--gold-deep); font-weight: 500; margin-bottom: 20px;
   }
   .sb-info h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-sans);
     font-size: clamp(36px, 3vw + 14px, 60px);
     line-height: 1.06;
     margin-bottom: 8px;
   }
   .sb-info .jp {
-    font-family: 'Noto Serif JP', serif;
+    font-family: var(--font-sans);
     font-size: 14px;
     letter-spacing: 0.14em;
     color: var(--ink-soft);
@@ -147,7 +147,7 @@
     font-weight: 500;
   }
   .sb-details dd {
-    font-family: 'Noto Serif JP', serif; font-weight: 300;
+    font-family: var(--font-sans); font-weight: 300;
     line-height: 1.7;
   }
   .sb-details dd a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; }
