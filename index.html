@@ -35,7 +35,7 @@
     --font-display: "Helvetica Neue", "Helvetica", "Arial", "Noto Sans JP", "Yu Gothic", "游ゴシック", "Hiragino Sans", sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
   body {
     background: var(--bg);
     color: var(--ink);
@@ -46,6 +46,7 @@
     letter-spacing: 0.02em;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    max-width: 100%;
   }
   img { display: block; max-width: 100%; height: auto; }
   a { color: inherit; text-decoration: none; }
@@ -771,7 +772,7 @@
   .media-hint .dot.active { background: var(--navy); width: 20px; border-radius: 3px; }
   @media (max-width: 720px) {
     .media-carousel { margin: 0 -20px; padding: 0 20px; }
-    .media-card { flex-basis: calc(100vw - 40px); }
+    .media-card { flex-basis: 100%; }
   }
 
   /* ============ LOOKBOOK — 3 large editorial images ============ */
@@ -1418,7 +1419,7 @@
   .journal-hint .dot.active { background: var(--navy); width: 20px; border-radius: 3px; }
   @media (max-width: 720px) {
     .journal-carousel { margin: 0 -20px; padding: 0 20px; }
-    .journal-card { flex-basis: calc(100vw - 40px); }
+    .journal-card { flex-basis: 100%; }
   }
 
   /* ============ STORE TEASER — 3-image split (no obscuring text overlay) ============ */
@@ -1770,7 +1771,7 @@
     .lookbook-grid { grid-template-columns: 1fr; grid-template-rows: auto; gap: 22px; }
     .lb-card { height: 420px; }
     .news-carousel { margin: 0 -20px; padding: 0 20px; }
-    .news-card { flex-basis: calc(100vw - 40px); }
+    .news-card { flex-basis: 100%; }
     .resort-strip-head { padding: 0 20px; }
     .featured { grid-template-columns: 1fr; gap: 56px; }
     .heritage { grid-template-columns: 1fr; gap: 56px; }
