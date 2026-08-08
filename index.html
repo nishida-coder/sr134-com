@@ -637,12 +637,20 @@
   }
   .news-hint {
     text-align: center; margin-top: 22px;
-    display: flex; justify-content: center; align-items: center; gap: 16px;
+    display: flex; justify-content: center; align-items: center; gap: 20px;
     font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-soft);
   }
-  .news-hint .dots { display: inline-flex; gap: 6px; }
+  .news-hint .dots { display: inline-flex; gap: 6px; align-items: center; }
   .news-hint .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--line); transition: all .3s; }
   .news-hint .dot.active { background: var(--navy); width: 20px; border-radius: 3px; }
+  .news-hint .news-nav { display: inline-flex; gap: 10px; }
+  .news-hint .swipe-only { display: none; }
+  @media (max-width: 720px) {
+    .news-hint .news-nav { display: none; }
+    .news-hint .swipe-only { display: inline; }
+    .news-hint .desktop-only { display: none; }
+  }
+  .news-head .news-nav { display: none; }
   .news-card:hover { transform: translateY(-3px); }
   .news-card .nc-visual {
     aspect-ratio: 16/10;
@@ -764,12 +772,20 @@
   }
   .media-hint {
     text-align: center; margin-top: 22px;
-    display: flex; justify-content: center; align-items: center; gap: 16px;
+    display: flex; justify-content: center; align-items: center; gap: 20px;
     font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-soft);
   }
-  .media-hint .dots { display: inline-flex; gap: 6px; }
+  .media-hint .dots { display: inline-flex; gap: 6px; align-items: center; }
   .media-hint .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--line); transition: all .3s; }
   .media-hint .dot.active { background: var(--navy); width: 20px; border-radius: 3px; }
+  .media-hint .media-nav { display: inline-flex; gap: 10px; }
+  .media-hint .swipe-only { display: none; }
+  @media (max-width: 720px) {
+    .media-hint .media-nav { display: none; }
+    .media-hint .swipe-only { display: inline; }
+    .media-hint .desktop-only { display: none; }
+  }
+  .media-head .media-nav { display: none; }
   @media (max-width: 720px) {
     .media-carousel { margin: 0 -20px; padding: 0 20px; }
     .media-card { flex-basis: 100%; }
@@ -1411,12 +1427,20 @@
   }
   .journal-hint {
     text-align: center; margin-top: 22px;
-    display: flex; justify-content: center; align-items: center; gap: 16px;
+    display: flex; justify-content: center; align-items: center; gap: 20px;
     font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-soft);
   }
-  .journal-hint .dots { display: inline-flex; gap: 6px; }
+  .journal-hint .dots { display: inline-flex; gap: 6px; align-items: center; }
   .journal-hint .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--line); transition: all .3s; }
   .journal-hint .dot.active { background: var(--navy); width: 20px; border-radius: 3px; }
+  .journal-hint .journal-nav { display: inline-flex; gap: 10px; }
+  .journal-hint .swipe-only { display: none; }
+  @media (max-width: 720px) {
+    .journal-hint .journal-nav { display: none; }
+    .journal-hint .swipe-only { display: inline; }
+    .journal-hint .desktop-only { display: none; }
+  }
+  .journal-head .journal-nav { display: none; }
   @media (max-width: 720px) {
     .journal-carousel { margin: 0 -20px; padding: 0 20px; }
     .journal-card { flex-basis: 100%; }
@@ -1927,8 +1951,14 @@
   </div>
   </div>
   <div class="news-hint">
-    <span>← Swipe / Click →</span>
+    <div class="news-nav">
+      <button class="nn-btn" data-news-prev aria-label="Prev">←</button>
+    </div>
     <span class="dots" data-news-dots></span>
+    <div class="news-nav">
+      <button class="nn-btn" data-news-next aria-label="Next">→</button>
+    </div>
+    <span class="swipe-only">← Swipe →</span>
   </div>
 </section>
 
@@ -2101,8 +2131,14 @@
     </div>
   </div>
   <div class="journal-hint">
-    <span>← Swipe / Click →</span>
+    <div class="journal-nav">
+      <button class="nn-btn" data-jour-prev aria-label="Prev">←</button>
+    </div>
     <span class="dots" data-jour-dots></span>
+    <div class="journal-nav">
+      <button class="nn-btn" data-jour-next aria-label="Next">→</button>
+    </div>
+    <span class="swipe-only">← Swipe →</span>
   </div>
 </section>
 
@@ -2158,8 +2194,14 @@
     </div>
   </div>
   <div class="media-hint">
-    <span>← Swipe / Click →</span>
+    <div class="media-nav">
+      <button class="nn-btn" data-med-prev aria-label="Prev">←</button>
+    </div>
     <span class="dots" data-med-dots></span>
+    <div class="media-nav">
+      <button class="nn-btn" data-med-next aria-label="Next">→</button>
+    </div>
+    <span class="swipe-only">← Swipe →</span>
   </div>
 </section>
 
