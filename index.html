@@ -1904,9 +1904,16 @@
   .st-cell::after {
     content: '';
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(17,32,59,0.55) 0%, transparent 45%);
+    background:
+      linear-gradient(180deg, rgba(17,32,59,0.55) 0%, rgba(17,32,59,0.20) 32%, rgba(17,32,59,0.05) 55%, transparent 100%),
+      linear-gradient(rgba(17,32,59,0.10), rgba(17,32,59,0.10));
     pointer-events: none;
   }
+  .st-cell.st-zoom img {
+    transform: scale(1.22);
+    transform-origin: center 58%;
+  }
+  .st-cell.st-zoom:hover img { transform: scale(1.28); }
   .st-cell .st-label {
     position: absolute;
     top: 40px; left: 40px; right: 20px; bottom: auto;
@@ -2621,7 +2628,7 @@
       <img src="photos/aoyama-storefront.jpg" alt="Aoyama">
       <div class="st-label"><div class="st-city">Aoyama</div><div class="st-jp">東京・青山店</div></div>
     </a>
-    <a href="stores.html#enoshima" class="st-cell">
+    <a href="stores.html#enoshima" class="st-cell st-zoom">
       <img src="photos/enoshima-storefront.jpg" alt="Enoshima">
       <div class="st-label"><div class="st-city">Enoshima</div><div class="st-jp">湘南・江ノ島店</div></div>
     </a>
