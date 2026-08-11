@@ -1732,8 +1732,8 @@
   .fc-day.sun { color: #C24A4A; }
   .fc-day.sat { color: #3F73C4; }
   .fc-day.closed {
-    background: rgba(184,154,92,0.28);
-    color: var(--gold-deep);
+    background: rgba(194,74,74,0.16);
+    color: #C24A4A;
     font-weight: 600;
     position: relative;
   }
@@ -1741,6 +1741,7 @@
     outline: 1px solid var(--gold);
     color: var(--gold-deep);
   }
+  .fc-day.closed.today { outline-color: #C24A4A; }
   .fc-legend {
     text-align: center;
     font-size: 11px; letter-spacing: 0.08em;
@@ -1750,7 +1751,7 @@
   .fc-legend .fc-swatch {
     display: inline-block;
     width: 10px; height: 10px;
-    background: rgba(184,154,92,0.55);
+    background: rgba(194,74,74,0.5);
     vertical-align: middle;
     margin-right: 6px;
     border-radius: 2px;
