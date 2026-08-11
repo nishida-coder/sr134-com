@@ -2679,18 +2679,24 @@
     viewAll.className = 'view-all-wrap reveal visible';
     viewAll.innerHTML = '<a href="shop.html" class="view-all-link">View All Products <span>→</span></a>';
     grid.after(viewAll);
-    // Render Pick Up hero (1 tall + 2 sq)
+  }
+
+  // === Pick Up coordinate features (weekly) ===
+  async function renderPickUp() {
     const pickup = $('[data-pickup]');
-    if (pickup) {
-      const picks = products.slice(0, 3);
-      pickup.innerHTML = picks.map((p, i) => `
-        <a class="${i===0?'pu-tall':'pu-sq'}" href="product.html?id=${p.id}">
-          <img referrerpolicy="no-referrer" src="${p.image}" alt="${p.brand} ${p.name}">
-          <div class="pu-label"><div class="pu-brand">${p.brand}</div><div class="pu-name">${p.name}</div></div>
+    if (!pickup) return;
+    try {
+      const feats = await (await fetch('pickup.json')).json();
+      if (!feats.length) return;
+      pickup.innerHTML = feats.slice(0, 3).map((p, i) => `
+        <a class="${i===0?'pu-tall':'pu-sq'}" href="pickup.html?id=${p.id}">
+          <img src="${p.image}" alt="${p.title}">
+          <div class="pu-label"><div class="pu-brand">${p.date}</div><div class="pu-name">${p.title}</div></div>
         </a>`).join('');
       pickup.classList.add('visible');
-    }
+    } catch { /* fallback: leave empty */ }
   }
+  renderPickUp();
 
   // News carousel controls + dots + touch swipe
   function initNewsCarousel() {
