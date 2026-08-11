@@ -1364,9 +1364,51 @@
   .brand-pop .b-flag { display: inline-block; vertical-align: middle; flex-shrink: 0; }
   .brand-pop .b-count { font-size: 10.5px; color: var(--ink-soft); margin-left: 4px; font-feature-settings: 'lnum' 1; font-weight: 400; }
   .brand-pop .b-soon { font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-deep); font-weight: 500; }
+
+  /* ALL button + expanded full list */
+  .brand-all-wrap { text-align: center; padding: 24px 0 8px; }
+  .brand-all-btn {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: var(--font-sans);
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+    padding: 12px 32px;
+    border: 1px solid var(--ink); background: transparent;
+    color: var(--ink); font-weight: 500;
+    cursor: pointer;
+    transition: all .3s var(--ease);
+  }
+  .brand-all-btn:hover { background: var(--navy); color: var(--surface); border-color: var(--navy); }
+  .brand-all-btn .caret { display: inline-block; transition: transform .3s var(--ease); font-size: 10px; }
+  .brand-all-btn.open .caret { transform: rotate(180deg); }
+  .brand-alpha-list {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 32px;
+    padding-top: 40px;
+  }
+  .brand-alpha-list.open { display: grid; }
+  .brand-letter-group h4 {
+    font-family: var(--font-sans);
+    font-size: 22px; font-weight: 600; color: var(--ink);
+    padding-bottom: 12px; margin-bottom: 14px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .brand-letter-group ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .brand-letter-group li a { display: flex; flex-direction: column; padding: 6px 0; color: var(--ink-2); text-decoration: none; transition: color .25s; }
+  .brand-letter-group li a:hover .b-name { color: var(--gold-deep); text-decoration: underline; text-underline-offset: 3px; }
+  .brand-letter-group .b-yomi { font-size: 10px; color: var(--ink-soft); letter-spacing: 0.06em; margin-bottom: 2px; }
+  .brand-letter-group .b-row { display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; white-space: nowrap; }
+  .brand-letter-group .b-name { font-size: 14px; letter-spacing: 0.04em; color: var(--ink); font-weight: 500; }
+  .brand-letter-group .b-flag { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+  .brand-letter-group .b-count { font-size: 10.5px; color: var(--ink-soft); margin-left: 4px; font-feature-settings: 'lnum' 1; font-weight: 400; }
+  .brand-letter-group .b-soon { font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-deep); font-weight: 500; }
+  @media (max-width: 900px) {
+    .brand-alpha-list.open { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; }
+  }
   @media (max-width: 600px) {
     .brand-alpha-cell > .b-letter { min-width: 30px; height: 32px; font-size: 12.5px; padding: 0 5px; }
     .brand-pop { min-width: 240px; max-width: 78vw; padding: 14px 16px; }
+    .brand-alpha-list.open { grid-template-columns: 1fr; }
   }
 
   /* ============ BRANDS — plain grid ============ */
@@ -2476,12 +2518,16 @@
   <div class="pb-list stagger" data-pb-list></div>
 </section>
 
-<!-- ============ BRANDS — A-Z + 0-9, hover to reveal ============ -->
+<!-- ============ BRANDS — A-Z + 0-9, hover to reveal + ALL toggle ============ -->
 <section id="brands">
   <div class="section-head reveal">
     <div class="eyebrow">Brands</div>
   </div>
   <div class="brand-alpha-nav" data-brand-nav></div>
+  <div class="brand-all-wrap">
+    <button class="brand-all-btn" type="button" data-brand-all-btn>ALL <span class="caret">▾</span></button>
+  </div>
+  <div class="brand-alpha-list" data-brand-list></div>
 </section>
 
 
@@ -2770,6 +2816,8 @@
   function renderFlag(code) { return FLAG_SVG[code] || ''; }
   async function renderBrandIndex() {
     const nav = $('[data-brand-nav]');
+    const list = $('[data-brand-list]');
+    const allBtn = $('[data-brand-all-btn]');
     if (!nav) return;
     let products = [];
     try { products = await (await fetch('products.json')).json(); }
@@ -2788,6 +2836,22 @@
       (groups[L] = groups[L] || []).push(b);
     });
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').concat(['0-9']);
+    function brandLi(b) {
+      const meta = BRAND_META[b] || { yomi: '', flag: '' };
+      const cnt = brandCounts[b];
+      const countLabel = cnt > 0 ? `<span class="b-count">(${cnt})</span>` : '<span class="b-soon">Coming Soon</span>';
+      return `<li>
+        <a href="shop.html?brand=${encodeURIComponent(b)}">
+          ${meta.yomi ? `<span class="b-yomi">${meta.yomi}</span>` : ''}
+          <span class="b-row">
+            <span class="b-name">${b}</span>
+            ${meta.flag ? renderFlag(meta.flag) : ''}
+            ${meta.flag2 ? renderFlag(meta.flag2) : ''}
+            ${countLabel}
+          </span>
+        </a>
+      </li>`;
+    }
     // Rightmost 4 letters get pop-edge-right; leftmost 4 get pop-edge-left
     const rightEdge = new Set(letters.slice(-4));
     const leftEdge  = new Set(letters.slice(0, 4));
@@ -2796,22 +2860,7 @@
       if (!has) {
         return `<div class="brand-alpha-cell disabled"><span class="b-letter">${L}</span></div>`;
       }
-      const items = groups[L].map(b => {
-        const meta = BRAND_META[b] || { yomi: '', flag: '' };
-        const cnt = brandCounts[b];
-        const countLabel = cnt > 0 ? `<span class="b-count">(${cnt})</span>` : '<span class="b-soon">Coming Soon</span>';
-        return `<li>
-          <a href="shop.html?brand=${encodeURIComponent(b)}">
-            ${meta.yomi ? `<span class="b-yomi">${meta.yomi}</span>` : ''}
-            <span class="b-row">
-              <span class="b-name">${b}</span>
-              ${meta.flag ? renderFlag(meta.flag) : ''}
-              ${meta.flag2 ? renderFlag(meta.flag2) : ''}
-              ${countLabel}
-            </span>
-          </a>
-        </li>`;
-      }).join('');
+      const items = groups[L].map(brandLi).join('');
       const edgeCls = rightEdge.has(L) ? ' pop-edge-right' : (leftEdge.has(L) ? ' pop-edge-left' : '');
       return `<div class="brand-alpha-cell" data-letter="${L}">
         <span class="b-letter">${L}</span>
@@ -2821,6 +2870,23 @@
         </div>
       </div>`;
     }).join('');
+    // Render the full A-Z list (initially hidden, toggled by ALL button)
+    if (list) {
+      const orderedLetters = letters.filter(L => groups[L]);
+      list.innerHTML = orderedLetters.map(L => `
+        <div class="brand-letter-group" id="brand-${L}">
+          <h4>${L}</h4>
+          <ul>${groups[L].map(brandLi).join('')}</ul>
+        </div>`).join('');
+    }
+    // ALL toggle
+    if (allBtn && list) {
+      allBtn.addEventListener('click', () => {
+        const isOpen = list.classList.toggle('open');
+        allBtn.classList.toggle('open', isOpen);
+        allBtn.firstChild.nodeValue = isOpen ? 'CLOSE ' : 'ALL ';
+      });
+    }
     // Mobile: tap-toggle behavior
     nav.addEventListener('click', (e) => {
       const cell = e.target.closest('.brand-alpha-cell');
