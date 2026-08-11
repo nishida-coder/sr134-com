@@ -1903,16 +1903,17 @@
   .st-cell::after {
     content: '';
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, transparent 45%, rgba(17,32,59,0.72));
+    background: linear-gradient(180deg, rgba(17,32,59,0.55) 0%, transparent 45%);
     pointer-events: none;
   }
   .st-cell .st-label {
     position: absolute;
-    left: 0; right: 0; bottom: 32px;
+    top: 22px; left: 24px; right: auto; bottom: auto;
     z-index: 2;
-    text-align: center;
+    text-align: left;
     color: var(--surface);
     pointer-events: none;
+    text-shadow: 0 1px 8px rgba(17,32,59,0.5);
   }
   .st-cell .st-city {
     font-family: var(--font-sans);
