@@ -1706,9 +1706,10 @@
   }
   .fc-months { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; max-width: 720px; margin: 0 auto; }
   .fc-month .fc-month-title {
-    font-family: 'Bodoni Moda', 'Playfair Display', serif;
-    font-size: 16px; letter-spacing: 0.14em;
+    font-family: var(--font-sans);
+    font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
     text-align: center; margin-bottom: 14px;
+    color: var(--gold-light); font-weight: 500;
     opacity: 0.92;
   }
   .fc-grid {
@@ -2644,7 +2645,7 @@
     </div>
     <div class="footer-col">
       <h4>Shop</h4>
-      <ul><li><a href="#">New Arrivals</a></li><li><a href="#">Women</a></li><li><a href="#">Men</a></li><li><a href="#">Accessories</a></li><li><a href="#">Sale</a></li></ul>
+      <ul><li><a href="#">New Arrivals</a></li><li><a href="#">Women</a></li><li><a href="#">Men</a></li><li><a href="#">Accessories</a></li></ul>
     </div>
     <div class="footer-col">
       <h4>Brands</h4>
@@ -2653,7 +2654,7 @@
         <li><a href="shop.html?brand=MARNI">MARNI</a></li>
         <li><a href="shop.html?brand=MONCLER">MONCLER</a></li>
         <li><a href="shop.html?brand=DSQUARED2">DSQUARED2</a></li>
-        <li><a href="#brands">View All</a></li>
+        <li><a href="#brands">ALL</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -2984,7 +2985,7 @@
     // Append "View All Products" link
     const viewAll = document.createElement('div');
     viewAll.className = 'view-all-wrap reveal visible';
-    viewAll.innerHTML = '<a href="shop.html" class="view-all-link">View All Products <span>→</span></a>';
+    viewAll.innerHTML = '<a href="shop.html" class="view-all-link">ALL Products <span>→</span></a>';
     grid.after(viewAll);
   }
 
