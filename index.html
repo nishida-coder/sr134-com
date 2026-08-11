@@ -2565,6 +2565,7 @@
     'Briglia':{ yomi:'ブリリア', flag:'IT' },
     'CARIGA':{ yomi:'カリガ', flag:'JP' },
     'CIRCOLO1901':{ yomi:'チルコロ 1901', flag:'IT' },
+    'COLLABORATION':{ yomi:'コラボレーション', flag:'JP' },
     'CRIME LONDON':{ yomi:'クライム ロンドン', flag:'IT' },
     'Destin':{ yomi:'デスティン', flag:'IT' },
     'DEVORE':{ yomi:'デヴォレ', flag:'IT' },
@@ -2630,7 +2631,6 @@
     // Add extra brands (displayed even without products yet)
     EXTRA_BRANDS.forEach(b => { if (!(b in brandCounts)) brandCounts[b] = 0; });
     const brands = Object.keys(brandCounts)
-      .filter(b => b !== 'Studio Route134')
       .sort((a, b) => a.localeCompare(b));
     function firstLetter(name) {
       const c = name.trim()[0].toUpperCase();
