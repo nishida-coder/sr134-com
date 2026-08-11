@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pick Up — Studio Route 134</title>
+<title>Pick Up — Studio Route134</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -70,7 +70,7 @@
 
 <header>
   <a href="index.html" class="back">← Back to Home</a>
-  <a href="index.html" class="logo"><img src="sr134_logo.png" alt="Studio Route 134"></a>
+  <a href="index.html" class="logo"><img src="sr134_logo.png" alt="Studio Route134"></a>
   <span style="width:120px"></span>
 </header>
 
@@ -95,7 +95,7 @@
   <a href="index.html">Back to Home <span>→</span></a>
 </div>
 
-<footer>© 2026 Studio Route 134 / Office T3 Inc.</footer>
+<footer>© 2026 Studio Route134 / Office T3 Inc.</footer>
 
 <script>
 const $=(s,r=document)=>r.querySelector(s);
@@ -105,7 +105,7 @@ const $=(s,r=document)=>r.querySelector(s);
   const all=await(await fetch('pickup.json')).json();
   const p=all.find(x=>x.id===id);
   if(!p){alert('コーディネートが見つかりません');location.href='index.html#pickup';return;}
-  document.title=`${p.title} — Pick Up — Studio Route 134`;
+  document.title=`${p.title} — Pick Up — Studio Route134`;
   $('[data-date]').textContent=p.date;
   $('[data-title]').textContent=p.title;
   $('[data-lead]').textContent=p.lead||'';

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media — Studio Route 134</title>
+<title>Media — Studio Route134</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -71,7 +71,7 @@
 
 <header>
   <a href="index.html" class="back">← Back to Home</a>
-  <a href="index.html" class="logo"><img src="sr134_logo.png" alt="Studio Route 134"></a>
+  <a href="index.html" class="logo"><img src="sr134_logo.png" alt="Studio Route134"></a>
   <span style="width:120px"></span>
 </header>
 
@@ -99,7 +99,7 @@
   <a href="index.html">Back to Home <span>→</span></a>
 </div>
 
-<footer>© 2026 Studio Route 134 / Office T3 Inc.</footer>
+<footer>© 2026 Studio Route134 / Office T3 Inc.</footer>
 
 <script>
 const $=(s,r=document)=>r.querySelector(s);
@@ -109,7 +109,7 @@ const $=(s,r=document)=>r.querySelector(s);
   const all=await(await fetch('media.json')).json();
   const a=all.find(x=>x.id===id);
   if(!a){alert('掲載記事が見つかりません');location.href='index.html#media';return;}
-  document.title=`${a.title} — ${a.badge} — Studio Route 134`;
+  document.title=`${a.title} — ${a.badge} — Studio Route134`;
   $('[data-hero-img]').src=a.image;
   $('[data-hero-img]').alt=a.title;
   $('[data-badge]').textContent=a.badge;
