@@ -423,25 +423,33 @@
     margin: 0 auto;
   }
   .gender-tile {
+    position: relative;
     display: flex; align-items: center; justify-content: center;
     aspect-ratio: 3/2;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    color: var(--ink);
-    transition: all .35s var(--ease);
-  }
-  .gender-tile:hover {
-    background: var(--navy);
+    background-color: var(--navy-deep);
+    background-size: cover;
+    background-position: center;
     color: var(--surface);
-    border-color: var(--navy);
-    transform: translateY(-3px);
+    overflow: hidden;
+    transition: transform .35s var(--ease);
   }
+  .gender-tile::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(17,32,59,0.25) 0%, rgba(17,32,59,0.65) 100%);
+    transition: background .35s;
+  }
+  .gender-tile:hover { transform: translateY(-3px); }
+  .gender-tile:hover::before { background: linear-gradient(180deg, rgba(17,32,59,0.35) 0%, rgba(17,32,59,0.78) 100%); }
   .gender-tile .gt-label {
+    position: relative; z-index: 2;
     font-family: var(--font-sans);
     font-size: clamp(28px, 3vw + 8px, 44px);
     letter-spacing: 0.16em;
     text-transform: uppercase;
     font-weight: 600;
+    color: var(--surface);
+    text-shadow: 0 2px 12px rgba(17,32,59,0.6);
   }
   .category-header {
     display: flex; align-items: center; justify-content: space-between;
@@ -1118,6 +1126,68 @@
     text-transform: uppercase;
   }
   @keyframes press-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ============ BRANDS — A-Z index ============ */
+  .brand-alpha-nav {
+    display: flex; flex-wrap: wrap; gap: 4px;
+    padding: 20px 0; margin-bottom: 40px;
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    justify-content: center;
+  }
+  .brand-alpha-nav a {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 34px; height: 34px;
+    padding: 0 8px;
+    font-size: 13px; letter-spacing: 0.08em; font-weight: 500;
+    color: var(--ink);
+    transition: all .25s;
+  }
+  .brand-alpha-nav a:hover {
+    background: var(--navy); color: var(--surface);
+  }
+  .brand-alpha-nav a.disabled {
+    color: var(--line); pointer-events: none;
+  }
+  .brand-alpha-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 32px;
+  }
+  .brand-letter-group h4 {
+    font-family: var(--font-sans);
+    font-size: 22px; font-weight: 600;
+    color: var(--ink);
+    padding-bottom: 12px; margin-bottom: 14px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .brand-letter-group ul {
+    list-style: none;
+    display: flex; flex-direction: column;
+    gap: 8px;
+  }
+  .brand-letter-group li a {
+    font-size: 13.5px;
+    letter-spacing: 0.04em;
+    color: var(--ink-2);
+    padding: 4px 0;
+    transition: color .25s;
+    display: inline-block;
+  }
+  .brand-letter-group li a:hover {
+    color: var(--gold-deep);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .brand-letter-group li .b-count {
+    font-size: 10.5px; color: var(--ink-soft); margin-left: 6px;
+    font-feature-settings: 'lnum' 1;
+  }
+  @media (max-width: 900px) {
+    .brand-alpha-list { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; }
+  }
+  @media (max-width: 600px) {
+    .brand-alpha-list { grid-template-columns: 1fr; }
+  }
 
   /* ============ BRANDS — plain grid ============ */
   .brands-grid {
@@ -2015,10 +2085,10 @@
   </div>
   <!-- Step 1: Gender selection -->
   <div class="gender-tiles stagger" data-gender-step>
-    <a href="#" class="gender-tile" data-gender="Men">
+    <a href="#" class="gender-tile" data-gender="Men" style="background-image:url('photos/hayama-store.jpg')">
       <span class="gt-label">Mens</span>
     </a>
-    <a href="#" class="gender-tile" data-gender="Women">
+    <a href="#" class="gender-tile" data-gender="Women" style="background-image:url('photos/aoyama-leon-shoot.jpg')">
       <span class="gt-label">Ladies</span>
     </a>
   </div>
@@ -2130,20 +2200,8 @@
   <div class="section-head reveal">
     <div class="eyebrow">Brands</div>
   </div>
-  <div class="brands-grid stagger">
-    <a class="brand-cell" data-brand="Maison Margiela" href="shop.html?brand=Maison%20Margiela"><span class="bnew">New</span><img class="blogo" src="logos/maison-margiela.svg" alt="Maison Margiela" onerror="this.style.display='none'"><div class="bname">Maison Margiela</div><div class="bcountry">Paris, France</div></a>
-    <a class="brand-cell" data-brand="MM6 Maison Margiela" href="shop.html?brand=MM6%20Maison%20Margiela"><img class="blogo" src="logos/mm6.svg" alt="MM6" onerror="this.style.display='none'"><div class="bname">MM6</div><div class="bcountry">Paris, France</div></a>
-    <a class="brand-cell" data-brand="Marni" href="shop.html?brand=Marni"><img class="blogo" src="logos/marni.svg" alt="Marni" onerror="this.style.display='none'"><div class="bname">Marni</div><div class="bcountry">Milano, Italy</div></a>
-    <a class="brand-cell" data-brand="Moncler" href="shop.html?brand=Moncler"><span class="bnew">FW26</span><img class="blogo" src="logos/moncler.svg" alt="Moncler" onerror="this.style.display='none'"><div class="bname">Moncler</div><div class="bcountry">Grenoble / Milano</div></a>
-    <a class="brand-cell" data-brand="Dsquared2" href="shop.html?brand=Dsquared2"><img class="blogo" src="logos/dsquared2.svg" alt="Dsquared2" onerror="this.style.display='none'"><div class="bname">Dsquared2</div><div class="bcountry">Milano, Italy</div></a>
-    <a class="brand-cell" data-brand="Amiri" href="shop.html?brand=Amiri"><img class="blogo" src="logos/amiri.svg" alt="Amiri" onerror="this.style.display='none'"><div class="bname">Amiri</div><div class="bcountry">Los Angeles, USA</div></a>
-    <a class="brand-cell" data-brand="Bob" href="shop.html?brand=Bob"><img class="blogo" src="logos/bob-italy.svg" alt="Bob Italy" onerror="this.style.display='none'"><div class="bname">Bob Italy</div><div class="bcountry">Milano, Italy</div></a>
-    <a class="brand-cell" data-brand="Barba" href="shop.html?brand=Barba"><img class="blogo" src="logos/barba.svg" alt="Barba" onerror="this.style.display='none'"><div class="bname">Barba</div><div class="bcountry">Napoli, Italy</div></a>
-    <a class="brand-cell" data-brand="Autry" href="shop.html?brand=Autry"><img class="blogo" src="logos/autry.svg" alt="Autry" onerror="this.style.display='none'"><div class="bname">Autry</div><div class="bcountry">USA / Italy</div></a>
-    <a class="brand-cell" data-brand="Ballantyne" href="shop.html?brand=Ballantyne"><img class="blogo" src="logos/ballantyne.svg" alt="Ballantyne" onerror="this.style.display='none'"><div class="bname">Ballantyne</div><div class="bcountry">Scotland, UK</div></a>
-    <a class="brand-cell" data-brand="Y's" href="shop.html?brand=Y%27s"><img class="blogo" src="logos/ys.svg" alt="Y's" onerror="this.style.display='none'"><div class="bname">Y&rsquo;s</div><div class="bcountry">Tokyo, Japan</div></a>
-    <a class="brand-cell viewall" href="shop.html"><div class="bname">View All →</div><div class="bcountry">20+ Houses</div></a>
-  </div>
+  <div class="brand-alpha-nav" data-brand-nav></div>
+  <div class="brand-alpha-list" data-brand-list></div>
 </section>
 
 
@@ -2399,6 +2457,49 @@
       </div>
     `).join('') + '</div>';
   }
+  // === Brand A-Z index (dynamic from products.json) ===
+  async function renderBrandIndex() {
+    const nav = $('[data-brand-nav]');
+    const list = $('[data-brand-list]');
+    if (!nav || !list) return;
+    let products = [];
+    try { products = await (await fetch('products.json')).json(); }
+    catch { return; }
+    // Count products per brand
+    const brandCounts = {};
+    products.forEach(p => { brandCounts[p.brand] = (brandCounts[p.brand] || 0) + 1; });
+    const brands = Object.keys(brandCounts)
+      .filter(b => b !== 'Studio Route 134')
+      .sort((a, b) => a.localeCompare(b));
+    // Group by first letter
+    function firstLetter(name) {
+      const c = name.trim()[0].toUpperCase();
+      return /[A-Z]/.test(c) ? c : '0-9';
+    }
+    const groups = {};
+    brands.forEach(b => {
+      const L = firstLetter(b);
+      (groups[L] = groups[L] || []).push(b);
+    });
+    // Alphabet nav
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').concat(['0-9']);
+    nav.innerHTML = letters.map(L => {
+      const has = !!groups[L];
+      return `<a href="${has ? '#brand-' + L : '#'}" class="${has ? '' : 'disabled'}">${L}</a>`;
+    }).join('');
+    // Grouped list
+    const orderedLetters = letters.filter(L => groups[L]);
+    list.innerHTML = orderedLetters.map(L => `
+      <div class="brand-letter-group" id="brand-${L}">
+        <h4>${L}</h4>
+        <ul>
+          ${groups[L].map(b => `<li><a href="shop.html?brand=${encodeURIComponent(b)}">${b}<span class="b-count">(${brandCounts[b]})</span></a></li>`).join('')}
+        </ul>
+      </div>
+    `).join('');
+  }
+  renderBrandIndex();
+
   // === Gender step → Category step ===
   function initGenderStep() {
     const genderStep = $('[data-gender-step]');
