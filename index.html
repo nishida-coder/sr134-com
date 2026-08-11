@@ -1180,12 +1180,15 @@
     margin-bottom: 2px;
     font-weight: 400;
   }
+  .brand-letter-group li .b-row {
+    display: flex; align-items: center; gap: 8px; flex-wrap: nowrap;
+    white-space: nowrap;
+  }
   .brand-letter-group li .b-name {
     font-size: 14px;
     letter-spacing: 0.04em;
     color: var(--ink);
     font-weight: 500;
-    display: inline-flex; align-items: center; gap: 6px;
   }
   .brand-letter-group li .b-flag {
     display: inline-block; vertical-align: middle;
@@ -2570,9 +2573,11 @@
             return `<li>
               <a href="shop.html?brand=${encodeURIComponent(b)}">
                 ${meta.yomi ? `<span class="b-yomi">${meta.yomi}</span>` : ''}
-                <span class="b-name">${b}</span>
-                ${meta.flag ? renderFlag(meta.flag) : ''}
-                <span class="b-count">(${brandCounts[b]})</span>
+                <span class="b-row">
+                  <span class="b-name">${b}</span>
+                  ${meta.flag ? renderFlag(meta.flag) : ''}
+                  <span class="b-count">(${brandCounts[b]})</span>
+                </span>
               </a>
             </li>`;
           }).join('')}
