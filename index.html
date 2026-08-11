@@ -1693,75 +1693,71 @@
   }
   .footer-social a:hover { background: var(--gold); color: var(--navy-deep); border-color: var(--gold); }
 
-  /* ============ FOOTER — Business Calendar ============ */
-  .footer-calendar {
-    padding: 40px 0 32px;
-    border-top: 1px solid rgba(255,255,255,0.12);
-    margin-bottom: 24px;
-  }
-  .footer-calendar .fc-head {
-    font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase;
-    color: var(--gold-light); font-weight: 500; margin-bottom: 18px;
+  /* ============ Business Calendar (beige section, before footer) ============ */
+  .calendar-section { background: var(--bg); padding: 64px 56px 72px; }
+  .calendar-section .fc-head {
+    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--ink); font-weight: 600; margin-bottom: 28px;
     text-align: center;
   }
-  .fc-months { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; max-width: 720px; margin: 0 auto; }
+  .fc-months { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 720px; margin: 0 auto; }
   .fc-month .fc-month-title {
     font-family: var(--font-sans);
     font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
     text-align: center; margin-bottom: 14px;
-    color: var(--gold-light); font-weight: 500;
-    opacity: 0.92;
+    color: var(--gold-deep); font-weight: 500;
   }
   .fc-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 4px;
     font-family: var(--font-sans);
-    font-size: 11.5px;
+    font-size: 12px;
   }
   .fc-dow {
     text-align: center;
     font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: rgba(255,255,255,0.4); font-weight: 500;
+    color: var(--ink-soft); font-weight: 500;
     padding-bottom: 6px;
   }
-  .fc-dow.sun { color: rgba(255,120,120,0.55); }
-  .fc-dow.sat { color: rgba(120,170,255,0.55); }
+  .fc-dow.sun { color: #C24A4A; }
+  .fc-dow.sat { color: #3F73C4; }
   .fc-day {
     aspect-ratio: 1;
     display: flex; align-items: center; justify-content: center;
-    color: rgba(255,255,255,0.78);
+    color: var(--ink-2);
     border-radius: 2px;
   }
   .fc-day.empty { opacity: 0; }
-  .fc-day.sun { color: rgba(255,140,140,0.75); }
-  .fc-day.sat { color: rgba(140,180,255,0.75); }
+  .fc-day.sun { color: #C24A4A; }
+  .fc-day.sat { color: #3F73C4; }
   .fc-day.closed {
-    background: rgba(184,154,92,0.22);
-    color: var(--gold-light);
-    font-weight: 500;
+    background: rgba(184,154,92,0.28);
+    color: var(--gold-deep);
+    font-weight: 600;
     position: relative;
   }
   .fc-day.today {
     outline: 1px solid var(--gold);
-    color: var(--gold-light);
+    color: var(--gold-deep);
   }
   .fc-legend {
     text-align: center;
-    font-size: 10.5px; letter-spacing: 0.08em;
-    color: rgba(255,255,255,0.55);
-    margin-top: 16px;
+    font-size: 11px; letter-spacing: 0.08em;
+    color: var(--ink-soft);
+    margin-top: 20px;
   }
   .fc-legend .fc-swatch {
     display: inline-block;
     width: 10px; height: 10px;
-    background: rgba(184,154,92,0.5);
+    background: rgba(184,154,92,0.55);
     vertical-align: middle;
     margin-right: 6px;
     border-radius: 2px;
   }
   @media (max-width: 720px) {
-    .fc-months { grid-template-columns: 1fr; gap: 24px; }
+    .calendar-section { padding: 44px 20px 56px; }
+    .fc-months { grid-template-columns: 1fr; gap: 28px; }
   }
   .footer-col h4 {
     font-size: 10.5px;
@@ -2632,6 +2628,13 @@
   </form>
 </section>
 
+<!-- ============ Business Calendar (before footer, beige bg) ============ -->
+<section class="calendar-section" id="calendar">
+  <div class="fc-head">Business Calendar · 営業カレンダー</div>
+  <div class="fc-months" data-fc-months></div>
+  <div class="fc-legend"><span class="fc-swatch"></span>定休日（葉山・江ノ島／青山は不定休）</div>
+</section>
+
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="footer-top">
@@ -2665,11 +2668,6 @@
       <h4>Support</h4>
       <ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Contact</a></li><li><a href="#">Legal</a></li><li><a href="#">Privacy</a></li></ul>
     </div>
-  </div>
-  <div class="footer-calendar">
-    <div class="fc-head">Business Calendar · 営業カレンダー</div>
-    <div class="fc-months" data-fc-months></div>
-    <div class="fc-legend"><span class="fc-swatch"></span>定休日（葉山・江ノ島／青山は不定休）</div>
   </div>
   <div class="footer-bottom">
     <div>© 2026 Studio Route134 / Office T3 Inc.</div>
