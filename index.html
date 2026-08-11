@@ -1188,8 +1188,8 @@
     display: inline-flex; align-items: center; gap: 6px;
   }
   .brand-letter-group li .b-flag {
-    font-size: 14px; line-height: 1;
     display: inline-block; vertical-align: middle;
+    flex-shrink: 0;
   }
   .brand-letter-group li .b-count {
     font-size: 10.5px; color: var(--ink-soft); margin-left: 4px;
@@ -2478,53 +2478,62 @@
   }
   // === Brand A-Z index (dynamic from products.json) — with furigana + country flag ===
   const BRAND_META = {
-    'Abronson':{ yomi:'アブロンソン', flag:'🇺🇸' },
-    'Alanui':{ yomi:'アラヌイ', flag:'🇮🇹' },
-    'Aliita':{ yomi:'アリータ', flag:'🇮🇹' },
-    'Amiri':{ yomi:'アミリ', flag:'🇺🇸' },
-    'Autry':{ yomi:'オートリー', flag:'🇮🇹' },
-    'Ballantyne':{ yomi:'バランタイン', flag:'🇬🇧' },
-    'Barba':{ yomi:'バルバ', flag:'🇮🇹' },
-    'Baronio':{ yomi:'バローニオ', flag:'🇮🇹' },
-    'Blancvert':{ yomi:'ブランベール', flag:'🇯🇵' },
-    'Bob':{ yomi:'ボブ', flag:'🇮🇹' },
-    'Cinquanta':{ yomi:'チンクアンタ', flag:'🇮🇹' },
-    'Coastal':{ yomi:'コースタル', flag:'🇯🇵' },
-    'Crime London':{ yomi:'クライム ロンドン', flag:'🇬🇧' },
-    'Destin':{ yomi:'デスティン', flag:'🇮🇹' },
-    'Dsquared2':{ yomi:'ディースクエアード', flag:'🇮🇹' },
-    'ELEV':{ yomi:'エレヴ', flag:'🇮🇹' },
-    'Fly Girl':{ yomi:'フライ ガール', flag:'🇮🇹' },
-    'GCR':{ yomi:'ジーシーアール', flag:'🇮🇹' },
-    'INST':{ yomi:'インスト', flag:'🇮🇹' },
-    'Koché':{ yomi:'コシェ', flag:'🇫🇷' },
-    'LAF':{ yomi:'ラフ', flag:'🇯🇵' },
-    'Lucien Pellat-Finet':{ yomi:'ルシアン ペラフィネ', flag:'🇫🇷' },
-    'Madson':{ yomi:'マッドソン', flag:'🇮🇹' },
-    'Maison Margiela':{ yomi:'メゾン マルジェラ', flag:'🇫🇷' },
-    'Marni':{ yomi:'マルニ', flag:'🇮🇹' },
-    'MBH 1955':{ yomi:'マイアミ ビーチ ホテル', flag:'🇯🇵' },
-    'MIAMI BEACH HOTEL 1955':{ yomi:'マイアミ ビーチ ホテル', flag:'🇯🇵' },
-    'MeiMeiJ':{ yomi:'メイメイジェー', flag:'🇮🇹' },
-    'Mihara Yasuhiro':{ yomi:'ミハラ ヤスヒロ', flag:'🇯🇵' },
-    'Mikio Sakabe':{ yomi:'ミキオ サカベ', flag:'🇯🇵' },
-    'MK':{ yomi:'エムケー', flag:'🇯🇵' },
-    'MM6 Maison Margiela':{ yomi:'エムエムシックス マルジェラ', flag:'🇫🇷' },
-    'Moncler':{ yomi:'モンクレール', flag:'🇫🇷' },
-    'N°21':{ yomi:'ヌメロ ヴェントゥーノ', flag:'🇮🇹' },
-    'Patou':{ yomi:'パトゥ', flag:'🇫🇷' },
-    'Pescali':{ yomi:'ペスカリ', flag:'🇮🇹' },
-    'Plan C':{ yomi:'プラン シー', flag:'🇮🇹' },
-    'Premiata':{ yomi:'プレミアータ', flag:'🇮🇹' },
-    'Roadless':{ yomi:'ロードレス', flag:'🇮🇹' },
-    'Seagreen':{ yomi:'シーグリーン', flag:'🇯🇵' },
-    'ST':{ yomi:'エスティー', flag:'🇮🇹' },
-    'TA':{ yomi:'ティーエー', flag:'🇯🇵' },
-    'T-Jacket':{ yomi:'ティー ジャケット', flag:'🇮🇹' },
-    'Voile Blanche':{ yomi:'ヴォワル ブランシェ', flag:'🇮🇹' },
-    'VRO':{ yomi:'ヴイアールオー', flag:'🇮🇹' },
-    "Y's":{ yomi:'ワイズ', flag:'🇯🇵' },
+    'Abronson':{ yomi:'アブロンソン', flag:'US' },
+    'Alanui':{ yomi:'アラヌイ', flag:'IT' },
+    'Aliita':{ yomi:'アリータ', flag:'IT' },
+    'Amiri':{ yomi:'アミリ', flag:'US' },
+    'Autry':{ yomi:'オートリー', flag:'IT' },
+    'Ballantyne':{ yomi:'バランタイン', flag:'GB' },
+    'Barba':{ yomi:'バルバ', flag:'IT' },
+    'Baronio':{ yomi:'バローニオ', flag:'IT' },
+    'Blancvert':{ yomi:'ブランベール', flag:'JP' },
+    'Bob':{ yomi:'ボブ', flag:'IT' },
+    'Cinquanta':{ yomi:'チンクアンタ', flag:'IT' },
+    'Coastal':{ yomi:'コースタル', flag:'JP' },
+    'Crime London':{ yomi:'クライム ロンドン', flag:'GB' },
+    'Destin':{ yomi:'デスティン', flag:'IT' },
+    'Dsquared2':{ yomi:'ディースクエアード', flag:'IT' },
+    'ELEV':{ yomi:'エレヴ', flag:'IT' },
+    'Fly Girl':{ yomi:'フライ ガール', flag:'IT' },
+    'GCR':{ yomi:'ジーシーアール', flag:'IT' },
+    'INST':{ yomi:'インスト', flag:'IT' },
+    'Koché':{ yomi:'コシェ', flag:'FR' },
+    'LAF':{ yomi:'ラフ', flag:'JP' },
+    'Lucien Pellat-Finet':{ yomi:'ルシアン ペラフィネ', flag:'FR' },
+    'Madson':{ yomi:'マッドソン', flag:'IT' },
+    'Maison Margiela':{ yomi:'メゾン マルジェラ', flag:'FR' },
+    'Marni':{ yomi:'マルニ', flag:'IT' },
+    'MBH 1955':{ yomi:'マイアミ ビーチ ホテル', flag:'JP' },
+    'MIAMI BEACH HOTEL 1955':{ yomi:'マイアミ ビーチ ホテル', flag:'JP' },
+    'MeiMeiJ':{ yomi:'メイメイジェー', flag:'IT' },
+    'Mihara Yasuhiro':{ yomi:'ミハラ ヤスヒロ', flag:'JP' },
+    'Mikio Sakabe':{ yomi:'ミキオ サカベ', flag:'JP' },
+    'MK':{ yomi:'エムケー', flag:'JP' },
+    'MM6 Maison Margiela':{ yomi:'エムエムシックス マルジェラ', flag:'FR' },
+    'Moncler':{ yomi:'モンクレール', flag:'FR' },
+    'N°21':{ yomi:'ヌメロ ヴェントゥーノ', flag:'IT' },
+    'Patou':{ yomi:'パトゥ', flag:'FR' },
+    'Pescali':{ yomi:'ペスカリ', flag:'IT' },
+    'Plan C':{ yomi:'プラン シー', flag:'IT' },
+    'Premiata':{ yomi:'プレミアータ', flag:'IT' },
+    'Roadless':{ yomi:'ロードレス', flag:'IT' },
+    'Seagreen':{ yomi:'シーグリーン', flag:'JP' },
+    'ST':{ yomi:'エスティー', flag:'IT' },
+    'TA':{ yomi:'ティーエー', flag:'JP' },
+    'T-Jacket':{ yomi:'ティー ジャケット', flag:'IT' },
+    'Voile Blanche':{ yomi:'ヴォワル ブランシェ', flag:'IT' },
+    'VRO':{ yomi:'ヴイアールオー', flag:'IT' },
+    "Y's":{ yomi:'ワイズ', flag:'JP' },
   };
+  // Inline SVG flags — Windows fonts don't render emoji flags
+  const FLAG_SVG = {
+    IT: '<svg class="b-flag" viewBox="0 0 24 16" width="20" height="14"><rect x="0" y="0" width="8" height="16" fill="#009246"/><rect x="8" y="0" width="8" height="16" fill="#fff"/><rect x="16" y="0" width="8" height="16" fill="#ce2b37"/><rect x="0" y="0" width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.5"/></svg>',
+    FR: '<svg class="b-flag" viewBox="0 0 24 16" width="20" height="14"><rect x="0" y="0" width="8" height="16" fill="#0055A4"/><rect x="8" y="0" width="8" height="16" fill="#fff"/><rect x="16" y="0" width="8" height="16" fill="#EF4135"/><rect x="0" y="0" width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.5"/></svg>',
+    US: '<svg class="b-flag" viewBox="0 0 24 16" width="20" height="14"><rect fill="#B22234" width="24" height="16"/><g fill="#fff"><rect y="1.23" width="24" height="1.23"/><rect y="3.69" width="24" height="1.23"/><rect y="6.15" width="24" height="1.23"/><rect y="8.62" width="24" height="1.23"/><rect y="11.08" width="24" height="1.23"/><rect y="13.54" width="24" height="1.23"/></g><rect fill="#3C3B6E" width="10" height="8.62"/><rect x="0" y="0" width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.5"/></svg>',
+    GB: '<svg class="b-flag" viewBox="0 0 24 16" width="20" height="14"><rect fill="#012169" width="24" height="16"/><path stroke="#fff" stroke-width="2" d="M0,0 L24,16 M24,0 L0,16"/><path stroke="#C8102E" stroke-width="1" d="M0,0 L24,16 M24,0 L0,16"/><path stroke="#fff" stroke-width="4" d="M12,0 v16 M0,8 h24"/><path stroke="#C8102E" stroke-width="2" d="M12,0 v16 M0,8 h24"/><rect x="0" y="0" width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.5"/></svg>',
+    JP: '<svg class="b-flag" viewBox="0 0 24 16" width="20" height="14"><rect fill="#fff" width="24" height="16"/><circle cx="12" cy="8" r="4.8" fill="#BC002D"/><rect x="0" y="0" width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.5"/></svg>',
+  };
+  function renderFlag(code) { return FLAG_SVG[code] || ''; }
   async function renderBrandIndex() {
     const nav = $('[data-brand-nav]');
     const list = $('[data-brand-list]');
@@ -2562,7 +2571,7 @@
               <a href="shop.html?brand=${encodeURIComponent(b)}">
                 ${meta.yomi ? `<span class="b-yomi">${meta.yomi}</span>` : ''}
                 <span class="b-name">${b}</span>
-                ${meta.flag ? `<span class="b-flag">${meta.flag}</span>` : ''}
+                ${meta.flag ? renderFlag(meta.flag) : ''}
                 <span class="b-count">(${brandCounts[b]})</span>
               </a>
             </li>`;
