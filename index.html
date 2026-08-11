@@ -415,16 +415,16 @@
   }
   @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-  /* ============ GENDER STEP — Mens / Ladies / All (vertical stack) ============ */
+  /* ============ GENDER STEP — MENS + LADIES side by side, ALL wide below ============ */
   .gender-tiles {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 12px;
   }
   .gender-tile {
     position: relative;
     display: flex; align-items: center; justify-content: center;
-    aspect-ratio: 5/1;
     background-color: var(--navy-deep);
     background-size: cover;
     background-position: center;
@@ -432,8 +432,14 @@
     overflow: hidden;
     transition: transform .35s var(--ease);
   }
+  .gender-tile:nth-child(1),
+  .gender-tile:nth-child(2) { aspect-ratio: 4/5; }
+  .gender-tile:nth-child(3) { grid-column: 1 / -1; aspect-ratio: 5/1; }
   @media (max-width: 720px) {
-    .gender-tile { aspect-ratio: 3/1; }
+    .gender-tiles { grid-template-columns: 1fr 1fr; }
+    .gender-tile:nth-child(1),
+    .gender-tile:nth-child(2) { aspect-ratio: 3/4; }
+    .gender-tile:nth-child(3) { aspect-ratio: 4/1; }
   }
   .gender-tile::before {
     content: '';
@@ -746,6 +752,75 @@
     color: var(--ink);
   }
 
+  /* ============ PICK UP BRANDS — 3 landscape brand banners stacked ============ */
+  .pickup-brands { background: var(--bg); }
+  .pickup-brands .section-head { margin-bottom: 24px; }
+  .pb-list { display: flex; flex-direction: column; gap: 14px; }
+  .pb-row {
+    position: relative;
+    display: block;
+    aspect-ratio: 16/5;
+    overflow: hidden;
+    background: var(--navy-deep) center/cover no-repeat;
+    color: var(--surface);
+    transition: transform .35s var(--ease);
+  }
+  .pb-row::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(17,32,59,0.30) 0%, rgba(17,32,59,0.72) 100%);
+    transition: background .35s;
+  }
+  .pb-row:hover { transform: translateY(-2px); }
+  .pb-row:hover::before { background: linear-gradient(180deg, rgba(17,32,59,0.42) 0%, rgba(17,32,59,0.82) 100%); }
+  .pb-label {
+    position: absolute; z-index: 2;
+    left: 0; right: 0; top: 50%; transform: translateY(-50%);
+    text-align: center;
+    padding: 0 20px;
+  }
+  .pb-label .pb-brand {
+    font-family: 'Bodoni Moda', 'Playfair Display', serif;
+    font-size: clamp(28px, 3vw + 10px, 56px);
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: var(--surface);
+    text-shadow: 0 2px 14px rgba(17,32,59,0.6);
+  }
+  .pb-label .pb-sub {
+    margin-top: 8px;
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold-light); font-weight: 500;
+  }
+  @media (max-width: 720px) {
+    .pb-row { aspect-ratio: 16/8; }
+  }
+
+  /* ============ GALLERY — 3 landscape photos, horizontal (PC) / vertical (MOB) ============ */
+  .gallery { background: var(--surface); }
+  .gallery .section-head { margin-bottom: 24px; }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .gallery-cell {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--bg-2);
+  }
+  .gallery-cell img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 1.4s var(--ease);
+  }
+  .gallery-cell:hover img { transform: scale(1.04); }
+  @media (max-width: 720px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-cell { aspect-ratio: 16/10; }
+  }
+
   /* ============ PICK UP — editorial: image left, story right ============ */
   .pickup-hero { background: var(--surface); }
   .pickup-hero .section-head { margin-bottom: 24px; }
@@ -788,8 +863,6 @@
   .pu-body .pu-story-preview {
     font-size: 13px; line-height: 1.9; color: var(--ink-soft);
     font-weight: 300; margin-bottom: 18px;
-    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
-    overflow: hidden;
   }
   .pu-body .pu-more {
     font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
@@ -1126,6 +1199,9 @@
     height: 44px;
   }
   .press-track .logo:hover { opacity: 1; }
+  .press-track img.logo { height: 44px; width: auto; object-fit: contain; filter: none; }
+  .press-track .logo-25ans img.logo, .press-track img.logo-25ans { height: 52px; }
+  .press-track .logo-vogue img.logo, .press-track img.logo-vogue { height: 38px; }
   /* Safari — bold slab-ish serif set solid */
   .logo-safari {
     font-family: 'Bodoni Moda', 'Playfair Display', serif;
@@ -1554,6 +1630,76 @@
     transition: all .3s;
   }
   .footer-social a:hover { background: var(--gold); color: var(--navy-deep); border-color: var(--gold); }
+
+  /* ============ FOOTER — Business Calendar ============ */
+  .footer-calendar {
+    padding: 40px 0 32px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    margin-bottom: 24px;
+  }
+  .footer-calendar .fc-head {
+    font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--gold-light); font-weight: 500; margin-bottom: 18px;
+    text-align: center;
+  }
+  .fc-months { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; max-width: 720px; margin: 0 auto; }
+  .fc-month .fc-month-title {
+    font-family: 'Bodoni Moda', 'Playfair Display', serif;
+    font-size: 16px; letter-spacing: 0.14em;
+    text-align: center; margin-bottom: 14px;
+    opacity: 0.92;
+  }
+  .fc-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    font-family: var(--font-sans);
+    font-size: 11.5px;
+  }
+  .fc-dow {
+    text-align: center;
+    font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4); font-weight: 500;
+    padding-bottom: 6px;
+  }
+  .fc-dow.sun { color: rgba(255,120,120,0.55); }
+  .fc-dow.sat { color: rgba(120,170,255,0.55); }
+  .fc-day {
+    aspect-ratio: 1;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.78);
+    border-radius: 2px;
+  }
+  .fc-day.empty { opacity: 0; }
+  .fc-day.sun { color: rgba(255,140,140,0.75); }
+  .fc-day.sat { color: rgba(140,180,255,0.75); }
+  .fc-day.closed {
+    background: rgba(184,154,92,0.22);
+    color: var(--gold-light);
+    font-weight: 500;
+    position: relative;
+  }
+  .fc-day.today {
+    outline: 1px solid var(--gold);
+    color: var(--gold-light);
+  }
+  .fc-legend {
+    text-align: center;
+    font-size: 10.5px; letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.55);
+    margin-top: 16px;
+  }
+  .fc-legend .fc-swatch {
+    display: inline-block;
+    width: 10px; height: 10px;
+    background: rgba(184,154,92,0.5);
+    vertical-align: middle;
+    margin-right: 6px;
+    border-radius: 2px;
+  }
+  @media (max-width: 720px) {
+    .fc-months { grid-template-columns: 1fr; gap: 24px; }
+  }
   .footer-col h4 {
     font-size: 10.5px;
     letter-spacing: 0.24em;
@@ -2075,26 +2221,39 @@
 <section class="press" id="press">
   <div class="press-eyebrow reveal">Press</div>
   <div class="press-track-wrap">
-    <div class="press-track">
+    <div class="press-track" data-press-track>
       <span class="logo logo-safari">Safari</span>
       <span class="logo logo-leon">LEON</span>
-      <span class="logo logo-oceans">OCEANS</span>
-      <span class="logo logo-25ans">25ans</span>
-      <span class="logo logo-very">VERY</span>
-      <span class="logo logo-vogue">VOGUE</span>
-      <span class="logo logo-elle">ELLE</span>
+      <img class="logo logo-oceans" src="logos/oceans.svg" alt="OCEANS" data-fallback="OCEANS">
+      <img class="logo logo-25ans"  src="logos/25ans.svg"  alt="25ans"  data-fallback="25ans">
+      <img class="logo logo-very"   src="logos/very.svg"   alt="VERY"   data-fallback="VERY">
+      <img class="logo logo-vogue"  src="logos/vogue.svg"  alt="VOGUE"  data-fallback="VOGUE">
+      <img class="logo logo-elle"   src="logos/elle.svg"   alt="ELLE"   data-fallback="ELLE">
       <span class="logo logo-nonno">MEN&rsquo;S NON-NO</span>
       <span class="logo logo-safari">Safari</span>
       <span class="logo logo-leon">LEON</span>
-      <span class="logo logo-oceans">OCEANS</span>
-      <span class="logo logo-25ans">25ans</span>
-      <span class="logo logo-very">VERY</span>
-      <span class="logo logo-vogue">VOGUE</span>
-      <span class="logo logo-elle">ELLE</span>
+      <img class="logo logo-oceans" src="logos/oceans.svg" alt="OCEANS" data-fallback="OCEANS">
+      <img class="logo logo-25ans"  src="logos/25ans.svg"  alt="25ans"  data-fallback="25ans">
+      <img class="logo logo-very"   src="logos/very.svg"   alt="VERY"   data-fallback="VERY">
+      <img class="logo logo-vogue"  src="logos/vogue.svg"  alt="VOGUE"  data-fallback="VOGUE">
+      <img class="logo logo-elle"   src="logos/elle.svg"   alt="ELLE"   data-fallback="ELLE">
       <span class="logo logo-nonno">MEN&rsquo;S NON-NO</span>
     </div>
   </div>
 </section>
+<script>
+  // Graceful fallback: if a press logo SVG is missing, swap to text
+  document.querySelectorAll('[data-press-track] img.logo').forEach(img => {
+    img.addEventListener('error', () => {
+      const cls = img.className;
+      const txt = img.dataset.fallback || img.alt || '';
+      const span = document.createElement('span');
+      span.className = cls;
+      span.textContent = txt;
+      img.replaceWith(span);
+    });
+  });
+</script>
 
 <!-- ============ NEWS — horizontal carousel ============ -->
 <section class="news" id="news">
@@ -2289,6 +2448,33 @@
   </div>
 </section>
 
+<!-- ============ PICK UP BRANDS — 3 stacked landscape brand banners ============ -->
+<section class="pickup-brands" id="pickup-brands">
+  <div class="section-head reveal">
+    <div class="eyebrow">Pick Up Brands</div>
+  </div>
+  <div class="pb-list stagger">
+    <a href="shop.html?brand=Maison+Margiela" class="pb-row" style="background-image:url('photos/aoyama-basement.jpg')">
+      <div class="pb-label">
+        <div class="pb-brand">Maison Margiela</div>
+        <div class="pb-sub">Maison Margiela · MM6 Maison Margiela</div>
+      </div>
+    </a>
+    <a href="shop.html?brand=MARNI" class="pb-row" style="background-image:url('photos/aoyama-alberto-bressi.jpg')">
+      <div class="pb-label">
+        <div class="pb-brand">MARNI</div>
+        <div class="pb-sub">Italian Craft · Editorial Color</div>
+      </div>
+    </a>
+    <a href="shop.html?brand=MONCLER" class="pb-row" style="background-image:url('photos/hayama-view-out.jpg')">
+      <div class="pb-label">
+        <div class="pb-brand">MONCLER</div>
+        <div class="pb-sub">Alps Heritage · Wool &amp; Down</div>
+      </div>
+    </a>
+  </div>
+</section>
+
 <!-- ============ BRANDS ============ -->
 <section id="brands">
   <div class="section-head reveal">
@@ -2411,6 +2597,18 @@
   </div>
 </section>
 
+<!-- ============ GALLERY — 3 landscape photos ============ -->
+<section class="gallery" id="gallery">
+  <div class="section-head reveal">
+    <div class="eyebrow">Gallery</div>
+  </div>
+  <div class="gallery-grid stagger">
+    <div class="gallery-cell"><img src="photos/hayama-beach-1.jpg" alt="Hayama beach" loading="lazy"></div>
+    <div class="gallery-cell"><img src="photos/hayama-beach-2.jpg" alt="Hayama shore" loading="lazy"></div>
+    <div class="gallery-cell"><img src="photos/enoshima-outside-2.jpg" alt="Enoshima view" loading="lazy"></div>
+  </div>
+</section>
+
 <!-- ============ STORES (3-image split → /stores.html) ============ -->
 <section class="store-teaser" id="stores">
   <div class="store-teaser-head reveal">
@@ -2469,6 +2667,11 @@
       <h4>Support</h4>
       <ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Contact</a></li><li><a href="#">Legal</a></li><li><a href="#">Privacy</a></li></ul>
     </div>
+  </div>
+  <div class="footer-calendar">
+    <div class="fc-head">Business Calendar · 営業カレンダー</div>
+    <div class="fc-months" data-fc-months></div>
+    <div class="fc-legend"><span class="fc-swatch"></span>定休日（葉山・江ノ島／青山は不定休）</div>
   </div>
   <div class="footer-bottom">
     <div>© 2026 Studio Route134 / Office T3 Inc.</div>
@@ -2600,6 +2803,7 @@
     'P.M.D.S':{ yomi:'ピーエムディーエス', flag:'IT' },
     'ROADLESS':{ yomi:'ロードレス', flag:'IT' },
     'SEAGREEN':{ yomi:'シーグリーン', flag:'JP', flag2:'US' },
+    'sporty & rich':{ yomi:'スポーティー アンド リッチ', flag:'US' },
     'TRAMAROSSA':{ yomi:'トラマロッサ', flag:'IT' },
     'TAW & TOE':{ yomi:'トー アンド トー', flag:'KR' },
     'TOM FORD':{ yomi:'トム フォード', flag:'IT' },
@@ -2608,7 +2812,7 @@
   };
   const EXTRA_BRANDS = ['TOM FORD', 'MooRER', 'Briglia', 'DUNO', 'FILIPPO DE LAURENTIIS',
     'Berna Italia', 'OVER-D', 'MaxMara', 'Nina Ricci', 'KEISUKEYOSHIDA', 'KO SAMUI',
-    'DEVORE', 'Drumohr', 'OKERU'];
+    'DEVORE', 'Drumohr', 'OKERU', 'sporty & rich'];
   // Inline SVG flags — Windows fonts don't render emoji flags
   const FLAG_SVG = {
     IT: '<svg class="b-flag" viewBox="0 0 24 16" width="20" height="14"><rect x="0" y="0" width="8" height="16" fill="#009246"/><rect x="8" y="0" width="8" height="16" fill="#fff"/><rect x="16" y="0" width="8" height="16" fill="#ce2b37"/><rect x="0" y="0" width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.5"/></svg>',
@@ -2759,7 +2963,8 @@
       const feats = await (await fetch('pickup.json')).json();
       if (!feats.length) return;
       pickup.innerHTML = feats.slice(0, 4).map(p => {
-        const preview = Array.isArray(p.story) ? (p.story[0] || '') : '';
+        const raw = Array.isArray(p.story) ? (p.story[0] || '') : '';
+        const preview = raw.length > 90 ? raw.substring(0, 90) + '…' : raw + '…';
         return `
         <a class="pu-row" href="pickup.html?id=${p.id}">
           <div class="pu-visual"><img src="${p.image}" alt="${p.title}"></div>
@@ -2767,8 +2972,8 @@
             <div class="pu-date">${p.date}</div>
             <div class="pu-title">${p.title}</div>
             ${p.lead ? `<div class="pu-lead">${p.lead}</div>` : ''}
-            ${preview ? `<div class="pu-story-preview">${preview}</div>` : ''}
-            <span class="pu-more">Read the Story →</span>
+            ${raw ? `<div class="pu-story-preview">${preview}</div>` : ''}
+            <span class="pu-more">READ THE STORY →</span>
           </div>
         </a>`;
       }).join('');
@@ -2776,6 +2981,45 @@
     } catch { /* fallback: leave empty */ }
   }
   renderPickUp();
+
+  // === Business Calendar (footer) — 2 months, 火曜 = closed ===
+  (function renderFooterCalendar() {
+    const wrap = $('[data-fc-months]');
+    if (!wrap) return;
+    const today = new Date();
+    const y0 = today.getFullYear(), m0 = today.getMonth();
+    const MONTH_JA = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+    const DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    function buildMonth(year, month) {
+      const first = new Date(year, month, 1).getDay();
+      const days = new Date(year, month + 1, 0).getDate();
+      const rows = [];
+      rows.push(`<div class="fc-month-title">${year}年 ${MONTH_JA[month]}</div>`);
+      rows.push('<div class="fc-grid">');
+      DOW.forEach((d, i) => {
+        const cls = i === 0 ? 'sun' : (i === 6 ? 'sat' : '');
+        rows.push(`<div class="fc-dow ${cls}">${d}</div>`);
+      });
+      for (let i = 0; i < first; i++) rows.push('<div class="fc-day empty"></div>');
+      for (let d = 1; d <= days; d++) {
+        const dow = new Date(year, month, d).getDay();
+        const isTue = dow === 2;
+        const isToday = (year === today.getFullYear() && month === today.getMonth() && d === today.getDate());
+        const cls = [
+          isTue ? 'closed' : '',
+          dow === 0 ? 'sun' : '',
+          dow === 6 ? 'sat' : '',
+          isToday ? 'today' : ''
+        ].filter(Boolean).join(' ');
+        rows.push(`<div class="fc-day ${cls}">${d}</div>`);
+      }
+      rows.push('</div>');
+      return `<div class="fc-month">${rows.join('')}</div>`;
+    }
+    const m1y = m0 === 11 ? y0 + 1 : y0;
+    const m1m = (m0 + 1) % 12;
+    wrap.innerHTML = buildMonth(y0, m0) + buildMonth(m1y, m1m);
+  })();
 
   // News carousel controls + dots + touch swipe
   function initNewsCarousel() {
