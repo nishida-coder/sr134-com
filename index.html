@@ -414,6 +414,56 @@
   }
   @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
+  /* ============ GENDER STEP — Mens / Ladies ============ */
+  .gender-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .gender-tile {
+    display: flex; align-items: center; justify-content: center;
+    aspect-ratio: 3/2;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--ink);
+    transition: all .35s var(--ease);
+  }
+  .gender-tile:hover {
+    background: var(--navy);
+    color: var(--surface);
+    border-color: var(--navy);
+    transform: translateY(-3px);
+  }
+  .gender-tile .gt-label {
+    font-family: var(--font-sans);
+    font-size: clamp(28px, 3vw + 8px, 44px);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .category-header {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 100%; margin-bottom: 22px;
+    padding: 10px 14px;
+    background: var(--bg-2); border: 1px solid var(--line);
+  }
+  .cat-back {
+    background: none; border: none; cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink); font-weight: 500;
+    padding: 8px 14px;
+    transition: color .3s;
+  }
+  .cat-back:hover { color: var(--gold-deep); }
+  .cat-current {
+    font-family: var(--font-sans);
+    font-size: 14px; letter-spacing: 0.28em; text-transform: uppercase;
+    font-weight: 600; color: var(--ink);
+  }
+
   /* ============ CATEGORY TILES — icon-based ============ */
   .category-tiles {
     display: grid;
@@ -1963,7 +2013,23 @@
   <div class="section-head reveal">
     <div class="eyebrow">Category</div>
   </div>
-  <div class="category-tiles stagger">
+  <!-- Step 1: Gender selection -->
+  <div class="gender-tiles stagger" data-gender-step>
+    <a href="#" class="gender-tile" data-gender="Men">
+      <span class="gt-label">Mens</span>
+    </a>
+    <a href="#" class="gender-tile" data-gender="Women">
+      <span class="gt-label">Ladies</span>
+    </a>
+  </div>
+
+  <!-- Step 2: Category tiles (hidden until gender chosen) -->
+  <div class="category-header" data-cat-header style="display:none">
+    <button class="cat-back" data-cat-back>← Change</button>
+    <span class="cat-current" data-cat-current>MENS</span>
+  </div>
+
+  <div class="category-tiles stagger" data-cat-step style="display:none">
     <a href="shop.html?group=Outerwear" class="cat-tile">
       <svg class="cat-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
         <path d="M20 12 L32 8 L44 12 L56 20 L52 28 L46 26 L46 56 L18 56 L18 26 L12 28 L8 20 Z"/>
@@ -2333,6 +2399,40 @@
       </div>
     `).join('') + '</div>';
   }
+  // === Gender step → Category step ===
+  function initGenderStep() {
+    const genderStep = $('[data-gender-step]');
+    const catStep = $('[data-cat-step]');
+    const catHeader = $('[data-cat-header]');
+    if (!genderStep || !catStep) return;
+    let currentGender = null;
+    function showCat(gender) {
+      currentGender = gender;
+      genderStep.style.display = 'none';
+      catStep.style.display = '';
+      catHeader.style.display = '';
+      $('[data-cat-current]').textContent = gender === 'Men' ? 'MENS' : 'LADIES';
+      // Rewrite tile links with gender query
+      $$('.cat-tile').forEach(t => {
+        const base = t.getAttribute('href').split('&')[0].split('?')[0];
+        const group = new URL(t.href, location.href).searchParams.get('group');
+        t.href = `shop.html?group=${group}&gender=${gender}`;
+      });
+    }
+    function showGender() {
+      currentGender = null;
+      genderStep.style.display = '';
+      catStep.style.display = 'none';
+      catHeader.style.display = 'none';
+    }
+    document.addEventListener('click', (e) => {
+      const g = e.target.closest('[data-gender]');
+      if (g) { e.preventDefault(); showCat(g.dataset.gender); return; }
+      if (e.target.closest('[data-cat-back]')) { e.preventDefault(); showGender(); return; }
+    });
+  }
+  initGenderStep();
+
   // === Render Pick Up dynamically from products.json (curated top 12) ===
   async function renderCollection() {
     const grid = $('[data-collection]');
