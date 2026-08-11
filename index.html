@@ -1167,21 +1167,33 @@
     gap: 8px;
   }
   .brand-letter-group li a {
-    font-size: 13.5px;
-    letter-spacing: 0.04em;
+    display: flex; flex-direction: column;
+    padding: 6px 0;
     color: var(--ink-2);
-    padding: 4px 0;
     transition: color .25s;
-    display: inline-block;
   }
-  .brand-letter-group li a:hover {
-    color: var(--gold-deep);
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  .brand-letter-group li a:hover .b-name { color: var(--gold-deep); text-decoration: underline; text-underline-offset: 3px; }
+  .brand-letter-group li .b-yomi {
+    font-size: 10px;
+    color: var(--ink-soft);
+    letter-spacing: 0.06em;
+    margin-bottom: 2px;
+    font-weight: 400;
+  }
+  .brand-letter-group li .b-name {
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    font-weight: 500;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .brand-letter-group li .b-flag {
+    font-size: 14px; line-height: 1;
+    display: inline-block; vertical-align: middle;
   }
   .brand-letter-group li .b-count {
-    font-size: 10.5px; color: var(--ink-soft); margin-left: 6px;
-    font-feature-settings: 'lnum' 1;
+    font-size: 10.5px; color: var(--ink-soft); margin-left: 4px;
+    font-feature-settings: 'lnum' 1; font-weight: 400;
   }
   @media (max-width: 900px) {
     .brand-alpha-list { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; }
@@ -2464,7 +2476,55 @@
       </div>
     `).join('') + '</div>';
   }
-  // === Brand A-Z index (dynamic from products.json) ===
+  // === Brand A-Z index (dynamic from products.json) — with furigana + country flag ===
+  const BRAND_META = {
+    'Abronson':{ yomi:'アブロンソン', flag:'🇺🇸' },
+    'Alanui':{ yomi:'アラヌイ', flag:'🇮🇹' },
+    'Aliita':{ yomi:'アリータ', flag:'🇮🇹' },
+    'Amiri':{ yomi:'アミリ', flag:'🇺🇸' },
+    'Autry':{ yomi:'オートリー', flag:'🇮🇹' },
+    'Ballantyne':{ yomi:'バランタイン', flag:'🇬🇧' },
+    'Barba':{ yomi:'バルバ', flag:'🇮🇹' },
+    'Baronio':{ yomi:'バローニオ', flag:'🇮🇹' },
+    'Blancvert':{ yomi:'ブランベール', flag:'🇯🇵' },
+    'Bob':{ yomi:'ボブ', flag:'🇮🇹' },
+    'Cinquanta':{ yomi:'チンクアンタ', flag:'🇮🇹' },
+    'Coastal':{ yomi:'コースタル', flag:'🇯🇵' },
+    'Crime London':{ yomi:'クライム ロンドン', flag:'🇬🇧' },
+    'Destin':{ yomi:'デスティン', flag:'🇮🇹' },
+    'Dsquared2':{ yomi:'ディースクエアード', flag:'🇮🇹' },
+    'ELEV':{ yomi:'エレヴ', flag:'🇮🇹' },
+    'Fly Girl':{ yomi:'フライ ガール', flag:'🇮🇹' },
+    'GCR':{ yomi:'ジーシーアール', flag:'🇮🇹' },
+    'INST':{ yomi:'インスト', flag:'🇮🇹' },
+    'Koché':{ yomi:'コシェ', flag:'🇫🇷' },
+    'LAF':{ yomi:'ラフ', flag:'🇯🇵' },
+    'Lucien Pellat-Finet':{ yomi:'ルシアン ペラフィネ', flag:'🇫🇷' },
+    'Madson':{ yomi:'マッドソン', flag:'🇮🇹' },
+    'Maison Margiela':{ yomi:'メゾン マルジェラ', flag:'🇫🇷' },
+    'Marni':{ yomi:'マルニ', flag:'🇮🇹' },
+    'MBH 1955':{ yomi:'マイアミ ビーチ ホテル', flag:'🇯🇵' },
+    'MIAMI BEACH HOTEL 1955':{ yomi:'マイアミ ビーチ ホテル', flag:'🇯🇵' },
+    'MeiMeiJ':{ yomi:'メイメイジェー', flag:'🇮🇹' },
+    'Mihara Yasuhiro':{ yomi:'ミハラ ヤスヒロ', flag:'🇯🇵' },
+    'Mikio Sakabe':{ yomi:'ミキオ サカベ', flag:'🇯🇵' },
+    'MK':{ yomi:'エムケー', flag:'🇯🇵' },
+    'MM6 Maison Margiela':{ yomi:'エムエムシックス マルジェラ', flag:'🇫🇷' },
+    'Moncler':{ yomi:'モンクレール', flag:'🇫🇷' },
+    'N°21':{ yomi:'ヌメロ ヴェントゥーノ', flag:'🇮🇹' },
+    'Patou':{ yomi:'パトゥ', flag:'🇫🇷' },
+    'Pescali':{ yomi:'ペスカリ', flag:'🇮🇹' },
+    'Plan C':{ yomi:'プラン シー', flag:'🇮🇹' },
+    'Premiata':{ yomi:'プレミアータ', flag:'🇮🇹' },
+    'Roadless':{ yomi:'ロードレス', flag:'🇮🇹' },
+    'Seagreen':{ yomi:'シーグリーン', flag:'🇯🇵' },
+    'ST':{ yomi:'エスティー', flag:'🇮🇹' },
+    'TA':{ yomi:'ティーエー', flag:'🇯🇵' },
+    'T-Jacket':{ yomi:'ティー ジャケット', flag:'🇮🇹' },
+    'Voile Blanche':{ yomi:'ヴォワル ブランシェ', flag:'🇮🇹' },
+    'VRO':{ yomi:'ヴイアールオー', flag:'🇮🇹' },
+    "Y's":{ yomi:'ワイズ', flag:'🇯🇵' },
+  };
   async function renderBrandIndex() {
     const nav = $('[data-brand-nav]');
     const list = $('[data-brand-list]');
@@ -2472,13 +2532,11 @@
     let products = [];
     try { products = await (await fetch('products.json')).json(); }
     catch { return; }
-    // Count products per brand
     const brandCounts = {};
     products.forEach(p => { brandCounts[p.brand] = (brandCounts[p.brand] || 0) + 1; });
     const brands = Object.keys(brandCounts)
       .filter(b => b !== 'Studio Route 134')
       .sort((a, b) => a.localeCompare(b));
-    // Group by first letter
     function firstLetter(name) {
       const c = name.trim()[0].toUpperCase();
       return /[A-Z]/.test(c) ? c : '0-9';
@@ -2488,19 +2546,27 @@
       const L = firstLetter(b);
       (groups[L] = groups[L] || []).push(b);
     });
-    // Alphabet nav
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').concat(['0-9']);
     nav.innerHTML = letters.map(L => {
       const has = !!groups[L];
       return `<a href="${has ? '#brand-' + L : '#'}" class="${has ? '' : 'disabled'}">${L}</a>`;
     }).join('');
-    // Grouped list
     const orderedLetters = letters.filter(L => groups[L]);
     list.innerHTML = orderedLetters.map(L => `
       <div class="brand-letter-group" id="brand-${L}">
         <h4>${L}</h4>
         <ul>
-          ${groups[L].map(b => `<li><a href="shop.html?brand=${encodeURIComponent(b)}">${b}<span class="b-count">(${brandCounts[b]})</span></a></li>`).join('')}
+          ${groups[L].map(b => {
+            const meta = BRAND_META[b] || { yomi: '', flag: '' };
+            return `<li>
+              <a href="shop.html?brand=${encodeURIComponent(b)}">
+                ${meta.yomi ? `<span class="b-yomi">${meta.yomi}</span>` : ''}
+                <span class="b-name">${b}</span>
+                ${meta.flag ? `<span class="b-flag">${meta.flag}</span>` : ''}
+                <span class="b-count">(${brandCounts[b]})</span>
+              </a>
+            </li>`;
+          }).join('')}
         </ul>
       </div>
     `).join('');
