@@ -1908,27 +1908,35 @@
   }
   .st-cell .st-label {
     position: absolute;
-    top: 22px; left: 24px; right: auto; bottom: auto;
+    top: 40px; left: 40px; right: 20px; bottom: auto;
     z-index: 2;
     text-align: left;
     color: var(--surface);
     pointer-events: none;
-    text-shadow: 0 1px 8px rgba(17,32,59,0.5);
+    text-shadow: 0 1px 8px rgba(17,32,59,0.55);
+    max-width: calc(100% - 60px);
   }
   .st-cell .st-city {
     font-family: var(--font-sans);
-    font-size: clamp(24px, 1.4vw + 14px, 34px);
-    line-height: 1;
+    font-size: clamp(22px, 1.4vw + 12px, 32px);
+    line-height: 1.05;
     margin-bottom: 6px;
     text-transform: uppercase;
     letter-spacing: 0.14em;
     font-weight: 600;
+    word-break: keep-all;
   }
   .st-cell .st-jp {
     font-family: var(--font-sans);
     font-size: 11px;
     letter-spacing: 0.22em;
     color: var(--gold-light);
+    line-height: 1.4;
+  }
+  @media (max-width: 720px) {
+    .st-cell .st-label { top: 20px; left: 20px; right: 16px; max-width: calc(100% - 36px); }
+    .st-cell .st-city { font-size: 18px; letter-spacing: 0.12em; margin-bottom: 4px; }
+    .st-cell .st-jp { font-size: 10px; letter-spacing: 0.18em; }
   }
 
   /* ============ BRAND FILTER — active state on brands cells + filtered collection ============ */
