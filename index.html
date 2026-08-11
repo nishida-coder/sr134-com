@@ -414,24 +414,25 @@
   }
   @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-  /* ============ GENDER STEP — Mens / Ladies ============ */
+  /* ============ GENDER STEP — Mens / Ladies / All (vertical stack) ============ */
   .gender-tiles {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
   .gender-tile {
     position: relative;
     display: flex; align-items: center; justify-content: center;
-    aspect-ratio: 3/2;
+    aspect-ratio: 5/1;
     background-color: var(--navy-deep);
     background-size: cover;
     background-position: center;
     color: var(--surface);
     overflow: hidden;
     transition: transform .35s var(--ease);
+  }
+  @media (max-width: 720px) {
+    .gender-tile { aspect-ratio: 3/1; }
   }
   .gender-tile::before {
     content: '';
@@ -2094,6 +2095,9 @@
     <a href="#" class="gender-tile" data-gender="Women" style="background-image:url('photos/aoyama-leon-shoot.jpg')">
       <span class="gt-label">Ladies</span>
     </a>
+    <a href="#" class="gender-tile" data-gender="All" style="background-image:url('photos/enoshima-store.jpg')">
+      <span class="gt-label">All</span>
+    </a>
   </div>
 
   <!-- Step 2: Category tiles (hidden until gender chosen) -->
@@ -2515,12 +2519,14 @@
       genderStep.style.display = 'none';
       catStep.style.display = '';
       catHeader.style.display = '';
-      $('[data-cat-current]').textContent = gender === 'Men' ? 'MENS' : 'LADIES';
-      // Rewrite tile links with gender query
+      const label = gender === 'Men' ? 'MENS' : gender === 'Women' ? 'LADIES' : 'ALL';
+      $('[data-cat-current]').textContent = label;
+      // Rewrite tile links with gender query (skip when All)
       $$('.cat-tile').forEach(t => {
-        const base = t.getAttribute('href').split('&')[0].split('?')[0];
         const group = new URL(t.href, location.href).searchParams.get('group');
-        t.href = `shop.html?group=${group}&gender=${gender}`;
+        t.href = gender === 'All'
+          ? `shop.html?group=${group}`
+          : `shop.html?group=${group}&gender=${gender}`;
       });
     }
     function showGender() {
@@ -2531,7 +2537,11 @@
     }
     document.addEventListener('click', (e) => {
       const g = e.target.closest('[data-gender]');
-      if (g) { e.preventDefault(); showCat(g.dataset.gender); return; }
+      if (g) {
+        e.preventDefault();
+        showCat(g.dataset.gender);
+        return;
+      }
       if (e.target.closest('[data-cat-back]')) { e.preventDefault(); showGender(); return; }
     });
   }
