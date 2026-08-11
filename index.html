@@ -752,7 +752,7 @@
     color: var(--ink);
   }
 
-  /* ============ PICK UP BRANDS — 3 landscape brand banners stacked ============ */
+  /* ============ PICK UP BRANDS — 3 landscape banners, alternating corner titles ============ */
   .pickup-brands { background: var(--bg); }
   .pickup-brands .section-head { margin-bottom: 24px; }
   .pb-list { display: flex; flex-direction: column; gap: 14px; }
@@ -768,57 +768,84 @@
   .pb-row::before {
     content: '';
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(17,32,59,0.30) 0%, rgba(17,32,59,0.72) 100%);
+    background: linear-gradient(180deg, rgba(17,32,59,0.22) 0%, rgba(17,32,59,0.62) 100%);
     transition: background .35s;
   }
   .pb-row:hover { transform: translateY(-2px); }
-  .pb-row:hover::before { background: linear-gradient(180deg, rgba(17,32,59,0.42) 0%, rgba(17,32,59,0.82) 100%); }
+  .pb-row:hover::before { background: linear-gradient(180deg, rgba(17,32,59,0.32) 0%, rgba(17,32,59,0.75) 100%); }
   .pb-label {
     position: absolute; z-index: 2;
-    left: 0; right: 0; top: 50%; transform: translateY(-50%);
-    text-align: center;
-    padding: 0 20px;
+    bottom: 22px; left: 28px; right: auto;
+    text-align: left;
+    padding: 0;
+    max-width: 60%;
   }
+  .pb-row.pb-align-right .pb-label { left: auto; right: 28px; text-align: right; }
   .pb-label .pb-brand {
-    font-family: 'Bodoni Moda', 'Playfair Display', serif;
-    font-size: clamp(28px, 3vw + 10px, 56px);
+    font-family: var(--font-sans);
+    font-size: clamp(24px, 2.4vw + 10px, 44px);
     letter-spacing: 0.12em;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
-    line-height: 1.1;
+    line-height: 1.05;
     color: var(--surface);
-    text-shadow: 0 2px 14px rgba(17,32,59,0.6);
+    text-shadow: 0 2px 14px rgba(17,32,59,0.55);
   }
   .pb-label .pb-sub {
-    margin-top: 8px;
-    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+    margin-top: 6px;
+    font-size: 10.5px; letter-spacing: 0.24em; text-transform: uppercase;
     color: var(--gold-light); font-weight: 500;
   }
   @media (max-width: 720px) {
     .pb-row { aspect-ratio: 16/8; }
+    .pb-label { bottom: 14px; left: 16px; max-width: 80%; }
+    .pb-row.pb-align-right .pb-label { right: 16px; }
   }
 
-  /* ============ GALLERY — 3 landscape photos, horizontal (PC) / vertical (MOB) ============ */
+  /* ============ GALLERY — editorial (merged Journal) 3-col PC / 1-col MOB ============ */
   .gallery { background: var(--surface); }
   .gallery .section-head { margin-bottom: 24px; }
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    gap: 14px;
   }
   .gallery-cell {
+    position: relative;
+    display: block;
     aspect-ratio: 4/3;
     overflow: hidden;
     background: var(--bg-2);
+    text-decoration: none;
+    color: inherit;
   }
   .gallery-cell img {
     width: 100%; height: 100%; object-fit: cover;
     transition: transform 1.4s var(--ease);
   }
   .gallery-cell:hover img { transform: scale(1.04); }
+  .gallery-label {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 20px 20px 18px;
+    background: linear-gradient(180deg, transparent 0%, rgba(17,32,59,0.86) 78%);
+    color: var(--surface);
+    transform: translateY(30%); opacity: 0;
+    transition: transform .4s var(--ease), opacity .4s var(--ease);
+    pointer-events: none;
+  }
+  .gallery-cell:hover .gallery-label { transform: translateY(0); opacity: 1; }
+  .g-date {
+    font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase;
+    color: var(--gold-light); font-weight: 500; margin-bottom: 6px;
+  }
+  .g-title {
+    font-family: var(--font-sans);
+    font-size: 15px; line-height: 1.35; font-weight: 500;
+  }
   @media (max-width: 720px) {
     .gallery-grid { grid-template-columns: 1fr; }
     .gallery-cell { aspect-ratio: 16/10; }
+    .gallery-label { transform: translateY(0); opacity: 1; padding: 16px 16px 14px; }
   }
 
   /* ============ PICK UP — editorial: image left, story right ============ */
@@ -1268,85 +1295,78 @@
   }
   @keyframes press-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-  /* ============ BRANDS — A-Z index ============ */
+  /* ============ BRANDS — A-Z index with hover popup ============ */
   .brand-alpha-nav {
-    display: flex; flex-wrap: wrap; gap: 4px;
-    padding: 20px 0; margin-bottom: 40px;
+    position: relative;
+    display: flex; flex-wrap: wrap; gap: 2px;
+    padding: 22px 0; margin: 0;
     border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
     justify-content: center;
   }
-  .brand-alpha-nav a {
+  .brand-alpha-cell { position: relative; }
+  .brand-alpha-cell > .b-letter {
     display: inline-flex; align-items: center; justify-content: center;
-    min-width: 34px; height: 34px;
+    min-width: 36px; height: 36px;
     padding: 0 8px;
-    font-size: 13px; letter-spacing: 0.08em; font-weight: 500;
+    font-size: 14px; letter-spacing: 0.06em; font-weight: 600;
     color: var(--ink);
-    transition: all .25s;
+    cursor: pointer;
+    transition: all .2s;
+    text-decoration: none;
   }
-  .brand-alpha-nav a:hover {
-    background: var(--navy); color: var(--surface);
+  .brand-alpha-cell:hover > .b-letter,
+  .brand-alpha-cell.open > .b-letter { background: var(--navy); color: var(--surface); }
+  .brand-alpha-cell.disabled > .b-letter { color: var(--line); pointer-events: none; }
+  .brand-pop {
+    position: absolute;
+    top: calc(100% + 12px); left: 50%; transform: translateX(-50%);
+    min-width: 280px; max-width: 340px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: 0 12px 40px rgba(17,32,59,0.18);
+    padding: 18px 22px;
+    z-index: 50;
+    visibility: hidden; opacity: 0;
+    transition: opacity .18s ease, visibility .18s ease, transform .25s var(--ease);
+    pointer-events: none;
   }
-  .brand-alpha-nav a.disabled {
-    color: var(--line); pointer-events: none;
+  .brand-alpha-cell:hover .brand-pop,
+  .brand-alpha-cell.open .brand-pop {
+    visibility: visible; opacity: 1; pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
   }
-  .brand-alpha-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px 32px;
+  .brand-pop::before {
+    content: '';
+    position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%);
+    border: 7px solid transparent; border-bottom-color: var(--surface);
+    filter: drop-shadow(0 -1px 0 var(--line));
   }
-  .brand-letter-group h4 {
+  .brand-pop.pop-edge-right { left: auto; right: 0; transform: none; }
+  .brand-pop.pop-edge-right::before { left: auto; right: 14px; transform: none; }
+  .brand-pop.pop-edge-left { left: 0; transform: none; }
+  .brand-pop.pop-edge-left::before { left: 14px; transform: none; }
+  .brand-pop.pop-edge-right.brand-alpha-cell:hover .brand-pop,
+  .brand-alpha-cell:hover .brand-pop.pop-edge-right { transform: none; }
+  .brand-pop-title {
     font-family: var(--font-sans);
-    font-size: 22px; font-weight: 600;
+    font-size: 20px; font-weight: 700;
     color: var(--ink);
-    padding-bottom: 12px; margin-bottom: 14px;
+    padding-bottom: 10px; margin-bottom: 10px;
     border-bottom: 1px solid var(--ink);
-  }
-  .brand-letter-group ul {
-    list-style: none;
-    display: flex; flex-direction: column;
-    gap: 8px;
-  }
-  .brand-letter-group li a {
-    display: flex; flex-direction: column;
-    padding: 6px 0;
-    color: var(--ink-2);
-    transition: color .25s;
-  }
-  .brand-letter-group li a:hover .b-name { color: var(--gold-deep); text-decoration: underline; text-underline-offset: 3px; }
-  .brand-letter-group li .b-yomi {
-    font-size: 10px;
-    color: var(--ink-soft);
-    letter-spacing: 0.06em;
-    margin-bottom: 2px;
-    font-weight: 400;
-  }
-  .brand-letter-group li .b-row {
-    display: flex; align-items: center; gap: 8px; flex-wrap: nowrap;
-    white-space: nowrap;
-  }
-  .brand-letter-group li .b-name {
-    font-size: 14px;
     letter-spacing: 0.04em;
-    color: var(--ink);
-    font-weight: 500;
   }
-  .brand-letter-group li .b-flag {
-    display: inline-block; vertical-align: middle;
-    flex-shrink: 0;
-  }
-  .brand-letter-group li .b-count {
-    font-size: 10.5px; color: var(--ink-soft); margin-left: 4px;
-    font-feature-settings: 'lnum' 1; font-weight: 400;
-  }
-  .brand-letter-group li .b-soon {
-    font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--gold-deep); font-weight: 500;
-  }
-  @media (max-width: 900px) {
-    .brand-alpha-list { grid-template-columns: repeat(2, 1fr); gap: 32px 20px; }
-  }
+  .brand-pop ul { list-style: none; display: flex; flex-direction: column; gap: 4px; max-height: 60vh; overflow-y: auto; }
+  .brand-pop li a { display: flex; flex-direction: column; padding: 6px 0; color: var(--ink-2); text-decoration: none; transition: color .2s; }
+  .brand-pop li a:hover .b-name { color: var(--gold-deep); }
+  .brand-pop .b-yomi { font-size: 10px; color: var(--ink-soft); letter-spacing: 0.06em; margin-bottom: 2px; }
+  .brand-pop .b-row { display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; white-space: nowrap; }
+  .brand-pop .b-name { font-size: 13.5px; letter-spacing: 0.04em; color: var(--ink); font-weight: 500; }
+  .brand-pop .b-flag { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+  .brand-pop .b-count { font-size: 10.5px; color: var(--ink-soft); margin-left: 4px; font-feature-settings: 'lnum' 1; font-weight: 400; }
+  .brand-pop .b-soon { font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-deep); font-weight: 500; }
   @media (max-width: 600px) {
-    .brand-alpha-list { grid-template-columns: 1fr; }
+    .brand-alpha-cell > .b-letter { min-width: 30px; height: 32px; font-size: 12.5px; padding: 0 5px; }
+    .brand-pop { min-width: 240px; max-width: 78vw; padding: 14px 16px; }
   }
 
   /* ============ BRANDS — plain grid ============ */
@@ -2453,90 +2473,19 @@
   <div class="section-head reveal">
     <div class="eyebrow">Pick Up Brands</div>
   </div>
-  <div class="pb-list stagger">
-    <a href="shop.html?brand=Maison+Margiela" class="pb-row" style="background-image:url('photos/aoyama-basement.jpg')">
-      <div class="pb-label">
-        <div class="pb-brand">Maison Margiela</div>
-        <div class="pb-sub">Maison Margiela · MM6 Maison Margiela</div>
-      </div>
-    </a>
-    <a href="shop.html?brand=MARNI" class="pb-row" style="background-image:url('photos/aoyama-alberto-bressi.jpg')">
-      <div class="pb-label">
-        <div class="pb-brand">MARNI</div>
-        <div class="pb-sub">Italian Craft · Editorial Color</div>
-      </div>
-    </a>
-    <a href="shop.html?brand=MONCLER" class="pb-row" style="background-image:url('photos/hayama-view-out.jpg')">
-      <div class="pb-label">
-        <div class="pb-brand">MONCLER</div>
-        <div class="pb-sub">Alps Heritage · Wool &amp; Down</div>
-      </div>
-    </a>
-  </div>
+  <div class="pb-list stagger" data-pb-list></div>
 </section>
 
-<!-- ============ BRANDS ============ -->
+<!-- ============ BRANDS — A-Z + 0-9, hover to reveal ============ -->
 <section id="brands">
   <div class="section-head reveal">
     <div class="eyebrow">Brands</div>
   </div>
   <div class="brand-alpha-nav" data-brand-nav></div>
-  <div class="brand-alpha-list" data-brand-list></div>
 </section>
 
 
-<!-- ============ JOURNAL — carousel ============ -->
-<section class="journal" id="journal">
-  <div class="journal-head reveal">
-    <div class="eyebrow">Journal</div>
-  </div>
-  <div class="journal-carousel-wrap">
-    <div class="journal-carousel" data-jour-carousel>
-      <div class="journal-track" data-jour-track>
-        <a class="journal-card" href="journal.html?id=skate-wall-enoshima">
-          <div class="jc-visual"><img src="photos/enoshima-inside.jpg" alt=""></div>
-          <div class="jc-date">2026.07.18 — Enoshima</div>
-          <div class="jc-title">スケート壁面、一点物のボードたち。</div>
-        </a>
-        <a class="journal-card" href="journal.html?id=hayama-beach-morning">
-          <div class="jc-visual"><img src="photos/hayama-beach-1.jpg" alt=""></div>
-          <div class="jc-date">2026.07.10 — Hayama</div>
-          <div class="jc-title">朝、海辺の空気を纏う。</div>
-        </a>
-        <a class="journal-card" href="journal.html?id=hayama-view-through-window">
-          <div class="jc-visual"><img src="photos/hayama-view-out.jpg" alt=""></div>
-          <div class="jc-date">2026.06.28 — Hayama</div>
-          <div class="jc-title">窓の外に、海を置く。</div>
-        </a>
-        <a class="journal-card" href="journal.html?id=hayama-terrace-afternoon">
-          <div class="jc-visual"><img src="photos/hayama-beach-2.jpg" alt=""></div>
-          <div class="jc-date">2026.06.15 — Hayama</div>
-          <div class="jc-title">テラスから、午後の海を眺めて。</div>
-        </a>
-        <a class="journal-card" href="journal.html?id=enoshima-island-view">
-          <div class="jc-visual"><img src="photos/enoshima-outside-2.jpg" alt=""></div>
-          <div class="jc-date">2026.06.02 — Enoshima</div>
-          <div class="jc-title">江ノ島の島影を、店の窓から。</div>
-        </a>
-        <a class="journal-card" href="journal.html?id=coastline-and-palms">
-          <div class="jc-visual"><img src="photos/enoshima-outside-1.jpg" alt=""></div>
-          <div class="jc-date">2026.05.22 — Enoshima</div>
-          <div class="jc-title">椰子と海と、海岸線。</div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="journal-hint">
-    <div class="journal-nav">
-      <button class="nn-btn" data-jour-prev aria-label="Prev">←</button>
-    </div>
-    <span class="dots" data-jour-dots></span>
-    <div class="journal-nav">
-      <button class="nn-btn" data-jour-next aria-label="Next">→</button>
-    </div>
-    <span class="swipe-only">← Swipe →</span>
-  </div>
-</section>
+<!-- JOURNAL section removed — merged into GALLERY -->
 
 <!-- ============ MEDIA — carousel ============ -->
 <section class="media" id="media">
@@ -2597,16 +2546,12 @@
   </div>
 </section>
 
-<!-- ============ GALLERY — 3 landscape photos ============ -->
+<!-- ============ GALLERY — editorial (Journal merged) ============ -->
 <section class="gallery" id="gallery">
   <div class="section-head reveal">
     <div class="eyebrow">Gallery</div>
   </div>
-  <div class="gallery-grid stagger">
-    <div class="gallery-cell"><img src="photos/hayama-beach-1.jpg" alt="Hayama beach" loading="lazy"></div>
-    <div class="gallery-cell"><img src="photos/hayama-beach-2.jpg" alt="Hayama shore" loading="lazy"></div>
-    <div class="gallery-cell"><img src="photos/enoshima-outside-2.jpg" alt="Enoshima view" loading="lazy"></div>
-  </div>
+  <div class="gallery-grid stagger" data-gallery></div>
 </section>
 
 <!-- ============ STORES (3-image split → /stores.html) ============ -->
@@ -2621,7 +2566,7 @@
     </a>
     <a href="stores.html#aoyama" class="st-cell">
       <img src="photos/aoyama-storefront.jpg" alt="Aoyama">
-      <div class="st-label"><div class="st-city">Aoyama</div><div class="st-jp">東京・南青山店</div></div>
+      <div class="st-label"><div class="st-city">Aoyama</div><div class="st-jp">青山店</div></div>
     </a>
     <a href="stores.html#enoshima" class="st-cell">
       <img src="photos/enoshima-storefront.jpg" alt="Enoshima">
@@ -2825,17 +2770,14 @@
   function renderFlag(code) { return FLAG_SVG[code] || ''; }
   async function renderBrandIndex() {
     const nav = $('[data-brand-nav]');
-    const list = $('[data-brand-list]');
-    if (!nav || !list) return;
+    if (!nav) return;
     let products = [];
     try { products = await (await fetch('products.json')).json(); }
     catch { return; }
     const brandCounts = {};
     products.forEach(p => { brandCounts[p.brand] = (brandCounts[p.brand] || 0) + 1; });
-    // Add extra brands (displayed even without products yet)
     EXTRA_BRANDS.forEach(b => { if (!(b in brandCounts)) brandCounts[b] = 0; });
-    const brands = Object.keys(brandCounts)
-      .sort((a, b) => a.localeCompare(b));
+    const brands = Object.keys(brandCounts).sort((a, b) => a.localeCompare(b));
     function firstLetter(name) {
       const c = name.trim()[0].toUpperCase();
       return /[A-Z]/.test(c) ? c : '0-9';
@@ -2846,34 +2788,53 @@
       (groups[L] = groups[L] || []).push(b);
     });
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').concat(['0-9']);
+    // Rightmost 4 letters get pop-edge-right; leftmost 4 get pop-edge-left
+    const rightEdge = new Set(letters.slice(-4));
+    const leftEdge  = new Set(letters.slice(0, 4));
     nav.innerHTML = letters.map(L => {
       const has = !!groups[L];
-      return `<a href="${has ? '#brand-' + L : '#'}" class="${has ? '' : 'disabled'}">${L}</a>`;
+      if (!has) {
+        return `<div class="brand-alpha-cell disabled"><span class="b-letter">${L}</span></div>`;
+      }
+      const items = groups[L].map(b => {
+        const meta = BRAND_META[b] || { yomi: '', flag: '' };
+        const cnt = brandCounts[b];
+        const countLabel = cnt > 0 ? `<span class="b-count">(${cnt})</span>` : '<span class="b-soon">Coming Soon</span>';
+        return `<li>
+          <a href="shop.html?brand=${encodeURIComponent(b)}">
+            ${meta.yomi ? `<span class="b-yomi">${meta.yomi}</span>` : ''}
+            <span class="b-row">
+              <span class="b-name">${b}</span>
+              ${meta.flag ? renderFlag(meta.flag) : ''}
+              ${meta.flag2 ? renderFlag(meta.flag2) : ''}
+              ${countLabel}
+            </span>
+          </a>
+        </li>`;
+      }).join('');
+      const edgeCls = rightEdge.has(L) ? ' pop-edge-right' : (leftEdge.has(L) ? ' pop-edge-left' : '');
+      return `<div class="brand-alpha-cell" data-letter="${L}">
+        <span class="b-letter">${L}</span>
+        <div class="brand-pop${edgeCls}">
+          <div class="brand-pop-title">${L}</div>
+          <ul>${items}</ul>
+        </div>
+      </div>`;
     }).join('');
-    const orderedLetters = letters.filter(L => groups[L]);
-    list.innerHTML = orderedLetters.map(L => `
-      <div class="brand-letter-group" id="brand-${L}">
-        <h4>${L}</h4>
-        <ul>
-          ${groups[L].map(b => {
-            const meta = BRAND_META[b] || { yomi: '', flag: '' };
-            const cnt = brandCounts[b];
-            const countLabel = cnt > 0 ? `(${cnt})` : '<span class="b-soon">Coming Soon</span>';
-            return `<li>
-              <a href="shop.html?brand=${encodeURIComponent(b)}">
-                ${meta.yomi ? `<span class="b-yomi">${meta.yomi}</span>` : ''}
-                <span class="b-row">
-                  <span class="b-name">${b}</span>
-                  ${meta.flag ? renderFlag(meta.flag) : ''}
-                  ${meta.flag2 ? renderFlag(meta.flag2) : ''}
-                  <span class="b-count">${countLabel}</span>
-                </span>
-              </a>
-            </li>`;
-          }).join('')}
-        </ul>
-      </div>
-    `).join('');
+    // Mobile: tap-toggle behavior
+    nav.addEventListener('click', (e) => {
+      const cell = e.target.closest('.brand-alpha-cell');
+      if (!cell || cell.classList.contains('disabled')) return;
+      if (e.target.closest('a')) return;
+      const wasOpen = cell.classList.contains('open');
+      nav.querySelectorAll('.brand-alpha-cell.open').forEach(c => c.classList.remove('open'));
+      if (!wasOpen) cell.classList.add('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.brand-alpha-nav')) {
+        nav.querySelectorAll('.brand-alpha-cell.open').forEach(c => c.classList.remove('open'));
+      }
+    });
   }
   renderBrandIndex();
 
@@ -2982,6 +2943,72 @@
   }
   renderPickUp();
 
+  // === Pick Up Brands — brand product images, alternating title corners ===
+  (async function renderPickUpBrands() {
+    const wrap = $('[data-pb-list]');
+    if (!wrap) return;
+    let products = [];
+    try { products = await (await fetch('products.json')).json(); }
+    catch { return; }
+    // Pick a representative image per brand
+    const pick = (brands) => {
+      for (const b of brands) {
+        const hit = products.find(p => p.brand === b && p.image);
+        if (hit) return hit.image;
+      }
+      return '';
+    };
+    const banners = [
+      {
+        href: 'shop.html?brand=Maison+Margiela',
+        label: 'Maison Margiela',
+        sub: 'Maison Margiela · MM6 Maison Margiela',
+        img: pick(['Maison Margiela', 'MM6 Maison Margiela']),
+        align: 'left'
+      },
+      {
+        href: 'shop.html?brand=MARNI',
+        label: 'MARNI',
+        sub: 'Italian Craft · Editorial Color',
+        img: pick(['MARNI']),
+        align: 'right'
+      },
+      {
+        href: 'shop.html?brand=MONCLER',
+        label: 'MONCLER',
+        sub: 'Alps Heritage · Wool & Down',
+        img: pick(['MONCLER']),
+        align: 'left'
+      }
+    ];
+    wrap.innerHTML = banners.map(b => `
+      <a href="${b.href}" class="pb-row${b.align==='right'?' pb-align-right':''}" style="background-image:url('${b.img}')">
+        <div class="pb-label">
+          <div class="pb-brand">${b.label}</div>
+          <div class="pb-sub">${b.sub}</div>
+        </div>
+      </a>`).join('');
+    wrap.classList.add('visible');
+  })();
+
+  // === Gallery (merged Journal) — 6 cards from journal.json ===
+  (async function renderGallery() {
+    const grid = $('[data-gallery]');
+    if (!grid) return;
+    try {
+      const items = await (await fetch('journal.json')).json();
+      grid.innerHTML = items.map(it => `
+        <a href="journal.html?id=${it.id}" class="gallery-cell">
+          <img src="${it.image}" alt="${it.title}" loading="lazy">
+          <div class="gallery-label">
+            <div class="g-date">${it.date} — ${it.location || ''}</div>
+            <div class="g-title">${it.title}</div>
+          </div>
+        </a>`).join('');
+      grid.classList.add('visible');
+    } catch {}
+  })();
+
   // === Business Calendar (footer) — 2 months, 火曜 = closed ===
   (function renderFooterCalendar() {
     const wrap = $('[data-fc-months]');
@@ -3086,60 +3113,7 @@
   }
   setTimeout(initNewsCarousel, 100);
 
-  // Journal carousel (same pattern, dedicated selectors)
-  function initJournalCarousel() {
-    const track = $('[data-jour-track]');
-    if (!track) return;
-    const dotsWrap = $('[data-jour-dots]');
-    const prevBtn = $('[data-jour-prev]');
-    const nextBtn = $('[data-jour-next]');
-    let pos = 0; let currentIdx = 0;
-    const step = () => {
-      const c = track.children;
-      if (!c.length) return 0;
-      return c[0].getBoundingClientRect().width + 26;
-    };
-    const visibleCount = () => {
-      const w = track.parentElement.clientWidth;
-      const cw = track.children[0].getBoundingClientRect().width;
-      return Math.max(1, Math.round(w / (cw + 26)));
-    };
-    const totalPages = () => Math.max(1, track.children.length - visibleCount() + 1);
-    function renderDots() {
-      if (!dotsWrap) return;
-      dotsWrap.innerHTML = Array.from({length: totalPages()}, (_, i) =>
-        `<span class="dot ${i===currentIdx?'active':''}" data-jour-dot="${i}"></span>`).join('');
-    }
-    function updateButtons() {
-      const maxPos = -(track.scrollWidth - track.parentElement.clientWidth);
-      if (prevBtn) prevBtn.disabled = pos >= 0;
-      if (nextBtn) nextBtn.disabled = pos <= maxPos + 1;
-    }
-    function goTo(idx) {
-      currentIdx = Math.max(0, Math.min(totalPages() - 1, idx));
-      pos = -currentIdx * step();
-      track.style.transform = `translateX(${pos}px)`;
-      renderDots(); updateButtons();
-    }
-    function shift(d) { goTo(currentIdx - d); }
-    prevBtn?.addEventListener('click', () => shift(1));
-    nextBtn?.addEventListener('click', () => shift(-1));
-    dotsWrap?.addEventListener('click', (e) => {
-      const d = e.target.closest('[data-jour-dot]');
-      if (d) goTo(+d.dataset.jourDot);
-    });
-    let ts = null;
-    track.addEventListener('touchstart', (e) => { ts = e.touches[0].clientX; }, {passive:true});
-    track.addEventListener('touchend', (e) => {
-      if (ts == null) return;
-      const dx = e.changedTouches[0].clientX - ts;
-      if (Math.abs(dx) > 40) shift(dx > 0 ? 1 : -1);
-      ts = null;
-    });
-    window.addEventListener('resize', () => { renderDots(); updateButtons(); });
-    renderDots(); updateButtons();
-  }
-  setTimeout(initJournalCarousel, 100);
+  // Journal carousel removed — content merged into Gallery
 
   // Media carousel (same pattern)
   function initMediaCarousel() {
