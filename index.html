@@ -745,39 +745,62 @@
     color: var(--ink);
   }
 
-  /* ============ PICK UP HERO — 1 tall left + 2 square right ============ */
+  /* ============ PICK UP — editorial: image left, story right ============ */
   .pickup-hero { background: var(--surface); }
-  .pickup-grid {
+  .pickup-hero .section-head { margin-bottom: 24px; }
+  .pickup-list { display: flex; flex-direction: column; gap: 56px; }
+  .pu-row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 22px;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 44px;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
   }
-  .pu-tall { grid-column: 1; grid-row: 1 / span 2; aspect-ratio: 1/2; overflow: hidden; background: var(--bg-2); position: relative; display: block; }
-  .pu-sq { aspect-ratio: 1/1; overflow: hidden; background: var(--bg-2); position: relative; display: block; }
-  .pu-tall img, .pu-sq img {
-    width: 100%; height: 100%; object-fit: contain;
-    padding: 8%;
-    background: var(--surface);
-    transition: transform 1.2s var(--ease);
+  .pu-row:nth-child(even) { grid-template-columns: 1fr 1.1fr; }
+  .pu-row:nth-child(even) .pu-visual { order: 2; }
+  .pu-visual {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--bg-2);
   }
-  .pu-tall:hover img, .pu-sq:hover img { transform: scale(1.03); }
-  .pu-label {
-    position: absolute; left: 20px; right: 20px; bottom: 18px;
-    z-index: 2; color: var(--ink); background: rgba(247,245,239,0.92);
-    padding: 12px 16px;
+  .pu-visual img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 1.4s var(--ease);
   }
-  .pu-label .pu-brand {
-    font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--gold-deep); font-weight: 500; margin-bottom: 4px;
+  .pu-row:hover .pu-visual img { transform: scale(1.04); }
+  .pu-body { padding: 8px 4px; }
+  .pu-body .pu-date {
+    font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold-deep); font-weight: 500; margin-bottom: 10px;
   }
-  .pu-label .pu-name {
-    font-family: var(--font-sans); font-size: 15px; color: var(--ink);
-    line-height: 1.2;
+  .pu-body .pu-title {
+    font-family: var(--font-sans);
+    font-size: clamp(20px, 1vw + 12px, 26px);
+    line-height: 1.35; color: var(--ink); font-weight: 500;
+    margin-bottom: 14px;
   }
+  .pu-body .pu-lead {
+    font-size: 13.5px; line-height: 1.9; color: var(--ink-2);
+    font-weight: 300; margin-bottom: 14px;
+  }
+  .pu-body .pu-story-preview {
+    font-size: 13px; line-height: 1.9; color: var(--ink-soft);
+    font-weight: 300; margin-bottom: 18px;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .pu-body .pu-more {
+    font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: var(--ink); font-weight: 500;
+    border-bottom: 1px solid var(--ink); padding-bottom: 2px;
+    display: inline-block;
+  }
+  .pu-row:hover .pu-more { color: var(--gold-deep); border-color: var(--gold-deep); }
   @media (max-width: 900px) {
-    .pickup-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
-    .pu-tall { grid-column: 1; grid-row: auto; aspect-ratio: 3/4; }
+    .pu-row, .pu-row:nth-child(even) { grid-template-columns: 1fr; gap: 18px; }
+    .pu-row:nth-child(even) .pu-visual { order: 0; }
+    .pu-body { padding: 0; }
   }
 
   /* ============ MEDIA — horizontal carousel (same UX as NEWS/Journal) ============ */
@@ -2182,12 +2205,12 @@
   <div class="collection-grid stagger" data-collection style="display:none"></div>
 </section>
 
-<!-- ============ PICK UP — RHC-style 1 tall + 2 square ============ -->
+<!-- ============ PICK UP — editorial: image left + story right ============ -->
 <section class="pickup-hero">
   <div class="section-head reveal">
     <div class="eyebrow">Pick Up</div>
   </div>
-  <div class="pickup-grid stagger" data-pickup></div>
+  <div class="pickup-list stagger" data-pickup></div>
 </section>
 
 
@@ -2520,18 +2543,18 @@
     'MEIMEIJ':{ yomi:'メイメイジェー', flag:'IT' },
     "MIKE Don't Do It":{ yomi:'マイク ドント ドゥ イット', flag:'IT' },
     'MM6 Maison Margiela':{ yomi:'エムエムシックス メゾン マルジェラ', flag:'FR' },
-    'Moncler':{ yomi:'モンクレール', flag:'FR' },
+    'MONCLER':{ yomi:'モンクレール', flag:'FR' },
     'MooRER':{ yomi:'ムーレー', flag:'IT' },
-    'Nina Ricci':{ yomi:'ニナ リッチ', flag:'IT' },
+    'Nina Ricci':{ yomi:'ニナ リッチ', flag:'FR' },
     'OKERU':{ yomi:'オケル', flag:'JP' },
     'OVER-D':{ yomi:'オーバーディー', flag:'IT' },
     'N°21':{ yomi:'ヌメロ ヴェントゥーノ', flag:'IT' },
     'PATOU':{ yomi:'パトゥ', flag:'FR' },
     'Plan C':{ yomi:'プラン シー', flag:'IT' },
     'P.M.D.S':{ yomi:'ピーエムディーエス', flag:'IT' },
-    'Roadless':{ yomi:'ロードレス', flag:'IT' },
-    'Seagreen':{ yomi:'シーグリーン', flag:'JP', flag2:'US' },
-    'Tramarossa':{ yomi:'トラマロッサ', flag:'IT' },
+    'ROADLESS':{ yomi:'ロードレス', flag:'IT' },
+    'SEAGREEN':{ yomi:'シーグリーン', flag:'JP', flag2:'US' },
+    'TRAMAROSSA':{ yomi:'トラマロッサ', flag:'IT' },
     'TAW & TOE':{ yomi:'トー アンド トー', flag:'KR' },
     'TOM FORD':{ yomi:'トム フォード', flag:'IT' },
     'Voile Blanche':{ yomi:'ボイル ブランシェ', flag:'IT' },
@@ -2683,18 +2706,27 @@
     grid.after(viewAll);
   }
 
-  // === Pick Up coordinate features (weekly) ===
+  // === Pick Up coordinate features (weekly) — image + story side-by-side ===
   async function renderPickUp() {
     const pickup = $('[data-pickup]');
     if (!pickup) return;
     try {
       const feats = await (await fetch('pickup.json')).json();
       if (!feats.length) return;
-      pickup.innerHTML = feats.slice(0, 3).map((p, i) => `
-        <a class="${i===0?'pu-tall':'pu-sq'}" href="pickup.html?id=${p.id}">
-          <img src="${p.image}" alt="${p.title}">
-          <div class="pu-label"><div class="pu-brand">${p.date}</div><div class="pu-name">${p.title}</div></div>
-        </a>`).join('');
+      pickup.innerHTML = feats.slice(0, 4).map(p => {
+        const preview = Array.isArray(p.story) ? (p.story[0] || '') : '';
+        return `
+        <a class="pu-row" href="pickup.html?id=${p.id}">
+          <div class="pu-visual"><img src="${p.image}" alt="${p.title}"></div>
+          <div class="pu-body">
+            <div class="pu-date">${p.date}</div>
+            <div class="pu-title">${p.title}</div>
+            ${p.lead ? `<div class="pu-lead">${p.lead}</div>` : ''}
+            ${preview ? `<div class="pu-story-preview">${preview}</div>` : ''}
+            <span class="pu-more">Read the Story →</span>
+          </div>
+        </a>`;
+      }).join('');
       pickup.classList.add('visible');
     } catch { /* fallback: leave empty */ }
   }
