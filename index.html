@@ -802,18 +802,18 @@
     .pb-row.pb-align-right .pb-label { right: 16px; }
   }
 
-  /* ============ GALLERY — editorial (merged Journal) 3-col PC / 1-col MOB ============ */
+  /* ============ GALLERY — editorial (merged Journal) 2-col × 3-row portrait ============ */
   .gallery { background: var(--surface); }
   .gallery .section-head { margin-bottom: 24px; }
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 14px;
   }
   .gallery-cell {
     position: relative;
     display: block;
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/4;
     overflow: hidden;
     background: var(--bg-2);
     text-decoration: none;
@@ -843,9 +843,9 @@
     font-size: 15px; line-height: 1.35; font-weight: 500;
   }
   @media (max-width: 720px) {
-    .gallery-grid { grid-template-columns: 1fr; }
-    .gallery-cell { aspect-ratio: 16/10; }
-    .gallery-label { transform: translateY(0); opacity: 1; padding: 16px 16px 14px; }
+    .gallery-grid { gap: 8px; }
+    .gallery-label { transform: translateY(0); opacity: 1; padding: 12px 12px 10px; }
+    .g-title { font-size: 12.5px; }
   }
 
   /* ============ PICK UP — editorial: image left, story right ============ */
