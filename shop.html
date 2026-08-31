@@ -137,10 +137,20 @@
   .cd-checkout:disabled{background:var(--ink-soft);cursor:not-allowed;}
   .cd-note{margin-top:10px;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-soft);text-align:center;}
 </style>
+<style>
+  /* ===== Online store — preparing (2026-09) ===== */
+  .icon-cart, .cart-badge, .cart-scrim, .cart-drawer { display: none !important; }
+  [data-facet="priceTier"] { display: none !important; }
+  .prep-note { max-width: 960px; margin: 0 auto 26px; padding: 20px 24px; background: var(--bg-2); border: 1px solid var(--gold); text-align: center; }
+  .prep-note .prep-h { font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 12px; }
+  .prep-note p { font-size: 13px; line-height: 1.95; color: var(--ink-2); font-weight: 300; margin: 0 0 8px; }
+  .prep-note p:last-child { margin-bottom: 0; }
+  .prep-note a { color: var(--ink); border-bottom: 1px solid var(--gold); }
+</style>
 </head>
 <body>
 
-<div class="topbar">Complimentary Shipping over ¥30,000 &nbsp;·&nbsp; 国内正規販売店</div>
+<div class="topbar">オンラインストアは準備中です &nbsp;·&nbsp; 商品は店頭にてご案内しております</div>
 
 <header>
   <a href="index.html" class="back">← Back to Home</a>
@@ -223,11 +233,15 @@
         <span>Sort</span>
         <select data-sort>
           <option value="new">新着順</option>
-          <option value="price-asc">低価格順</option>
-          <option value="price-desc">高価格順</option>
           <option value="brand">ブランド順</option>
         </select>
       </div>
+    </div>
+
+    <div class="prep-note">
+      <div class="prep-h">Online Store — Preparing</div>
+      <p>オンラインでのご購入は準備中です。掲載中の商品はカタログとしてご覧いただけます。</p>
+      <p>在庫、サイズ、価格のお問い合わせは、湘南葉山店、湘南江ノ島店、東京青山店、または <a href="mailto:info@sr134.com">info@sr134.com</a> へお願いいたします。</p>
     </div>
 
     <div class="catalog" data-catalog></div>

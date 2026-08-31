@@ -195,10 +195,20 @@
   .cd-checkout:disabled { background: var(--ink-soft); cursor: not-allowed; }
   .cd-note { margin-top: 10px; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); text-align: center; }
 </style>
+<style>
+  /* ===== Online store — preparing (2026-09) ===== */
+  .icon-cart, .cart-badge, .cart-scrim, .cart-drawer { display: none !important; }
+  .p-price, .p-actions { display: none !important; }
+  .prep-note { margin: 4px 0 26px; padding: 20px 24px; background: var(--bg-2); border: 1px solid var(--gold); text-align: center; }
+  .prep-note .prep-h { font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; margin-bottom: 12px; }
+  .prep-note p { font-size: 13px; line-height: 1.95; color: var(--ink-2); font-weight: 300; margin: 0 0 8px; }
+  .prep-note p:last-child { margin-bottom: 0; }
+  .prep-note a { color: var(--ink); border-bottom: 1px solid var(--gold); }
+</style>
 </head>
 <body>
 
-<div class="topbar">Complimentary Shipping over ¥30,000 &nbsp;·&nbsp; 国内正規販売店</div>
+<div class="topbar">オンラインストアは準備中です &nbsp;·&nbsp; 商品は店頭にてご案内しております</div>
 
 <header>
   <a href="index.html" class="back">← Back to Home</a>
@@ -236,14 +246,19 @@
       <button class="p-add" data-p-add>Add to Cart</button>
       <button class="p-fav">Add to Wishlist ♡</button>
     </div>
+    <div class="prep-note">
+      <div class="prep-h">Online Store — Preparing</div>
+      <p>オンラインでのご購入は準備中です。</p>
+      <p>在庫、サイズ、価格のお問い合わせは、湘南葉山店、湘南江ノ島店、東京青山店、または <a href="mailto:info@sr134.com">info@sr134.com</a> へお願いいたします。</p>
+      <p><a href="stores.html">店舗のご案内 →</a></p>
+    </div>
     <div class="p-meta">
       <div><strong>Item</strong>: <span data-p-id></span></div>
       <div data-p-origin-row style="display:none"><strong>Origin</strong>: <span data-p-origin></span></div>
       <div data-p-material-row style="display:none"><strong>Material</strong>: <span data-p-material></span></div>
       <div data-p-gender-row style="display:none"><strong>Category</strong>: <span data-p-gender></span></div>
-      <div><strong>Availability</strong>: 在庫確認中 · Contact for stock</div>
-      <div><strong>Shipping</strong>: ¥30,000以上で送料無料 (国内)</div>
-      <div><strong>Note</strong>: 表示価格は国内正規販売店の販売価格です。</div>
+      <div><strong>Availability</strong>: 店頭在庫はお問い合わせください</div>
+      <div><strong>Note</strong>: 価格はオンラインストア公開時に掲載いたします。</div>
     </div>
   </div>
 </main>
