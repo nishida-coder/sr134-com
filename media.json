@@ -1,7 +1,14 @@
 [
   {
     "id": "leon-2026-10-pmds",
-    "image": "photos/aoyama-storefront.jpg",
+    "image": "photos/leon-2026-10-p120.jpg",
+    "gallery": [
+      "photos/leon-2026-10-cover.jpg",
+      "photos/leon-2026-10-p121.jpg",
+      "photos/leon-2026-10-p122.jpg",
+      "photos/leon-2026-10-wako.jpg"
+    ],
+    "credit": "LEON 2026年10月号（主婦と生活社）P.120〜122 より",
     "badge": "LEON",
     "date": "2026年10月号",
     "location": "P.M.D.S. Collection",

@@ -51,6 +51,14 @@
   .more-card .mc-badge{display:inline-block;font-size:14px;font-weight:600;letter-spacing:0.04em;color:var(--ink);padding:2px 8px;border:1px solid var(--ink);margin-bottom:8px;}
   .more-card .mc-title{font-size:14px;line-height:1.35;color:var(--ink);font-weight:400;}
 
+  .spreads{max-width:1000px;margin:0 auto;padding:0 40px 70px;}
+  .spreads h3{font-size:11px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:22px;text-align:center;}
+  .spread-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .spread-grid figure{margin:0;background:var(--bg-2);overflow:hidden;}
+  .spread-grid img{width:100%;height:auto;display:block;transition:transform 1.4s var(--ease);}
+  .spread-grid figure:hover img{transform:scale(1.02);}
+  .spreads .credit{margin-top:22px;font-size:10.5px;line-height:1.9;color:var(--ink-2);text-align:center;font-weight:300;letter-spacing:0.04em;}
+
   .back-cta{text-align:center;padding:20px 20px 80px;}
   .back-cta a{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;padding:14px 28px;border:1px solid var(--ink);color:var(--ink);font-weight:500;transition:all .4s var(--ease);}
   .back-cta a:hover{background:var(--navy);color:var(--surface);border-color:var(--navy);}
@@ -61,6 +69,8 @@
     header,.feature,.feature-body,.more-media,.back-cta,footer{padding-left:20px;padding-right:20px;}
     .feature{grid-template-columns:1fr;gap:32px;padding:32px 20px;}
     .more-grid{grid-template-columns:1fr;}
+    .spreads{padding-left:20px;padding-right:20px;}
+    .spread-grid{grid-template-columns:1fr;}
     .feature-info .badge{font-size:26px;}
   }
 </style>
@@ -90,6 +100,12 @@
   <div class="divider"></div>
 </article>
 
+<section class="spreads" data-spreads hidden>
+  <h3>Pages</h3>
+  <div class="spread-grid" data-spread-grid></div>
+  <div class="credit" data-credit></div>
+</section>
+
 <section class="more-media">
   <h3>More Media</h3>
   <div class="more-grid" data-more></div>
@@ -117,6 +133,12 @@ const $=(s,r=document)=>r.querySelector(s);
   $('[data-title]').textContent=a.title;
   $('[data-lead]').textContent=a.lead;
   $('[data-body]').innerHTML=(a.body||[]).map(p=>`<p>${p}</p>`).join('');
+  const gallery=a.gallery||[];
+  if(gallery.length){
+    $('[data-spreads]').hidden=false;
+    $('[data-spread-grid]').innerHTML=gallery.map(src=>`<figure><img src="${src}" alt="${a.badge} 誌面" loading="lazy"></figure>`).join('');
+    if(a.credit) $('[data-credit]').textContent=a.credit;
+  }
   const others=all.filter(x=>x.id!==id).slice(0,3);
   $('[data-more]').innerHTML=others.map(o=>`
     <a class="more-card" href="media.html?id=${o.id}">
