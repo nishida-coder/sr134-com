@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sr134.com/sitemap.xml

@@ -338,7 +338,9 @@ document.addEventListener('click', (e) => {
   if (!id) { location.href = 'index.html'; return; }
   const products = await (await fetch('products.json')).json();
   const p = products.find(x => x.id === id);
-  if (!p) { alert('商品が見つかりませんでした'); location.href = 'index.html'; return; }
+  // 旧サイトからのリダイレクトで、新カタログに存在しない品番が来る場合がある。
+  // 警告を出さずに一覧へ送る。
+  if (!p) { location.replace('shop.html'); return; }
   document.title = `${p.name} — ${p.brand} — Studio Route134`;
   const gallery = [p.image, ...(p.images || [])].filter((v,i,a) => a.indexOf(v) === i).slice(0, 6);
   $('[data-main-img]').src = gallery[0];

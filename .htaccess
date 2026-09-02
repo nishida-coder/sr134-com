@@ -1,0 +1,67 @@
+# ===== Studio Route134 — sr134.com (XServer) =====
+# 2026-09 移行時に設置。新サイトは静的サイトのため PHP は使用しない。
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# --- www なしへ統一 ---
+RewriteCond %{HTTP_HOST} ^www\.sr134\.com$ [NC]
+RewriteRule ^(.*)$ https://sr134.com/$1 [R=301,L]
+
+# --- HTTPS へ統一 ---
+# 注意 : XServer の無料独自SSL を発行し、証明書が有効になってから
+#        次の2行のコメントを外すこと。発行前に有効化すると全ページが表示できなくなる。
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^(.*)$ https://sr134.com/$1 [R=301,L]
+
+# ===== 旧サイトからのリダイレクト =====
+
+# 商品詳細  /products/{品番}/{カラーコード} → /product.html?id={品番}
+# 旧カタログに存在して新カタログにない品番は、product.html 側で一覧へ送る
+RewriteRule ^products/([^/]+)/?[^/]*/?$ /product.html?id=$1 [R=301,L]
+
+# 商品一覧・ブランド
+RewriteRule ^item\.html$   /shop.html [R=301,L]
+RewriteRule ^brands\.html$ /shop.html [R=301,L]
+
+# 店舗・会社案内
+RewriteRule ^store\.html$    /stores.html [R=301,L]
+RewriteRule ^about-us\.html$ /story.html  [R=301,L]
+RewriteRule ^recruit\.html$  /story.html  [R=301,L]
+
+# プレス・ニュース
+RewriteRule ^press(-detail)?\.html(/.*)?$ /index.html#media [R=301,L]
+RewriteRule ^news(-detail)?\.html(/.*)?$   /journal.html    [R=301,L]
+
+# EC機能（オンラインストア準備中のため一覧へ送る）
+RewriteRule ^(cart|login|register|account-settings|favorite-list-free)\.html$ /shop.html [R=301,L]
+RewriteRule ^customer(/.*)?$ /shop.html [R=301,L]
+</IfModule>
+
+# --- 404 ---
+ErrorDocument 404 /index.html
+
+# --- キャッシュ ---
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpeg "access plus 30 days"
+ExpiresByType image/png  "access plus 30 days"
+ExpiresByType image/webp "access plus 30 days"
+ExpiresByType image/svg+xml "access plus 30 days"
+ExpiresByType text/css   "access plus 7 days"
+ExpiresByType application/javascript "access plus 7 days"
+ExpiresByType application/json "access plus 1 hours"
+ExpiresByType text/html  "access plus 1 hours"
+</IfModule>
+
+# --- 圧縮 ---
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# --- セキュリティヘッダ ---
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
