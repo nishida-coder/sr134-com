@@ -1,0 +1,29 @@
+# XServer secrets (XSERVER_HOST / XSERVER_USER / XSERVER_SSH_KEY) を登録するまでは
+# 手動実行のみ。自動では走らない。
+name: Deploy to XServer
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.XSERVER_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p 10022 -H "${{ secrets.XSERVER_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Rsync to XServer
+        run: |
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/id_ed25519 -p 10022" \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude 'deploy/' \
+            --exclude 'CLAUDE_TASKS.md' \
+            ./ "${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }}:/home/${{ secrets.XSERVER_USER }}/sr134.com/public_html/"
