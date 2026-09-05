@@ -10,7 +10,7 @@
 
 set -euo pipefail
 
-SERVER_ID="${SERVER_ID:-CHANGE_ME}"          # 例 xagm のような短い英数字。契約IDではない
+SERVER_ID="${SERVER_ID:-xs936545}"           # 2026-09-06 実測確認済（85.131.221.43）
 DOMAIN="sr134.com"
 SSH_KEY="${SSH_KEY:-$HOME/.ssh/xserver_sr134}"
 SSH_PORT=10022
@@ -19,7 +19,7 @@ REMOTE_DIR="/home/${SERVER_ID}/${DOMAIN}/public_html/"
 LOCAL_DIR="$(cd "$(dirname "$0")/.." && pwd)/"
 
 if [ "$SERVER_ID" = "CHANGE_ME" ]; then
-  echo "ERROR: SERVER_ID が未設定です。XServerサーバーパネルの「サーバーID」を指定してください。" >&2
+  echo "ERROR: SERVER_ID が未設定です。" >&2
   echo "  例: SERVER_ID=xxxx bash deploy/xserver-deploy.sh" >&2
   exit 1
 fi
