@@ -1,6 +1,10 @@
 # ===== Studio Route134 — sr134.com (XServer) =====
 # 2026-09 移行時に設置。新サイトは静的サイトのため PHP は使用しない。
 
+# --- XServer の nginx キャッシュ制御（サーバー既定値。消さないこと）---
+SetEnvIf Request_URI ".*" Ngx_Cache_NoCacheMode=off
+SetEnvIf Request_URI ".*" Ngx_Cache_AllCacheMode
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 

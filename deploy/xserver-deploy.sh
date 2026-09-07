@@ -31,16 +31,26 @@ echo
 echo "=== 転送先の確認 ==="
 ssh -i "$SSH_KEY" -p "$SSH_PORT" "$REMOTE" "test -d '${REMOTE_DIR}' && echo '公開ディレクトリ OK: ${REMOTE_DIR}'"
 
+SSH="ssh -i ${SSH_KEY} -p ${SSH_PORT}"
+EXCLUDES=(--exclude='.git' --exclude='.github' --exclude='deploy' --exclude='CLAUDE_TASKS.md' --exclude='.DS_Store' --exclude='.user.ini')
+
 echo
-echo "=== 同期（--delete あり。公開ディレクトリを本リポジトリの内容に一致させる）==="
-rsync -avz --delete \
-  -e "ssh -i ${SSH_KEY} -p ${SSH_PORT}" \
-  --exclude '.git/' \
-  --exclude '.github/' \
-  --exclude 'deploy/' \
-  --exclude 'CLAUDE_TASKS.md' \
-  --exclude '.DS_Store' \
-  "$LOCAL_DIR" "${REMOTE}:${REMOTE_DIR}"
+echo "=== 公開ディレクトリを空にする（.user.ini はサーバー既定のため残す）==="
+$SSH "$REMOTE" "cd '${REMOTE_DIR}' && find . -mindepth 1 -maxdepth 1 ! -name '.user.ini' -exec rm -rf {} + && echo cleared"
+
+echo
+echo "=== 転送 ==="
+if command -v rsync >/dev/null 2>&1; then
+  rsync -avz --delete -e "$SSH" "${EXCLUDES[@]}" "$LOCAL_DIR" "${REMOTE}:${REMOTE_DIR}"
+else
+  # rsync が無い環境（Windows の Git Bash 等）では tar over ssh で転送する
+  tar czf - "${EXCLUDES[@]}" -C "$LOCAL_DIR" . | $SSH "$REMOTE" "tar xzf - -C '${REMOTE_DIR}'"
+  echo "tar over ssh で転送しました"
+fi
+
+echo
+echo "=== 転送結果 ==="
+$SSH "$REMOTE" "cd '${REMOTE_DIR}' && ls -1 | head -20 && echo '---' && echo -n 'files: ' && find . -type f | wc -l && echo -n 'size: ' && du -sh . | cut -f1"
 
 echo
 echo "=== 完了 ==="
