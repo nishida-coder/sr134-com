@@ -9,16 +9,14 @@ SetEnvIf Request_URI ".*" Ngx_Cache_AllCacheMode
 RewriteEngine On
 
 # --- www なしへ統一 ---
-# 注意 : SSL 発行前は http に送る。SSL 発行後、下の HTTPS 強制を有効にするときに
-#        この行の http を https に書き換えること。
+# 2026-09-12 SSL 発行（Let's Encrypt、sr134.com と www.sr134.com）を確認し https へ変更
 RewriteCond %{HTTP_HOST} ^www\.sr134\.com$ [NC]
-RewriteRule ^(.*)$ http://sr134.com/$1 [R=301,L]
+RewriteRule ^(.*)$ https://sr134.com/$1 [R=301,L]
 
 # --- HTTPS へ統一 ---
-# 注意 : XServer の無料独自SSL を発行し、証明書が有効になってから
-#        次の2行のコメントを外すこと。発行前に有効化すると全ページが表示できなくなる。
-# RewriteCond %{HTTPS} !=on
-# RewriteRule ^(.*)$ https://sr134.com/$1 [R=301,L]
+# 2026-09-12 SSL 発行を確認し有効化
+RewriteCond %{HTTPS} !on
+RewriteRule ^(.*)$ https://sr134.com/$1 [R=301,L]
 
 # ===== 旧サイトからのリダイレクト =====
 
