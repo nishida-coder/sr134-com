@@ -1,0 +1,38 @@
+# ===== Studio Route134 — sr134.com 公開停止（Under Construction）=====
+# 2026-09-13 しもんさん指示によりサイト全体の公開を停止。
+# 全リクエストを 503 Service Unavailable で受け、案内ページを表示する。
+# 再開時は deploy/xserver-deploy.sh で通常のサイトを再配置すれば元に戻る。
+
+# --- XServer の nginx キャッシュ。停止中は保存させない ---
+SetEnvIf Request_URI ".*" Ngx_Cache_NoCacheMode=on
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# www なしへ統一
+RewriteCond %{HTTP_HOST} ^www\.sr134\.com$ [NC]
+RewriteRule ^(.*)$ https://sr134.com/$1 [R=301,L]
+
+# HTTPS へ統一
+RewriteCond %{HTTPS} !on
+RewriteRule ^(.*)$ https://sr134.com/$1 [R=301,L]
+
+# 案内ページと画像だけは通し、それ以外はすべて 503 にする
+RewriteCond %{REQUEST_URI} !^/index\.html$
+RewriteCond %{REQUEST_URI} !^/sr134_logo\.png$
+RewriteRule ^ - [R=503,L]
+</IfModule>
+
+# 503 のときに表示するページ
+ErrorDocument 503 /index.html
+
+<IfModule mod_headers.c>
+# 一時的な停止であることを検索エンジンに伝える（1日後に再確認させる）
+Header always set Retry-After "86400"
+Header always set X-Robots-Tag "noindex, nofollow"
+Header always set Cache-Control "no-store, no-cache, must-revalidate"
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
