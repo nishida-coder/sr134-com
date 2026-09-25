@@ -2291,7 +2291,7 @@
     <div class="mh-r"><span>Hayama · Aoyama · Enoshima</span></div>
   </div>
   <div class="hero-content">
-    <div class="hero-eyebrow">2026 Spring &amp; Summer Collection</div>
+    <div class="hero-eyebrow">Fall &amp; Winter 2026-27</div>
     <div class="hero-ctas">
       <a href="#collection" class="btn btn-primary">View the Collection <span class="arrow">→</span></a>
     </div>
@@ -2308,20 +2308,18 @@
     <div class="press-track" data-press-track>
       <span class="logo logo-safari">Safari</span>
       <span class="logo logo-leon">LEON</span>
-      <img class="logo logo-oceans" src="logos/oceans.svg" alt="OCEANS" data-fallback="OCEANS">
-      <img class="logo logo-25ans"  src="logos/25ans.svg"  alt="25ans"  data-fallback="25ans">
-      <img class="logo logo-very"   src="logos/very.svg"   alt="VERY"   data-fallback="VERY">
-      <img class="logo logo-vogue"  src="logos/vogue.svg"  alt="VOGUE"  data-fallback="VOGUE">
-      <img class="logo logo-elle"   src="logos/elle.svg"   alt="ELLE"   data-fallback="ELLE">
-      <span class="logo logo-nonno">MEN&rsquo;S NON-NO</span>
+      <span class="logo logo-oceans">OCEANS</span>
+      <span class="logo logo-very">VERY</span>
+      <span class="logo logo-story">STORY</span>
+      <span class="logo logo-precious">Precious</span>
+      <span class="logo logo-vogue">VOGUE</span>
       <span class="logo logo-safari">Safari</span>
       <span class="logo logo-leon">LEON</span>
-      <img class="logo logo-oceans" src="logos/oceans.svg" alt="OCEANS" data-fallback="OCEANS">
-      <img class="logo logo-25ans"  src="logos/25ans.svg"  alt="25ans"  data-fallback="25ans">
-      <img class="logo logo-very"   src="logos/very.svg"   alt="VERY"   data-fallback="VERY">
-      <img class="logo logo-vogue"  src="logos/vogue.svg"  alt="VOGUE"  data-fallback="VOGUE">
-      <img class="logo logo-elle"   src="logos/elle.svg"   alt="ELLE"   data-fallback="ELLE">
-      <span class="logo logo-nonno">MEN&rsquo;S NON-NO</span>
+      <span class="logo logo-oceans">OCEANS</span>
+      <span class="logo logo-very">VERY</span>
+      <span class="logo logo-story">STORY</span>
+      <span class="logo logo-precious">Precious</span>
+      <span class="logo logo-vogue">VOGUE</span>
     </div>
   </div>
 </section>
@@ -2347,6 +2345,16 @@
   <div class="news-carousel-wrap">
   <div class="news-carousel" data-news-carousel>
     <div class="news-track" data-news-track>
+      <a class="news-card" href="brand.html?id=maison-margiela">
+        <div class="nc-visual"><img src="photos/aoyama-storefront.jpg" alt=""></div>
+        <div class="nc-date">2026.10 — Maison Margiela</div>
+        <div class="nc-title">26-27 3rd Delivery 到着</div>
+      </a>
+      <a class="news-card" href="brand.html?id=sporty-and-rich">
+        <div class="nc-visual"><img src="photos/hayama-storefront.jpg" alt=""></div>
+        <div class="nc-date">2026.10 — Sporty &amp; Rich</div>
+        <div class="nc-title">取り扱い開始</div>
+      </a>
       <a class="news-card" href="story.html">
         <div class="nc-visual"><img src="photos/story-fujisawa.jpg" alt=""></div>
         <div class="nc-date">2026.08 — Story</div>
@@ -2503,34 +2511,53 @@
 
 
 <!-- ============ RESORT EDIT STRIP ============ -->
-<section class="resort-strip">
-  <div class="resort-strip-head reveal">
-    <div class="eyebrow">Recommend Summer Resort SS26</div>
+<style>
+  .brand-stories{background:var(--bg-2);padding:64px 48px 68px;}
+  .brand-stories .bs-head{max-width:1200px;margin:0 auto 26px;display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+  .brand-stories .bs-head .eyebrow{font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:var(--gold-deep);font-weight:500;}
+  .brand-stories .bs-head .bs-all{font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px;font-weight:500;}
+  .brand-stories .bs-head .bs-all:hover{color:var(--gold-deep);}
+  .bs-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .bs-card{background:var(--surface);border:1px solid var(--line);padding:28px 26px;display:block;transition:border-color .35s var(--ease),transform .35s var(--ease);}
+  .bs-card:hover{border-color:var(--gold);transform:translateY(-3px);}
+  .bs-card .bs-country{font-size:13px;margin-bottom:10px;}
+  .bs-card .bs-name{font-size:18px;font-weight:500;line-height:1.28;color:var(--ink);margin-bottom:4px;}
+  .bs-card .bs-ja{font-size:10.5px;letter-spacing:0.18em;color:var(--ink-soft);margin-bottom:14px;}
+  .bs-card .bs-lead{font-size:12.5px;line-height:1.9;color:var(--ink-2);font-weight:300;}
+  .bs-card .bs-more{margin-top:16px;font-size:10px;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold-deep);font-weight:500;}
+  @media (max-width:900px){ .brand-stories{padding:44px 20px 48px;} .bs-grid{grid-template-columns:1fr;} }
+</style>
+<section class="brand-stories" id="brand-stories">
+  <div class="bs-head reveal">
+    <div class="eyebrow">Brand Stories</div>
+    <a class="bs-all" href="brand.html">ブランド一覧を見る →</a>
   </div>
-  <div class="resort-strip-grid stagger">
-    <a class="resort-card" href="product.html?id=amr102swtk1006">
-      <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/image/other_brand/13182876/imgrc0170327001.jpg" alt="Amiri Swim Shorts"></div>
-      <div class="rc-text">
-        <div class="rc-brand">Amiri</div>
-        <div class="rc-name">All-Over Logo Swim Shorts</div>
-      </div>
-    </a>
-    <a class="resort-card" href="product.html?id=bab12748778622n-b">
-      <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/08751276/bab12748778622n-bs.jpg" alt="Barba Swim Shorts"></div>
-      <div class="rc-text">
-        <div class="rc-brand">Barba</div>
-        <div class="rc-name">Handcrafted Swim Shorts</div>
-      </div>
-    </a>
-    <a class="resort-card" href="product.html?id=bob133072713312">
-      <div class="rc-visual"><img referrerpolicy="no-referrer" src="https://shop.r10s.jp/studio-route134/cabinet/06688764/bob133072713312-sale.jpg" alt="Bob Swim Shorts"></div>
-      <div class="rc-text">
-        <div class="rc-brand">Bob</div>
-        <div class="rc-name">Beach Print Swim Shorts</div>
-      </div>
-    </a>
-  </div>
+  <div class="bs-grid stagger" data-brand-stories></div>
 </section>
+<script>
+(async () => {
+  const wrap = document.querySelector('[data-brand-stories]');
+  if (!wrap) return;
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  try {
+    const all = await (await fetch('brands.json')).json();
+    const featured = ['maison-margiela', 'moncler', 'marni'];
+    const pick = featured.map(id => all.find(b => b.id === id)).filter(Boolean);
+    while (pick.length < 3 && all.length) {
+      const c = all[Math.floor(Math.random() * all.length)];
+      if (!pick.includes(c)) pick.push(c);
+    }
+    wrap.innerHTML = pick.map(b => `
+      <a class="bs-card" href="brand.html?id=${esc(b.id)}">
+        <div class="bs-country">${esc(b.country || '')}</div>
+        <div class="bs-name">${esc(b.name)}</div>
+        <div class="bs-ja">${esc(b.nameJa || '')}</div>
+        <div class="bs-lead">${esc((b.lead || '').slice(0, 110))}…</div>
+        <div class="bs-more">Read the story →</div>
+      </a>`).join('');
+  } catch (e) { wrap.innerHTML = ''; }
+})();
+</script>
 
 <!-- ============ PICK UP BRANDS — 3 stacked landscape brand banners ============ -->
 <section class="pickup-brands" id="pickup-brands">
