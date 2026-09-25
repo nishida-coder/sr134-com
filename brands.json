@@ -26,7 +26,8 @@
   ],
   "countries": [
    "IT"
-  ]
+  ],
+  "hero": "photos/brands/berna-italia.jpg"
  },
  {
   "id": "blanc-vert",
@@ -97,7 +98,8 @@
   ],
   "countries": [
    "IT"
-  ]
+  ],
+  "hero": "photos/brands/dsquared2.jpg"
  },
  {
   "id": "eleventy",
@@ -111,7 +113,8 @@
   ],
   "countries": [
    "IT"
-  ]
+  ],
+  "hero": "photos/brands/eleventy.jpg"
  },
  {
   "id": "ko-samui-tailors",
@@ -125,7 +128,8 @@
   ],
   "countries": [
    "IT"
-  ]
+  ],
+  "hero": "photos/brands/ko-samui-tailors.jpg"
  },
  {
   "id": "lucien-pellat-finet",
@@ -141,7 +145,8 @@
   ],
   "countries": [
    "FR"
-  ]
+  ],
+  "hero": "photos/brands/lucien-pellat-finet.jpg"
  },
  {
   "id": "mai-mai-j",
@@ -170,7 +175,8 @@
   ],
   "countries": [
    "FR"
-  ]
+  ],
+  "hero": "photos/brands/maison-margiela.jpg"
  },
  {
   "id": "maison-mihara-yasuhiro",
@@ -198,7 +204,8 @@
   ],
   "countries": [
    "IT"
-  ]
+  ],
+  "hero": "photos/brands/marni.jpg"
  },
  {
   "id": "miami-beach-hotel-1955",
@@ -240,7 +247,8 @@
   ],
   "countries": [
    "FR"
-  ]
+  ],
+  "hero": "photos/brands/moncler.jpg"
  },
  {
   "id": "plan-c",
@@ -268,7 +276,8 @@
   ],
   "countries": [
    "IT"
-  ]
+  ],
+  "hero": "photos/brands/pmds.jpg"
  },
  {
   "id": "rag-and-bone",
@@ -282,7 +291,8 @@
   ],
   "countries": [
    "US"
-  ]
+  ],
+  "hero": "photos/brands/rag-and-bone.jpg"
  },
  {
   "id": "seagreen",

@@ -2468,7 +2468,10 @@
   .brand-stories .bs-head .bs-all{font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px;font-weight:500;}
   .brand-stories .bs-head .bs-all:hover{color:var(--gold-deep);}
   .bs-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .bs-card{background:var(--surface);border:1px solid var(--line);padding:28px 26px;display:block;transition:border-color .35s var(--ease),transform .35s var(--ease);}
+  .bs-card{background:var(--surface);border:1px solid var(--line);padding:28px 26px;display:block;overflow:hidden;transition:border-color .35s var(--ease),transform .35s var(--ease);}
+  .bs-card .bs-visual{aspect-ratio:3/4;overflow:hidden;background:var(--bg-2);margin:-28px -26px 20px;}
+  .bs-card .bs-visual img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--ease);}
+  .bs-card:hover .bs-visual img{transform:scale(1.04);}
   .bs-card:hover{border-color:var(--gold);transform:translateY(-3px);}
   .bs-card .bs-country{margin-bottom:12px;min-height:15px;}
   .bs-flag{display:inline-block;vertical-align:middle;margin-right:6px;}
@@ -2510,6 +2513,7 @@
     }
     wrap.innerHTML = pick.map(b => `
       <a class="bs-card" href="brand.html?id=${esc(b.id)}">
+        ${b.hero ? `<div class="bs-visual"><img src="${esc(b.hero)}" alt="${esc(b.name)}" loading="lazy"></div>` : ''}
         <div class="bs-country">${bsFlags(b.countries)}</div>
         <div class="bs-name">${esc(b.name)}</div>
         <div class="bs-ja">${esc(b.nameJa || '')}</div>

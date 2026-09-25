@@ -37,6 +37,12 @@
   .brand-grid{max-width:1200px;margin:0 auto;padding:10px 48px 100px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
   .brand-cell{background:var(--surface);border:1px solid var(--line);padding:26px 24px;transition:border-color .35s var(--ease),transform .35s var(--ease);}
   .brand-cell:hover{border-color:var(--gold);transform:translateY(-2px);}
+  .brand-cell{overflow:hidden;}
+  .brand-cell .bc-visual{aspect-ratio:3/4;overflow:hidden;background:var(--bg-2);margin:-26px -24px 18px;}
+  .brand-cell .bc-visual img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease);}
+  .brand-cell:hover .bc-visual img{transform:scale(1.03);}
+  .detail-hero{max-width:820px;margin:0 auto;padding:44px 40px 0;}
+  .detail-hero img{width:100%;height:auto;display:block;}
   .brand-cell .bc-flag{margin-bottom:10px;min-height:15px;}
   .b-flag{display:inline-block;vertical-align:middle;margin-right:6px;}
   .detail .eyebrow .b-flag{margin-left:8px;margin-right:0;}
@@ -96,6 +102,7 @@
 <div class="brand-grid" data-index-grid hidden></div>
 
 <!-- 詳細 -->
+<div class="detail-hero" data-d-hero hidden><img data-d-hero-img alt=""></div>
 <article class="detail" data-detail hidden>
   <div class="eyebrow" data-d-country>Brand</div>
   <h1 data-d-name>—</h1>
@@ -144,6 +151,7 @@ const flags = codes => (codes || []).map(c => FLAG_SVG[c] || '').join('');
     grid.hidden = false;
     grid.innerHTML = all.map(b => `
       <a class="brand-cell" href="brand.html?id=${esc(b.id)}">
+        ${b.hero ? `<div class="bc-visual"><img src="${esc(b.hero)}" alt="${esc(b.name)}" loading="lazy"></div>` : ''}
         <div class="bc-flag">${flags(b.countries)}</div>
         <div class="bc-name">${esc(b.name)}</div>
         <div class="bc-ja">${esc(b.nameJa || '')}</div>
@@ -157,6 +165,11 @@ const flags = codes => (codes || []).map(c => FLAG_SVG[c] || '').join('');
   if (!b) { location.replace('brand.html'); return; }
 
   document.title = `${b.name} — Studio Route134`;
+  if (b.hero) {
+    $('[data-d-hero]').hidden = false;
+    $('[data-d-hero-img]').src = b.hero;
+    $('[data-d-hero-img]').alt = b.name;
+  }
   $('[data-detail]').hidden = false;
   $('[data-d-country]').innerHTML = `Brand ${flags(b.countries)}`;
   $('[data-d-name]').textContent = b.name;
