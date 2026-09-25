@@ -2470,7 +2470,8 @@
   .bs-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
   .bs-card{background:var(--surface);border:1px solid var(--line);padding:28px 26px;display:block;transition:border-color .35s var(--ease),transform .35s var(--ease);}
   .bs-card:hover{border-color:var(--gold);transform:translateY(-3px);}
-  .bs-card .bs-country{font-size:13px;margin-bottom:10px;}
+  .bs-card .bs-country{margin-bottom:12px;min-height:15px;}
+  .bs-flag{display:inline-block;vertical-align:middle;margin-right:6px;}
   .bs-card .bs-name{font-size:18px;font-weight:500;line-height:1.28;color:var(--ink);margin-bottom:4px;}
   .bs-card .bs-ja{font-size:10.5px;letter-spacing:0.18em;color:var(--ink-soft);margin-bottom:14px;}
   .bs-card .bs-lead{font-size:12.5px;line-height:1.9;color:var(--ink-2);font-weight:300;}
@@ -2489,6 +2490,16 @@
   const wrap = document.querySelector('[data-brand-stories]');
   if (!wrap) return;
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  // 絵文字の国旗はWindowsで表示されないため、インラインSVGで描画する
+  const BS_FLAG = {
+    IT: '<svg class="bs-flag" viewBox="0 0 24 16" width="22" height="15"><rect width="8" height="16" fill="#009246"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#ce2b37"/><rect width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.6"/></svg>',
+    FR: '<svg class="bs-flag" viewBox="0 0 24 16" width="22" height="15"><rect width="8" height="16" fill="#0055A4"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#EF4135"/><rect width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.6"/></svg>',
+    US: '<svg class="bs-flag" viewBox="0 0 24 16" width="22" height="15"><rect fill="#B22234" width="24" height="16"/><g fill="#fff"><rect y="1.23" width="24" height="1.23"/><rect y="3.69" width="24" height="1.23"/><rect y="6.15" width="24" height="1.23"/><rect y="8.62" width="24" height="1.23"/><rect y="11.08" width="24" height="1.23"/><rect y="13.54" width="24" height="1.23"/></g><rect fill="#3C3B6E" width="10" height="8.62"/><rect width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.6"/></svg>',
+    JP: '<svg class="bs-flag" viewBox="0 0 24 16" width="22" height="15"><rect fill="#fff" width="24" height="16"/><circle cx="12" cy="8" r="4.8" fill="#BC002D"/><rect width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.6"/></svg>',
+    DE: '<svg class="bs-flag" viewBox="0 0 24 16" width="22" height="15"><rect width="24" height="5.33" fill="#000"/><rect y="5.33" width="24" height="5.33" fill="#DD0000"/><rect y="10.66" width="24" height="5.34" fill="#FFCE00"/><rect width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.6"/></svg>',
+    GB: '<svg class="bs-flag" viewBox="0 0 24 16" width="22" height="15"><rect fill="#012169" width="24" height="16"/><path stroke="#fff" stroke-width="2" d="M0,0 L24,16 M24,0 L0,16"/><path stroke="#C8102E" stroke-width="1" d="M0,0 L24,16 M24,0 L0,16"/><path stroke="#fff" stroke-width="4" d="M12,0 v16 M0,8 h24"/><path stroke="#C8102E" stroke-width="2" d="M12,0 v16 M0,8 h24"/><rect width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.6"/></svg>',
+  };
+  const bsFlags = codes => (codes || []).map(c => BS_FLAG[c] || '').join('');
   try {
     const all = await (await fetch('brands.json')).json();
     const featured = ['maison-margiela', 'moncler', 'marni'];
@@ -2499,7 +2510,7 @@
     }
     wrap.innerHTML = pick.map(b => `
       <a class="bs-card" href="brand.html?id=${esc(b.id)}">
-        <div class="bs-country">${esc(b.country || '')}</div>
+        <div class="bs-country">${bsFlags(b.countries)}</div>
         <div class="bs-name">${esc(b.name)}</div>
         <div class="bs-ja">${esc(b.nameJa || '')}</div>
         <div class="bs-lead">${esc((b.lead || '').slice(0, 110))}…</div>
