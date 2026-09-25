@@ -207,6 +207,7 @@
 </style>
 </head>
 <body>
+<script>const SR134_REV = '20260926';</script>
 
 <div class="topbar">Online Store — Coming Soon &nbsp;·&nbsp; 商品は店頭にてご案内しております</div>
 
@@ -336,7 +337,7 @@ document.addEventListener('click', (e) => {
 (async () => {
   const id = new URLSearchParams(location.search).get('id');
   if (!id) { location.href = 'index.html'; return; }
-  const products = await (await fetch('products.json')).json();
+  const products = await (await fetch('products.json?v=' + SR134_REV)).json();
   const p = products.find(x => x.id === id);
   // 旧サイトからのリダイレクトで、新カタログに存在しない品番が来る場合がある。
   // 警告を出さずに一覧へ送る。

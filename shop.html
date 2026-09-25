@@ -149,6 +149,7 @@
 </style>
 </head>
 <body>
+<script>const SR134_REV = '20260926';</script>
 
 <div class="topbar">Online Store — Coming Soon &nbsp;·&nbsp; 商品は店頭にてご案内しております</div>
 
@@ -451,7 +452,7 @@ function attachFilterHandlers(){
 }
 
 (async()=>{
-  try{ ALL_PRODUCTS = await (await fetch('products.json')).json(); }
+  try{ ALL_PRODUCTS = await (await fetch('products.json?v=' + SR134_REV)).json(); }
   catch{ $('[data-catalog]').innerHTML='<div class="empty">商品データを読み込めませんでした。</div>';return; }
   // If URL has ?brand=X, apply
   const initBrand = new URLSearchParams(location.search).get('brand');

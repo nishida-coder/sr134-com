@@ -2257,6 +2257,7 @@
 </style>
 </head>
 <body>
+<script>const SR134_REV = '20260926';</script>
 
 <!-- ============ TOPBAR ============ -->
 <div class="topbar">Online Store — Coming Soon <span>·</span> 商品は店頭にてご案内しております <span>·</span> 葉山 · 南青山 · 江ノ島</div>
@@ -2504,7 +2505,7 @@
   };
   const bsFlags = codes => (codes || []).map(c => BS_FLAG[c] || '').join('');
   try {
-    const all = await (await fetch('brands.json')).json();
+    const all = await (await fetch('brands.json?v=' + SR134_REV)).json();
     const featured = ['maison-margiela', 'moncler', 'marni'];
     const pick = featured.map(id => all.find(b => b.id === id)).filter(Boolean);
     while (pick.length < 3 && all.length) {
@@ -2848,7 +2849,7 @@
     const allBtn = $('[data-brand-all-btn]');
     if (!nav) return;
     let products = [];
-    try { products = await (await fetch('products.json')).json(); }
+    try { products = await (await fetch('products.json?v=' + SR134_REV)).json(); }
     catch { return; }
     const brandCounts = {};
     products.forEach(p => { brandCounts[p.brand] = (brandCounts[p.brand] || 0) + 1; });
@@ -2977,7 +2978,7 @@
     const grid = $('[data-collection]');
     if (!grid) return;
     let products = [];
-    try { products = await (await fetch('products.json')).json(); }
+    try { products = await (await fetch('products.json?v=' + SR134_REV)).json(); }
     catch { grid.innerHTML = '<p style="padding:40px;color:#6E7A8E">商品データを読み込めませんでした。</p>'; return; }
     // Curate: one per brand for the top position, then higher-price items to fill 12
     const seen = new Set();
@@ -3015,7 +3016,7 @@
     const pickup = $('[data-pickup]');
     if (!pickup) return;
     try {
-      const feats = await (await fetch('pickup.json')).json();
+      const feats = await (await fetch('pickup.json?v=' + SR134_REV)).json();
       if (!feats.length) return;
       pickup.innerHTML = feats.slice(0, 4).map(p => {
         const raw = Array.isArray(p.story) ? (p.story[0] || '') : '';
@@ -3042,7 +3043,7 @@
     const wrap = $('[data-pb-list]');
     if (!wrap) return;
     let products = [];
-    try { products = await (await fetch('products.json')).json(); }
+    try { products = await (await fetch('products.json?v=' + SR134_REV)).json(); }
     catch { return; }
     // Pick a representative image per brand
     const pick = (brands) => {
@@ -3090,7 +3091,7 @@
     const grid = $('[data-gallery]');
     if (!grid) return;
     try {
-      const items = await (await fetch('journal.json')).json();
+      const items = await (await fetch('journal.json?v=' + SR134_REV)).json();
       grid.innerHTML = items.map(it => `
         <a href="journal.html?id=${it.id}" class="gallery-cell">
           <img src="${it.image}" alt="${it.title}" loading="lazy">

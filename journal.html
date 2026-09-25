@@ -67,6 +67,7 @@
 </style>
 </head>
 <body>
+<script>const SR134_REV = '20260926';</script>
 
 <div class="topbar">Online Store — Coming Soon &nbsp;·&nbsp; 商品は店頭にてご案内しております</div>
 
@@ -107,7 +108,7 @@ const $=(s,r=document)=>r.querySelector(s);
 (async()=>{
   const id=new URLSearchParams(location.search).get('id');
   if(!id){location.href='index.html#journal';return;}
-  const all=await(await fetch('journal.json')).json();
+  const all=await(await fetch('journal.json?v=' + SR134_REV)).json();
   const a=all.find(x=>x.id===id);
   if(!a){alert('記事が見つかりません');location.href='index.html#journal';return;}
   document.title=`${a.title} — Journal — Studio Route134`;
