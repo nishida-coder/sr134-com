@@ -87,7 +87,8 @@
   ],
   "countries": [
    "IT"
-  ]
+  ],
+  "hero": "photos/brands/devore-incipit.jpg"
  },
  {
   "id": "dsquared2",
@@ -163,7 +164,8 @@
   ],
   "countries": [
    "IT"
-  ]
+  ],
+  "hero": "photos/brands/mai-mai-j.jpg"
  },
  {
   "id": "maison-margiela",
@@ -193,7 +195,8 @@
   ],
   "countries": [
    "JP"
-  ]
+  ],
+  "hero": "photos/brands/maison-mihara-yasuhiro.jpg"
  },
  {
   "id": "marni",
@@ -236,7 +239,8 @@
   ],
   "countries": [
    "FR"
-  ]
+  ],
+  "hero": "photos/brands/mm6-maison-margiela.jpg"
  },
  {
   "id": "moncler",

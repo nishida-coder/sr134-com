@@ -447,6 +447,10 @@
     background: linear-gradient(180deg, rgba(17,32,59,0.25) 0%, rgba(17,32,59,0.65) 100%);
     transition: background .35s;
   }
+  /* 画像に文字が入っているタイルは、サイト側の文字を出さず覆いも薄くする */
+  .gender-tile.has-caption .gt-label { display: none; }
+  .gender-tile.has-caption::before { background: linear-gradient(180deg, rgba(17,32,59,0.05) 0%, rgba(17,32,59,0.18) 100%); }
+  .gender-tile.has-caption:hover::before { background: linear-gradient(180deg, rgba(17,32,59,0.12) 0%, rgba(17,32,59,0.28) 100%); }
   .gender-tile:hover { transform: translateY(-3px); }
   .gender-tile:hover::before { background: linear-gradient(180deg, rgba(17,32,59,0.35) 0%, rgba(17,32,59,0.78) 100%); }
   .gender-tile .gt-label {
@@ -2381,13 +2385,13 @@
   </div>
   <!-- Step 1: Gender selection -->
   <div class="gender-tiles stagger" data-gender-step>
-    <a href="#" class="gender-tile" data-gender="Men" style="background-image:url('photos/hayama-store.jpg')">
+    <a href="#" class="gender-tile has-caption" data-gender="Men" style="background-image:url('photos/category/mens.jpg')">
       <span class="gt-label">Mens</span>
     </a>
     <a href="#" class="gender-tile" data-gender="Women" style="background-image:url('photos/aoyama-leon-shoot.jpg')">
       <span class="gt-label">Ladies</span>
     </a>
-    <a href="#" class="gender-tile" data-gender="All" style="background-image:url('photos/enoshima-store.jpg')">
+    <a href="#" class="gender-tile has-caption" data-gender="All" style="background-image:url('photos/category/all.jpg')">
       <span class="gt-label">All</span>
     </a>
   </div>
