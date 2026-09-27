@@ -34,16 +34,15 @@
   .index-head .eyebrow{font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:var(--gold-deep);font-weight:500;margin-bottom:14px;}
   .index-head h1{font-size:clamp(28px,2.2vw+14px,44px);line-height:1.15;margin-bottom:14px;}
   .index-head p{font-size:14px;color:var(--ink-2);max-width:640px;margin:0 auto;}
-  .brand-grid{max-width:1200px;margin:0 auto;padding:10px 48px 100px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;grid-auto-rows:1fr;}
-  .brand-cell{background:var(--surface);border:1px solid var(--line);padding:0 0 24px;overflow:hidden;height:100%;display:flex;flex-direction:column;transition:border-color .35s var(--ease),transform .35s var(--ease);}
+  /* 一覧も 紹介文が左、画像が右 の横並び。枠の大きさは全件そろえる */
+  .brand-grid{max-width:1200px;margin:0 auto;padding:10px 48px 100px;display:grid;grid-template-columns:repeat(2,1fr);gap:22px;grid-auto-rows:1fr;}
+  .brand-cell{background:var(--surface);border:1px solid var(--line);padding:0;overflow:hidden;height:100%;min-height:210px;display:flex;flex-direction:row;transition:border-color .35s var(--ease),transform .35s var(--ease);}
   .brand-cell:hover{border-color:var(--gold);transform:translateY(-2px);}
-  /* 画像の有無にかかわらず枠の高さを揃える */
-  .brand-cell .bc-visual{height:190px;flex:0 0 190px;overflow:hidden;background:var(--bg-2);display:flex;align-items:center;justify-content:center;}
+  .brand-cell .bc-visual{width:180px;flex:0 0 180px;align-self:stretch;overflow:hidden;background:var(--bg-2);display:flex;align-items:center;justify-content:center;}
   .brand-cell .bc-visual img{width:100%;height:100%;object-fit:cover;object-position:center 38%;transition:transform 1.2s var(--ease);}
   .brand-cell:hover .bc-visual img{transform:scale(1.03);}
-  .brand-cell .bc-visual.is-empty{background:var(--bg-2);}
-  .brand-cell .bc-visual.is-empty span{font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:var(--ink-soft);opacity:0.6;}
-  .brand-cell .bc-body{padding:20px 24px 0;display:flex;flex-direction:column;flex:1 1 auto;}
+  .brand-cell .bc-visual.is-empty span{font-size:10px;letter-spacing:0.26em;text-transform:uppercase;color:var(--ink-soft);opacity:0.6;text-align:center;padding:0 10px;line-height:1.6;}
+  .brand-cell .bc-body{padding:22px 24px;display:flex;flex-direction:column;flex:1 1 auto;min-width:0;}
   .brand-cell .bc-flag{margin-bottom:10px;min-height:15px;}
   .b-flag{display:inline-block;vertical-align:middle;margin-right:6px;}
   .detail .eyebrow .b-flag{margin-left:8px;margin-right:0;}
@@ -84,6 +83,9 @@
   @media (max-width:900px){
     header,.index-head,.brand-grid,.detail-wrap,.more-brands,footer{padding-left:20px;padding-right:20px;}
     .brand-grid{grid-template-columns:1fr;grid-auto-rows:auto;}
+    .brand-cell{min-height:170px;}
+    .brand-cell .bc-visual{width:130px;flex:0 0 130px;}
+    .brand-cell .bc-body{padding:18px 18px;}
     .detail-wrap{grid-template-columns:1fr;gap:26px;}
     .detail-figure{position:static;order:-1;max-width:360px;}
     .more-grid{grid-template-columns:repeat(2,1fr);}
@@ -164,16 +166,16 @@ const flags = codes => (codes || []).map(c => FLAG_SVG[c] || '').join('');
     // 画像の有無にかかわらず同じ構造にして、枠の大きさを揃える
     grid.innerHTML = all.map(b => `
       <a class="brand-cell" href="brand.html?id=${esc(b.id)}">
-        ${b.hero
-          ? `<div class="bc-visual"><img src="${esc(b.hero)}" alt="${esc(b.name)}" loading="lazy"></div>`
-          : `<div class="bc-visual is-empty"><span>${esc(b.name)}</span></div>`}
         <div class="bc-body">
           <div class="bc-flag">${flags(b.countries)}</div>
           <div class="bc-name">${esc(b.name)}</div>
           <div class="bc-ja">${esc(b.nameJa || '')}</div>
-          <div class="bc-lead">${esc((b.lead || '').slice(0, 110))}…</div>
+          <div class="bc-lead">${esc((b.lead || '').slice(0, 130))}…</div>
           <div class="bc-more">Read more →</div>
         </div>
+        ${b.hero
+          ? `<div class="bc-visual"><img src="${esc(b.hero)}" alt="${esc(b.name)}" loading="lazy"></div>`
+          : `<div class="bc-visual is-empty"><span>${esc(b.name)}</span></div>`}
       </a>`).join('');
     return;
   }
