@@ -447,6 +447,10 @@
     background: linear-gradient(180deg, rgba(17,32,59,0.25) 0%, rgba(17,32,59,0.65) 100%);
     transition: background .35s;
   }
+  /* ALL は画像の比率に合わせ、端が切れないようにする */
+  .gender-tile.has-caption[data-gender="All"] { aspect-ratio: 2 / 1; background-size: contain; background-repeat: no-repeat; background-color: #EFEDE6; }
+  /* 上半分に寄せて、写真に入った文字を画面外に逃がす */
+  .gender-tile.zoom-crop { background-size: 152%; background-position: center top; }
   /* 画像に文字が入っているタイルは、サイト側の文字を出さず覆いも薄くする */
   .gender-tile.has-caption .gt-label { display: none; }
   .gender-tile.has-caption::before { background: linear-gradient(180deg, rgba(17,32,59,0.05) 0%, rgba(17,32,59,0.18) 100%); }
@@ -2388,7 +2392,7 @@
     <a href="#" class="gender-tile has-caption" data-gender="Men" style="background-image:url('photos/category/mens.jpg')">
       <span class="gt-label">Mens</span>
     </a>
-    <a href="#" class="gender-tile" data-gender="Women" style="background-image:url('photos/aoyama-leon-shoot.jpg')">
+    <a href="#" class="gender-tile zoom-crop" data-gender="Women" style="background-image:url('photos/category/ladies.jpg')">
       <span class="gt-label">Ladies</span>
     </a>
     <a href="#" class="gender-tile has-caption" data-gender="All" style="background-image:url('photos/category/all.jpg')">
