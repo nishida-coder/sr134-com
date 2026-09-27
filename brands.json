@@ -11,7 +11,8 @@
   ],
   "countries": [
    "US"
-  ]
+  ],
+  "hero": "photos/brands/amiri.jpg"
  },
  {
   "id": "berna-italia",
@@ -56,7 +57,8 @@
   ],
   "countries": [
    "IT"
-  ]
+  ],
+  "hero": "photos/brands/crime-london.jpg"
  },
  {
   "id": "destin",
@@ -70,7 +72,8 @@
   ],
   "countries": [
    "IT"
-  ]
+  ],
+  "hero": "photos/brands/destin.jpg"
  },
  {
   "id": "devore-incipit",
