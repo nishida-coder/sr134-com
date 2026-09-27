@@ -72,6 +72,7 @@
   .more-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
   .more-grid a{background:var(--surface);border:1px solid var(--line);padding:16px 18px;font-size:13px;transition:border-color .3s;}
   .more-grid a:hover{border-color:var(--gold);}
+  .more-grid .mg-flag{display:block;margin-bottom:8px;min-height:15px;}
   .more-grid .mg-ja{display:block;font-size:10.5px;color:var(--ink-soft);margin-top:4px;}
 
   .back-cta{text-align:center;padding:10px 20px 80px;}
@@ -205,7 +206,11 @@ const flags = codes => (codes || []).map(c => FLAG_SVG[c] || '').join('');
   const others = all.filter(x => x.id !== b.id).sort(() => Math.random() - 0.5).slice(0, 8);
   $('[data-more-wrap]').hidden = false;
   $('[data-more]').innerHTML = others.map(o => `
-    <a href="brand.html?id=${esc(o.id)}">${esc(o.name)}<span class="mg-ja">${esc(o.nameJa || '')}</span></a>`).join('');
+    <a href="brand.html?id=${esc(o.id)}">
+      <span class="mg-flag">${flags(o.countries)}</span>
+      ${esc(o.name)}
+      <span class="mg-ja">${esc(o.nameJa || '')}</span>
+    </a>`).join('');
 })();
 </script>
 </body>
