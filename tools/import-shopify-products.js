@@ -103,11 +103,27 @@ function descriptionOf(p, category) {
   return lines.map(t => `<p>${t}</p>`).join('\n');
 }
 
+/**
+ * 楽天の登録順（tools/fetch-rakuten-image-order.js で取得）があればそれを使う。
+ * products.json の images はスクレイプ順で、接写や書類の写真が先頭に来てしまうため。
+ */
+let ORDER_MAP = null;
+function loadOrderMap(brand) {
+  const file = path.join(
+    __dirname,
+    'out',
+    `rakuten-images-${brand.replace(/\s+/g, '-').toLowerCase()}.json`
+  );
+  ORDER_MAP = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf8')) : {};
+  return Object.keys(ORDER_MAP).length;
+}
+
 function imagesOf(p) {
-  const raw = Array.isArray(p.images) ? p.images : [];
+  const ordered = ORDER_MAP && ORDER_MAP[p.id];
+  const raw = ordered && ordered.length ? ordered : Array.isArray(p.images) ? p.images : [];
   const seen = new Set();
   return raw
-    .slice(1) // 1枚目は採用しない
+    .slice(1) // 1枚目は採用しない。2枚目をメインにする（しもんさん指示）
     .filter(u => u && !/evidence/i.test(u))
     .filter(u => (seen.has(u) ? false : (seen.add(u), true)))
     .slice(0, MAX_IMAGES);
@@ -187,7 +203,11 @@ async function main() {
     console.error(`${brand} の商品が見つかりません`);
     process.exit(1);
   }
-  console.log(`${brand} ${targets.length} 件を処理します`);
+  const ordered = loadOrderMap(brand);
+  console.log(
+    `${brand} ${targets.length} 件を処理します` +
+      (ordered ? `（うち ${ordered} 件は楽天の登録順を使用）` : '（楽天の登録順は未取得）')
+  );
 
   if (dryRun) {
     const sample = buildInput(targets[0]);
