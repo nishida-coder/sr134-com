@@ -2532,11 +2532,18 @@
   const bsFlags = codes => (codes || []).map(c => BS_FLAG[c] || '').join('');
   try {
     const all = await (await fetch('brands.json?v=' + SR134_REV)).json();
-    const featured = ['maison-margiela', 'moncler', 'marni'];
-    const pick = featured.map(id => all.find(b => b.id === id)).filter(Boolean);
-    while (pick.length < 3 && all.length) {
-      const c = all[Math.floor(Math.random() * all.length)];
-      if (!pick.includes(c)) pick.push(c);
+    // 5枠。1枠目は Maison Margiela で固定し、残り4枠は入れ替える。
+    // Shopify 連携後は「新しく更新された商品のブランド」を優先して並べる予定。
+    const FIXED = 'maison-margiela';
+    const SLOTS = 5;
+    const pick = [all.find(b => b.id === FIXED)].filter(Boolean);
+    const shuffle = arr => arr.map(v => [Math.random(), v]).sort((a, b) => a[0] - b[0]).map(v => v[1]);
+    const rest = all.filter(b => b.id !== FIXED);
+    // 写真のあるブランドを優先し、足りなければ残りから補う
+    const rotation = [...shuffle(rest.filter(b => b.hero)), ...shuffle(rest.filter(b => !b.hero))];
+    for (const b of rotation) {
+      if (pick.length >= SLOTS) break;
+      pick.push(b);
     }
     wrap.innerHTML = pick.map(b => `
       <a class="bs-card" href="brand.html?id=${esc(b.id)}">
@@ -2556,12 +2563,8 @@
 </script>
 
 <!-- ============ PICK UP BRANDS — 3 stacked landscape brand banners ============ -->
-<section class="pickup-brands" id="pickup-brands">
-  <div class="section-head reveal">
-    <div class="eyebrow">Pick Up Brands</div>
-  </div>
-  <div class="pb-list stagger" data-pb-list></div>
-</section>
+<!-- Pick Up Brands はセクションごと削除（2026-10-20）。Brand Stories と訴求が重なるため -->
+
 
 <!-- ============ BRANDS — A-Z + 0-9, hover to reveal + ALL toggle ============ -->
 <section id="brands">
