@@ -449,8 +449,8 @@
   }
   /* ALL は画像の比率に合わせ、端が切れないようにする */
   .gender-tile.has-caption[data-gender="All"] { aspect-ratio: 2 / 1; background-size: contain; background-repeat: no-repeat; background-color: #EFEDE6; }
-  /* 上半分に寄せて、写真に入った文字を画面外に逃がす */
-  .gender-tile.zoom-crop { background-size: 152%; background-position: center top; }
+  /* PCでは大きくなりすぎるため、カテゴリの並び自体の横幅を抑える */
+  @media (min-width: 901px) { .gender-tiles { max-width: 680px; margin-left: auto; margin-right: auto; } }
   /* 画像に文字が入っているタイルは、サイト側の文字を出さず覆いも薄くする */
   .gender-tile.has-caption .gt-label { display: none; }
   .gender-tile.has-caption::before { background: linear-gradient(180deg, rgba(17,32,59,0.05) 0%, rgba(17,32,59,0.18) 100%); }
@@ -2389,13 +2389,13 @@
   </div>
   <!-- Step 1: Gender selection -->
   <div class="gender-tiles stagger" data-gender-step>
-    <a href="#" class="gender-tile has-caption" data-gender="Men" style="background-image:url('photos/category/mens.jpg')">
+    <a href="shop.html?gender=Men" class="gender-tile has-caption" data-gender="Men" style="background-image:url('photos/category/mens.jpg')">
       <span class="gt-label">Mens</span>
     </a>
-    <a href="#" class="gender-tile zoom-crop" data-gender="Women" style="background-image:url('photos/category/ladies.jpg')">
+    <a href="shop.html?gender=Women" class="gender-tile has-caption" data-gender="Women" style="background-image:url('photos/category/ladies.jpg')">
       <span class="gt-label">Ladies</span>
     </a>
-    <a href="#" class="gender-tile has-caption" data-gender="All" style="background-image:url('photos/category/all.jpg')">
+    <a href="shop.html" class="gender-tile has-caption" data-gender="All" style="background-image:url('photos/category/all.jpg')">
       <span class="gt-label">All</span>
     </a>
   </div>
@@ -2479,19 +2479,26 @@
   .brand-stories .bs-head .eyebrow{font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:var(--gold-deep);font-weight:500;}
   .brand-stories .bs-head .bs-all{font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px;font-weight:500;}
   .brand-stories .bs-head .bs-all:hover{color:var(--gold-deep);}
-  .bs-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-  .bs-card{background:var(--surface);border:1px solid var(--line);padding:28px 26px;display:block;overflow:hidden;transition:border-color .35s var(--ease),transform .35s var(--ease);}
-  .bs-card .bs-visual{aspect-ratio:3/4;overflow:hidden;background:var(--bg-2);margin:-28px -26px 20px;}
-  .bs-card .bs-visual img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s var(--ease);}
+  /* 画像が左、国旗とブランド名と説明文が右。縦に積む */
+  .bs-grid{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:18px;}
+  .bs-card{background:var(--surface);border:1px solid var(--line);padding:0;display:flex;flex-direction:row;overflow:hidden;transition:border-color .35s var(--ease),transform .35s var(--ease);}
+  .bs-card:hover{border-color:var(--gold);transform:translateY(-2px);}
+  .bs-card .bs-visual{width:210px;flex:0 0 210px;align-self:stretch;overflow:hidden;background:var(--bg-2);}
+  .bs-card .bs-visual img{width:100%;height:100%;object-fit:cover;object-position:center 38%;transition:transform 1.3s var(--ease);}
   .bs-card:hover .bs-visual img{transform:scale(1.04);}
-  .bs-card:hover{border-color:var(--gold);transform:translateY(-3px);}
-  .bs-card .bs-country{margin-bottom:12px;min-height:15px;}
+  .bs-card .bs-body{padding:24px 28px;display:flex;flex-direction:column;flex:1 1 auto;min-width:0;}
+  .bs-card .bs-country{margin-bottom:10px;min-height:15px;}
   .bs-flag{display:inline-block;vertical-align:middle;margin-right:6px;}
   .bs-card .bs-name{font-size:18px;font-weight:500;line-height:1.28;color:var(--ink);margin-bottom:4px;}
-  .bs-card .bs-ja{font-size:10.5px;letter-spacing:0.18em;color:var(--ink-soft);margin-bottom:14px;}
-  .bs-card .bs-lead{font-size:12.5px;line-height:1.9;color:var(--ink-2);font-weight:300;}
-  .bs-card .bs-more{margin-top:16px;font-size:10px;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold-deep);font-weight:500;}
-  @media (max-width:900px){ .brand-stories{padding:44px 20px 48px;} .bs-grid{grid-template-columns:1fr;} }
+  .bs-card .bs-ja{font-size:10.5px;letter-spacing:0.18em;color:var(--ink-soft);margin-bottom:12px;}
+  .bs-card .bs-lead{font-size:12.5px;line-height:1.95;color:var(--ink-2);font-weight:300;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;}
+  .bs-card .bs-more{margin-top:auto;padding-top:14px;font-size:10px;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold-deep);font-weight:500;}
+  @media (max-width:900px){
+    .brand-stories{padding:44px 20px 48px;}
+    .bs-card .bs-visual{width:120px;flex:0 0 120px;}
+    .bs-card .bs-body{padding:18px 18px;}
+    .bs-card .bs-lead{-webkit-line-clamp:3;}
+  }
 </style>
 <section class="brand-stories" id="brand-stories">
   <div class="bs-head reveal">
@@ -2526,11 +2533,13 @@
     wrap.innerHTML = pick.map(b => `
       <a class="bs-card" href="brand.html?id=${esc(b.id)}">
         ${b.hero ? `<div class="bs-visual"><img src="${esc(b.hero)}" alt="${esc(b.name)}" loading="lazy"></div>` : ''}
-        <div class="bs-country">${bsFlags(b.countries)}</div>
-        <div class="bs-name">${esc(b.name)}</div>
-        <div class="bs-ja">${esc(b.nameJa || '')}</div>
-        <div class="bs-lead">${esc((b.lead || '').slice(0, 110))}…</div>
-        <div class="bs-more">Read the story →</div>
+        <div class="bs-body">
+          <div class="bs-country">${bsFlags(b.countries)}</div>
+          <div class="bs-name">${esc(b.name)}</div>
+          <div class="bs-ja">${esc(b.nameJa || '')}</div>
+          <div class="bs-lead">${esc((b.lead || '').slice(0, 170))}…</div>
+          <div class="bs-more">Read the story →</div>
+        </div>
       </a>`).join('');
   } catch (e) { wrap.innerHTML = ''; }
 })();
@@ -2974,7 +2983,8 @@
     }
     document.addEventListener('click', (e) => {
       const g = e.target.closest('[data-gender]');
-      if (g) {
+      // shop.html へ直接リンクしているタイルは、そのまま商品一覧へ遷移させる
+      if (g && !(g.getAttribute('href') || '').startsWith('shop.html')) {
         e.preventDefault();
         showCat(g.dataset.gender);
         return;

@@ -458,6 +458,12 @@ function attachFilterHandlers(){
   try{ ALL_PRODUCTS = await (await fetch('products.json?v=' + SR134_REV)).json(); }
   catch{ $('[data-catalog]').innerHTML='<div class="empty">商品データを読み込めませんでした。</div>';return; }
   // If URL has ?brand=X, apply
+  // TOPのカテゴリから渡される絞り込みを反映する
+  const qs = new URLSearchParams(location.search);
+  const initGender = qs.get('gender');
+  if (initGender) STATE.gender.add(initGender);
+  const initGroup = qs.get('group');
+  if (initGroup) STATE.group.add(initGroup);
   const initBrand = new URLSearchParams(location.search).get('brand');
   if(initBrand) STATE.brand.add(initBrand);
   buildFacets();
@@ -465,6 +471,11 @@ function attachFilterHandlers(){
   if(initBrand){
     setTimeout(()=>{ const cb = document.querySelector(`[data-facet="brand"] input[data-facet-value="${initBrand}"]`); if(cb) cb.checked=true; },0);
   }
+  // 絞り込みのチェックも入れて、何で絞っているか見えるようにする
+  setTimeout(()=>{
+    if(initGender){ const cb = document.querySelector(`[data-facet="gender"] input[data-facet-value="${initGender}"]`); if(cb) cb.checked=true; }
+    if(initGroup){ const cb = document.querySelector(`[data-facet="group"] input[data-facet-value="${initGroup}"]`); if(cb) cb.checked=true; }
+  },0);
   attachFilterHandlers();
   renderCatalog();
   renderCart();
