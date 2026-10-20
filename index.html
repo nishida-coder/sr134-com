@@ -2268,6 +2268,7 @@
 </head>
 <body>
 <script>const SR134_REV = '20260926';</script>
+<script src="shopify-config.js"></script>
 
 <!-- ============ TOPBAR ============ -->
 <div class="topbar">Online Store — Coming Soon <span>·</span> 商品は店頭にてご案内しております <span>·</span> 葉山 · 南青山 · 江ノ島</div>
@@ -2540,7 +2541,20 @@
     const shuffle = arr => arr.map(v => [Math.random(), v]).sort((a, b) => a[0] - b[0]).map(v => v[1]);
     const rest = all.filter(b => b.id !== FIXED);
     // 写真のあるブランドを優先し、足りなければ残りから補う
-    const rotation = [...shuffle(rest.filter(b => b.hero)), ...shuffle(rest.filter(b => !b.hero))];
+    let rotation = [...shuffle(rest.filter(b => b.hero)), ...shuffle(rest.filter(b => !b.hero))];
+    // Shopify がつながっていれば、商品が新しく更新されたブランドを前に出す
+    try {
+      const vendors = window.sr134RecentVendors ? await window.sr134RecentVendors(50) : null;
+      if (vendors && vendors.length) {
+        const norm = s => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        const order = vendors.map(norm);
+        const rank = b => {
+          const i = order.indexOf(norm(b.name));
+          return i === -1 ? 999 : i;
+        };
+        rotation = rotation.slice().sort((a, b) => rank(a) - rank(b));
+      }
+    } catch (e) { /* つながっていなければ従来の並びのまま */ }
     for (const b of rotation) {
       if (pick.length >= SLOTS) break;
       pick.push(b);
