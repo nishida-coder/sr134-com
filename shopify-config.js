@@ -14,7 +14,7 @@ window.SR134_SHOPIFY = {
   // API用の恒久ドメイン。表に出る主ドメインを変えてもこちらは変わらない。
   domain: 'gp9g0i-sk.myshopify.com',
   // ブランドページと商品ページの公開先。shop.sr134.com の接続が済んだらここを差し替える。
-  shopBase: 'https://sr134.myshopify.com',
+  shopBase: 'https://shop.sr134.com',
   storefrontToken: '',   // 例 'shpat_xxx' ではなく Storefront 用の公開トークン
   apiVersion: '2026-10',
 };
