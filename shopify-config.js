@@ -13,7 +13,7 @@
 window.SR134_SHOPIFY = {
   domain: 'gp9g0i-sk.myshopify.com',
   storefrontToken: '',   // 例 'shpat_xxx' ではなく Storefront 用の公開トークン
-  apiVersion: '2025-07',
+  apiVersion: '2026-10',
 };
 
 // 直近で更新された商品のブランド（vendor）を新しい順に返す。
