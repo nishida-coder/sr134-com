@@ -2,14 +2,16 @@
 // Storefront API は公開用のトークンを使うため、ここに書いて問題ない種類の値です。
 // Admin API のキーやパスワードは絶対にここへ書かないこと。
 //
-// 取得手順（Shopify管理画面）
-//   設定 → アプリと販売チャネル → アプリを開発 → アプリを作成
-//   → Storefront API の権限で unauthenticated_read_product_listings を許可
-//   → インストール → Storefront API アクセストークンをコピー
+// 取得手順（2026-10 現在。旧「アプリを開発」は Dev Dashboard に移行済み）
+//   A案 Headless チャネルを入れると管理画面上で公開トークンが発行される（推奨）
+//   B案 https://dev.shopify.com でアプリ作成 → Storefront API の
+//        unauthenticated_read_product_listings を許可 → ストアにインストール
 //
 // domain は xxxx.myshopify.com の形式。独自ドメインではなく myshopify の方を入れる。
+// ストアがパスワード保護中は公開トークンでも取得できない場合があるため、
+// 公開後に改めて疎通を確認する。取れないときは null が返り従来表示に戻る。
 window.SR134_SHOPIFY = {
-  domain: '',            // 例 'studio-route134.myshopify.com'
+  domain: 'gp9g0i-sk.myshopify.com',
   storefrontToken: '',   // 例 'shpat_xxx' ではなく Storefront 用の公開トークン
   apiVersion: '2025-07',
 };
