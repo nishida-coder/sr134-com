@@ -11,9 +11,10 @@
 // ストアがパスワード保護中は公開トークンでも取得できない場合があるため、
 // 公開後に改めて疎通を確認する。取れないときは null が返り従来表示に戻る。
 window.SR134_SHOPIFY = {
+  // API用の恒久ドメイン。表に出る主ドメインを変えてもこちらは変わらない。
   domain: 'gp9g0i-sk.myshopify.com',
-  // ブランドページと商品ページの公開先。shop.sr134.com のDNSが通ったらここを差し替える。
-  shopBase: 'https://gp9g0i-sk.myshopify.com',
+  // ブランドページと商品ページの公開先。shop.sr134.com の接続が済んだらここを差し替える。
+  shopBase: 'https://sr134.myshopify.com',
   storefrontToken: '',   // 例 'shpat_xxx' ではなく Storefront 用の公開トークン
   apiVersion: '2026-10',
 };
