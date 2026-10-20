@@ -2560,7 +2560,7 @@
       pick.push(b);
     }
     wrap.innerHTML = pick.map(b => `
-      <a class="bs-card" href="brand.html?id=${esc(b.id)}">
+      <a class="bs-card" href="${esc(window.sr134BrandUrl ? window.sr134BrandUrl(b.id) : 'brand.html?id=' + b.id)}">
         ${b.hero ? `<div class="bs-visual"><img src="${esc(b.hero)}" alt="${esc(b.name)}" loading="lazy"></div>` : ''}
         <div class="bs-body">
           <div class="bs-title">

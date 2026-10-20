@@ -12,9 +12,28 @@
 // 公開後に改めて疎通を確認する。取れないときは null が返り従来表示に戻る。
 window.SR134_SHOPIFY = {
   domain: 'gp9g0i-sk.myshopify.com',
+  // ブランドページと商品ページの公開先。shop.sr134.com のDNSが通ったらここを差し替える。
+  shopBase: 'https://gp9g0i-sk.myshopify.com',
   storefrontToken: '',   // 例 'shpat_xxx' ではなく Storefront 用の公開トークン
   apiVersion: '2026-10',
 };
+
+// ブランドページのURL。Shopifyの自動コレクションを handle = brands.json の id で作ってある。
+// 未設定なら従来の自サイト内ページへ落とす。
+window.sr134BrandUrl = function (id) {
+  const base = (window.SR134_SHOPIFY || {}).shopBase;
+  return base ? `${base}/collections/${id}` : `brand.html?id=${encodeURIComponent(id)}`;
+};
+
+// 静的に書かれた brand.html?id=... のリンクも Shopify 側へ送る。
+// ブランド一覧（idなしの brand.html）は自サイトのままにしておく。
+document.addEventListener('DOMContentLoaded', function () {
+  if (!(window.SR134_SHOPIFY || {}).shopBase) return;
+  document.querySelectorAll('a[href^="brand.html?id="]').forEach(a => {
+    const id = new URLSearchParams(a.getAttribute('href').split('?')[1]).get('id');
+    if (id) a.setAttribute('href', window.sr134BrandUrl(id));
+  });
+});
 
 // 直近で更新された商品のブランド（vendor）を新しい順に返す。
 // 設定が空のときは null を返し、呼び出し側は従来どおりの表示に戻る。

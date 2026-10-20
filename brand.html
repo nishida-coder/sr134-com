@@ -97,6 +97,7 @@
 </head>
 <body>
 <script>const SR134_REV = '20260926';</script>
+<script src="shopify-config.js"></script>
 
 <div class="topbar">Online Store — Coming Soon &nbsp;·&nbsp; 商品は店頭にてご案内しております</div>
 
@@ -168,7 +169,7 @@ const flags = codes => (codes || []).map(c => FLAG_SVG[c] || '').join('');
     grid.hidden = false;
     // 画像の有無にかかわらず同じ構造にして、枠の大きさを揃える
     grid.innerHTML = all.map(b => `
-      <a class="brand-cell" href="brand.html?id=${esc(b.id)}">
+      <a class="brand-cell" href="${esc(window.sr134BrandUrl ? window.sr134BrandUrl(b.id) : 'brand.html?id=' + b.id)}">
         <div class="bc-body">
           <div class="bc-flag">${flags(b.countries)}</div>
           <div class="bc-name">${esc(b.name)}</div>
@@ -208,7 +209,7 @@ const flags = codes => (codes || []).map(c => FLAG_SVG[c] || '').join('');
   const others = all.filter(x => x.id !== b.id).sort(() => Math.random() - 0.5).slice(0, 8);
   $('[data-more-wrap]').hidden = false;
   $('[data-more]').innerHTML = others.map(o => `
-    <a href="brand.html?id=${esc(o.id)}">
+    <a href="${esc(window.sr134BrandUrl ? window.sr134BrandUrl(o.id) : 'brand.html?id=' + o.id)}">
       <span class="mg-flag">${flags(o.countries)}</span>
       ${esc(o.name)}
       <span class="mg-ja">${esc(o.nameJa || '')}</span>
