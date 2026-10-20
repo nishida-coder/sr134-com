@@ -20,9 +20,11 @@ RewriteCond %{HTTPS} !on
 RewriteRule ^(.*)$ https://sr134.com/$1 [R=301,L]
 
 # 案内ページ本体とロゴ以外は、すべてトップへ送る（一時的なので302）
+# 2026-10-21 追加。/photos/brands/ だけは Shopify がブランド画像を取りに来るため通す。
 RewriteCond %{REQUEST_URI} !^/$
 RewriteCond %{REQUEST_URI} !^/index\.html$
 RewriteCond %{REQUEST_URI} !^/sr134_logo\.png$
+RewriteCond %{REQUEST_URI} !^/photos/brands/[A-Za-z0-9._-]+\.(jpe?g|png|webp)$
 RewriteRule ^ https://sr134.com/ [R=302,L]
 </IfModule>
 
