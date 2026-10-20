@@ -2493,11 +2493,19 @@
   .bs-card .bs-ja{font-size:10.5px;letter-spacing:0.18em;color:var(--ink-soft);margin-bottom:12px;}
   .bs-card .bs-lead{font-size:12.5px;line-height:1.95;color:var(--ink-2);font-weight:300;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;}
   .bs-card .bs-more{margin-top:auto;padding-top:14px;font-size:10px;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold-deep);font-weight:500;}
+  .bs-card .bs-title{display:block;}
   @media (max-width:900px){
     .brand-stories{padding:44px 20px 48px;}
-    .bs-card .bs-visual{width:120px;flex:0 0 120px;}
-    .bs-card .bs-body{padding:18px 18px;}
-    .bs-card .bs-lead{-webkit-line-clamp:3;}
+    /* 画像の切り取り方をPCと同じにして、写真のブランド名が切れないようにする */
+    .bs-card .bs-visual{width:150px;flex:0 0 150px;align-self:flex-start;aspect-ratio:1/1;}
+    .bs-card .bs-body{padding:16px 16px;}
+    /* 縦を詰めるため、国旗の横にブランド名を置く */
+    .bs-card .bs-title{display:flex;align-items:center;gap:8px;margin-bottom:2px;}
+    .bs-card .bs-country{margin-bottom:0;line-height:1;}
+    .bs-card .bs-name{font-size:15px;margin-bottom:0;}
+    .bs-card .bs-ja{margin-bottom:8px;}
+    .bs-card .bs-lead{font-size:12px;line-height:1.8;-webkit-line-clamp:3;}
+    .bs-card .bs-more{padding-top:10px;}
   }
 </style>
 <section class="brand-stories" id="brand-stories">
@@ -2534,8 +2542,10 @@
       <a class="bs-card" href="brand.html?id=${esc(b.id)}">
         ${b.hero ? `<div class="bs-visual"><img src="${esc(b.hero)}" alt="${esc(b.name)}" loading="lazy"></div>` : ''}
         <div class="bs-body">
-          <div class="bs-country">${bsFlags(b.countries)}</div>
-          <div class="bs-name">${esc(b.name)}</div>
+          <div class="bs-title">
+            <div class="bs-country">${bsFlags(b.countries)}</div>
+            <div class="bs-name">${esc(b.name)}</div>
+          </div>
           <div class="bs-ja">${esc(b.nameJa || '')}</div>
           <div class="bs-lead">${esc((b.lead || '').slice(0, 170))}…</div>
           <div class="bs-more">Read the story →</div>
