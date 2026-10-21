@@ -1285,10 +1285,11 @@
     white-space: nowrap;
     color: var(--ink);
     /* 合成レイヤーに固定して、再ラスタライズによるちらつきを止める */
-    will-change: transform;
     transform: translateZ(0);
     backface-visibility: hidden;
+    animation-play-state: paused;
   }
+  .press.in-view .press-track { animation-play-state: running; }
   /* 同じ並びを2組にして、1組分ちょうど流す。半分だと隙間のぶんだけずれる */
   .press-set {
     display: flex;
@@ -1311,7 +1312,7 @@
   .press-track .logo-vogue img.logo, .press-track img.logo-vogue { height: 38px; }
   @media (max-width: 720px) {
     /* 画面が狭いと間隔が広すぎて流れが途切れて見えるため詰める */
-    .press-track { --press-gap: 44px; animation-duration: 26s; }
+    .press-track { --press-gap: 44px; animation-name: press-scroll-sp; animation-duration: 26s; }
     .press-track .logo { height: 32px; }
     .press-track img.logo { height: 32px; }
     /* モバイルではマスクを外す。常時アニメーションと重なると描画が重くなる */
@@ -1388,10 +1389,10 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
-  @keyframes press-scroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(calc(-50% - var(--press-gap) / 2)); }
-  }
+  /* 変数を含む calc をキーフレームに置くと毎フレーム再計算が走るため、
+     画面幅ごとに固定値のキーフレームを用意する */
+  @keyframes press-scroll { to { transform: translateX(calc(-50% - 48px)); } }
+  @keyframes press-scroll-sp { to { transform: translateX(calc(-50% - 22px)); } }
 
   /* ============ BRANDS — A-Z index with hover popup ============ */
   .brand-alpha-nav {
@@ -3274,6 +3275,14 @@
   // スクロール連動の処理は行わない。モバイルで画面が揺れる原因になるため。
   // 既存の見た目を保つため visible は最初から付けておく。
   document.querySelectorAll('.reveal, .stagger, .section-head').forEach(el => el.classList.add('visible'));
+
+  // PRESS の帯は、画面に入っているときだけ動かす
+  const pressSection = document.querySelector('.press');
+  if (pressSection) {
+    new IntersectionObserver(entries => {
+      entries.forEach(e => pressSection.classList.toggle('in-view', e.isIntersecting));
+    }, { threshold: 0 }).observe(pressSection);
+  }
   onScroll();
 </script>
 </body>
