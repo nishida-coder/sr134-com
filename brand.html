@@ -125,7 +125,7 @@
     <div class="lead" data-d-lead></div>
     <div data-d-body></div>
     <div class="to-products">
-      <a data-d-shop href="shop.html">このブランドの商品を見る <span>→</span></a>
+      <a data-d-shop href="https://shop.sr134.com/collections/all">このブランドの商品を見る <span>→</span></a>
     </div>
   </article>
   <figure class="detail-figure" data-d-hero hidden>
@@ -204,7 +204,7 @@ const flags = codes => (codes || []).map(c => FLAG_SVG[c] || '').join('');
   $('[data-d-ja]').textContent = b.nameJa || '';
   $('[data-d-lead]').textContent = b.lead || '';
   $('[data-d-body]').innerHTML = (b.body || []).map(p => `<p class="body">${esc(p)}</p>`).join('');
-  $('[data-d-shop]').href = 'shop.html?brand=' + encodeURIComponent(b.name);
+  $('[data-d-shop]').href = window.sr134Shop ? window.sr134Shop.brand(b.id) : 'https://shop.sr134.com/collections/' + b.id;
 
   const others = all.filter(x => x.id !== b.id).sort(() => Math.random() - 0.5).slice(0, 8);
   $('[data-more-wrap]').hidden = false;

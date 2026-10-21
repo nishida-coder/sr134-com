@@ -22,11 +22,11 @@ RewriteRule ^(.*)$ https://sr134.com/$1 [R=301,L]
 
 # 商品詳細  /products/{品番}/{カラーコード} → /product.html?id={品番}
 # 旧カタログに存在して新カタログにない品番は、product.html 側で一覧へ送る
-RewriteRule ^products/([^/]+)/?[^/]*/?$ /product.html?id=$1 [R=301,L]
+RewriteRule ^products/([^/]+)/?[^/]*/?$ https://shop.sr134.com/products/$1 [R=301,L]
 
 # 商品一覧・ブランド
-RewriteRule ^item\.html$   /shop.html [R=301,L]
-RewriteRule ^brands\.html$ /shop.html [R=301,L]
+RewriteRule ^item\.html$   https://shop.sr134.com/collections/all [R=301,L]
+RewriteRule ^brands\.html$ https://shop.sr134.com/collections/all [R=301,L]
 
 # 店舗・会社案内
 RewriteRule ^store\.html$    /stores.html [R=301,L]
@@ -38,9 +38,17 @@ RewriteRule ^press(-detail)?\.html(/.*)?$ /index.html#media [R=301,L]
 # news.html は現行サイトの記事ページ。転送しない（旧サイトの news-detail だけを送る）
 RewriteRule ^news-detail\.html(/.*)?$ /news.html [R=301,L]
 
-# EC機能（オンラインストア準備中のため一覧へ送る）
-RewriteRule ^(cart|login|register|account-settings|favorite-list-free)\.html$ /shop.html [R=301,L]
-RewriteRule ^customer(/.*)?$ /shop.html [R=301,L]
+# ===== ショップは Shopify に一本化 =====
+# 旧来の静的なショップ画面は廃止し、shop.sr134.com へ送る
+# 品番つきは個別の商品ページへ。先に判定すること
+RewriteCond %{QUERY_STRING} (?:^|&)id=([^&]+)
+RewriteRule ^product\.html$ https://shop.sr134.com/products/%1? [R=301,L]
+RewriteRule ^product\.html$ https://shop.sr134.com/collections/all? [R=301,L]
+RewriteRule ^shop\.html$ https://shop.sr134.com/collections/all? [R=301,L]
+
+# EC機能（旧サイト由来）
+RewriteRule ^(cart|login|register|account-settings|favorite-list-free)\.html$ https://shop.sr134.com/collections/all [R=301,L]
+RewriteRule ^customer(/.*)?$ https://shop.sr134.com/collections/all [R=301,L]
 </IfModule>
 
 # --- 404 ---

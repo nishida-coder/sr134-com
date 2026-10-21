@@ -38,6 +38,27 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// ショップの各種URL。買い物は Shopify に一本化しており、
+// 旧来の shop.html と product.html は使わない。
+window.sr134Shop = {
+  base() {
+    return (window.SR134_SHOPIFY || {}).shopBase || 'https://shop.sr134.com';
+  },
+  all() {
+    return `${this.base()}/collections/all`;
+  },
+  // タグでの絞り込み。Shopify は /collections/all/<タグ> で絞れる
+  tag(name) {
+    return name ? `${this.base()}/collections/all/${String(name).toLowerCase()}` : this.all();
+  },
+  brand(id) {
+    return `${this.base()}/collections/${id}`;
+  },
+  product(id) {
+    return `${this.base()}/products/${id}`;
+  },
+};
+
 // 直近で更新された商品のブランド（vendor）を新しい順に返す。
 // 設定が空のときは null を返し、呼び出し側は従来どおりの表示に戻る。
 window.sr134RecentVendors = async function (limit = 50) {
