@@ -74,6 +74,17 @@
   }
   .ig-link{width:120px;display:inline-flex;align-items:center;justify-content:flex-end;color:var(--ink);}
   .ig-link:hover{color:var(--gold-deep);}
+
+  /* 狭い画面では文字を省き、矢印だけの戻るボタンにする */
+  @media (max-width: 640px) {
+    header .back, .back { font-size: 0 !important; letter-spacing: 0; }
+    .back::before {
+      content: '←';
+      font-size: 17px;
+      line-height: 1;
+      display: inline-block;
+    }
+  }
 </style>
 </head>
 <body>
@@ -83,7 +94,7 @@
 <div class="topbar">Online Store — Coming Soon &nbsp;·&nbsp; 商品は店頭にてご案内しております</div>
 
 <header>
-  <a href="index.html" class="back">← Back to Home</a>
+  <a href="index.html" class="back" aria-label="戻る">← Back to Home</a>
   <a href="index.html" class="logo"><img src="sr134_logo.png" alt="Studio Route134"></a>
   <a class="ig-link" href="https://www.instagram.com/studio_route134_official/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram @studio_route134_official"><svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg></a>
 </header>

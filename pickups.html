@@ -55,6 +55,17 @@
   @media (max-width:760px){
     .list{grid-template-columns:1fr; gap:28px;}
   }
+
+  /* 狭い画面では文字を省き、矢印だけの戻るボタンにする */
+  @media (max-width: 640px) {
+    header .back, .back { font-size: 0 !important; letter-spacing: 0; }
+    .back::before {
+      content: '←';
+      font-size: 17px;
+      line-height: 1;
+      display: inline-block;
+    }
+  }
 </style>
 </head>
 <body>
