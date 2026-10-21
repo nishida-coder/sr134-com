@@ -29,8 +29,9 @@ const NAVY = '#1B2F52';
 const GOLD = '#B89A5C';
 
 const COLOR_SCHEMES = {
-  'scheme-1': { background: WHITE, text: INK, button: INK, button_label: WHITE, secondary_button_label: INK, shadow: INK },
-  'scheme-2': { background: IVORY, text: INK, button: INK, button_label: IVORY, secondary_button_label: INK, shadow: INK },
+  // 既定の配色をサイト本体と同じアイボリーにする。白はカードなどの面に使う
+  'scheme-1': { background: IVORY, text: INK, button: INK, button_label: IVORY, secondary_button_label: INK, shadow: INK },
+  'scheme-2': { background: WHITE, text: INK, button: INK, button_label: WHITE, secondary_button_label: INK, shadow: INK },
   'scheme-3': { background: NAVY, text: IVORY, button: GOLD, button_label: INK, secondary_button_label: IVORY, shadow: INK },
   'scheme-4': { background: INK, text: IVORY, button: GOLD, button_label: INK, secondary_button_label: IVORY, shadow: INK },
   'scheme-5': { background: GOLD, text: INK, button: INK, button_label: GOLD, secondary_button_label: INK, shadow: INK },
@@ -39,7 +40,7 @@ const COLOR_SCHEMES = {
 // 角を立てて余白を広く取り、装飾を抑える
 const OVERRIDES = {
   logo: 'shopify://shop_images/sr134_logo.png',
-  logo_width: 150,
+  logo_width: 110,
   // 見出しと本文は同じ書体に揃える。装飾的なセリフ体は数字が崩れるため使わない。
   type_header_font: 'inter_n4',
   type_body_font: 'inter_n4',

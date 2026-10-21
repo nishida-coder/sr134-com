@@ -215,13 +215,12 @@
     transform: scale(1.04);
     filter: saturate(0.88) brightness(0.97);
   }
+  /* 揺れの切り分けのため、切り替えも停止して1枚固定にする。
+     戻す場合は animation の行を復活させ、:first-of-type の行を外す */
   .hero .window .slide {
     opacity: 0;
-    /* 拡大縮小（kenburns）は常時の再描画が重くスクロール中に揺れるため外す。
-       切り替えの淡いフェードだけ残す */
-    animation: heroFade 21s infinite linear;
-    will-change: opacity;
   }
+  .hero .window .slide:first-of-type { opacity: 1; }
   .hero .window .slide:nth-child(1) { animation-delay: 0s; }
   .hero .window .slide:nth-child(2) { animation-delay: 7s; }
   .hero .window .slide:nth-child(3) { animation-delay: 14s; }
@@ -233,6 +232,7 @@
     100% { opacity: 0; }
   }
   .hero-dots {
+    display: none;
     position: absolute;
     z-index: 5;
     bottom: 32px; left: 0; right: 0;
@@ -242,7 +242,6 @@
     width: 6px; height: 6px;
     border-radius: 50%;
     background: rgba(247,245,239,0.4);
-    animation: dotHi 21s infinite;
   }
   .hero-dots .dot:nth-child(1) { animation-delay: 0s; }
   .hero-dots .dot:nth-child(2) { animation-delay: 7s; }
