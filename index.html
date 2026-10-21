@@ -1892,12 +1892,14 @@
   /* ============ STORE TEASER — 3-image split (no obscuring text overlay) ============ */
   .store-teaser {
     background: var(--surface);
-    padding: var(--space-section) 56px 0;
+    /* 左右の余白は section の指定に任せる。独自に持つと画面幅で揃わなくなる */
+    --side: 56px;
+    padding-bottom: 0;
   }
   /* 見出しは他セクションと同じ section-head を使う */
   .store-teaser .section-head { margin-bottom: 40px; }
   .store-teaser-strip {
-    margin: 0 -56px;
+    margin: 0 calc(var(--side) * -1);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
@@ -2237,6 +2239,7 @@
   }
   @media (max-width: 720px) {
     header, section, .stores .section-head, footer { padding-left: 20px; padding-right: 20px; }
+    .store-teaser { --side: 20px; }
     header { grid-template-columns: auto 1fr auto; padding: 13px 20px; }
     .header-left { display: none; }
     .hero { min-height: 580px; }
