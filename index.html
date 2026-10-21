@@ -35,13 +35,18 @@
     --font-display: "Helvetica Neue", "Helvetica", "Arial", "Noto Sans JP", "Yu Gothic", "游ゴシック", "Hiragino Sans", sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { max-width: 100%; }
+  /* 上にスクロールする途中でページが戻って跳ねるのを止める。
+     ブラウザが「位置合わせ」で勝手にスクロール位置を補正する動きを切る。
+     スクロールの主体はビューポート(html)なので html にも指定する */
+  html { max-width: 100%; overflow-anchor: none; }
   body {
     overflow-x: clip;
-    /* 上にスクロールする途中でページが戻って跳ねるのを止める。
-       ブラウザが「位置合わせ」で勝手にスクロール位置を補正する動きを切る */
     overflow-anchor: none;
   }
+  /* 後から届く内容（Shopify / JSON）の分の高さを先に確保し、
+     読み込み完了時に上の区画が伸びてページ全体がずれるのを防ぐ */
+  [data-news-track]:empty { min-height: clamp(220px, 70vw, 420px); }
+  [data-pickup]:empty     { min-height: clamp(260px, 110vw, 560px); }
   /* モバイル用の上に戻るボタン。最上部にいるときは出さない */
   .to-top {
     position: fixed;
@@ -2354,7 +2359,8 @@
 </head>
 <body>
 <span id="top" aria-hidden="true"></span>
-<script>const SR134_REV = '20260926';</script>
+<script>const SR134_REV = '20261021';</script>
+<script>/* 縦揺れ診断: ?sdbg=1 のときだけ読み込む */ if (/[?&]sdbg=1/.test(location.search)) document.write('<script src="scroll-debug.js?v=' + SR134_REV + '"><\/script>');</script>
 <script src="shopify-config.js"></script>
 
 <!-- ============ TOPBAR ============ -->
@@ -3248,7 +3254,9 @@
     });
     // この要素の中だけを見る。ページ全体のスクロールには関与しない
     box.addEventListener('scroll', render, { passive: true });
-    window.addEventListener('resize', render);
+    // Android のアドレスバー出入りは高さだけの resize を起こす。幅が変わったときだけ作り直す
+    let lastW = window.innerWidth;
+    window.addEventListener('resize', () => { if (window.innerWidth !== lastW) { lastW = window.innerWidth; render(); } });
 
     // 記事は後から届くので、増減を見てから作り直す
     new MutationObserver(render).observe(track, { childList: true });
@@ -3308,7 +3316,8 @@
       if (Math.abs(dx) > 40) shift(dx > 0 ? 1 : -1);
       ts = null;
     });
-    window.addEventListener('resize', () => { renderDots(); updateButtons(); });
+    let lastW = window.innerWidth;
+    window.addEventListener('resize', () => { if (window.innerWidth !== lastW) { lastW = window.innerWidth; renderDots(); updateButtons(); } });
     renderDots(); updateButtons();
   }
   setTimeout(initMediaCarousel, 100);
@@ -3394,7 +3403,6 @@
       entries.forEach(e => pressSection.classList.toggle('in-view', e.isIntersecting));
     }, { threshold: 0 }).observe(pressSection);
   }
-  onScroll();
 </script>
 <a class="to-top" href="#top" aria-label="上に戻る" hidden>↑</a>
 </body>
