@@ -67,9 +67,12 @@
   @media (max-width: 760px) {
     .to-top:not([hidden]) { display: flex; }
   }
-  /* スクロール中は薄くして視界を邪魔しない。止まれば戻る */
-  body.is-scrolling .header-right,
-  body.is-scrolling .to-top { opacity: 0.22; pointer-events: none; }
+  /* 薄くするのは右下に浮かせているモバイルのときだけ。
+     PCのアイコンはヘッダー内にあるので常に表示したままにする */
+  @media (max-width: 760px) {
+    body.is-scrolling .header-right,
+    body.is-scrolling .to-top { opacity: 0.22; pointer-events: none; }
+  }
   body {
     background: var(--bg);
     color: var(--ink);
