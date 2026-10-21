@@ -735,6 +735,7 @@
   .news-card .nc-visual img {
     width: 100%; height: 100%;
     object-fit: cover;
+    object-position: center;
     transition: transform 1.4s var(--ease);
   }
   .news-card:hover .nc-visual img { transform: scale(1.04); }
@@ -2318,16 +2319,6 @@
   <div class="news-carousel-wrap">
   <div class="news-carousel" data-news-carousel>
     <div class="news-track" data-news-track>
-      <a class="news-card" href="brand.html?id=maison-margiela">
-        <div class="nc-visual"><img src="photos/aoyama-storefront.jpg" alt=""></div>
-        <div class="nc-date">2026.10 — Maison Margiela</div>
-        <div class="nc-title">26-27 3rd Delivery 到着</div>
-      </a>
-      <a class="news-card" href="brand.html?id=sporty-and-rich">
-        <div class="nc-visual"><img src="photos/hayama-storefront.jpg" alt=""></div>
-        <div class="nc-date">2026.10 — Sporty &amp; Rich</div>
-        <div class="nc-title">取り扱い開始</div>
-      </a>
     </div>
   </div>
   </div>
@@ -2943,6 +2934,22 @@
     viewAll.innerHTML = '<a href="shop.html" class="view-all-link">ALL Products <span>→</span></a>';
     grid.after(viewAll);
   }
+
+  // === News — news.json から描画。縦長写真は focus で見せたい位置を指定する ===
+  (async function renderNews() {
+    const track = $('[data-news-track]');
+    if (!track) return;
+    try {
+      const items = await (await fetch('news.json?v=' + SR134_REV)).json();
+      if (!items.length) return;
+      track.innerHTML = items.map(n => `
+        <a class="news-card" href="news.html?id=${encodeURIComponent(n.id)}">
+          <div class="nc-visual"><img src="${n.image}" alt="${n.title}"${n.focus ? ` style="object-position:${n.focus}"` : ''}></div>
+          <div class="nc-date">${n.date}${n.brand ? ' — ' + n.brand : ''}</div>
+          <div class="nc-title">${n.title}</div>
+        </a>`).join('');
+    } catch (e) { /* 取得できなければ空のまま */ }
+  })();
 
   // === Pick Up coordinate features (weekly) — image + story side-by-side ===
   async function renderPickUp() {
