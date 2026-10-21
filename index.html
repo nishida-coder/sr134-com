@@ -2306,8 +2306,11 @@
     header, section, .stores .section-head, footer { padding-left: 20px; padding-right: 20px; }
     .store-teaser { --side: 20px; }
     header { grid-template-columns: 1fr auto 1fr; }
-    /* ロゴの上下にしっかり余白を取る */
-    header { min-height: 48px; padding: 26px 20px; }
+    /* モバイルは fixed ではなく sticky にする。
+       fixed はアドレスバーの伸縮のたびに置き直されて画面が揺れるが、
+       sticky は文書の流れの中に留まるため揺れない。ロゴは常に見える */
+    header { position: sticky; top: 0; min-height: 48px; padding: 20px; }
+    .topbar { position: relative; z-index: 1; }
     header .logo-center img { height: 42px; }
     /* 検索、ログイン、Instagram は右下へ縦に並べる。最下段は戻るボタンの場所 */
     .header-right {
@@ -2583,8 +2586,11 @@
   .bs-card .bs-title{display:block;}
   @media (max-width:900px){
     .brand-stories{padding:44px 20px 48px;}
-    /* 画像の切り取り方をPCと同じにして、写真のブランド名が切れないようにする */
-    .bs-card .bs-visual{width:150px;flex:0 0 150px;align-self:flex-start;aspect-ratio:1/1;}
+    /* 画像は本文の高さいっぱいに伸ばす。正方形に固定すると下に空きが出て、
+       縦も切り取られすぎるため */
+    .bs-card{align-items:stretch;}
+    .bs-card .bs-visual{width:152px;flex:0 0 152px;align-self:stretch;min-height:168px;aspect-ratio:auto;}
+    .bs-card .bs-visual img{object-position:center 30%;}
     .bs-card .bs-body{padding:16px 16px;}
     /* 縦を詰めるため、国旗の横にブランド名を置く */
     .bs-card .bs-title{display:flex;align-items:center;gap:8px;margin-bottom:2px;}
