@@ -24,10 +24,16 @@
   a{color:inherit;}
   .wrap{max-width:1240px; margin:0 auto; padding:0 clamp(20px,4vw,56px);}
   header.site{
-    display:flex; align-items:center; justify-content:space-between;
+    display:grid; grid-template-columns:1fr auto 1fr; align-items:center;
     padding:22px clamp(20px,4vw,56px); border-bottom:1px solid var(--line);
   }
-  .logo{font-family:'Bodoni Moda',serif; font-size:20px; letter-spacing:0.08em; text-decoration:none;}
+  .logo-center{grid-column:2; text-align:center; line-height:0;}
+  .logo-center img{height:44px; width:auto; display:inline-block;}
+  .back{grid-column:1; justify-self:start;}
+  @media (max-width:640px){
+    .logo-center img{height:34px;}
+    .back{font-size:10px;}
+  }
   .back{font-size:11px; letter-spacing:0.24em; text-transform:uppercase; text-decoration:none; color:var(--ink-soft);}
   .back:hover{color:var(--gold-deep);}
   .head{padding:clamp(40px,5vw,72px) 0 28px;}
@@ -62,8 +68,8 @@
 <script>const SR134_REV = '20260926';</script>
 
 <header class="site">
-  <a class="logo" href="index.html">Studio Route134</a>
   <a class="back" href="index.html">← Back to Top</a>
+  <a class="logo-center" href="index.html"><img src="sr134_logo.png" alt="Studio Route134"></a>
 </header>
 
 <div class="wrap">
