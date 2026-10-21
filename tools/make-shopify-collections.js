@@ -27,6 +27,47 @@ function loadBrands() {
   return Array.isArray(raw) ? raw : raw.brands || [];
 }
 
+/** brand.html と同じ国旗。コレクション見出しの左に出すため data URI にする。 */
+const FLAG_SVG = {
+  IT: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16"><rect width="8" height="16" fill="#009246"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#ce2b37"/><rect width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.6"/></svg>',
+  FR: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16"><rect width="8" height="16" fill="#0055A4"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#EF4135"/><rect width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.6"/></svg>',
+  US: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16"><rect fill="#B22234" width="24" height="16"/><g fill="#fff"><rect y="1.23" width="24" height="1.23"/><rect y="3.69" width="24" height="1.23"/><rect y="6.15" width="24" height="1.23"/><rect y="8.62" width="24" height="1.23"/><rect y="11.08" width="24" height="1.23"/><rect y="13.54" width="24" height="1.23"/></g><rect fill="#3C3B6E" width="10" height="8.62"/><rect width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.6"/></svg>',
+  JP: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16"><rect fill="#fff" width="24" height="16"/><circle cx="12" cy="8" r="4.8" fill="#BC002D"/><rect width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.6"/></svg>',
+  DE: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16"><rect width="24" height="5.33" fill="#000"/><rect y="5.33" width="24" height="5.33" fill="#DD0000"/><rect y="10.66" width="24" height="5.34" fill="#FFCE00"/><rect width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.6"/></svg>',
+  GB: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16"><rect fill="#012169" width="24" height="16"/><path stroke="#fff" stroke-width="2" d="M0,0 L24,16 M24,0 L0,16"/><path stroke="#C8102E" stroke-width="1" d="M0,0 L24,16 M24,0 L0,16"/><path stroke="#fff" stroke-width="4" d="M12,0 v16 M0,8 h24"/><path stroke="#C8102E" stroke-width="2" d="M12,0 v16 M0,8 h24"/><rect width="24" height="16" fill="none" stroke="#DAD5C7" stroke-width="0.6"/></svg>',
+};
+
+const FLAG_W = 24;
+const FLAG_GAP = 6;
+
+function dataUri(svg) {
+  return `data:image/svg+xml,${encodeURIComponent(svg).replace(/'/g, '%27')}`;
+}
+
+/**
+ * 見出しの左に国旗を置くCSS。テーマを編集できないため、
+ * コレクション説明の中から見出し要素へ当てる。
+ */
+function flagCss(brand) {
+  const codes = (brand.countries || []).filter(c => FLAG_SVG[c]);
+  if (!codes.length) return '';
+  const images = codes.map(c => `url("${dataUri(FLAG_SVG[c])}")`).join(',');
+  const positions = codes.map((_, i) => `${i * (FLAG_W + FLAG_GAP)}px center`).join(',');
+  const sizes = codes.map(() => `${FLAG_W}px 16px`).join(',');
+  const total = codes.length * FLAG_W + (codes.length - 1) * FLAG_GAP;
+  return [
+    '.collection-hero__title{display:flex;align-items:center;gap:14px;justify-content:flex-start;}',
+    '.collection-hero__title::before{',
+    'content:"";',
+    `flex:0 0 ${total}px;width:${total}px;height:16px;`,
+    `background-image:${images};`,
+    `background-position:${positions};`,
+    `background-size:${sizes};`,
+    'background-repeat:no-repeat;',
+    '}',
+  ].join('');
+}
+
 function bodyHtml(brand) {
   const paragraphs = [brand.lead, ...(brand.body || [])]
     .map(t => (t || '').trim())
@@ -35,17 +76,30 @@ function bodyHtml(brand) {
     .join('\n');
 
   const hero = imageUrl(brand);
-  if (!hero) return paragraphs;
+  const css = flagCss(brand);
+
+  if (!hero) {
+    return (css ? `<style>${css}</style>\n` : '') + paragraphs;
+  }
 
   // テーマのコレクション画像設定が使えないあいだ、説明文の中で
-  // 文章を左、ブランド写真を右に並べる。狭い画面では縦に折り返す。
+  // 文章を左、ブランド写真を右に並べる。モバイルでも横並びを保つ。
+  const layout = [
+    '.sr-brand-hero{display:flex;gap:28px;align-items:flex-start;text-align:left;}',
+    '.sr-brand-hero__text{flex:1 1 0;min-width:0;}',
+    '.sr-brand-hero__fig{flex:0 0 34%;max-width:340px;}',
+    '.sr-brand-hero__fig img{width:100%;height:auto;display:block;}',
+    '@media (max-width:749px){.sr-brand-hero{gap:16px;}.sr-brand-hero__fig{flex:0 0 38%;}}',
+  ].join('');
+
   return [
-    '<div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;text-align:left;">',
-    '<div style="flex:1 1 380px;min-width:0;">',
+    `<style>${layout}${css}</style>`,
+    '<div class="sr-brand-hero">',
+    '<div class="sr-brand-hero__text">',
     paragraphs,
     '</div>',
-    '<div style="flex:0 1 340px;min-width:240px;">',
-    `<img src="${hero}" alt="${escapeHtml(brand.name)}" style="width:100%;height:auto;display:block;">`,
+    '<div class="sr-brand-hero__fig">',
+    `<img src="${hero}" alt="${escapeHtml(brand.name)}">`,
     '</div>',
     '</div>',
   ].join('\n');
