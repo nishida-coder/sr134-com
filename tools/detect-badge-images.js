@@ -199,9 +199,11 @@ async function main() {
   }
 
   // 左上だけに濃い画素が偏っているものを候補とする
-  // 左上だけが濃く、右上は薄く、帯の下は背景に戻っているものを候補とする
+  // 左上だけが濃く右上は薄いものを候補とする。
+  // 「帯の下が背景に戻る」条件も試したが、帯の下が暗い写真だと取りこぼすため外した。
+  // 拾いすぎる側に倒し、最後は目視で確認する。
   const candidates = results
-    .filter(r => !r.error && r.left > 0.05 && r.diff > 0.045 && r.drop > 0.03 && r.below < 0.06)
+    .filter(r => !r.error && r.left > 0.04 && r.diff > 0.035)
     .sort((a, b) => b.diff - a.diff);
 
   const outDir = path.join(__dirname, 'out');
