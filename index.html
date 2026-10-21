@@ -731,17 +731,10 @@
     position: relative;
     aspect-ratio: 8/5;
     overflow: hidden;
-    background: var(--surface);
+    background: var(--bg);
     margin-bottom: 14px;
   }
-  /* 余白は白地に公式ロゴのモノグラムを薄く散らす */
-  .news-card .nc-visual::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: url('photos/monogram-tile.png') repeat;
-    background-size: 150px auto;
-    opacity: 0.12;
-  }
+  /* 余白はセクションの地色と同じにして、枠が見えないようにする */
   .news-card .nc-visual .nc-bg { display: none; }
   .news-card .nc-visual .nc-fg {
     position: relative;
@@ -1265,14 +1258,35 @@
     vertical-align: middle;
     margin: 0 18px;
   }
-  .press-track-wrap { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%); }
-  .press-track {
+  /* 高さを固定し、描画範囲を閉じ込める。スクロール中の再計算で縦に揺れるのを防ぐ */
+  .press-track-wrap {
+    overflow: hidden;
+    height: 52px;
     display: flex;
     align-items: center;
-    gap: 96px;
+    contain: layout paint;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+  }
+  .press-track {
+    --press-gap: 96px;
+    display: flex;
+    align-items: center;
+    gap: var(--press-gap);
     animation: press-scroll 44s linear infinite;
     white-space: nowrap;
     color: var(--ink);
+    /* 合成レイヤーに固定して、再ラスタライズによるちらつきを止める */
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  /* 同じ並びを2組にして、1組分ちょうど流す。半分だと隙間のぶんだけずれる */
+  .press-set {
+    display: flex;
+    align-items: center;
+    gap: var(--press-gap);
+    flex-shrink: 0;
   }
   .press-track .logo {
     flex-shrink: 0;
@@ -1287,6 +1301,21 @@
   .press-track img.logo { height: 44px; width: auto; object-fit: contain; filter: none; }
   .press-track .logo-25ans img.logo, .press-track img.logo-25ans { height: 52px; }
   .press-track .logo-vogue img.logo, .press-track img.logo-vogue { height: 38px; }
+  @media (max-width: 720px) {
+    /* 画面が狭いと間隔が広すぎて流れが途切れて見えるため詰める */
+    .press-track { --press-gap: 44px; animation-duration: 26s; }
+    .press-track .logo { height: 32px; }
+    .press-track img.logo { height: 32px; }
+    /* モバイルではマスクを外す。常時アニメーションと重なると描画が重くなる */
+    .press-track-wrap {
+      height: 40px;
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .press-track { animation: none; }
+  }
   /* Safari — bold slab-ish serif set solid */
   .logo-safari {
     font-family: 'Bodoni Moda', 'Playfair Display', serif;
@@ -1351,7 +1380,10 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
-  @keyframes press-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes press-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-50% - var(--press-gap) / 2)); }
+  }
 
   /* ============ BRANDS — A-Z index with hover popup ============ */
   .brand-alpha-nav {
@@ -2304,16 +2336,20 @@
   <div class="press-eyebrow reveal">Press</div>
   <div class="press-track-wrap">
     <div class="press-track" data-press-track>
-      <span class="logo logo-safari">Safari</span>
-      <span class="logo logo-leon">LEON</span>
-      <span class="logo logo-oceans">OCEANS</span>
-      <span class="logo logo-very">VERY</span>
-      <span class="logo logo-vogue">VOGUE</span>
-      <span class="logo logo-safari">Safari</span>
-      <span class="logo logo-leon">LEON</span>
-      <span class="logo logo-oceans">OCEANS</span>
-      <span class="logo logo-very">VERY</span>
-      <span class="logo logo-vogue">VOGUE</span>
+      <div class="press-set">
+        <span class="logo logo-safari">Safari</span>
+        <span class="logo logo-leon">LEON</span>
+        <span class="logo logo-oceans">OCEANS</span>
+        <span class="logo logo-very">VERY</span>
+        <span class="logo logo-vogue">VOGUE</span>
+      </div>
+      <div class="press-set" aria-hidden="true">
+        <span class="logo logo-safari">Safari</span>
+        <span class="logo logo-leon">LEON</span>
+        <span class="logo logo-oceans">OCEANS</span>
+        <span class="logo logo-very">VERY</span>
+        <span class="logo logo-vogue">VOGUE</span>
+      </div>
     </div>
   </div>
 </section>
