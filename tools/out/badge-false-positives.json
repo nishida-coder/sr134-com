@@ -1,0 +1,82 @@
+[
+  {
+    "handle": "sea126mcka0133-w",
+    "mediaId": "gid://shopify/MediaImage/56552882667885",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-w10.jpg?v=1792568374",
+    "left": 0.4768,
+    "right": 0.094,
+    "below": 0.0415,
+    "diff": 0.3827,
+    "drop": 0.4353
+  },
+  {
+    "handle": "sea226lcka0134-w",
+    "mediaId": "gid://shopify/MediaImage/56552903573869",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-w10_461be9f0-639a-4382-903e-9d75cf426982.jpg?v=1792568446",
+    "left": 0.4768,
+    "right": 0.094,
+    "below": 0.0415,
+    "diff": 0.3827,
+    "drop": 0.4353
+  },
+  {
+    "handle": "mmy172j17bl751",
+    "mediaId": "gid://shopify/MediaImage/56552973042029",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177533453.jpg?v=1792568659",
+    "left": 0.2741,
+    "right": 0.022,
+    "below": 0.0381,
+    "diff": 0.2521,
+    "drop": 0.236
+  },
+  {
+    "handle": "pmd12262059016",
+    "mediaId": "gid://shopify/MediaImage/56552891253101",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059016-9.jpg?v=1792568404",
+    "left": 0.5923,
+    "right": 0.3943,
+    "below": 0.0024,
+    "diff": 0.1979,
+    "drop": 0.5899
+  },
+  {
+    "handle": "cic1702538902",
+    "mediaId": "gid://shopify/MediaImage/56552962294125",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/cic1702538902-6.jpg?v=1792568632",
+    "left": 0.1161,
+    "right": 0.01,
+    "below": 0.0004,
+    "diff": 0.1061,
+    "drop": 0.1156
+  },
+  {
+    "handle": "mmm206s51la0139",
+    "mediaId": "gid://shopify/MediaImage/56529144349037",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm206s51la0139-11.jpg?v=1792515079",
+    "left": 0.1071,
+    "right": 0.0048,
+    "below": 0.0009,
+    "diff": 0.1024,
+    "drop": 0.1062
+  },
+  {
+    "handle": "mmy572a17fw730-bk",
+    "mediaId": "gid://shopify/MediaImage/56552949875053",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/a17fw730bk-06.jpg?v=1792568590",
+    "left": 0.0795,
+    "right": 0,
+    "below": 0.0027,
+    "diff": 0.0795,
+    "drop": 0.0768
+  },
+  {
+    "handle": "d2102s71ha1438",
+    "mediaId": "gid://shopify/MediaImage/56552897380717",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s71ha1438-06.jpg?v=1792568426",
+    "left": 0.0784,
+    "right": 0,
+    "below": 0.0009,
+    "diff": 0.0784,
+    "drop": 0.0775
+  }
+]
