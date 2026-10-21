@@ -2265,16 +2265,10 @@
   .reveal.visible { opacity: 1; transform: none; }
   .stagger > * { opacity: 1; transform: none; }
   .stagger.visible > * { opacity: 1; transform: none; }
+  /* 読み込み時の動きは止めたので、最初から表示された状態にしておく */
   .hero-eyebrow, .hero-ctas, .hero-masthead {
-    opacity: 0;
-    transform: translateY(24px);
-    /* 読み込み時の動きも止める */
-  }
-  .hero-masthead { animation-delay: .35s; }
-  .hero-eyebrow { animation-delay: .7s; }
-  .hero-ctas { animation-delay: .95s; }
-  @keyframes hero-lift {
-    to { opacity: 1; transform: translateY(0); }
+    opacity: 1;
+    transform: none;
   }
   .parallax { will-change: transform; }
   @media (prefers-reduced-motion: reduce) {
