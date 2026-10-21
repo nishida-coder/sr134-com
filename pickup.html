@@ -60,10 +60,11 @@
   .pu-item-info .pu-item-note{font-size:14px;line-height:2;color:var(--ink-2);font-weight:300;}
 
   .back-cta{text-align:center;padding:20px 20px 80px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-  /* 画面の左右中央に置く前後ボタン。記事どうしを行き来する */
+  /* 写真の左右に重ねる前後ボタン。記事どうしを行き来する */
+  .pu-visual{position:relative;}
   .pu-nav{
-    position:fixed; top:50%; transform:translateY(-50%);
-    z-index:120;
+    position:absolute; top:50%; transform:translateY(-50%);
+    z-index:5;
     width:48px; height:48px;
     display:flex; align-items:center; justify-content:center;
     border:1px solid var(--line);
@@ -75,10 +76,10 @@
     box-shadow:0 4px 14px rgba(17,32,59,0.16);
     transition:background .3s var(--ease), color .3s var(--ease), opacity .25s ease;
   }
+  .pu-nav[hidden]{display:none;}
   .pu-nav:hover{background:var(--navy); color:var(--surface);}
   .pu-nav-prev{left:16px;}
   .pu-nav-next{right:16px;}
-  body.is-scrolling .pu-nav{opacity:0.22;}
   @media (max-width:760px){
     .pu-nav{width:42px; height:42px; font-size:21px;}
     .pu-nav-prev{left:10px;}
@@ -130,7 +131,11 @@
 </section>
 
 <section class="pu-main">
-  <div class="pu-visual"><img data-hero-img alt=""></div>
+  <div class="pu-visual">
+    <img data-hero-img alt="">
+    <a class="pu-nav pu-nav-prev" data-prev href="#" aria-label="前のコーディネート" hidden>‹</a>
+    <a class="pu-nav pu-nav-next" data-next href="#" aria-label="次のコーディネート" hidden>›</a>
+  </div>
 </section>
 
 <article class="pu-story" data-story></article>
@@ -140,11 +145,7 @@
   <div class="pu-items-list" data-items></div>
 </section>
 
-<a class="pu-nav pu-nav-prev" data-prev href="#" aria-label="前のコーディネート" hidden>‹</a>
-<a class="pu-nav pu-nav-next" data-next href="#" aria-label="次のコーディネート" hidden>›</a>
-
 <div class="back-cta">
-  <a href="pickups.html">Pick Up をすべて見る <span>→</span></a>
   <a href="index.html">Back to Home <span>→</span></a>
 </div>
 
