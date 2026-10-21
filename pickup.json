@@ -14,24 +14,32 @@
     ],
     "items": [
       {
-        "brand": "Moncler",
         "name": "Wool Boa Pullover",
-        "note": ""
-      },
-      {
-        "brand": "Dsquared2",
-        "name": "Denim",
-        "note": ""
-      },
-      {
-        "brand": "THOM BROWNE",
-        "name": "Sneakers",
-        "note": ""
-      },
-      {
         "brand": "MONCLER",
+        "note": "",
+        "image": "",
+        "url": ""
+      },
+      {
+        "name": "Denim",
+        "brand": "MONCLER",
+        "note": "",
+        "image": "",
+        "url": ""
+      },
+      {
+        "name": "Sneakers",
+        "brand": "THOM BROWNE",
+        "note": "",
+        "image": "",
+        "url": ""
+      },
+      {
         "name": "Cap",
-        "note": ""
+        "brand": "MONCLER",
+        "note": "",
+        "image": "",
+        "url": ""
       }
     ]
   },
@@ -49,24 +57,32 @@
     ],
     "items": [
       {
-        "brand": "",
         "name": "Knit Hooded Zip",
-        "note": ""
+        "brand": "SEAGREEN",
+        "note": "",
+        "image": "",
+        "url": ""
       },
       {
-        "brand": "Moncler",
         "name": "Denim",
-        "note": ""
+        "brand": "MONCLER",
+        "note": "",
+        "image": "",
+        "url": ""
       },
       {
-        "brand": "",
         "name": "Suede Shoulder Bag",
-        "note": ""
+        "brand": "Maison Margiela",
+        "note": "",
+        "image": "",
+        "url": ""
       },
       {
-        "brand": "",
         "name": "Suede Loafers",
-        "note": ""
+        "brand": "MONCLER",
+        "note": "",
+        "image": "",
+        "url": ""
       }
     ]
   }

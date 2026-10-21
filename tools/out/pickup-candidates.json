@@ -1,0 +1,206 @@
+[
+  {
+    "article": "moncler-wool-boa-week1",
+    "label": "Wool Boa Pullover / MONCLER",
+    "candidates": [
+      {
+        "handle": "monc2281a00087",
+        "title": "Outerwear",
+        "type": "Outerwear"
+      },
+      {
+        "handle": "monc2288g00011",
+        "title": "Outerwear",
+        "type": "Outerwear"
+      },
+      {
+        "handle": "monc2288g00034",
+        "title": "Outerwear",
+        "type": "Outerwear"
+      },
+      {
+        "handle": "monc4286f00002",
+        "title": "Outerwear",
+        "type": "Outerwear"
+      },
+      {
+        "handle": "monc2289b00019",
+        "title": "Outerwear",
+        "type": "Outerwear"
+      },
+      {
+        "handle": "monc1281a00095",
+        "title": "Outerwear",
+        "type": "Outerwear"
+      }
+    ]
+  },
+  {
+    "article": "moncler-wool-boa-week1",
+    "label": "Sneakers / THOM BROWNE",
+    "candidates": []
+  },
+  {
+    "article": "moncler-wool-boa-week1",
+    "label": "Cap / MONCLER",
+    "candidates": [
+      {
+        "handle": "monc2281a00087",
+        "title": "Outerwear",
+        "type": "Outerwear"
+      },
+      {
+        "handle": "monc2288g00011",
+        "title": "Outerwear",
+        "type": "Outerwear"
+      },
+      {
+        "handle": "monc2288g00034",
+        "title": "Outerwear",
+        "type": "Outerwear"
+      },
+      {
+        "handle": "monc4286f00002",
+        "title": "Outerwear",
+        "type": "Outerwear"
+      },
+      {
+        "handle": "monc1288c00021",
+        "title": "Tee",
+        "type": "Tee"
+      },
+      {
+        "handle": "monc2289b00019",
+        "title": "Outerwear",
+        "type": "Outerwear"
+      },
+      {
+        "handle": "monc1282a00044",
+        "title": "Denim",
+        "type": "Denim"
+      },
+      {
+        "handle": "monc1281a00095",
+        "title": "Outerwear",
+        "type": "Outerwear"
+      },
+      {
+        "handle": "monc1288g00058",
+        "title": "Shirt",
+        "type": "Shirt"
+      },
+      {
+        "handle": "monc4285l00008",
+        "title": "Bag",
+        "type": "Bag"
+      },
+      {
+        "handle": "monc1284g00100",
+        "title": "Boots",
+        "type": "Boots"
+      }
+    ]
+  },
+  {
+    "article": "knit-hoodie-denim-2026-10",
+    "label": "Knit Hooded Zip / SEAGREEN",
+    "candidates": [
+      {
+        "handle": "sea126mcka0133-w",
+        "title": "Hoodie",
+        "type": "Hoodie"
+      },
+      {
+        "handle": "sea126mcka0133-lg",
+        "title": "Hoodie",
+        "type": "Hoodie"
+      },
+      {
+        "handle": "sea226lcka0134",
+        "title": "Hoodie",
+        "type": "Hoodie"
+      },
+      {
+        "handle": "sea226lcka0134-lg",
+        "title": "Hoodie",
+        "type": "Hoodie"
+      },
+      {
+        "handle": "sea226lcka0134-w",
+        "title": "Hoodie",
+        "type": "Hoodie"
+      },
+      {
+        "handle": "sea126mcka0133",
+        "title": "Hoodie",
+        "type": "Hoodie"
+      }
+    ]
+  },
+  {
+    "article": "knit-hoodie-denim-2026-10",
+    "label": "Suede Shoulder Bag / Maison Margiela",
+    "candidates": [
+      {
+        "handle": "mmm435sb1wg0086",
+        "title": "Bag",
+        "type": "Bag"
+      },
+      {
+        "handle": "mmm435sb1wa0010",
+        "title": "Bag",
+        "type": "Bag"
+      },
+      {
+        "handle": "mmm535s56wg0082-blk",
+        "title": "Bag",
+        "type": "Bag"
+      },
+      {
+        "handle": "mmm535s56wg0082-gc",
+        "title": "Bag",
+        "type": "Bag"
+      },
+      {
+        "handle": "mmm535s56wg0082-pt",
+        "title": "Bag",
+        "type": "Bag"
+      },
+      {
+        "handle": "mmm535s56wg0082-t8031",
+        "title": "Bag",
+        "type": "Bag"
+      },
+      {
+        "handle": "mmm235sb1wg0084",
+        "title": "Bag",
+        "type": "Bag"
+      },
+      {
+        "handle": "mmm435sb1wg0003",
+        "title": "Bag",
+        "type": "Bag"
+      },
+      {
+        "handle": "mmm535s56wg0082-ama",
+        "title": "Bag",
+        "type": "Bag"
+      },
+      {
+        "handle": "mmm535s56wg0082-aq",
+        "title": "Bag",
+        "type": "Bag"
+      },
+      {
+        "handle": "mmm435sb1wa0004",
+        "title": "Bag",
+        "type": "Bag"
+      },
+      {
+        "handle": "mmm435sb1wc0024",
+        "title": "Bag",
+        "type": "Bag"
+      }
+    ]
+  }
+]
