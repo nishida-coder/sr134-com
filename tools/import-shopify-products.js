@@ -119,7 +119,8 @@ function loadOrderMap(brand) {
 }
 
 function imagesOf(p) {
-  const ordered = ORDER_MAP && ORDER_MAP[p.id];
+  // 楽天から取り直したデータは images が既に登録順
+  const ordered = (ORDER_MAP && ORDER_MAP[p.id]) || (p.fromRakuten ? p.images : null);
   const raw = ordered && ordered.length ? ordered : Array.isArray(p.images) ? p.images : [];
   const seen = new Set();
   return raw
@@ -161,7 +162,8 @@ function buildInput(p) {
     inventoryItem: { tracked: false },
   }));
 
-  const tags = [p.brand, p.gender, p.group, category].filter(Boolean);
+  const extra = (process.env.SHOPIFY_EXTRA_TAGS || '').split(',').map(t => t.trim()).filter(Boolean);
+  const tags = [p.brand, p.gender, p.group, category, ...extra].filter(Boolean);
 
   return {
     handle: p.id,
@@ -197,8 +199,17 @@ async function main() {
   const limitArg = process.argv.indexOf('--limit');
   const limit = limitArg > -1 ? Number(process.argv[limitArg + 1]) : Infinity;
 
-  const all = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'products.json'), 'utf8'));
-  const targets = all.filter(p => p.brand === brand).slice(0, limit);
+  // --from で楽天から取り直したデータを使う。省略時は products.json。
+  const fromArg = process.argv.indexOf('--from');
+  let targets;
+  if (fromArg > -1) {
+    const src = JSON.parse(fs.readFileSync(path.resolve(process.argv[fromArg + 1]), 'utf8'));
+    const rows = Array.isArray(src) ? src : Object.values(src);
+    targets = (brand === 'ALL' ? rows : rows.filter(p => p.brand === brand)).slice(0, limit);
+  } else {
+    const all = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'products.json'), 'utf8'));
+    targets = all.filter(p => p.brand === brand).slice(0, limit);
+  }
   if (!targets.length) {
     console.error(`${brand} の商品が見つかりません`);
     process.exit(1);
