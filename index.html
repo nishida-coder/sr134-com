@@ -731,16 +731,18 @@
     position: relative;
     aspect-ratio: 8/5;
     overflow: hidden;
-    background: var(--bg-2);
+    background: var(--surface);
     margin-bottom: 14px;
   }
-  .news-card .nc-visual .nc-bg {
+  /* 余白は白地に公式ロゴのモノグラムを薄く散らす */
+  .news-card .nc-visual::before {
+    content: '';
     position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    filter: blur(22px) saturate(1.08);
-    transform: scale(1.18);
+    background: url('photos/monogram-tile.png') repeat;
+    background-size: 150px auto;
+    opacity: 0.12;
   }
+  .news-card .nc-visual .nc-bg { display: none; }
   .news-card .nc-visual .nc-fg {
     position: relative;
     width: 100%; height: 100%;
@@ -755,6 +757,19 @@
     padding: 8%;
   }
   .news-card.nc-product:hover .nc-visual img { transform: scale(1.03); }
+  /* 新着を示す赤い囲み。背景は敷かない */
+  .nc-new {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 1px 7px;
+    border: 1px solid #C2271F;
+    color: #C2271F;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    vertical-align: 1px;
+  }
   .news-card .nc-date {
     font-size: 10.5px;
     letter-spacing: 0.24em;
@@ -2954,7 +2969,7 @@
             <img class="nc-bg" src="${n.image}" alt="" aria-hidden="true">
             <img class="nc-fg" src="${n.image}" alt="${n.title}"${n.focus ? ` style="object-position:${n.focus}"` : ''}>
           </div>
-          <div class="nc-date">${n.date}${n.brand ? ' — ' + n.brand : ''}</div>
+          <div class="nc-date">${n.isNew ? '<span class="nc-new">New</span>' : ''}${n.date}${n.brand ? ' — ' + n.brand : ''}</div>
           <div class="nc-title">${n.title}</div>
         </a>`).join('');
     } catch (e) { /* 取得できなければ空のまま */ }

@@ -138,6 +138,7 @@ async function migrateNews(root) {
       { key: 'card_image', value: card },
       { key: 'images', value: JSON.stringify(gallery) },
       { key: 'link', value: n.link },
+      { key: 'is_new', value: n.isNew ? 'true' : 'false' },
     ]);
     console.log(`  移行 ${n.id}（写真 ${gallery.length}枚）`);
   }

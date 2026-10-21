@@ -182,6 +182,7 @@ window.sr134RecentVendors = async function (limit = 50) {
       image: imageUrl(f, 'card_image'),
       images: imageList(f, 'images'),
       link: val(f, 'link'),
+      isNew: String(val(f, 'is_new')) === 'true',
     };
   }
 

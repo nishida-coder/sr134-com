@@ -133,6 +133,12 @@ function definitions(pickupItemId) {
           validations: [{ name: 'file_type_options', value: JSON.stringify(['Image']) }],
         },
         { key: 'link', name: 'リンク先', description: '記事の下のボタンの飛び先', type: 'url' },
+        {
+          key: 'is_new',
+          name: 'NEW表示',
+          description: '日付の左に赤いNEWを出す',
+          type: 'boolean',
+        },
       ],
     },
   ];

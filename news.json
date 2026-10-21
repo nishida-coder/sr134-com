@@ -1,7 +1,35 @@
 [
   {
+    "id": "halloween-2026-10",
+    "date": "2026.10.20",
+    "brand": "",
+    "title": "Halloween イベント告知",
+    "lead": "毎年恒例のキッズ向けHalloweenイベント。今年はあの怪物がやってくる。各店舗のお菓子配布時間はチラシのとおりです。",
+    "image": "photos/news-halloween-01.jpg",
+    "images": [
+      "photos/news-halloween-01.jpg"
+    ],
+    "link": "",
+    "isNew": true
+  },
+  {
+    "id": "seagreen-collab-2026-10",
+    "date": "2026.10.17",
+    "brand": "SEAGREEN",
+    "title": "SEAGREEN × Studio Route134 コラボレーション",
+    "lead": "10年以上欠かさず毎年続くコラボレーションに、初めて秋冬バージョンが登場しました。春夏のオーガニックコットンから秋冬のリサイクルウールへ生地が変わり、新しい表情にも期待が高まります。",
+    "image": "photos/news-seagreen-01.jpg",
+    "images": [
+      "photos/news-seagreen-01.jpg",
+      "photos/news-seagreen-02.jpg",
+      "photos/news-seagreen-03.jpg"
+    ],
+    "link": "https://shop.sr134.com/collections/seagreen",
+    "isNew": true
+  },
+  {
     "id": "moncler-fw-7th-delivery-2026-10",
-    "date": "2026.10",
+    "date": "2026.10.15",
     "brand": "MONCLER",
     "title": "MONCLER 2026-27FW 7th Delivery",
     "lead": "MONCLER の 2026-27 Fall & Winter、7th Delivery が到着しました。MONCLER × Clarks Originals のコラボレーションシューズをはじめ、今シーズンの一足が揃っています。",
@@ -13,11 +41,12 @@
       "photos/news-moncler-04.jpg",
       "photos/news-moncler-05.jpg"
     ],
-    "link": "https://shop.sr134.com/collections/moncler"
+    "link": "https://shop.sr134.com/collections/moncler",
+    "isNew": false
   },
   {
     "id": "closed-fw-1st-delivery-2026-10",
-    "date": "2026.10",
+    "date": "2026.10.02",
     "brand": "CLOSED",
     "title": "CLOSED 2026-27FW 1st Delivery 到着",
     "lead": "CLOSED の 2026-27 Fall & Winter、1st Delivery が到着しました。ヘビーウェイトのデニム生地を用いたシャツブルゾンに注目です。",
@@ -27,11 +56,12 @@
       "photos/news-closed-02.jpg",
       "photos/news-closed-03.jpg"
     ],
-    "link": ""
+    "link": "https://shop.sr134.com/collections/closed",
+    "isNew": false
   },
   {
     "id": "berna-leon-2026-09",
-    "date": "2026.09",
+    "date": "2026.09.25",
     "brand": "BERNA",
     "title": "< BERNA ベルナ >がファッションライフスタイル誌<LEON>に特集掲載",
     "lead": "新しく取り扱いが始まったイタリア・ボローニャのブランド< BERNA ベルナ >がファッションライフスタイル誌<LEON>に特集掲載されております。大人の遊び心溢れるニットブルゾンは残りわずか、お早めに。",
@@ -42,6 +72,7 @@
       "photos/news-berna-leon-02.jpg",
       "photos/news-berna-leon-03.jpg"
     ],
-    "link": "https://shop.sr134.com/collections/berna-italia"
+    "link": "https://shop.sr134.com/collections/berna-italia",
+    "isNew": false
   }
 ]
