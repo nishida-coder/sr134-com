@@ -35,7 +35,13 @@
     --font-display: "Helvetica Neue", "Helvetica", "Arial", "Noto Sans JP", "Yu Gothic", "游ゴシック", "Hiragino Sans", sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { overflow-x: clip; max-width: 100%; }
+  html { max-width: 100%; }
+  body {
+    overflow-x: clip;
+    /* 上にスクロールする途中でページが戻って跳ねるのを止める。
+       ブラウザが「位置合わせ」で勝手にスクロール位置を補正する動きを切る */
+    overflow-anchor: none;
+  }
   /* モバイル用の上に戻るボタン。最上部にいるときは出さない */
   .to-top {
     position: fixed;
@@ -99,8 +105,8 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    min-height: 44px;
-    padding: 20px 56px;
+    min-height: 46px;
+    padding: 30px 56px;
     /* 背面のお知らせ帯が透けないよう不透明にする */
     background: var(--bg);
     border-bottom: 1px solid var(--line);
@@ -2303,7 +2309,7 @@
     /* モバイルは fixed ではなく sticky にする。
        fixed はアドレスバーの伸縮のたびに置き直されて画面が揺れるが、
        sticky は文書の流れの中に留まるため揺れない。ロゴは常に見える */
-    header { position: sticky; top: 0; min-height: 48px; padding: 20px; }
+    header { position: sticky; top: 0; min-height: 46px; padding: 28px 20px; }
     .topbar { position: relative; z-index: 1; }
     header .logo-center img { height: 42px; }
     /* 検索、ログイン、Instagram は右下へ縦に並べる。最下段は戻るボタンの場所 */
