@@ -15,7 +15,9 @@ window.SR134_SHOPIFY = {
   domain: 'gp9g0i-sk.myshopify.com',
   // ブランドページと商品ページの公開先。shop.sr134.com の接続が済んだらここを差し替える。
   shopBase: 'https://shop.sr134.com',
-  storefrontToken: '',   // 例 'shpat_xxx' ではなく Storefront 用の公開トークン
+  // Headless チャネルが発行した公開トークン。サイトに埋め込む前提の値。
+  // shpat_ で始まる非公開トークンは絶対にここへ書かない（credentials.md のみ）。
+  storefrontToken: 'c4aa07c6725484170c0609df2fc4818c',
   apiVersion: '2026-10',
 };
 
