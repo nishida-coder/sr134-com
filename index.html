@@ -1268,6 +1268,7 @@
   }
   /* 高さを固定し、描画範囲を閉じ込める。スクロール中の再計算で縦に揺れるのを防ぐ */
   .press-track-wrap {
+    justify-content: center;
     overflow: hidden;
     height: 52px;
     display: flex;
@@ -1281,15 +1282,14 @@
     display: flex;
     align-items: center;
     gap: var(--press-gap);
-    animation: press-scroll 44s linear infinite;
+    /* 動くものを一切残さないため停止。再開する場合はこの行を戻す */
     white-space: nowrap;
     color: var(--ink);
     /* 合成レイヤーに固定して、再ラスタライズによるちらつきを止める */
     transform: translateZ(0);
     backface-visibility: hidden;
-    animation-play-state: paused;
   }
-  .press.in-view .press-track { animation-play-state: running; }
+
   /* 同じ並びを2組にして、1組分ちょうど流す。半分だと隙間のぶんだけずれる */
   .press-set {
     display: flex;
@@ -1312,7 +1312,7 @@
   .press-track .logo-vogue img.logo, .press-track img.logo-vogue { height: 38px; }
   @media (max-width: 720px) {
     /* 画面が狭いと間隔が広すぎて流れが途切れて見えるため詰める */
-    .press-track { --press-gap: 44px; animation-name: press-scroll-sp; animation-duration: 26s; }
+    .press-track { --press-gap: 44px; }
     .press-track .logo { height: 32px; }
     .press-track img.logo { height: 32px; }
     /* モバイルではマスクを外す。常時アニメーションと重なると描画が重くなる */
@@ -2204,7 +2204,7 @@
   .hero-eyebrow, .hero-ctas, .hero-masthead {
     opacity: 0;
     transform: translateY(24px);
-    animation: hero-lift 1.4s var(--ease) forwards;
+    /* 読み込み時の動きも止める */
   }
   .hero-masthead { animation-delay: .35s; }
   .hero-eyebrow { animation-delay: .7s; }
@@ -2324,7 +2324,7 @@
         <span class="logo logo-very">VERY</span>
         <span class="logo logo-vogue">VOGUE</span>
       </div>
-      <div class="press-set" aria-hidden="true">
+      <div class="press-set" aria-hidden="true" hidden>
         <span class="logo logo-safari">Safari</span>
         <span class="logo logo-leon">LEON</span>
         <span class="logo logo-oceans">OCEANS</span>
