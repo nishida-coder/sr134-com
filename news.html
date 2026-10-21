@@ -65,6 +65,7 @@
 </head>
 <body>
 <script>const SR134_REV = '20260926';</script>
+<script src="shopify-config.js"></script>
 
 <header class="site">
   <a class="back" href="index.html">← Back to Top</a>
@@ -89,7 +90,8 @@
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const id = new URLSearchParams(location.search).get('id');
   try {
-    const all = await (await fetch('news.json?v=' + SR134_REV)).json();
+    const all = (window.sr134Content && await window.sr134Content('news'))
+      || await (await fetch('news.json?v=' + SR134_REV)).json();
     const n = id ? all.find(x => x.id === id) : all[0];
     if (!n) { location.href = 'index.html'; return; }
 

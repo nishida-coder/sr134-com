@@ -2432,11 +2432,11 @@
 
 <!-- ============ RESORT EDIT STRIP ============ -->
 <style>
-  .brand-stories{background:var(--bg-2);padding:64px 48px 68px;}
-  .brand-stories .bs-head{max-width:1200px;margin:0 auto 26px;display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;}
-  .brand-stories .bs-head .eyebrow{font-size:11px;letter-spacing:0.34em;text-transform:uppercase;color:var(--gold-deep);font-weight:500;}
-  .brand-stories .bs-head .bs-all{font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px;font-weight:500;}
-  .brand-stories .bs-head .bs-all:hover{color:var(--gold-deep);}
+  .brand-stories{background:var(--bg-2);}
+  /* 見出しは他セクションと同じ section-head を使う。右端にブランド一覧への導線を置く */
+  .brand-stories .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;max-width:none;margin-bottom:32px;}
+  .brand-stories .section-head .bs-all{font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px;font-weight:500;}
+  .brand-stories .section-head .bs-all:hover{color:var(--gold-deep);}
   /* 画像が左、国旗とブランド名と説明文が右。縦に積む */
   .bs-grid{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:18px;}
   .bs-card{background:var(--surface);border:1px solid var(--line);padding:0;display:flex;flex-direction:row;overflow:hidden;transition:border-color .35s var(--ease),transform .35s var(--ease);}
@@ -2467,7 +2467,7 @@
   }
 </style>
 <section class="brand-stories" id="brand-stories">
-  <div class="bs-head reveal">
+  <div class="section-head reveal">
     <div class="eyebrow">Brand Stories</div>
     <a class="bs-all" href="brand.html">ブランド一覧を見る →</a>
   </div>
@@ -2945,7 +2945,8 @@
     const track = $('[data-news-track]');
     if (!track) return;
     try {
-      const items = await (await fetch('news.json?v=' + SR134_REV)).json();
+      const items = (window.sr134Content && await window.sr134Content('news'))
+        || await (await fetch('news.json?v=' + SR134_REV)).json();
       if (!items.length) return;
       track.innerHTML = items.map(n => `
         <a class="news-card" href="news.html?id=${encodeURIComponent(n.id)}">
@@ -2964,7 +2965,8 @@
     const pickup = $('[data-pickup]');
     if (!pickup) return;
     try {
-      const all = await (await fetch('pickup.json?v=' + SR134_REV)).json();
+      const all = (window.sr134Content && await window.sr134Content('pickup'))
+        || await (await fetch('pickup.json?v=' + SR134_REV)).json();
       if (!all.length) return;
       const VISIBLE = 2;
       const feats = all.slice(0, VISIBLE);
@@ -3048,14 +3050,18 @@
       const items = all.slice(0, VISIBLE);
       const more = $('[data-gallery-more]');
       if (more && all.length > VISIBLE) more.hidden = false;
-      grid.innerHTML = items.map(it => `
-        <a href="journal.html?id=${it.id}" class="gallery-cell">
-          <img src="${it.image}" alt="${it.title}" loading="lazy">
+      grid.innerHTML = items.map(it => {
+        const label = [it.date, it.location].filter(Boolean).join(' ');
+        const inner = `
+          <img src="${it.image}" alt="${label}" loading="lazy">
           <div class="gallery-label">
-            <div class="g-date">${it.date} — ${it.location || ''}</div>
-            <div class="g-title">${it.title}</div>
-          </div>
-        </a>`).join('');
+            <div class="g-date">${label}</div>
+            ${it.title ? `<div class="g-title">${it.title}</div>` : ''}
+          </div>`;
+        return it.title
+          ? `<a href="journal.html?id=${it.id}" class="gallery-cell">${inner}</a>`
+          : `<div class="gallery-cell">${inner}</div>`;
+      }).join('');
       grid.classList.add('visible');
     } catch {}
   })();

@@ -87,14 +87,18 @@
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   try {
     const items = await (await fetch('journal.json?v=' + SR134_REV)).json();
-    grid.innerHTML = items.map(it => `
-      <a href="journal.html?id=${esc(it.id)}" class="cell">
-        <img src="${esc(it.image)}" alt="${esc(it.title)}" loading="lazy">
+    grid.innerHTML = items.map(it => {
+      const label = [it.date, it.location].filter(Boolean).join(' ');
+      const inner = `
+        <img src="${esc(it.image)}" alt="${esc(label)}" loading="lazy">
         <div class="label">
-          <div class="date">${esc(it.date)} — ${esc(it.location || '')}</div>
-          <div class="title">${esc(it.title)}</div>
-        </div>
-      </a>`).join('');
+          <div class="date">${esc(label)}</div>
+          ${it.title ? `<div class="title">${esc(it.title)}</div>` : ''}
+        </div>`;
+      return it.title
+        ? `<a href="journal.html?id=${esc(it.id)}" class="cell">${inner}</a>`
+        : `<div class="cell">${inner}</div>`;
+    }).join('');
   } catch (e) {
     grid.innerHTML = '';
   }

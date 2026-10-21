@@ -77,6 +77,7 @@
 </head>
 <body>
 <script>const SR134_REV = '20260926';</script>
+<script src="shopify-config.js"></script>
 
 <div class="topbar">Online Store — Coming Soon &nbsp;·&nbsp; 商品は店頭にてご案内しております</div>
 
@@ -114,7 +115,8 @@ const $=(s,r=document)=>r.querySelector(s);
 (async()=>{
   const id=new URLSearchParams(location.search).get('id');
   if(!id){location.href='index.html#pickup';return;}
-  const all=await(await fetch('pickup.json?v=' + SR134_REV)).json();
+  const all=(window.sr134Content && await window.sr134Content('pickup'))
+    || await(await fetch('pickup.json?v=' + SR134_REV)).json();
   const p=all.find(x=>x.id===id);
   if(!p){alert('コーディネートが見つかりません');location.href='index.html#pickup';return;}
   document.title=`${p.title} — Pick Up — Studio Route134`;

@@ -59,6 +59,7 @@
 </head>
 <body>
 <script>const SR134_REV = '20260926';</script>
+<script src="shopify-config.js"></script>
 
 <header class="site">
   <a class="back" href="index.html">← Back to Top</a>
@@ -79,7 +80,8 @@
   const list = document.querySelector('[data-list]');
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   try {
-    const items = await (await fetch('pickup.json?v=' + SR134_REV)).json();
+    const items = (window.sr134Content && await window.sr134Content('pickup'))
+      || await (await fetch('pickup.json?v=' + SR134_REV)).json();
     list.innerHTML = items.map(p => `
       <a class="card" href="pickup.html?id=${encodeURIComponent(p.id)}">
         <div class="visual"><img src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy"></div>
