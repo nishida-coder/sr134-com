@@ -1,5 +1,35 @@
 [
   {
+    "id": "moncler-fw-7th-delivery-2026-10",
+    "date": "2026.10",
+    "brand": "MONCLER",
+    "title": "MONCLER 2026-27FW 7th Delivery",
+    "lead": "MONCLER の 2026-27 Fall & Winter、7th Delivery が到着しました。MONCLER × Clarks Originals のコラボレーションシューズをはじめ、今シーズンの一足が揃っています。",
+    "image": "photos/news-moncler-01.jpg",
+    "images": [
+      "photos/news-moncler-01.jpg",
+      "photos/news-moncler-02.jpg",
+      "photos/news-moncler-03.jpg",
+      "photos/news-moncler-04.jpg",
+      "photos/news-moncler-05.jpg"
+    ],
+    "link": "https://shop.sr134.com/collections/moncler"
+  },
+  {
+    "id": "closed-fw-1st-delivery-2026-10",
+    "date": "2026.10",
+    "brand": "CLOSED",
+    "title": "CLOSED 2026-27FW 1st Delivery 到着",
+    "lead": "CLOSED の 2026-27 Fall & Winter、1st Delivery が到着しました。ヘビーウェイトのデニム生地を用いたシャツブルゾンに注目です。",
+    "image": "photos/news-closed-01.jpg",
+    "images": [
+      "photos/news-closed-01.jpg",
+      "photos/news-closed-02.jpg",
+      "photos/news-closed-03.jpg"
+    ],
+    "link": ""
+  },
+  {
     "id": "berna-leon-2026-09",
     "date": "2026.09",
     "brand": "BERNA",

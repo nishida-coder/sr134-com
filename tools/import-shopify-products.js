@@ -214,6 +214,14 @@ async function main() {
     console.error(`${brand} の商品が見つかりません`);
     process.exit(1);
   }
+
+  // このサイトは定価販売のみ。楽天の割引品は入れない。
+  const DISCOUNT = /％OFF|%OFF|SALE|セール|OFF】/i;
+  const discounted = targets.filter(p => DISCOUNT.test(p.title || ''));
+  if (discounted.length) {
+    targets = targets.filter(p => !DISCOUNT.test(p.title || ''));
+    console.log(`割引表記のある ${discounted.length}件は除外しました（定価販売の方針）`);
+  }
   const ordered = loadOrderMap(brand);
   console.log(
     `${brand} ${targets.length} 件を処理します` +

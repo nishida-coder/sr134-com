@@ -67,6 +67,25 @@ const BRANDS = [
   ['BERNA', 'BERNA ITALIA'],
   ['N°21', 'N°21'],
   ['BARK', 'BARK'],
+  ['FILIPPO DE LAURENTIIS', 'FILIPPO DE LAURENTIIS'],
+  ['ALBERTO BRESCI', 'Alberto Breci'],
+  ['BRIGLIA 1949', 'BRIGLIA 1949'],
+  ['BRIGLIA1949', 'BRIGLIA 1949'],
+  ['DISTRETTO12', 'DISTRETTO12'],
+  ['SCOTCH&SODA', 'SCOTCH & SODA'],
+  ['SCOTCH & SODA', 'SCOTCH & SODA'],
+  ['ALTEM FLOWER', 'ALTEM FLOWER'],
+  ['IL MOCASSINO', 'IL MOCASSINO'],
+  ['BALLANTYNE', 'BALLANTYNE'],
+  ['BOB ITALY', 'BOB COMPANY'],
+  ['DRUMOHR', 'Drumohr'],
+  ['GALLIA', 'GALLIA'],
+  ['OKERU', 'OKERU'],
+  ['CLOSED', 'CLOSED'],
+  ['CLARKS', 'Clarks'],
+  ['DUNO', 'DUNO'],
+  ['OVER', 'OVER'],
+  ['BOB', 'BOB COMPANY'],
 ];
 
 /** タイトルから品目を読み取る。先に並べたものが優先される。 */
@@ -110,8 +129,19 @@ const CATEGORIES = [
   ['HAT', 'Accessory'], ['ハット', 'Accessory'],
 ];
 
+function decodeEntities(s) {
+  return String(s)
+    .replace(/&amp;/g, '&')
+    .replace(/&times;/g, '×')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ');
+}
+
 function detect(title, table, fallback) {
-  const upper = title.toUpperCase();
+  const upper = decodeEntities(title).toUpperCase();
   for (const [needle, value] of table) {
     if (upper.includes(needle)) return value;
   }
@@ -136,7 +166,7 @@ async function fetchPage(url) {
 
 function parse(html, id) {
   const titleRaw = (html.match(/<title>(.*?)<\/title>/s) || [])[1] || '';
-  const title = titleRaw
+  const title = decodeEntities(titleRaw)
     .replace(/^【楽天市場】/, '')
     .replace(/：Studio Route134\s*$/, '')
     .replace(/\s+/g, ' ')
