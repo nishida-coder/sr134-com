@@ -876,17 +876,15 @@
   /* ============ PICK UP — editorial: image left, story right ============ */
   .pickup-hero { background: var(--surface); }
   .pickup-hero .section-head { margin-bottom: 24px; }
-  .pickup-list { display: flex; flex-direction: column; gap: 56px; }
+  /* 可視領域は2列×1段の2枚。残りは pickups.html へ */
+  .pickup-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px; }
   .pu-row {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 44px;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     text-decoration: none;
     color: inherit;
   }
-  .pu-row:nth-child(even) { grid-template-columns: 1fr 1.1fr; }
-  .pu-row:nth-child(even) .pu-visual { order: 2; }
   .pu-visual {
     aspect-ratio: 4/3;
     overflow: hidden;
@@ -923,9 +921,16 @@
     display: inline-block;
   }
   .pu-row:hover .pu-more { color: var(--gold-deep); border-color: var(--gold-deep); }
-  @media (max-width: 900px) {
-    .pu-row, .pu-row:nth-child(even) { grid-template-columns: 1fr; gap: 18px; }
-    .pu-row:nth-child(even) .pu-visual { order: 0; }
+  .pickup-more { display: flex; justify-content: center; margin-top: 34px; }
+  .pickup-more a {
+    font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase;
+    font-weight: 500; color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--gold); padding-bottom: 6px;
+    transition: color .3s var(--ease), border-color .3s var(--ease);
+  }
+  .pickup-more a:hover { color: var(--gold-deep); border-color: var(--gold-deep); }
+  @media (max-width: 760px) {
+    .pickup-list { grid-template-columns: 1fr; gap: 28px; }
     .pu-body { padding: 0; }
   }
 
@@ -1719,71 +1724,6 @@
   .footer-social a:hover { background: var(--gold); color: var(--navy-deep); border-color: var(--gold); }
 
   /* ============ Business Calendar (beige section, before footer) ============ */
-  .calendar-section { background: var(--bg); padding: 64px 56px 72px; }
-  .calendar-section .fc-head {
-    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ink); font-weight: 600; margin-bottom: 28px;
-    text-align: center;
-  }
-  .fc-months { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 720px; margin: 0 auto; }
-  .fc-month .fc-month-title {
-    font-family: var(--font-sans);
-    font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
-    text-align: center; margin-bottom: 14px;
-    color: var(--gold-deep); font-weight: 500;
-  }
-  .fc-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 4px;
-    font-family: var(--font-sans);
-    font-size: 12px;
-  }
-  .fc-dow {
-    text-align: center;
-    font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--ink-soft); font-weight: 500;
-    padding-bottom: 6px;
-  }
-  .fc-dow.sun { color: #C24A4A; }
-  .fc-dow.sat { color: #3F73C4; }
-  .fc-day {
-    aspect-ratio: 1;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--ink-2);
-    border-radius: 2px;
-  }
-  .fc-day.empty { opacity: 0; }
-  .fc-day.sun { color: #C24A4A; }
-  .fc-day.sat { color: #3F73C4; }
-  .fc-day.closed {
-    background: rgba(194,74,74,0.16);
-    color: #C24A4A;
-    font-weight: 600;
-    position: relative;
-  }
-  .fc-day.today {
-    outline: 1px solid var(--gold);
-    color: var(--gold-deep);
-  }
-  .fc-day.closed.today { outline-color: #C24A4A; }
-  .fc-legend {
-    text-align: center;
-    font-size: 11px; letter-spacing: 0.08em;
-    color: var(--ink-soft);
-    margin-top: 20px;
-  }
-  .fc-legend .fc-swatch {
-    display: inline-block;
-    width: 10px; height: 10px;
-    background: rgba(194,74,74,0.5);
-    vertical-align: middle;
-    margin-right: 6px;
-    border-radius: 2px;
-  }
-  @media (max-width: 720px) {
-    .calendar-section { padding: 44px 20px 56px; }
-    .fc-months { grid-template-columns: 1fr; gap: 28px; }
   }
   .footer-col h4 {
     font-size: 10.5px;
@@ -2487,6 +2427,7 @@
     <div class="eyebrow">Pick Up</div>
   </div>
   <div class="pickup-list stagger" data-pickup></div>
+  <div class="pickup-more" data-pickup-more hidden><a href="pickups.html">Show More</a></div>
 </section>
 
 
@@ -2646,12 +2587,6 @@
 
 <!-- NEWSLETTER セクションは削除（2026-10-21 しもんさん指示） -->
 
-<!-- ============ Business Calendar (before footer, beige bg) ============ -->
-<section class="calendar-section" id="calendar">
-  <div class="fc-head">Business Calendar · 営業カレンダー</div>
-  <div class="fc-months" data-fc-months></div>
-  <div class="fc-legend"><span class="fc-swatch"></span>定休日（葉山・江ノ島／青山は不定休）</div>
-</section>
 
 <!-- ============ FOOTER ============ -->
 <footer>
@@ -3011,9 +2946,13 @@
     const pickup = $('[data-pickup]');
     if (!pickup) return;
     try {
-      const feats = await (await fetch('pickup.json?v=' + SR134_REV)).json();
-      if (!feats.length) return;
-      pickup.innerHTML = feats.slice(0, 4).map(p => {
+      const all = await (await fetch('pickup.json?v=' + SR134_REV)).json();
+      if (!all.length) return;
+      const VISIBLE = 2;
+      const feats = all.slice(0, VISIBLE);
+      const more = $('[data-pickup-more]');
+      if (more && all.length > VISIBLE) more.hidden = false;
+      pickup.innerHTML = feats.map(p => {
         const raw = Array.isArray(p.story) ? (p.story[0] || '') : '';
         const preview = raw.length > 90 ? raw.substring(0, 90) + '…' : raw + '…';
         return `
@@ -3103,44 +3042,6 @@
     } catch {}
   })();
 
-  // === Business Calendar (footer) — 2 months, 火曜 = closed ===
-  (function renderFooterCalendar() {
-    const wrap = $('[data-fc-months]');
-    if (!wrap) return;
-    const today = new Date();
-    const y0 = today.getFullYear(), m0 = today.getMonth();
-    const MONTH_JA = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
-    const DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-    function buildMonth(year, month) {
-      const first = new Date(year, month, 1).getDay();
-      const days = new Date(year, month + 1, 0).getDate();
-      const rows = [];
-      rows.push(`<div class="fc-month-title">${year}年 ${MONTH_JA[month]}</div>`);
-      rows.push('<div class="fc-grid">');
-      DOW.forEach((d, i) => {
-        const cls = i === 0 ? 'sun' : (i === 6 ? 'sat' : '');
-        rows.push(`<div class="fc-dow ${cls}">${d}</div>`);
-      });
-      for (let i = 0; i < first; i++) rows.push('<div class="fc-day empty"></div>');
-      for (let d = 1; d <= days; d++) {
-        const dow = new Date(year, month, d).getDay();
-        const isTue = dow === 2;
-        const isToday = (year === today.getFullYear() && month === today.getMonth() && d === today.getDate());
-        const cls = [
-          isTue ? 'closed' : '',
-          dow === 0 ? 'sun' : '',
-          dow === 6 ? 'sat' : '',
-          isToday ? 'today' : ''
-        ].filter(Boolean).join(' ');
-        rows.push(`<div class="fc-day ${cls}">${d}</div>`);
-      }
-      rows.push('</div>');
-      return `<div class="fc-month">${rows.join('')}</div>`;
-    }
-    const m1y = m0 === 11 ? y0 + 1 : y0;
-    const m1m = (m0 + 1) % 12;
-    wrap.innerHTML = buildMonth(y0, m0) + buildMonth(m1y, m1m);
-  })();
 
   // News carousel controls + dots + touch swipe
   function initNewsCarousel() {

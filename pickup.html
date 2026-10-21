@@ -45,7 +45,13 @@
   .pu-items{max-width:1000px;margin:0 auto;padding:20px 40px 80px;}
   .pu-items h2{font-size:14px;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink);font-weight:600;padding-bottom:12px;margin-bottom:24px;border-bottom:1px solid var(--line);}
   .pu-items-list{display:grid;grid-template-columns:1fr;gap:24px;}
-  .pu-item{display:grid;grid-template-columns:auto 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start;}
+  .pu-item{display:grid;grid-template-columns:120px auto 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--line);align-items:start;text-decoration:none;color:inherit;}
+  .pu-item-visual{width:120px;aspect-ratio:3/4;overflow:hidden;background:var(--bg);}
+  .pu-item-visual img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease);}
+  a.pu-item:hover .pu-item-visual img{transform:scale(1.05);}
+  .pu-item--noimg{grid-template-columns:auto 1fr;}
+  .pu-item-shop{display:inline-block;margin-top:10px;font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px;}
+  a.pu-item:hover .pu-item-shop{color:var(--gold-deep);border-color:var(--gold-deep);}
   .pu-item:last-child{border-bottom:none;}
   .pu-item-brand{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;min-width:180px;}
   .pu-item-info .pu-item-name{font-family:var(--font-sans);font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;}
@@ -59,7 +65,9 @@
 
   @media (max-width:900px){
     header,.pu-hero,.pu-main,.pu-story,.pu-items,.back-cta,footer{padding-left:20px;padding-right:20px;}
-    .pu-item{grid-template-columns:1fr;gap:8px;}
+    .pu-item,.pu-item--noimg{grid-template-columns:96px 1fr;gap:14px;}
+    .pu-item-visual{width:96px;}
+    .pu-item--noimg{grid-template-columns:1fr;}
     .pu-item-brand{min-width:0;}
   }
   .ig-link{width:120px;display:inline-flex;align-items:center;justify-content:flex-end;color:var(--ink);}
@@ -115,14 +123,24 @@ const $=(s,r=document)=>r.querySelector(s);
   $('[data-hero-img]').src=p.image;
   $('[data-hero-img]').alt=p.title;
   $('[data-story]').innerHTML=(p.story||[]).map(par=>`<p>${par}</p>`).join('')+(p.story?'<div class="divider"></div>':'');
-  $('[data-items]').innerHTML=(p.items||[]).map(it=>`
-    <div class="pu-item">
+  // 商品写真とEC販売ページへの導線。url が無いものは従来どおり文字だけで出す。
+  $('[data-items]').innerHTML=(p.items||[]).map(it=>{
+    const tag=it.url?'a':'div';
+    const attrs=it.url?` href="${it.url}" target="_blank" rel="noopener"`:'';
+    const visual=it.image
+      ? `<div class="pu-item-visual"><img src="${it.image}" alt="${it.name||''}" loading="lazy"></div>`
+      : '';
+    return `
+    <${tag} class="pu-item${it.image?'':' pu-item--noimg'}"${attrs}>
+      ${visual}
       <div class="pu-item-brand">${it.brand}</div>
       <div class="pu-item-info">
         <div class="pu-item-name">${it.name}</div>
         ${it.note?`<div class="pu-item-note">${it.note}</div>`:''}
+        ${it.url?'<span class="pu-item-shop">商品を見る →</span>':''}
       </div>
-    </div>`).join('');
+    </${tag}>`;
+  }).join('');
 })();
 </script>
 </body>
