@@ -39,6 +39,8 @@
   /* モバイル用の上に戻るボタン。最上部にいるときは出さない */
   .to-top {
     position: fixed;
+    transform: translateZ(0);
+    transition: opacity .25s ease;
     right: 18px; bottom: 18px;
     z-index: 150;
     width: 46px; height: 46px;
@@ -54,6 +56,9 @@
   @media (max-width: 760px) {
     .to-top:not([hidden]) { display: flex; }
   }
+  /* スクロール中は薄くして視界を邪魔しない。止まれば戻る */
+  body.is-scrolling .header-right,
+  body.is-scrolling .to-top { opacity: 0.22; pointer-events: none; }
   body {
     background: var(--bg);
     color: var(--ink);
@@ -90,15 +95,10 @@
   }
 
   /* ============ HEADER ============ */
-  .site-top {
+  header {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    /* ここに transform を置くと、中の position:fixed の基準がこの要素になる。
-       右下のアイコンがヘッダー内に吸い寄せられるため使わない */
-  }
-  header {
-    position: relative;
     min-height: 44px;
     padding: 20px 56px;
     background: rgba(247,245,239,0.98);
@@ -2310,11 +2310,13 @@
     /* 検索、ログイン、Instagram は右下へ縦に並べる。最下段は戻るボタンの場所 */
     .header-right {
       position: fixed;
-      right: 14px;
-      bottom: 62px;
+      right: 16px;
+      bottom: 76px;
       flex-direction: column;
       gap: 8px;
       z-index: 150;
+      transform: translateZ(0);
+      transition: opacity .25s ease;
     }
     .header-right .icon {
       width: 36px; height: 36px;
@@ -2322,8 +2324,8 @@
       border-color: var(--line);
       box-shadow: 0 4px 14px rgba(17,32,59,0.16);
     }
-    .header-right .icon svg { width: 16px; height: 16px; }
-    .to-top { right: 14px; bottom: 14px; width: 36px; height: 36px; font-size: 15px; }
+    .header-right .icon svg { width: 21px; height: 21px; }
+    .to-top { right: 16px; bottom: 16px; width: 48px; height: 48px; font-size: 19px; }
     .header-left { display: none; }
     .hero { min-height: 580px; }
     .hero-masthead { left: 20px; right: 20px; top: 62px; font-size: 8.5px; letter-spacing: 0.22em; gap: 8px; }
@@ -2352,7 +2354,6 @@
 <script src="shopify-config.js"></script>
 
 <!-- ============ TOPBAR ============ -->
-<div class="site-top">
 <div class="topbar">Online Store — Coming Soon <span>·</span> 商品は店頭にてご案内しております <span class="tb-sep2">·</span> <span class="tb-stores">葉山 · 南青山 · 江ノ島</span></div>
 
 <!-- ============ HEADER ============ -->
@@ -2370,7 +2371,6 @@
     <a href="#" class="icon icon-cart" title="Cart" aria-label="Cart" data-cart-toggle><svg viewBox="0 0 24 24"><path d="M5 6h15l-1.6 9.4a2 2 0 0 1-2 1.6H9.2a2 2 0 0 1-2-1.6L5 6z" stroke-linejoin="round"/><path d="M3 3h2l0.6 3" stroke-linecap="round"/><circle cx="10" cy="20" r="1.2" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.2" fill="currentColor" stroke="none"/></svg><span class="cart-badge" data-cart-count></span></a>
   </div>
 </header>
-</div>
 
 <!-- ============ HERO ============ -->
 <section class="hero">
@@ -3363,6 +3363,14 @@
   // スクロール連動の処理は行わない。モバイルで画面が揺れる原因になるため。
   // 既存の見た目を保つため visible は最初から付けておく。
   document.querySelectorAll('.reveal, .stagger, .section-head').forEach(el => el.classList.add('visible'));
+
+  // スクロール中かどうかだけを印として付ける。位置の計測はしない
+  let scrollTimer = null;
+  window.addEventListener('scroll', () => {
+    document.body.classList.add('is-scrolling');
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => document.body.classList.remove('is-scrolling'), 220);
+  }, { passive: true });
 
   // 上に戻るボタン。先頭の目印が見えている間は隠す
   const toTop = document.querySelector('.to-top');
