@@ -25,6 +25,8 @@ RewriteCond %{REQUEST_URI} !^/$
 RewriteCond %{REQUEST_URI} !^/index\.html$
 RewriteCond %{REQUEST_URI} !^/sr134_logo\.png$
 RewriteCond %{REQUEST_URI} !^/photos/brands/[A-Za-z0-9._-]+\.(jpe?g|png|webp)$
+# 2026-10-21 追加。確認用のプレビューだけ通す（検索には載せない）
+RewriteCond %{REQUEST_URI} !^/preview/
 RewriteRule ^ https://sr134.com/ [R=302,L]
 </IfModule>
 
