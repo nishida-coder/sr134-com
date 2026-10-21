@@ -155,6 +155,9 @@
   /* ============ HERO — full-bleed + striped awning + editorial masthead ============ */
   .hero {
     height: 100vh;
+    /* モバイルはアドレスバーの出入りで 100vh が変動し、画面全体が揺れる。
+       伸縮しない svh を使う */
+    height: 100svh;
     min-height: 660px;
     position: relative;
     overflow: hidden;
@@ -1884,31 +1887,12 @@
   /* ============ STORE TEASER — 3-image split (no obscuring text overlay) ============ */
   .store-teaser {
     background: var(--surface);
-    padding: 0;
+    padding: var(--space-section) 56px 0;
   }
-  .store-teaser-head {
-    padding: var(--space-section) 56px 40px;
-    max-width: 900px;
-  }
-  .store-teaser-head .eyebrow {
-    font-size: 16px !important;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--ink);
-    font-weight: 600;
-  }
-  .store-teaser-head .eyebrow-old-hidden {
-    font-size: 16px; letter-spacing: 0.28em; text-transform: uppercase;
-    color: var(--ink); font-weight: 600;
-    margin-bottom: 14px;
-  }
-  .store-teaser-head h2 {
-    font-family: var(--font-sans); font-weight: 400;
-    font-size: clamp(30px, 2.6vw + 14px, 54px);
-    line-height: 1.1;
-  }
-  .store-teaser-head h2 em { font-style: normal; color: var(--gold-deep); }
+  /* 見出しは他セクションと同じ section-head を使う */
+  .store-teaser .section-head { margin-bottom: 40px; }
   .store-teaser-strip {
+    margin: 0 -56px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
@@ -2012,7 +1996,7 @@
   .cart-scrim.open { opacity: 1; pointer-events: auto; }
   .cart-drawer {
     position: fixed; top: 0; right: 0; z-index: 210;
-    width: 100%; max-width: 460px; height: 100vh;
+    width: 100%; max-width: 460px; height: 100vh; height: 100dvh;
     background: var(--surface);
     box-shadow: -20px 0 60px -20px rgba(17,32,59,0.28);
     transform: translateX(105%);
@@ -2486,6 +2470,19 @@
   .brand-stories{background:var(--bg-2);}
   /* 見出しは他セクションと同じ section-head を使う。右端にブランド一覧への導線を置く */
   .brand-stories .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;max-width:none;margin-bottom:32px;}
+  @media (max-width: 760px) {
+    /* 狭い画面では見出しの隣に置かず、下に枠ボタンとして出す */
+    .brand-stories .section-head { display: block; }
+    .brand-stories .section-head .bs-all {
+      display: inline-flex; align-items: center; gap: 12px;
+      margin-top: 22px;
+      padding: 12px 24px;
+      border: 1px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      font-size: 11px; letter-spacing: 0.26em;
+      color: var(--ink);
+    }
+  }
   .brand-stories .section-head .bs-all{font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px;font-weight:500;}
   .brand-stories .section-head .bs-all:hover{color:var(--gold-deep);}
   /* 画像が左、国旗とブランド名と説明文が右。縦に積む */
@@ -2616,7 +2613,7 @@
 
 <!-- ============ STORES (3-image split → /stores.html) ============ -->
 <section class="store-teaser" id="stores">
-  <div class="store-teaser-head reveal">
+  <div class="section-head reveal">
     <div class="eyebrow">Our Stores</div>
   </div>
   <div class="store-teaser-strip">
@@ -3298,6 +3295,7 @@
   let lastScroll = 0, ticking = false;
   function onScroll() {
     header.classList.toggle('scrolled', lastScroll > 60);
+    if (!parallaxEls.length) { ticking = false; return; }
     const vh = window.innerHeight;
     parallaxEls.forEach(el => {
       const rect = el.getBoundingClientRect();

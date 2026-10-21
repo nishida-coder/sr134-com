@@ -16,22 +16,22 @@
       {
         "brand": "Moncler",
         "name": "Wool Boa Pullover",
-        "note": "アルプスのルーツを持つブランドが選ぶウール素材。プルオーバーの型に贅沢な表情を宿す一枚。"
+        "note": ""
       },
       {
         "brand": "Dsquared2",
         "name": "Denim",
-        "note": "デニムに落として、素材の贅沢さを普段着に馴染ませる。"
+        "note": ""
       },
       {
-        "brand": "—",
+        "brand": "THOM BROWNE",
         "name": "Sneakers",
-        "note": "肩の力を抜く街の一足。"
+        "note": ""
       },
       {
-        "brand": "—",
+        "brand": "MONCLER",
         "name": "Cap",
-        "note": "山と街のあいだにひとつ。"
+        "note": ""
       }
     ]
   },
@@ -49,24 +49,24 @@
     ],
     "items": [
       {
-        "brand": "—",
+        "brand": "",
         "name": "Knit Hooded Zip",
-        "note": "ワッフル編みのニットパーカ。厚みがありながら軽く見える一枚。"
+        "note": ""
       },
       {
         "brand": "Moncler",
         "name": "Denim",
-        "note": "色を落としすぎないストレート。上の白を澄ませる濃紺。"
+        "note": ""
       },
       {
-        "brand": "—",
+        "brand": "",
         "name": "Suede Shoulder Bag",
-        "note": "柔らかなスエードに、使い込むほど馴染むレザーの持ち手。"
+        "note": ""
       },
       {
-        "brand": "—",
+        "brand": "",
         "name": "Suede Loafers",
-        "note": "白いソールで足元に抜けをつくる。"
+        "note": ""
       }
     ]
   }
