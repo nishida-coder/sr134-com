@@ -15,7 +15,7 @@ LOCAL_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$LOCAL_DIR"
 tar czf - \
   --exclude='.git' --exclude='.github' --exclude='deploy' --exclude='tools' \
-  --exclude='maintenance' --exclude='photos/_original' --exclude='*.md' \
+  --exclude='maintenance' --exclude='photos/_original' --exclude='*.md' \n  --exclude='./.htaccess' \
   . | ssh -i "$SSH_KEY" -p "$SSH_PORT" -o BatchMode=yes "$REMOTE" \
       "mkdir -p '${REMOTE_DIR}' && cd '${REMOTE_DIR}' && tar xzf - && echo 転送完了"
 

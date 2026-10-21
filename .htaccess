@@ -35,7 +35,8 @@ RewriteRule ^recruit\.html$  /story.html  [R=301,L]
 
 # プレス・ニュース
 RewriteRule ^press(-detail)?\.html(/.*)?$ /index.html#media [R=301,L]
-RewriteRule ^news(-detail)?\.html(/.*)?$   /journal.html    [R=301,L]
+# news.html は現行サイトの記事ページ。転送しない（旧サイトの news-detail だけを送る）
+RewriteRule ^news-detail\.html(/.*)?$ /news.html [R=301,L]
 
 # EC機能（オンラインストア準備中のため一覧へ送る）
 RewriteRule ^(cart|login|register|account-settings|favorite-list-free)\.html$ /shop.html [R=301,L]
