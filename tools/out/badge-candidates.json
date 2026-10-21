@@ -1,12 +1,6212 @@
 [
   {
-    "handle": "mmm535s50gc0678",
-    "mediaId": "gid://shopify/MediaImage/56529111089517",
-    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0128583835.jpg?v=1792515050"
+    "handle": "sea226lcka0102",
+    "mediaId": "gid://shopify/MediaImage/56552907735405",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0102-4.jpg?v=1792568460",
+    "left": 1,
+    "right": 0,
+    "below": 1,
+    "diff": 1,
+    "drop": 0
+  },
+  {
+    "handle": "cic1704540604",
+    "mediaId": "gid://shopify/MediaImage/56552997028205",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/4540604-09.jpg?v=1792568714",
+    "left": 1,
+    "right": 0,
+    "below": 1,
+    "diff": 1,
+    "drop": 0
+  },
+  {
+    "handle": "ball40173389001",
+    "mediaId": "gid://shopify/MediaImage/56553051521389",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/ball40173389001-9.jpg?v=1792568827",
+    "left": 0.9993,
+    "right": 0,
+    "below": 0.9628,
+    "diff": 0.9993,
+    "drop": 0.0365
+  },
+  {
+    "handle": "mmm435sb1wg0017-tk",
+    "mediaId": "gid://shopify/MediaImage/56528885285229",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb1wg0017k-0008.jpg?v=1792514918",
+    "left": 0.9988,
+    "right": 0,
+    "below": 0.9996,
+    "diff": 0.9988,
+    "drop": -0.0007
+  },
+  {
+    "handle": "devo18302w2627",
+    "mediaId": "gid://shopify/MediaImage/56552894333293",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0178579926.jpg?v=1792568414",
+    "left": 1,
+    "right": 0.0021,
+    "below": 1,
+    "diff": 0.9979,
+    "drop": 0
+  },
+  {
+    "handle": "mmm235s58wu0260",
+    "mediaId": "gid://shopify/MediaImage/56528909140333",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0128837743.jpg?v=1792514936",
+    "left": 0.994,
+    "right": 0,
+    "below": 0.994,
+    "diff": 0.994,
+    "drop": 0
+  },
+  {
+    "handle": "mmm135s57wr0139",
+    "mediaId": "gid://shopify/MediaImage/56528908452205",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0129563705.jpg?v=1792514934",
+    "left": 0.9913,
+    "right": 0,
+    "below": 0.9647,
+    "diff": 0.9913,
+    "drop": 0.0266
+  },
+  {
+    "handle": "mm6235s62lb0226",
+    "mediaId": "gid://shopify/MediaImage/56552871690605",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6235s62lb0226-10.jpg?v=1792568337",
+    "left": 0.9897,
+    "right": 0,
+    "below": 1,
+    "diff": 0.9897,
+    "drop": -0.0103
+  },
+  {
+    "handle": "pmd12262059039",
+    "mediaId": "gid://shopify/MediaImage/56553009054061",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059039-11.jpg?v=1792568732",
+    "left": 0.99,
+    "right": 0.001,
+    "below": 1,
+    "diff": 0.989,
+    "drop": -0.01
+  },
+  {
+    "handle": "sea226lcka0112",
+    "mediaId": "gid://shopify/MediaImage/56552927691117",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0112-5.jpg?v=1792568525",
+    "left": 1,
+    "right": 0.0164,
+    "below": 1,
+    "diff": 0.9836,
+    "drop": 0
+  },
+  {
+    "handle": "mmm135s57wr0139",
+    "mediaId": "gid://shopify/MediaImage/56528908222829",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0129548775.jpg?v=1792514933",
+    "left": 0.9899,
+    "right": 0.0211,
+    "below": 0.9708,
+    "diff": 0.9688,
+    "drop": 0.019
+  },
+  {
+    "handle": "mmy572a14fw703",
+    "mediaId": "gid://shopify/MediaImage/56553031663981",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0134537322.jpg?v=1792568782",
+    "left": 1,
+    "right": 0.0319,
+    "below": 0.6377,
+    "diff": 0.9681,
+    "drop": 0.3623
+  },
+  {
+    "handle": "mmm535s56wg0082-pt",
+    "mediaId": "gid://shopify/MediaImage/56528812573037",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56wg0082pt-006.jpg?v=1792514873",
+    "left": 0.9676,
+    "right": 0,
+    "below": 0.9686,
+    "diff": 0.9676,
+    "drop": -0.001
+  },
+  {
+    "handle": "mmm435sb1wg0017-tk",
+    "mediaId": "gid://shopify/MediaImage/56528885481837",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb1wg0017k-0015.jpg?v=1792514916",
+    "left": 0.9665,
+    "right": 0,
+    "below": 0.9999,
+    "diff": 0.9665,
+    "drop": -0.0333
+  },
+  {
+    "handle": "mm6435sb5wg0038",
+    "mediaId": "gid://shopify/MediaImage/56553084092781",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6435sb5wg0038-10.jpg?v=1792568890",
+    "left": 0.9653,
+    "right": 0,
+    "below": 0.9821,
+    "diff": 0.9653,
+    "drop": -0.0168
+  },
+  {
+    "handle": "mm6435sb5wg0038",
+    "mediaId": "gid://shopify/MediaImage/56553083994477",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6435sb5wg0038-7.jpg?v=1792568890",
+    "left": 1,
+    "right": 0.0376,
+    "below": 1,
+    "diff": 0.9624,
+    "drop": 0
+  },
+  {
+    "handle": "bark16722bb004-b",
+    "mediaId": "gid://shopify/MediaImage/56552977465709",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bb004b-05.jpg?v=1792568668",
+    "left": 1,
+    "right": 0.0379,
+    "below": 0.9874,
+    "diff": 0.9621,
+    "drop": 0.0126
+  },
+  {
+    "handle": "devo18302w2627-h",
+    "mediaId": "gid://shopify/MediaImage/56552910487917",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0178581121.jpg?v=1792568468",
+    "left": 1,
+    "right": 0.0408,
+    "below": 0.6388,
+    "diff": 0.9592,
+    "drop": 0.3612
+  },
+  {
+    "handle": "mmy272k17bl771-b",
+    "mediaId": "gid://shopify/MediaImage/56552925364589",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177582046.jpg?v=1792568518",
+    "left": 0.9491,
+    "right": 0,
+    "below": 0.8613,
+    "diff": 0.9491,
+    "drop": 0.0878
+  },
+  {
+    "handle": "mmm135s56ui0143-b",
+    "mediaId": "gid://shopify/MediaImage/56553039135085",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56ui0143b-08.jpg?v=1792568796",
+    "left": 0.9435,
+    "right": 0,
+    "below": 0.8113,
+    "diff": 0.9435,
+    "drop": 0.1321
+  },
+  {
+    "handle": "mmm235sh0ha0004",
+    "mediaId": "gid://shopify/MediaImage/56529077436781",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235sh0ha0004-8.jpg?v=1792515035",
+    "left": 0.9429,
+    "right": 0.0016,
+    "below": 1,
+    "diff": 0.9412,
+    "drop": -0.0571
+  },
+  {
+    "handle": "crl12262030028",
+    "mediaId": "gid://shopify/MediaImage/56552954888557",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/crl12262030028-8.jpg?v=1792568608",
+    "left": 0.9374,
+    "right": 0,
+    "below": 0.9915,
+    "diff": 0.9374,
+    "drop": -0.0542
+  },
+  {
+    "handle": "mmy572a14fw703-bk",
+    "mediaId": "gid://shopify/MediaImage/56552958067053",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy572a14fw703-bk10.jpg?v=1792568618",
+    "left": 1,
+    "right": 0.0649,
+    "below": 1,
+    "diff": 0.9351,
+    "drop": 0
+  },
+  {
+    "handle": "mmm135sa3ui0010-bl",
+    "mediaId": "gid://shopify/MediaImage/56529134813549",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0126134515.jpg?v=1792515074",
+    "left": 0.9214,
+    "right": 0,
+    "below": 0.9897,
+    "diff": 0.9214,
+    "drop": -0.0683
+  },
+  {
+    "handle": "bark26722bd9021-bk",
+    "mediaId": "gid://shopify/MediaImage/56552940765549",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bark26722bd9021-bk-7.jpg?v=1792568562",
+    "left": 0.9884,
+    "right": 0.0671,
+    "below": 0.9295,
+    "diff": 0.9213,
+    "drop": 0.0589
+  },
+  {
+    "handle": "rag262w04048",
+    "mediaId": "gid://shopify/MediaImage/56552935522669",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04048-6.jpg?v=1792568545",
+    "left": 0.9204,
+    "right": 0,
+    "below": 0.9323,
+    "diff": 0.9204,
+    "drop": -0.0119
+  },
+  {
+    "handle": "mmm235sa3ui0009",
+    "mediaId": "gid://shopify/MediaImage/56529039720813",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa3ui0009-35.jpg?v=1792515010",
+    "left": 0.9198,
+    "right": 0,
+    "below": 0.9366,
+    "diff": 0.9198,
+    "drop": -0.0168
+  },
+  {
+    "handle": "mmm435saui0023",
+    "mediaId": "gid://shopify/MediaImage/56553040249197",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa1ui0023bk-08.jpg?v=1792568799",
+    "left": 1,
+    "right": 0.0808,
+    "below": 1,
+    "diff": 0.9192,
+    "drop": 0
+  },
+  {
+    "handle": "sea226lcka0129",
+    "mediaId": "gid://shopify/MediaImage/56552912978285",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-4.jpg?v=1792568477",
+    "left": 0.986,
+    "right": 0.0757,
+    "below": 0.9826,
+    "diff": 0.9103,
+    "drop": 0.0034
+  },
+  {
+    "handle": "sea126mcka0096",
+    "mediaId": "gid://shopify/MediaImage/56552961376621",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-4_3df206b3-f111-4356-9112-caef8c9f0b82.jpg?v=1792568631",
+    "left": 0.986,
+    "right": 0.0757,
+    "below": 0.9826,
+    "diff": 0.9103,
+    "drop": 0.0034
+  },
+  {
+    "handle": "nina256pl202702",
+    "mediaId": "gid://shopify/MediaImage/56552873427309",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/nina256pl202702-11.jpg?v=1792568338",
+    "left": 0.9125,
+    "right": 0.0027,
+    "below": 0.9964,
+    "diff": 0.9098,
+    "drop": -0.0839
+  },
+  {
+    "handle": "blav241l3415103",
+    "mediaId": "gid://shopify/MediaImage/56552923201901",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/lq3415103-08.jpg?v=1792568512",
+    "left": 1,
+    "right": 0.0975,
+    "below": 1,
+    "diff": 0.9025,
+    "drop": 0
+  },
+  {
+    "handle": "blav241q4419103",
+    "mediaId": "gid://shopify/MediaImage/56552899412333",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/4419103-07.jpg?v=1792568437",
+    "left": 0.9021,
+    "right": 0,
+    "below": 1,
+    "diff": 0.9021,
+    "drop": -0.0979
+  },
+  {
+    "handle": "voi52262222019",
+    "mediaId": "gid://shopify/MediaImage/56553088024941",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/voi52262222019-7.jpg?v=1792568902",
+    "left": 0.8997,
+    "right": 0,
+    "below": 0.9494,
+    "diff": 0.8997,
+    "drop": -0.0497
+  },
+  {
+    "handle": "crl12262030028",
+    "mediaId": "gid://shopify/MediaImage/56552954757485",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/crl12262030028-4.jpg?v=1792568608",
+    "left": 0.9368,
+    "right": 0.0408,
+    "below": 0.7897,
+    "diff": 0.896,
+    "drop": 0.147
+  },
+  {
+    "handle": "mmm435sm1uq0050-g",
+    "mediaId": "gid://shopify/MediaImage/56529149624685",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sm1uq0050-g-77.jpg?v=1792515093",
+    "left": 0.9699,
+    "right": 0.0763,
+    "below": 1,
+    "diff": 0.8936,
+    "drop": -0.0301
+  },
+  {
+    "handle": "mmm535s51la0052",
+    "mediaId": "gid://shopify/MediaImage/56552890761581",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm535s51la0052-9.jpg?v=1792568401",
+    "left": 0.8906,
+    "right": 0,
+    "below": 1,
+    "diff": 0.8906,
+    "drop": -0.1094
+  },
+  {
+    "handle": "pat456ac0270008",
+    "mediaId": "gid://shopify/MediaImage/56553079800173",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176780771.jpg?v=1792568883",
+    "left": 0.9994,
+    "right": 0.114,
+    "below": 1,
+    "diff": 0.8854,
+    "drop": -0.0006
+  },
+  {
+    "handle": "be12262290050",
+    "mediaId": "gid://shopify/MediaImage/56552958755181",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/be12262290050-9.jpg?v=1792568622",
+    "left": 0.8735,
+    "right": 0,
+    "below": 0.7987,
+    "diff": 0.8735,
+    "drop": 0.0749
+  },
+  {
+    "handle": "blav2413435301",
+    "mediaId": "gid://shopify/MediaImage/56552934703469",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/lq3435301-06.jpg?v=1792568541",
+    "left": 0.8734,
+    "right": 0,
+    "below": 0.9952,
+    "diff": 0.8734,
+    "drop": -0.1219
+  },
+  {
+    "handle": "mmm535s51la0052",
+    "mediaId": "gid://shopify/MediaImage/56552890827117",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm535s51la0052-12.jpg?v=1792568401",
+    "left": 0.9946,
+    "right": 0.1253,
+    "below": 1,
+    "diff": 0.8693,
+    "drop": -0.0054
+  },
+  {
+    "handle": "mmm435sa2ui0006-w",
+    "mediaId": "gid://shopify/MediaImage/56529089954157",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa2ui0006w-09.jpg?v=1792515045",
+    "left": 0.8621,
+    "right": 0,
+    "below": 0.983,
+    "diff": 0.8621,
+    "drop": -0.121
+  },
+  {
+    "handle": "crl12262030028",
+    "mediaId": "gid://shopify/MediaImage/56552954855789",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/crl12262030028-7.jpg?v=1792568609",
+    "left": 0.8604,
+    "right": 0,
+    "below": 0.9993,
+    "diff": 0.8604,
+    "drop": -0.1388
+  },
+  {
+    "handle": "mmm435s55ui0280",
+    "mediaId": "gid://shopify/MediaImage/56529145758061",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435s55ui0280-11.jpg?v=1792515084",
+    "left": 1,
+    "right": 0.14,
+    "below": 1,
+    "diff": 0.86,
+    "drop": 0
+  },
+  {
+    "handle": "cic170a537901",
+    "mediaId": "gid://shopify/MediaImage/56552880800109",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/a537901-12.jpg?v=1792568365",
+    "left": 0.9683,
+    "right": 0.1094,
+    "below": 1,
+    "diff": 0.8589,
+    "drop": -0.0317
+  },
+  {
+    "handle": "mm6435s52tc0061",
+    "mediaId": "gid://shopify/MediaImage/56553063088493",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s52tc0061-04.jpg?v=1792568848",
+    "left": 0.8938,
+    "right": 0.0371,
+    "below": 1,
+    "diff": 0.8567,
+    "drop": -0.1062
+  },
+  {
+    "handle": "mmy172j17vt752",
+    "mediaId": "gid://shopify/MediaImage/56552948007277",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy172j17vt752-10.jpg?v=1792568584",
+    "left": 0.8432,
+    "right": 0,
+    "below": 0.8512,
+    "diff": 0.8432,
+    "drop": -0.008
+  },
+  {
+    "handle": "mmm435sb1wb0006-bk",
+    "mediaId": "gid://shopify/MediaImage/56528858906989",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0134738970.jpg?v=1792514907",
+    "left": 0.9938,
+    "right": 0.154,
+    "below": 0.97,
+    "diff": 0.8399,
+    "drop": 0.0238
+  },
+  {
+    "handle": "mm6135sh0dt0049",
+    "mediaId": "gid://shopify/MediaImage/56552877588845",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6135sh0dt0049-25.jpg?v=1792568354",
+    "left": 0.8946,
+    "right": 0.0607,
+    "below": 0.9159,
+    "diff": 0.8339,
+    "drop": -0.0213
+  },
+  {
+    "handle": "voi12262914017",
+    "mediaId": "gid://shopify/MediaImage/56552951185773",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/voi12262914017-10.jpg?v=1792568594",
+    "left": 0.9479,
+    "right": 0.1162,
+    "below": 1,
+    "diff": 0.8317,
+    "drop": -0.0521
+  },
+  {
+    "handle": "mm6435s52tc0068",
+    "mediaId": "gid://shopify/MediaImage/56552906260845",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s52tc0068-02.jpg?v=1792568455",
+    "left": 1,
+    "right": 0.1783,
+    "below": 1,
+    "diff": 0.8217,
+    "drop": 0
+  },
+  {
+    "handle": "mmy172j17bl751-b",
+    "mediaId": "gid://shopify/MediaImage/56552959312237",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177542848.jpg?v=1792568624",
+    "left": 0.8201,
+    "right": 0,
+    "below": 0.9978,
+    "diff": 0.8201,
+    "drop": -0.1777
+  },
+  {
+    "handle": "monc1288c00021",
+    "mediaId": "gid://shopify/MediaImage/56552924250477",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0172560279.jpg?v=1792568514",
+    "left": 0.9975,
+    "right": 0.178,
+    "below": 1,
+    "diff": 0.8195,
+    "drop": -0.0025
+  },
+  {
+    "handle": "brig170annab008",
+    "mediaId": "gid://shopify/MediaImage/56553033531757",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/brig170annab008-12.jpg?v=1792568786",
+    "left": 0.9235,
+    "right": 0.1092,
+    "below": 0.586,
+    "diff": 0.8143,
+    "drop": 0.3375
+  },
+  {
+    "handle": "mmm135s50hl0021",
+    "mediaId": "gid://shopify/MediaImage/56528960160109",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s50hl0021-08.jpg?v=1792514965",
+    "left": 0.8083,
+    "right": 0,
+    "below": 0.997,
+    "diff": 0.8083,
+    "drop": -0.1887
+  },
+  {
+    "handle": "mmy572a17fw732",
+    "mediaId": "gid://shopify/MediaImage/56552949154157",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy572a17fw732-6.jpg?v=1792568587",
+    "left": 0.8647,
+    "right": 0.0634,
+    "below": 0.4606,
+    "diff": 0.8013,
+    "drop": 0.4042
+  },
+  {
+    "handle": "mmm135s51hn0002",
+    "mediaId": "gid://shopify/MediaImage/56529025696109",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s51hn0002-27.jpg?v=1792514995",
+    "left": 0.9186,
+    "right": 0.125,
+    "below": 0.7652,
+    "diff": 0.7936,
+    "drop": 0.1534
+  },
+  {
+    "handle": "mmm135s51hn0002",
+    "mediaId": "gid://shopify/MediaImage/56529025401197",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s51hn0002-28.jpg?v=1792514995",
+    "left": 0.9182,
+    "right": 0.125,
+    "below": 0.7609,
+    "diff": 0.7932,
+    "drop": 0.1573
+  },
+  {
+    "handle": "mmm435sa1ui0050",
+    "mediaId": "gid://shopify/MediaImage/56553041363309",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0175200309.jpg?v=1792568801",
+    "left": 0.9866,
+    "right": 0.1949,
+    "below": 0.7743,
+    "diff": 0.7917,
+    "drop": 0.2124
+  },
+  {
+    "handle": "mmm435sb1wa0010",
+    "mediaId": "gid://shopify/MediaImage/56528729342317",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb1wa0010-99.jpg?v=1792514825",
+    "left": 1,
+    "right": 0.2164,
+    "below": 0.9996,
+    "diff": 0.7836,
+    "drop": 0.0004
+  },
+  {
+    "handle": "mmm135s51hn0002-n",
+    "mediaId": "gid://shopify/MediaImage/56529018880365",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s51hn0002-24.jpg?v=1792514994",
+    "left": 0.9045,
+    "right": 0.1216,
+    "below": 0.8695,
+    "diff": 0.7829,
+    "drop": 0.035
+  },
+  {
+    "handle": "d2102s71lb1774",
+    "mediaId": "gid://shopify/MediaImage/56552885813613",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s71lb1774-06.jpg?v=1792568388",
+    "left": 0.7811,
+    "right": 0,
+    "below": 0.8403,
+    "diff": 0.7811,
+    "drop": -0.0592
+  },
+  {
+    "handle": "mm6135sh0gu0052",
+    "mediaId": "gid://shopify/MediaImage/56552972353901",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sh0gu0052-05.jpg?v=1792568657",
+    "left": 0.975,
+    "right": 0.1955,
+    "below": 1,
+    "diff": 0.7795,
+    "drop": -0.025
+  },
+  {
+    "handle": "mmm535s51la0052",
+    "mediaId": "gid://shopify/MediaImage/56552890663277",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm535s51la0052-7.jpg?v=1792568411",
+    "left": 1,
+    "right": 0.2208,
+    "below": 1,
+    "diff": 0.7792,
+    "drop": 0
+  },
+  {
+    "handle": "mmm5s50am0658",
+    "mediaId": "gid://shopify/MediaImage/56528873161069",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm5s50am0658-9.jpg?v=1792514915",
+    "left": 0.9949,
+    "right": 0.2193,
+    "below": 0.9357,
+    "diff": 0.7756,
+    "drop": 0.0592
+  },
+  {
+    "handle": "mm6235s62hg0033",
+    "mediaId": "gid://shopify/MediaImage/56552879227245",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s62hg0033-06.jpg?v=1792568360",
+    "left": 0.7878,
+    "right": 0.0124,
+    "below": 0.9981,
+    "diff": 0.7754,
+    "drop": -0.2103
+  },
+  {
+    "handle": "mmm435sb1wg0003",
+    "mediaId": "gid://shopify/MediaImage/56552941584749",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0174466729.jpg?v=1792568565",
+    "left": 0.8086,
+    "right": 0.0396,
+    "below": 0.9423,
+    "diff": 0.769,
+    "drop": -0.1336
+  },
+  {
+    "handle": "sea226lcka0129-br",
+    "mediaId": "gid://shopify/MediaImage/56552925921645",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-br5.jpg?v=1792568520",
+    "left": 0.9155,
+    "right": 0.1537,
+    "below": 0.9961,
+    "diff": 0.7618,
+    "drop": -0.0807
+  },
+  {
+    "handle": "sea126mcka0096-br",
+    "mediaId": "gid://shopify/MediaImage/56552979628397",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-br5_2edc67bf-3643-4874-b395-54c85f3d588b.jpg?v=1792568673",
+    "left": 0.9155,
+    "right": 0.1537,
+    "below": 0.9961,
+    "diff": 0.7618,
+    "drop": -0.0807
+  },
+  {
+    "handle": "mm6235s62hg0033",
+    "mediaId": "gid://shopify/MediaImage/56552879194477",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s62hg0033-05.jpg?v=1792568360",
+    "left": 0.7754,
+    "right": 0.0149,
+    "below": 1,
+    "diff": 0.7606,
+    "drop": -0.2246
+  },
+  {
+    "handle": "mmy572a17fw732-b",
+    "mediaId": "gid://shopify/MediaImage/56552954069357",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy572a17fw732-bb7.jpg?v=1792568605",
+    "left": 0.9238,
+    "right": 0.1698,
+    "below": 0.9829,
+    "diff": 0.754,
+    "drop": -0.0591
+  },
+  {
+    "handle": "mmm135s51gc0519",
+    "mediaId": "gid://shopify/MediaImage/56529173709165",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s51gc0519-18.jpg?v=1792515112",
+    "left": 1,
+    "right": 0.2485,
+    "below": 0.8363,
+    "diff": 0.7515,
+    "drop": 0.1637
+  },
+  {
+    "handle": "d2102s71lb1773",
+    "mediaId": "gid://shopify/MediaImage/56552890007917",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177055145.jpg?v=1792568397",
+    "left": 0.7789,
+    "right": 0.0278,
+    "below": 0.8729,
+    "diff": 0.751,
+    "drop": -0.094
+  },
+  {
+    "handle": "mmy572a17fw730-bk",
+    "mediaId": "gid://shopify/MediaImage/56552949711213",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/a17fw730bk-03.jpg?v=1792568589",
+    "left": 0.8504,
+    "right": 0.1006,
+    "below": 0.9143,
+    "diff": 0.7499,
+    "drop": -0.0638
+  },
+  {
+    "handle": "bark16722b8001-wh",
+    "mediaId": "gid://shopify/MediaImage/56553018163565",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/22b8001wh-09.jpg?v=1792568754",
+    "left": 0.7464,
+    "right": 0,
+    "below": 0.7079,
+    "diff": 0.7464,
+    "drop": 0.0385
+  },
+  {
+    "handle": "rag262w04047",
+    "mediaId": "gid://shopify/MediaImage/56552921268589",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04047-07.jpg?v=1792568507",
+    "left": 0.7458,
+    "right": 0,
+    "below": 0.7013,
+    "diff": 0.7458,
+    "drop": 0.0445
+  },
+  {
+    "handle": "mmm435sa1vx0019-f",
+    "mediaId": "gid://shopify/MediaImage/56529162928493",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sa1vx0019-8.jpg?v=1792515098",
+    "left": 0.7417,
+    "right": 0,
+    "below": 1,
+    "diff": 0.7417,
+    "drop": -0.2583
+  },
+  {
+    "handle": "marn155cuju0396",
+    "mediaId": "gid://shopify/MediaImage/56552878244205",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/cuju0396-02.jpg?v=1792568365",
+    "left": 0.7624,
+    "right": 0.0235,
+    "below": 0.8866,
+    "diff": 0.7388,
+    "drop": -0.1243
+  },
+  {
+    "handle": "mmm135s56ui0110-bk",
+    "mediaId": "gid://shopify/MediaImage/56529077240173",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56ui0110-08.jpg?v=1792515032",
+    "left": 0.9917,
+    "right": 0.253,
+    "below": 0.9874,
+    "diff": 0.7387,
+    "drop": 0.0043
+  },
+  {
+    "handle": "mmm435sa2ui0006-bk",
+    "mediaId": "gid://shopify/MediaImage/56553037791597",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56ui0110-08_353bcbbf-41e4-403d-bf8f-37cf41342a17.jpg?v=1792568793",
+    "left": 0.9917,
+    "right": 0.253,
+    "below": 0.9874,
+    "diff": 0.7387,
+    "drop": 0.0043
+  },
+  {
+    "handle": "mmm435s56ui0148mauve",
+    "mediaId": "gid://shopify/MediaImage/56529106141549",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0116162947.jpg?v=1792515048",
+    "left": 0.8618,
+    "right": 0.1298,
+    "below": 0.7366,
+    "diff": 0.732,
+    "drop": 0.1251
+  },
+  {
+    "handle": "pmd12262059045",
+    "mediaId": "gid://shopify/MediaImage/56552965865837",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059045-5.jpg?v=1792568642",
+    "left": 0.9226,
+    "right": 0.193,
+    "below": 0.9948,
+    "diff": 0.7296,
+    "drop": -0.0722
+  },
+  {
+    "handle": "mmm435sb2wf0008",
+    "mediaId": "gid://shopify/MediaImage/56529035329901",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb2wf0008-09.jpg?v=1792515004",
+    "left": 0.7467,
+    "right": 0.0231,
+    "below": 0.9525,
+    "diff": 0.7237,
+    "drop": -0.2058
+  },
+  {
+    "handle": "mmm135s51hn0002-n",
+    "mediaId": "gid://shopify/MediaImage/56529018913133",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s51hn0002-22.jpg?v=1792514993",
+    "left": 0.8546,
+    "right": 0.1344,
+    "below": 0.7653,
+    "diff": 0.7202,
+    "drop": 0.0893
+  },
+  {
+    "handle": "sbt10171310003",
+    "mediaId": "gid://shopify/MediaImage/56552885256557",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/71310003-03.jpg?v=1792568385",
+    "left": 0.8491,
+    "right": 0.1298,
+    "below": 0.9388,
+    "diff": 0.7193,
+    "drop": -0.0897
+  },
+  {
+    "handle": "cic1702538902",
+    "mediaId": "gid://shopify/MediaImage/56552962425197",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/cic1702538902-8.jpg?v=1792568632",
+    "left": 0.983,
+    "right": 0.2685,
+    "below": 1,
+    "diff": 0.7146,
+    "drop": -0.017
+  },
+  {
+    "handle": "cic170a537901",
+    "mediaId": "gid://shopify/MediaImage/56552880701805",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/a537901-05.jpg?v=1792568365",
+    "left": 0.8583,
+    "right": 0.1469,
+    "below": 0.9784,
+    "diff": 0.7115,
+    "drop": -0.1201
+  },
+  {
+    "handle": "mmm135s51hn0002",
+    "mediaId": "gid://shopify/MediaImage/56529025565037",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s51hn0002-26.jpg?v=1792514995",
+    "left": 0.9182,
+    "right": 0.2088,
+    "below": 0.7612,
+    "diff": 0.7094,
+    "drop": 0.157
+  },
+  {
+    "handle": "mmm435saui0023-f",
+    "mediaId": "gid://shopify/MediaImage/56529115480429",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0165834302.jpg?v=1792515064",
+    "left": 0.9994,
+    "right": 0.2988,
+    "below": 0.8704,
+    "diff": 0.7006,
+    "drop": 0.129
+  },
+  {
+    "handle": "pmd12262059045",
+    "mediaId": "gid://shopify/MediaImage/56552965996909",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059045-9.jpg?v=1792568642",
+    "left": 1,
+    "right": 0.3052,
+    "below": 0.9732,
+    "diff": 0.6948,
+    "drop": 0.0268
+  },
+  {
+    "handle": "alw183it319340",
+    "mediaId": "gid://shopify/MediaImage/56552884568429",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183it319340-3.jpg?v=1792568382",
+    "left": 0.8686,
+    "right": 0.176,
+    "below": 0.7981,
+    "diff": 0.6926,
+    "drop": 0.0705
+  },
+  {
+    "handle": "mmm535sa1ui0050",
+    "mediaId": "gid://shopify/MediaImage/56553046868333",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135sa1ui0050-6.jpg?v=1792568813",
+    "left": 1,
+    "right": 0.3115,
+    "below": 0.9655,
+    "diff": 0.6885,
+    "drop": 0.0345
+  },
+  {
+    "handle": "mmm235sb1wg0084",
+    "mediaId": "gid://shopify/MediaImage/56528816636269",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb1wg0084-10.jpg?v=1792514877",
+    "left": 0.9775,
+    "right": 0.3028,
+    "below": 0.9749,
+    "diff": 0.6747,
+    "drop": 0.0027
+  },
+  {
+    "handle": "mm6235sb6wd0042",
+    "mediaId": "gid://shopify/MediaImage/56553082093933",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6235sb6wd0042-r3.jpg?v=1792568886",
+    "left": 1,
+    "right": 0.3289,
+    "below": 0.9991,
+    "diff": 0.6711,
+    "drop": 0.0009
+  },
+  {
+    "handle": "mmm535s50gc0687",
+    "mediaId": "gid://shopify/MediaImage/56529113022829",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0129523454.jpg?v=1792515053",
+    "left": 0.9347,
+    "right": 0.2638,
+    "below": 0.8811,
+    "diff": 0.6708,
+    "drop": 0.0536
+  },
+  {
+    "handle": "kos183kseww458",
+    "mediaId": "gid://shopify/MediaImage/56552888205677",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177309383.jpg?v=1792568393",
+    "left": 0.982,
+    "right": 0.3134,
+    "below": 0.6449,
+    "diff": 0.6686,
+    "drop": 0.3371
+  },
+  {
+    "handle": "mmm535s56wg0082-gc",
+    "mediaId": "gid://shopify/MediaImage/56528809263469",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/wg0082gc-08.jpg?v=1792514871",
+    "left": 0.993,
+    "right": 0.3278,
+    "below": 0.9667,
+    "diff": 0.6652,
+    "drop": 0.0263
+  },
+  {
+    "handle": "mmy572a14fw703-bk",
+    "mediaId": "gid://shopify/MediaImage/56552957968749",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy572a14fw703-bk7.jpg?v=1792568619",
+    "left": 0.9878,
+    "right": 0.3249,
+    "below": 0.8774,
+    "diff": 0.6629,
+    "drop": 0.1104
+  },
+  {
+    "handle": "mmm135sa1ui0050",
+    "mediaId": "gid://shopify/MediaImage/56553049588077",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0175275129.jpg?v=1792568821",
+    "left": 0.96,
+    "right": 0.3024,
+    "below": 0.9987,
+    "diff": 0.6576,
+    "drop": -0.0387
+  },
+  {
+    "handle": "mmm435sb3wg0025",
+    "mediaId": "gid://shopify/MediaImage/56528905404781",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0128739514.jpg?v=1792514929",
+    "left": 0.8833,
+    "right": 0.2293,
+    "below": 1,
+    "diff": 0.654,
+    "drop": -0.1167
+  },
+  {
+    "handle": "crl12262030028",
+    "mediaId": "gid://shopify/MediaImage/56552954823021",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/crl12262030028-6.jpg?v=1792568607",
+    "left": 0.8753,
+    "right": 0.224,
+    "below": 0.9814,
+    "diff": 0.6513,
+    "drop": -0.1061
+  },
+  {
+    "handle": "mmm535s56wg0082-t8031",
+    "mediaId": "gid://shopify/MediaImage/56528813359469",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0146664779.jpg?v=1792514876",
+    "left": 0.9874,
+    "right": 0.3432,
+    "below": 0.9798,
+    "diff": 0.6442,
+    "drop": 0.0076
+  },
+  {
+    "handle": "nina256pl202702",
+    "mediaId": "gid://shopify/MediaImage/56552873296237",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/nina256pl202702-7.jpg?v=1792568338",
+    "left": 1,
+    "right": 0.3558,
+    "below": 1,
+    "diff": 0.6442,
+    "drop": 0
+  },
+  {
+    "handle": "monc4286f00002",
+    "mediaId": "gid://shopify/MediaImage/56552912093549",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/6f00002-05.jpg?v=1792568473",
+    "left": 0.7205,
+    "right": 0.0808,
+    "below": 0.9851,
+    "diff": 0.6397,
+    "drop": -0.2646
+  },
+  {
+    "handle": "d2102s71lb1774",
+    "mediaId": "gid://shopify/MediaImage/56552885879149",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s71lb1774-07.jpg?v=1792568392",
+    "left": 0.8527,
+    "right": 0.2214,
+    "below": 0.8723,
+    "diff": 0.6312,
+    "drop": -0.0196
+  },
+  {
+    "handle": "mmy472c17fw705",
+    "mediaId": "gid://shopify/MediaImage/56552882078061",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy472c17fw705-7.jpg?v=1792568372",
+    "left": 0.6283,
+    "right": 0,
+    "below": 0.7863,
+    "diff": 0.6283,
+    "drop": -0.158
+  },
+  {
+    "handle": "mmm435sb1wg0017-tk",
+    "mediaId": "gid://shopify/MediaImage/56528885416301",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb1wg0017k-0010.jpg?v=1792514918",
+    "left": 0.7296,
+    "right": 0.1042,
+    "below": 1,
+    "diff": 0.6254,
+    "drop": -0.2704
+  },
+  {
+    "handle": "d2102s74lb2002",
+    "mediaId": "gid://shopify/MediaImage/56552897184109",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s74lb2002-11.jpg?v=1792568424",
+    "left": 0.9926,
+    "right": 0.379,
+    "below": 0.9827,
+    "diff": 0.6135,
+    "drop": 0.0098
+  },
+  {
+    "handle": "mmm235s58wu0273",
+    "mediaId": "gid://shopify/MediaImage/56528947544429",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0088273666.jpg?v=1792514954",
+    "left": 0.6079,
+    "right": 0,
+    "below": 0.899,
+    "diff": 0.6079,
+    "drop": -0.2911
+  },
+  {
+    "handle": "marn155puju0136",
+    "mediaId": "gid://shopify/MediaImage/56552893612397",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/marn155puju0136-7.jpg?v=1792568412",
+    "left": 0.6045,
+    "right": 0,
+    "below": 0.5847,
+    "diff": 0.6045,
+    "drop": 0.0198
+  },
+  {
+    "handle": "marn755cumu0061",
+    "mediaId": "gid://shopify/MediaImage/56552957084013",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/cumu0061-04.jpg?v=1792568617",
+    "left": 0.6037,
+    "right": 0,
+    "below": 0.9918,
+    "diff": 0.6037,
+    "drop": -0.3881
+  },
+  {
+    "handle": "mmm535s56wg0082-aq",
+    "mediaId": "gid://shopify/MediaImage/56528821649773",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56wg0082b-013.jpg?v=1792514885",
+    "left": 0.9384,
+    "right": 0.3357,
+    "below": 0.9778,
+    "diff": 0.6027,
+    "drop": -0.0394
+  },
+  {
+    "handle": "mmm535s56ui0110-blk",
+    "mediaId": "gid://shopify/MediaImage/56553090842989",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/456ui0110-06.jpg?v=1792568911",
+    "left": 0.7859,
+    "right": 0.1874,
+    "below": 0.7679,
+    "diff": 0.5985,
+    "drop": 0.018
+  },
+  {
+    "handle": "marn155puju0136",
+    "mediaId": "gid://shopify/MediaImage/56552893645165",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/marn155puju0136-8.jpg?v=1792568424",
+    "left": 0.6551,
+    "right": 0.058,
+    "below": 0.7565,
+    "diff": 0.597,
+    "drop": -0.1015
+  },
+  {
+    "handle": "pmd12262059068",
+    "mediaId": "gid://shopify/MediaImage/56552974516589",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/leo-2026-0825-01.jpg?v=1792568662",
+    "left": 0.6815,
+    "right": 0.0871,
+    "below": 0.8335,
+    "diff": 0.5945,
+    "drop": -0.1519
+  },
+  {
+    "handle": "alw183it319341",
+    "mediaId": "gid://shopify/MediaImage/56553015411053",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183it319341-2.jpg?v=1792568749",
+    "left": 0.6991,
+    "right": 0.1076,
+    "below": 0.5631,
+    "diff": 0.5915,
+    "drop": 0.136
+  },
+  {
+    "handle": "be12262290050",
+    "mediaId": "gid://shopify/MediaImage/56552958689645",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/be12262290050-7.jpg?v=1792568621",
+    "left": 0.6073,
+    "right": 0.0159,
+    "below": 0.436,
+    "diff": 0.5914,
+    "drop": 0.1713
+  },
+  {
+    "handle": "pmd12262059068",
+    "mediaId": "gid://shopify/MediaImage/56552974319981",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0175644256.jpg?v=1792568662",
+    "left": 0.8051,
+    "right": 0.2146,
+    "below": 0.9357,
+    "diff": 0.5905,
+    "drop": -0.1307
+  },
+  {
+    "handle": "mmm135s56ui0110-bk",
+    "mediaId": "gid://shopify/MediaImage/56529077272941",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56ui0110-07.jpg?v=1792515033",
+    "left": 0.9832,
+    "right": 0.3948,
+    "below": 1,
+    "diff": 0.5884,
+    "drop": -0.0168
+  },
+  {
+    "handle": "mmm435sa2ui0006-bk",
+    "mediaId": "gid://shopify/MediaImage/56553037758829",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56ui0110-07_6c586b6e-6684-4386-9c0e-209d54f881e6.jpg?v=1792568793",
+    "left": 0.9832,
+    "right": 0.3948,
+    "below": 1,
+    "diff": 0.5884,
+    "drop": -0.0168
+  },
+  {
+    "handle": "mm6135sh2dt0062",
+    "mediaId": "gid://shopify/MediaImage/56552967733613",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6135sh2dt0062-19.jpg?v=1792568645",
+    "left": 0.5899,
+    "right": 0.0031,
+    "below": 0.3561,
+    "diff": 0.5868,
+    "drop": 0.2338
+  },
+  {
+    "handle": "blav2413435301",
+    "mediaId": "gid://shopify/MediaImage/56552934900077",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/lq3435301-08.jpg?v=1792568541",
+    "left": 0.6317,
+    "right": 0.0457,
+    "below": 0.9708,
+    "diff": 0.586,
+    "drop": -0.3391
+  },
+  {
+    "handle": "mmm535s56wg0082-pt",
+    "mediaId": "gid://shopify/MediaImage/56528812605805",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56wg0082pt-005.jpg?v=1792514873",
+    "left": 0.9783,
+    "right": 0.3963,
+    "below": 0.9969,
+    "diff": 0.582,
+    "drop": -0.0186
+  },
+  {
+    "handle": "mmm135s57wr0139",
+    "mediaId": "gid://shopify/MediaImage/56528908321133",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0129548781.jpg?v=1792514933",
+    "left": 0.7286,
+    "right": 0.1518,
+    "below": 0.544,
+    "diff": 0.5768,
+    "drop": 0.1845
+  },
+  {
+    "handle": "scotch12761402",
+    "mediaId": "gid://shopify/MediaImage/56553006956909",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/61402-08.jpg?v=1792568727",
+    "left": 0.6635,
+    "right": 0.0871,
+    "below": 0.9345,
+    "diff": 0.5765,
+    "drop": -0.271
+  },
+  {
+    "handle": "mm6135sh0dt0049",
+    "mediaId": "gid://shopify/MediaImage/56552877818221",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6135sh0dt0049-266.jpg?v=1792568362",
+    "left": 0.5905,
+    "right": 0.0187,
+    "below": 0.9996,
+    "diff": 0.5717,
+    "drop": -0.4091
+  },
+  {
+    "handle": "alw183bd509341",
+    "mediaId": "gid://shopify/MediaImage/56552968520045",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509341-5.jpg?v=1792568647",
+    "left": 0.5969,
+    "right": 0.0284,
+    "below": 0.5682,
+    "diff": 0.5685,
+    "drop": 0.0287
+  },
+  {
+    "handle": "sea226lcka0134-w",
+    "mediaId": "gid://shopify/MediaImage/56552903606637",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-w13.jpg?v=1792568443",
+    "left": 0.6109,
+    "right": 0.0437,
+    "below": 0.2244,
+    "diff": 0.5671,
+    "drop": 0.3865
+  },
+  {
+    "handle": "mmm435s55ui0280",
+    "mediaId": "gid://shopify/MediaImage/56529145856365",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435s55ui0280-13.jpg?v=1792515085",
+    "left": 0.8552,
+    "right": 0.2924,
+    "below": 0.9073,
+    "diff": 0.5628,
+    "drop": -0.0521
+  },
+  {
+    "handle": "scotch12765501",
+    "mediaId": "gid://shopify/MediaImage/56552900624749",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/65501-05.jpg?v=1792568436",
+    "left": 0.5613,
+    "right": 0,
+    "below": 0.4256,
+    "diff": 0.5613,
+    "drop": 0.1357
+  },
+  {
+    "handle": "over12262269002",
+    "mediaId": "gid://shopify/MediaImage/56553004204397",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/over12262269002-4.jpg?v=1792568722",
+    "left": 0.5606,
+    "right": 0,
+    "below": 0.3253,
+    "diff": 0.5606,
+    "drop": 0.2353
+  },
+  {
+    "handle": "mmm135s51hn0002-n",
+    "mediaId": "gid://shopify/MediaImage/56529018814829",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s51hn0002-13.jpg?v=1792514994",
+    "left": 0.5573,
+    "right": 0,
+    "below": 0.9838,
+    "diff": 0.5573,
+    "drop": -0.4265
+  },
+  {
+    "handle": "mmm235s51la0052",
+    "mediaId": "gid://shopify/MediaImage/56552895316333",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0052-11.jpg?v=1792568417",
+    "left": 0.5571,
+    "right": 0,
+    "below": 0.6903,
+    "diff": 0.5571,
+    "drop": -0.1332
+  },
+  {
+    "handle": "mmy472c17fw705",
+    "mediaId": "gid://shopify/MediaImage/56552882209133",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy472c17fw705-11.jpg?v=1792568371",
+    "left": 0.6054,
+    "right": 0.0513,
+    "below": 0.9872,
+    "diff": 0.554,
+    "drop": -0.3818
+  },
+  {
+    "handle": "mmm435sa3ui0018",
+    "mediaId": "gid://shopify/MediaImage/56528944464237",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sa3ui0018-8.jpg?v=1792514947",
+    "left": 0.9314,
+    "right": 0.3792,
+    "below": 1,
+    "diff": 0.5522,
+    "drop": -0.0686
+  },
+  {
+    "handle": "mmy272k17bl771-b",
+    "mediaId": "gid://shopify/MediaImage/56552925397357",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177582050.jpg?v=1792568518",
+    "left": 1,
+    "right": 0.4485,
+    "below": 0.9985,
+    "diff": 0.5515,
+    "drop": 0.0015
+  },
+  {
+    "handle": "bob133074761132-w",
+    "mediaId": "gid://shopify/MediaImage/56553014329709",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bob133074761132-w5.jpg?v=1792568745",
+    "left": 0.5833,
+    "right": 0.0323,
+    "below": 0.1704,
+    "diff": 0.551,
+    "drop": 0.4129
+  },
+  {
+    "handle": "oke465okmg6st6-bk",
+    "mediaId": "gid://shopify/MediaImage/56553047392621",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/oke465okmg6st7-bk5.jpg?v=1792568816",
+    "left": 0.5458,
+    "right": 0,
+    "below": 0.6686,
+    "diff": 0.5458,
+    "drop": -0.1228
+  },
+  {
+    "handle": "monc2289b00019",
+    "mediaId": "gid://shopify/MediaImage/56552928510317",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/9b00019-09.jpg?v=1792568529",
+    "left": 1,
+    "right": 0.4543,
+    "below": 1,
+    "diff": 0.5457,
+    "drop": 0
+  },
+  {
+    "handle": "alw183bd509341",
+    "mediaId": "gid://shopify/MediaImage/56552968651117",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509341-9.jpg?v=1792568648",
+    "left": 0.7054,
+    "right": 0.1616,
+    "below": 0.5065,
+    "diff": 0.5438,
+    "drop": 0.1988
+  },
+  {
+    "handle": "alw183it319341",
+    "mediaId": "gid://shopify/MediaImage/56553015542125",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509341-9_df9fec7e-d05e-4c96-a39c-35e7126d1091.jpg?v=1792568749",
+    "left": 0.7054,
+    "right": 0.1616,
+    "below": 0.5065,
+    "diff": 0.5438,
+    "drop": 0.1988
+  },
+  {
+    "handle": "marn155puju0136",
+    "mediaId": "gid://shopify/MediaImage/56552893579629",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/marn155puju0136-14.jpg?v=1792568412",
+    "left": 0.5423,
+    "right": 0,
+    "below": 0.9128,
+    "diff": 0.5423,
+    "drop": -0.3705
+  },
+  {
+    "handle": "mmm435s55ui0197",
+    "mediaId": "gid://shopify/MediaImage/56529169154413",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0116847554.jpg?v=1792515100",
+    "left": 1,
+    "right": 0.4597,
+    "below": 1,
+    "diff": 0.5403,
+    "drop": 0
+  },
+  {
+    "handle": "sea226lcka0129-lg",
+    "mediaId": "gid://shopify/MediaImage/56552933163373",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-lg-12.jpg?v=1792568536",
+    "left": 0.7393,
+    "right": 0.2024,
+    "below": 0.6884,
+    "diff": 0.5369,
+    "drop": 0.0509
+  },
+  {
+    "handle": "sea126mcka0096-lg",
+    "mediaId": "gid://shopify/MediaImage/56553017082221",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-lg-9.jpg?v=1792568751",
+    "left": 0.7174,
+    "right": 0.1818,
+    "below": 0.796,
+    "diff": 0.5356,
+    "drop": -0.0786
+  },
+  {
+    "handle": "sea226lcka0129-lg",
+    "mediaId": "gid://shopify/MediaImage/56552933130605",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-lg-10.jpg?v=1792568538",
+    "left": 0.5354,
+    "right": 0,
+    "below": 0.3131,
+    "diff": 0.5354,
+    "drop": 0.2223
+  },
+  {
+    "handle": "sea126mcka0096-lg",
+    "mediaId": "gid://shopify/MediaImage/56553017114989",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-lg-10_77f3df65-8485-4573-a9f3-85718ffbef21.jpg?v=1792568751",
+    "left": 0.5354,
+    "right": 0,
+    "below": 0.3131,
+    "diff": 0.5354,
+    "drop": 0.2223
+  },
+  {
+    "handle": "mmy272k17pt381",
+    "mediaId": "gid://shopify/MediaImage/56552898691437",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177794599.jpg?v=1792568428",
+    "left": 0.5558,
+    "right": 0.026,
+    "below": 0.879,
+    "diff": 0.5298,
+    "drop": -0.3232
+  },
+  {
+    "handle": "monc4286f00002",
+    "mediaId": "gid://shopify/MediaImage/56552912060781",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/6f00002-008.jpg?v=1792568476",
+    "left": 0.6183,
+    "right": 0.0899,
+    "below": 0.9314,
+    "diff": 0.5284,
+    "drop": -0.3131
+  },
+  {
+    "handle": "bob133074761132-w",
+    "mediaId": "gid://shopify/MediaImage/56553014296941",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bob133074761132-w4.jpg?v=1792568746",
+    "left": 0.5232,
+    "right": 0,
+    "below": 0.7235,
+    "diff": 0.5232,
+    "drop": -0.2003
+  },
+  {
+    "handle": "st10110071258-g",
+    "mediaId": "gid://shopify/MediaImage/56553104212333",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0120906301.jpg?v=1792568955",
+    "left": 0.9574,
+    "right": 0.4368,
+    "below": 0.9515,
+    "diff": 0.5207,
+    "drop": 0.006
+  },
+  {
+    "handle": "mm6235s52dd0104",
+    "mediaId": "gid://shopify/MediaImage/56552906948973",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6235s52dd0104-3.jpg?v=1792568458",
+    "left": 0.5743,
+    "right": 0.0588,
+    "below": 1,
+    "diff": 0.5155,
+    "drop": -0.4257
+  },
+  {
+    "handle": "mmm135sh1wr0006",
+    "mediaId": "gid://shopify/MediaImage/56529044013421",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135sh1wr0006-s.jpg?v=1792515015",
+    "left": 0.5141,
+    "right": 0,
+    "below": 0.2964,
+    "diff": 0.5141,
+    "drop": 0.2177
+  },
+  {
+    "handle": "mmm235s51la0190",
+    "mediaId": "gid://shopify/MediaImage/56552876933485",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0173853095.jpg?v=1792568351",
+    "left": 0.9263,
+    "right": 0.4162,
+    "below": 0.9591,
+    "diff": 0.5101,
+    "drop": -0.0327
+  },
+  {
+    "handle": "pmd12262059018",
+    "mediaId": "gid://shopify/MediaImage/56552953119085",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059018-10.jpg?v=1792568600",
+    "left": 0.6455,
+    "right": 0.1436,
+    "below": 0.2594,
+    "diff": 0.5019,
+    "drop": 0.3862
+  },
+  {
+    "handle": "mmm535s56ui0110-t8049",
+    "mediaId": "gid://shopify/MediaImage/56529073733997",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0146661438.jpg?v=1792515027",
+    "left": 0.8735,
+    "right": 0.3717,
+    "below": 0.8751,
+    "diff": 0.5018,
+    "drop": -0.0016
+  },
+  {
+    "handle": "voi52262222020",
+    "mediaId": "gid://shopify/MediaImage/56553090122093",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/voi52262222020-11.jpg?v=1792568907",
+    "left": 1,
+    "right": 0.5012,
+    "below": 1,
+    "diff": 0.4988,
+    "drop": 0
+  },
+  {
+    "handle": "mmm235s51la0128",
+    "mediaId": "gid://shopify/MediaImage/56552943321453",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0128-9.jpg?v=1792568569",
+    "left": 0.9595,
+    "right": 0.4613,
+    "below": 0.9426,
+    "diff": 0.4982,
+    "drop": 0.017
+  },
+  {
+    "handle": "mmm435sb1wg0018-n",
+    "mediaId": "gid://shopify/MediaImage/56528899703149",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0136152533.jpg?v=1792514922",
+    "left": 0.8049,
+    "right": 0.3141,
+    "below": 0.8238,
+    "diff": 0.4908,
+    "drop": -0.0189
+  },
+  {
+    "handle": "mmm435s58ws0109",
+    "mediaId": "gid://shopify/MediaImage/56529113416045",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0133950994.jpg?v=1792515057",
+    "left": 0.4899,
+    "right": 0,
+    "below": 0.4363,
+    "diff": 0.4899,
+    "drop": 0.0536
+  },
+  {
+    "handle": "bark16722bb004-n",
+    "mediaId": "gid://shopify/MediaImage/56552982348141",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bb004n-03.jpg?v=1792568681",
+    "left": 0.4902,
+    "right": 0.0006,
+    "below": 0.7253,
+    "diff": 0.4896,
+    "drop": -0.2351
+  },
+  {
+    "handle": "mmm435s35ui0448",
+    "mediaId": "gid://shopify/MediaImage/56529206444397",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0113932144.jpg?v=1792515137",
+    "left": 0.8801,
+    "right": 0.3915,
+    "below": 0.8856,
+    "diff": 0.4885,
+    "drop": -0.0055
+  },
+  {
+    "handle": "mmm435s35vt0074",
+    "mediaId": "gid://shopify/MediaImage/56529210147181",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0089340798.jpg?v=1792515146",
+    "left": 0.476,
+    "right": 0,
+    "below": 0.6504,
+    "diff": 0.476,
+    "drop": -0.1744
+  },
+  {
+    "handle": "mmm435sb2wg0011",
+    "mediaId": "gid://shopify/MediaImage/56528903635309",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sb2wg0011-27.jpg?v=1792514927",
+    "left": 0.4716,
+    "right": 0,
+    "below": 0.9994,
+    "diff": 0.4716,
+    "drop": -0.5278
+  },
+  {
+    "handle": "pat256je2629999",
+    "mediaId": "gid://shopify/MediaImage/56552917631341",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177018931.jpg?v=1792568489",
+    "left": 0.775,
+    "right": 0.3034,
+    "below": 0.4388,
+    "diff": 0.4716,
+    "drop": 0.3362
+  },
+  {
+    "handle": "mmm235s51la0128",
+    "mediaId": "gid://shopify/MediaImage/56552943419757",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0128-14.jpg?v=1792568568",
+    "left": 0.5091,
+    "right": 0.0399,
+    "below": 0.8098,
+    "diff": 0.4692,
+    "drop": -0.3007
+  },
+  {
+    "handle": "gaa10170130002",
+    "mediaId": "gid://shopify/MediaImage/56552981758317",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/gaa10170130002-8.jpg?v=1792568679",
+    "left": 0.7503,
+    "right": 0.2859,
+    "below": 0.6278,
+    "diff": 0.4644,
+    "drop": 0.1225
+  },
+  {
+    "handle": "mmm135si1th0001-bk",
+    "mediaId": "gid://shopify/MediaImage/56529036804461",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135si1th0001-bkt.jpg?v=1792515006",
+    "left": 0.4639,
+    "right": 0,
+    "below": 0.2921,
+    "diff": 0.4639,
+    "drop": 0.1718
+  },
+  {
+    "handle": "bob133074761132-lb",
+    "mediaId": "gid://shopify/MediaImage/56552998011245",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bob133074761132-lb6.jpg?v=1792568716",
+    "left": 0.9918,
+    "right": 0.5281,
+    "below": 0.8882,
+    "diff": 0.4637,
+    "drop": 0.1036
+  },
+  {
+    "handle": "bark16722bb004",
+    "mediaId": "gid://shopify/MediaImage/56552965177709",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bb004-04.jpg?v=1792568640",
+    "left": 0.4616,
+    "right": 0,
+    "below": 0.2421,
+    "diff": 0.4616,
+    "drop": 0.2195
+  },
+  {
+    "handle": "mm6135sh2la0039",
+    "mediaId": "gid://shopify/MediaImage/56552976384365",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6135sh2la0039-7.jpg?v=1792568665",
+    "left": 0.9609,
+    "right": 0.5049,
+    "below": 0.4918,
+    "diff": 0.456,
+    "drop": 0.469
+  },
+  {
+    "handle": "st10110071258",
+    "mediaId": "gid://shopify/MediaImage/56553110765933",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0120904575.jpg?v=1792568978",
+    "left": 0.457,
+    "right": 0.0015,
+    "below": 0.658,
+    "diff": 0.4555,
+    "drop": -0.201
+  },
+  {
+    "handle": "mmm206s51la0139",
+    "mediaId": "gid://shopify/MediaImage/56529144283501",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm206s51la0139-1.jpg?v=1792515078",
+    "left": 0.4536,
+    "right": 0,
+    "below": 0.2518,
+    "diff": 0.4536,
+    "drop": 0.2018
+  },
+  {
+    "handle": "bob133074761132-lb",
+    "mediaId": "gid://shopify/MediaImage/56552998044013",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bob133074761132-lb36.jpg?v=1792568717",
+    "left": 0.4585,
+    "right": 0.0049,
+    "below": 0.2254,
+    "diff": 0.4536,
+    "drop": 0.233
+  },
+  {
+    "handle": "mmy472c17fw705",
+    "mediaId": "gid://shopify/MediaImage/56552882045293",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy472c17fw705-6.jpg?v=1792568371",
+    "left": 0.5732,
+    "right": 0.1198,
+    "below": 0.8546,
+    "diff": 0.4534,
+    "drop": -0.2814
+  },
+  {
+    "handle": "mmm135s50hl0021",
+    "mediaId": "gid://shopify/MediaImage/56528960127341",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s50hl0021-t.jpg?v=1792514965",
+    "left": 0.4516,
+    "right": 0,
+    "below": 0.2196,
+    "diff": 0.4516,
+    "drop": 0.2319
+  },
+  {
+    "handle": "mmm435sb1wd0058",
+    "mediaId": "gid://shopify/MediaImage/56528840655213",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0163071601.jpg?v=1792514890",
+    "left": 0.5315,
+    "right": 0.0802,
+    "below": 0.3522,
+    "diff": 0.4513,
+    "drop": 0.1793
+  },
+  {
+    "handle": "st10110071258",
+    "mediaId": "gid://shopify/MediaImage/56553110733165",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0120904574.jpg?v=1792568978",
+    "left": 0.5083,
+    "right": 0.0573,
+    "below": 0.7381,
+    "diff": 0.451,
+    "drop": -0.2298
+  },
+  {
+    "handle": "mmm206s51la0138",
+    "mediaId": "gid://shopify/MediaImage/56529113973101",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm206s51la0138-11.jpg?v=1792515057",
+    "left": 1,
+    "right": 0.5501,
+    "below": 0.8251,
+    "diff": 0.4499,
+    "drop": 0.1749
+  },
+  {
+    "handle": "rag262w04125r",
+    "mediaId": "gid://shopify/MediaImage/56552918712685",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/0412sr-08.jpg?v=1792568498",
+    "left": 0.4451,
+    "right": 0,
+    "below": 0.8195,
+    "diff": 0.4451,
+    "drop": -0.3744
+  },
+  {
+    "handle": "rag262w04009",
+    "mediaId": "gid://shopify/MediaImage/56552916189549",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/rag262w04009-7.jpg?v=1792568487",
+    "left": 0.4436,
+    "right": 0,
+    "below": 0.6555,
+    "diff": 0.4436,
+    "drop": -0.2119
+  },
+  {
+    "handle": "gaa10170130002",
+    "mediaId": "gid://shopify/MediaImage/56552981627245",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/gaa10170130002-4.jpg?v=1792568678",
+    "left": 0.9423,
+    "right": 0.499,
+    "below": 0.6186,
+    "diff": 0.4433,
+    "drop": 0.3237
+  },
+  {
+    "handle": "d2102s74lb2002",
+    "mediaId": "gid://shopify/MediaImage/56552897118573",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s74lb2002-07.jpg?v=1792568424",
+    "left": 0.4768,
+    "right": 0.0341,
+    "below": 0.8915,
+    "diff": 0.4427,
+    "drop": -0.4147
+  },
+  {
+    "handle": "fdl1705pant3a24",
+    "mediaId": "gid://shopify/MediaImage/56552879718765",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/fdl1705pant3a24-8.jpg?v=1792568363",
+    "left": 0.442,
+    "right": 0,
+    "below": 0.8101,
+    "diff": 0.442,
+    "drop": -0.3682
+  },
+  {
+    "handle": "rag262w04105",
+    "mediaId": "gid://shopify/MediaImage/56552919826797",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04105-06.jpg?v=1792568500",
+    "left": 0.4731,
+    "right": 0.0311,
+    "below": 0.6301,
+    "diff": 0.442,
+    "drop": -0.157
+  },
+  {
+    "handle": "sea226lcka0102-m",
+    "mediaId": "gid://shopify/MediaImage/56552913437037",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0102-m4.jpg?v=1792568478",
+    "left": 0.4415,
+    "right": 0,
+    "below": 0.3612,
+    "diff": 0.4415,
+    "drop": 0.0804
+  },
+  {
+    "handle": "mmm135s51gc0519",
+    "mediaId": "gid://shopify/MediaImage/56529173938541",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s51gc0519-08.jpg?v=1792515112",
+    "left": 0.6385,
+    "right": 0.2012,
+    "below": 0.2686,
+    "diff": 0.4374,
+    "drop": 0.3699
+  },
+  {
+    "handle": "mmm535sb2wc0003",
+    "mediaId": "gid://shopify/MediaImage/56528851435885",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0146392433.jpg?v=1792514898",
+    "left": 0.4369,
+    "right": 0,
+    "below": 0.272,
+    "diff": 0.4369,
+    "drop": 0.1649
+  },
+  {
+    "handle": "mmm535s56ui0110-t8031",
+    "mediaId": "gid://shopify/MediaImage/56529069539693",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0146660861.jpg?v=1792515024",
+    "left": 0.8969,
+    "right": 0.461,
+    "below": 0.8272,
+    "diff": 0.4359,
+    "drop": 0.0696
+  },
+  {
+    "handle": "scotch12761402",
+    "mediaId": "gid://shopify/MediaImage/56553006858605",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/61402-05.jpg?v=1792568728",
+    "left": 0.4411,
+    "right": 0.0124,
+    "below": 0.2403,
+    "diff": 0.4287,
+    "drop": 0.2007
+  },
+  {
+    "handle": "st10110071258-g",
+    "mediaId": "gid://shopify/MediaImage/56553104277869",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0120906303.jpg?v=1792568955",
+    "left": 0.4286,
+    "right": 0.0003,
+    "below": 0.4802,
+    "diff": 0.4283,
+    "drop": -0.0516
+  },
+  {
+    "handle": "be12262290050",
+    "mediaId": "gid://shopify/MediaImage/56552958722413",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/be12262290050-8.jpg?v=1792568622",
+    "left": 0.4277,
+    "right": 0,
+    "below": 0.8769,
+    "diff": 0.4277,
+    "drop": -0.4493
+  },
+  {
+    "handle": "blav241q4419103",
+    "mediaId": "gid://shopify/MediaImage/56552899445101",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/4419103-08.jpg?v=1792568431",
+    "left": 1,
+    "right": 0.5759,
+    "below": 1,
+    "diff": 0.4241,
+    "drop": 0
+  },
+  {
+    "handle": "mmm535s56wg0082-aq",
+    "mediaId": "gid://shopify/MediaImage/56528821354861",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56wg0082b-012.jpg?v=1792514884",
+    "left": 0.4237,
+    "right": 0,
+    "below": 0.4612,
+    "diff": 0.4237,
+    "drop": -0.0375
+  },
+  {
+    "handle": "mmm435sb1wa0004",
+    "mediaId": "gid://shopify/MediaImage/56528827580781",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb1wa0004-12.jpg?v=1792514887",
+    "left": 0.5366,
+    "right": 0.1165,
+    "below": 1,
+    "diff": 0.4201,
+    "drop": -0.4634
+  },
+  {
+    "handle": "sea126mcka0133-w",
+    "mediaId": "gid://shopify/MediaImage/56552882700653",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-w11.jpg?v=1792568376",
+    "left": 0.4506,
+    "right": 0.0308,
+    "below": 0.403,
+    "diff": 0.4198,
+    "drop": 0.0476
+  },
+  {
+    "handle": "st10110071258",
+    "mediaId": "gid://shopify/MediaImage/56553110798701",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0120904576.jpg?v=1792568978",
+    "left": 0.4763,
+    "right": 0.0583,
+    "below": 0.5705,
+    "diff": 0.418,
+    "drop": -0.0942
+  },
+  {
+    "handle": "mmm435s55ui0174",
+    "mediaId": "gid://shopify/MediaImage/56528967860589",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/d2102s74gd1254-1.jpg?v=1792514967",
+    "left": 0.4175,
+    "right": 0,
+    "below": 0.2052,
+    "diff": 0.4175,
+    "drop": 0.2123
+  },
+  {
+    "handle": "mmm535sb1wc0019-h",
+    "mediaId": "gid://shopify/MediaImage/56528846848365",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0146596160.jpg?v=1792514893",
+    "left": 0.4159,
+    "right": 0,
+    "below": 0.436,
+    "diff": 0.4159,
+    "drop": -0.0201
+  },
+  {
+    "handle": "sbt10162671006",
+    "mediaId": "gid://shopify/MediaImage/56553097331053",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/62671006-04.jpg?v=1792568930",
+    "left": 0.4158,
+    "right": 0,
+    "below": 0.7937,
+    "diff": 0.4158,
+    "drop": -0.378
+  },
+  {
+    "handle": "scotch12761402",
+    "mediaId": "gid://shopify/MediaImage/56553006891373",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/61402-06.jpg?v=1792568727",
+    "left": 0.5062,
+    "right": 0.0918,
+    "below": 0.4528,
+    "diff": 0.4144,
+    "drop": 0.0534
+  },
+  {
+    "handle": "mmm435sb1wg0044-bk",
+    "mediaId": "gid://shopify/MediaImage/56553069412717",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sb1wg0044-bk-7.jpg?v=1792568860",
+    "left": 0.4121,
+    "right": 0,
+    "below": 0.3897,
+    "diff": 0.4121,
+    "drop": 0.0223
+  },
+  {
+    "handle": "rag262w04115r",
+    "mediaId": "gid://shopify/MediaImage/56552908718445",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04124r-04.jpg?v=1792568463",
+    "left": 0.4121,
+    "right": 0,
+    "below": 0.7943,
+    "diff": 0.4121,
+    "drop": -0.3823
+  },
+  {
+    "handle": "sea126mcka0133-lg",
+    "mediaId": "gid://shopify/MediaImage/56552883683693",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-lg28.jpg?v=1792568380",
+    "left": 0.5766,
+    "right": 0.167,
+    "below": 0.5738,
+    "diff": 0.4097,
+    "drop": 0.0028
+  },
+  {
+    "handle": "scotch12765501",
+    "mediaId": "gid://shopify/MediaImage/56552900591981",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/65501-04.jpg?v=1792568436",
+    "left": 0.5329,
+    "right": 0.1234,
+    "below": 0.7829,
+    "diff": 0.4095,
+    "drop": -0.25
+  },
+  {
+    "handle": "mmy272k17sk382",
+    "mediaId": "gid://shopify/MediaImage/56552933785965",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177771782.jpg?v=1792568539",
+    "left": 1,
+    "right": 0.594,
+    "below": 0.9381,
+    "diff": 0.406,
+    "drop": 0.0619
+  },
+  {
+    "handle": "mmm435sa1vx0019-bk",
+    "mediaId": "gid://shopify/MediaImage/56553053782381",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa1vx019bk-06.jpg?v=1792568834",
+    "left": 1,
+    "right": 0.5949,
+    "below": 1,
+    "diff": 0.4051,
+    "drop": 0
+  },
+  {
+    "handle": "mmm435s56ui0223-bl",
+    "mediaId": "gid://shopify/MediaImage/56529205559661",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0116165282.jpg?v=1792515133",
+    "left": 0.7958,
+    "right": 0.3908,
+    "below": 0.8781,
+    "diff": 0.4051,
+    "drop": -0.0823
+  },
+  {
+    "handle": "mmm235s51la0052-g",
+    "mediaId": "gid://shopify/MediaImage/56529031823725",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0166971123.jpg?v=1792514998",
+    "left": 0.4098,
+    "right": 0.0064,
+    "below": 0.5685,
+    "diff": 0.4034,
+    "drop": -0.1586
+  },
+  {
+    "handle": "d2102s74kb1154",
+    "mediaId": "gid://shopify/MediaImage/56552990966125",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s74kb1154-04.jpg?v=1792568700",
+    "left": 0.4033,
+    "right": 0,
+    "below": 0.9089,
+    "diff": 0.4033,
+    "drop": -0.5057
+  },
+  {
+    "handle": "mm6535sh2gu0035",
+    "mediaId": "gid://shopify/MediaImage/56552970617197",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sh2gu0035-06.jpg?v=1792568653",
+    "left": 0.7821,
+    "right": 0.3793,
+    "below": 0.8452,
+    "diff": 0.4028,
+    "drop": -0.0631
+  },
+  {
+    "handle": "sbt10171310003",
+    "mediaId": "gid://shopify/MediaImage/56552885223789",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/71310003-02.jpg?v=1792568395",
+    "left": 0.5213,
+    "right": 0.1213,
+    "below": 0.9912,
+    "diff": 0.4,
+    "drop": -0.4699
+  },
+  {
+    "handle": "rag262w04048",
+    "mediaId": "gid://shopify/MediaImage/56552935424365",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04048-03.jpg?v=1792568544",
+    "left": 0.3993,
+    "right": 0,
+    "below": 0.9551,
+    "diff": 0.3993,
+    "drop": -0.5558
+  },
+  {
+    "handle": "mm6235s62hg0033",
+    "mediaId": "gid://shopify/MediaImage/56552879325549",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s62hg0033-09.jpg?v=1792568360",
+    "left": 0.3917,
+    "right": 0,
+    "below": 0.949,
+    "diff": 0.3917,
+    "drop": -0.5573
+  },
+  {
+    "handle": "bob133074761132-lb",
+    "mediaId": "gid://shopify/MediaImage/56552998076781",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bob133074761132-lb37.jpg?v=1792568716",
+    "left": 0.5217,
+    "right": 0.1313,
+    "below": 0.7689,
+    "diff": 0.3905,
+    "drop": -0.2472
+  },
+  {
+    "handle": "rag262w04124r",
+    "mediaId": "gid://shopify/MediaImage/56552919204205",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/rag262w04124r-7.jpg?v=1792568498",
+    "left": 0.3851,
+    "right": 0,
+    "below": 0.9116,
+    "diff": 0.3851,
+    "drop": -0.5265
+  },
+  {
+    "handle": "mm6435s62tc0046",
+    "mediaId": "gid://shopify/MediaImage/56553055158637",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177890470.jpg?v=1792568837",
+    "left": 0.3847,
+    "right": 0,
+    "below": 0.994,
+    "diff": 0.3847,
+    "drop": -0.6094
+  },
+  {
+    "handle": "sea126mcka0133-w",
+    "mediaId": "gid://shopify/MediaImage/56552882667885",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-w10.jpg?v=1792568374",
+    "left": 0.4768,
+    "right": 0.094,
+    "below": 0.0415,
+    "diff": 0.3827,
+    "drop": 0.4353
+  },
+  {
+    "handle": "sea226lcka0134-w",
+    "mediaId": "gid://shopify/MediaImage/56552903573869",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-w10_461be9f0-639a-4382-903e-9d75cf426982.jpg?v=1792568446",
+    "left": 0.4768,
+    "right": 0.094,
+    "below": 0.0415,
+    "diff": 0.3827,
+    "drop": 0.4353
+  },
+  {
+    "handle": "monc2288g00011",
+    "mediaId": "gid://shopify/MediaImage/56552904917357",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/8g00011-10.jpg?v=1792568449",
+    "left": 0.4161,
+    "right": 0.0333,
+    "below": 0.1476,
+    "diff": 0.3827,
+    "drop": 0.2685
+  },
+  {
+    "handle": "mm6435sb5wg0038",
+    "mediaId": "gid://shopify/MediaImage/56553084027245",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6435sb5wg0038-8.jpg?v=1792568889",
+    "left": 1,
+    "right": 0.6183,
+    "below": 1,
+    "diff": 0.3817,
+    "drop": 0
+  },
+  {
+    "handle": "mmm435sb1wb0006-bk",
+    "mediaId": "gid://shopify/MediaImage/56528858612077",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb1wb0006bk-10.jpg?v=1792514908",
+    "left": 0.3798,
+    "right": 0,
+    "below": 0.9872,
+    "diff": 0.3798,
+    "drop": -0.6074
+  },
+  {
+    "handle": "ilmo183reverso",
+    "mediaId": "gid://shopify/MediaImage/56552947351917",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/ilmo183reverso-15.jpg?v=1792568582",
+    "left": 0.3783,
+    "right": 0,
+    "below": 0.4036,
+    "diff": 0.3783,
+    "drop": -0.0253
+  },
+  {
+    "handle": "rag262w04047",
+    "mediaId": "gid://shopify/MediaImage/56552921334125",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04047-11.jpg?v=1792568506",
+    "left": 0.4771,
+    "right": 0.1045,
+    "below": 0.6295,
+    "diff": 0.3726,
+    "drop": -0.1524
+  },
+  {
+    "handle": "mmy272k17bl331",
+    "mediaId": "gid://shopify/MediaImage/56552932082029",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177372274.jpg?v=1792568533",
+    "left": 0.6027,
+    "right": 0.2301,
+    "below": 0.5491,
+    "diff": 0.3726,
+    "drop": 0.0536
+  },
+  {
+    "handle": "mmm235s51gu0111",
+    "mediaId": "gid://shopify/MediaImage/56529192583533",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0128208530.jpg?v=1792515125",
+    "left": 0.9985,
+    "right": 0.6265,
+    "below": 0.5077,
+    "diff": 0.372,
+    "drop": 0.4908
+  },
+  {
+    "handle": "mm6135sh2dt0062",
+    "mediaId": "gid://shopify/MediaImage/56552967700845",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6135sh2dt0062-18.jpg?v=1792568646",
+    "left": 0.4606,
+    "right": 0.0887,
+    "below": 0.7714,
+    "diff": 0.3719,
+    "drop": -0.3109
+  },
+  {
+    "handle": "bob133074761710",
+    "mediaId": "gid://shopify/MediaImage/56553011609965",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bob133074761710-5.jpg?v=1792568740",
+    "left": 0.4513,
+    "right": 0.0813,
+    "below": 0.1113,
+    "diff": 0.3701,
+    "drop": 0.34
+  },
+  {
+    "handle": "mm6435sb5zh0032",
+    "mediaId": "gid://shopify/MediaImage/56553085436269",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0175481485.jpg?v=1792568893",
+    "left": 0.4329,
+    "right": 0.0679,
+    "below": 0.8756,
+    "diff": 0.365,
+    "drop": -0.4427
+  },
+  {
+    "handle": "mmm435sa2ui0006-le",
+    "mediaId": "gid://shopify/MediaImage/56529081532781",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa2ui0006y-04.jpg?v=1792515040",
+    "left": 0.364,
+    "right": 0.0007,
+    "below": 0.2716,
+    "diff": 0.3632,
+    "drop": 0.0924
+  },
+  {
+    "handle": "mmm235sb1wg0084",
+    "mediaId": "gid://shopify/MediaImage/56528816439661",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb1wg0084-07.jpg?v=1792514878",
+    "left": 0.4394,
+    "right": 0.0768,
+    "below": 0.3475,
+    "diff": 0.3626,
+    "drop": 0.092
+  },
+  {
+    "handle": "mmm435sb1wa0004",
+    "mediaId": "gid://shopify/MediaImage/56528827679085",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb1wa0004-10.jpg?v=1792514886",
+    "left": 0.3649,
+    "right": 0.0036,
+    "below": 1,
+    "diff": 0.3613,
+    "drop": -0.6351
+  },
+  {
+    "handle": "mmm435sa3ui0017",
+    "mediaId": "gid://shopify/MediaImage/56553042739565",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0128330255.jpg?v=1792568804",
+    "left": 0.5198,
+    "right": 0.1598,
+    "below": 0.8424,
+    "diff": 0.36,
+    "drop": -0.3226
+  },
+  {
+    "handle": "mmm535s51la0052",
+    "mediaId": "gid://shopify/MediaImage/56552890630509",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm535s51la0052-6.jpg?v=1792568401",
+    "left": 0.7951,
+    "right": 0.4365,
+    "below": 1,
+    "diff": 0.3586,
+    "drop": -0.2049
+  },
+  {
+    "handle": "mmm435s56ui0148mauve",
+    "mediaId": "gid://shopify/MediaImage/56529106239853",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0116162955.jpg?v=1792515049",
+    "left": 0.4427,
+    "right": 0.0845,
+    "below": 0.547,
+    "diff": 0.3582,
+    "drop": -0.1043
+  },
+  {
+    "handle": "pmd12262059016",
+    "mediaId": "gid://shopify/MediaImage/56552891154797",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059016-6.jpg?v=1792568421",
+    "left": 0.7813,
+    "right": 0.4257,
+    "below": 0.8388,
+    "diff": 0.3555,
+    "drop": -0.0576
+  },
+  {
+    "handle": "mmm135s50bn0318",
+    "mediaId": "gid://shopify/MediaImage/56528857661805",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s50bn0318-t.jpg?v=1792514904",
+    "left": 0.4637,
+    "right": 0.1083,
+    "below": 0.1438,
+    "diff": 0.3554,
+    "drop": 0.3198
+  },
+  {
+    "handle": "d2102s71lb1774",
+    "mediaId": "gid://shopify/MediaImage/56552885780845",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s71lb1774-03.jpg?v=1792568388",
+    "left": 0.3548,
+    "right": 0,
+    "below": 0.7757,
+    "diff": 0.3548,
+    "drop": -0.421
+  },
+  {
+    "handle": "sea226lcka0107",
+    "mediaId": "gid://shopify/MediaImage/56552909603181",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0107-3.jpg?v=1792568466",
+    "left": 0.5699,
+    "right": 0.2159,
+    "below": 0.8984,
+    "diff": 0.354,
+    "drop": -0.3284
+  },
+  {
+    "handle": "mmm435s50tc0051",
+    "mediaId": "gid://shopify/MediaImage/56529205330285",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s50tc0051-03.jpg?v=1792515131",
+    "left": 0.3525,
+    "right": 0,
+    "below": 0.9957,
+    "diff": 0.3525,
+    "drop": -0.6432
+  },
+  {
+    "handle": "mm6435sb5zh0032-tp",
+    "mediaId": "gid://shopify/MediaImage/56553070494061",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb5zh0032t-11.jpg?v=1792568863",
+    "left": 0.3551,
+    "right": 0.0033,
+    "below": 0.2687,
+    "diff": 0.3518,
+    "drop": 0.0863
+  },
+  {
+    "handle": "bob133074761126",
+    "mediaId": "gid://shopify/MediaImage/56552963244397",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0178810557.jpg?v=1792568635",
+    "left": 0.9332,
+    "right": 0.5845,
+    "below": 0.9515,
+    "diff": 0.3487,
+    "drop": -0.0183
+  },
+  {
+    "handle": "pmd12262059018",
+    "mediaId": "gid://shopify/MediaImage/56552953086317",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059018-9.jpg?v=1792568600",
+    "left": 0.361,
+    "right": 0.0135,
+    "below": 0.6402,
+    "diff": 0.3475,
+    "drop": -0.2792
+  },
+  {
+    "handle": "mm6135sh0hl0046",
+    "mediaId": "gid://shopify/MediaImage/56552980447597",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0175020409.jpg?v=1792568676",
+    "left": 0.9286,
+    "right": 0.5853,
+    "below": 0.6705,
+    "diff": 0.3433,
+    "drop": 0.258
+  },
+  {
+    "handle": "over12262269002",
+    "mediaId": "gid://shopify/MediaImage/56553004269933",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/over12262269002-6.jpg?v=1792568721",
+    "left": 0.4506,
+    "right": 0.1112,
+    "below": 0.1631,
+    "diff": 0.3394,
+    "drop": 0.2875
+  },
+  {
+    "handle": "pmd12262059016",
+    "mediaId": "gid://shopify/MediaImage/56552891122029",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059016-5.jpg?v=1792568404",
+    "left": 0.3391,
+    "right": 0,
+    "below": 0.9129,
+    "diff": 0.3391,
+    "drop": -0.5738
+  },
+  {
+    "handle": "voi52262222020",
+    "mediaId": "gid://shopify/MediaImage/56553090023789",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/voi52262222020-8.jpg?v=1792568907",
+    "left": 0.8146,
+    "right": 0.4762,
+    "below": 0.9906,
+    "diff": 0.3384,
+    "drop": -0.176
+  },
+  {
+    "handle": "mmm235sh0ha0004",
+    "mediaId": "gid://shopify/MediaImage/56529077633389",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235sh0ha0004-s.jpg?v=1792515035",
+    "left": 0.4768,
+    "right": 0.1389,
+    "below": 0.3532,
+    "diff": 0.3379,
+    "drop": 0.1236
+  },
+  {
+    "handle": "alw183bd509341",
+    "mediaId": "gid://shopify/MediaImage/56552968618349",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509341-8.jpg?v=1792568648",
+    "left": 0.5323,
+    "right": 0.1954,
+    "below": 0.2457,
+    "diff": 0.3369,
+    "drop": 0.2866
+  },
+  {
+    "handle": "alw183it319341",
+    "mediaId": "gid://shopify/MediaImage/56553015509357",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509341-8_e0f6c9bc-01d6-44b3-a623-d020e27ce344.jpg?v=1792568748",
+    "left": 0.5323,
+    "right": 0.1954,
+    "below": 0.2457,
+    "diff": 0.3369,
+    "drop": 0.2866
+  },
+  {
+    "handle": "st10121071074",
+    "mediaId": "gid://shopify/MediaImage/56553095856493",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0134291214.jpg?v=1792568924",
+    "left": 0.3356,
+    "right": 0,
+    "below": 0.397,
+    "diff": 0.3356,
+    "drop": -0.0615
+  },
+  {
+    "handle": "pmd12262059069",
+    "mediaId": "gid://shopify/MediaImage/56552969568621",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059069-15.jpg?v=1792568650",
+    "left": 0.9269,
+    "right": 0.5918,
+    "below": 0.9036,
+    "diff": 0.3351,
+    "drop": 0.0234
+  },
+  {
+    "handle": "be12262290028",
+    "mediaId": "gid://shopify/MediaImage/56552956461421",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/be12262290028-8.jpg?v=1792568615",
+    "left": 0.5487,
+    "right": 0.2138,
+    "below": 0.3207,
+    "diff": 0.3348,
+    "drop": 0.228
+  },
+  {
+    "handle": "blav2413435301",
+    "mediaId": "gid://shopify/MediaImage/56552934736237",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/lq3435301-07.jpg?v=1792568543",
+    "left": 0.9899,
+    "right": 0.6561,
+    "below": 0.9967,
+    "diff": 0.3338,
+    "drop": -0.0068
+  },
+  {
+    "handle": "mmm535s56wg0082-ama",
+    "mediaId": "gid://shopify/MediaImage/56528820437357",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0144884793.jpg?v=1792514882",
+    "left": 0.699,
+    "right": 0.3653,
+    "below": 0.6458,
+    "diff": 0.3336,
+    "drop": 0.0531
+  },
+  {
+    "handle": "mmm435sb3wg0025",
+    "mediaId": "gid://shopify/MediaImage/56528905535853",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sb3wg0025-60.jpg?v=1792514930",
+    "left": 0.3366,
+    "right": 0.0034,
+    "below": 0.4369,
+    "diff": 0.3332,
+    "drop": -0.1003
+  },
+  {
+    "handle": "mm6235s51la0133",
+    "mediaId": "gid://shopify/MediaImage/56552937390445",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s51la0133-10.jpg?v=1792568549",
+    "left": 0.7592,
+    "right": 0.4265,
+    "below": 0.9844,
+    "diff": 0.3327,
+    "drop": -0.2251
+  },
+  {
+    "handle": "pat456ac1558101",
+    "mediaId": "gid://shopify/MediaImage/56553048277357",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176487390.jpg?v=1792568818",
+    "left": 0.9978,
+    "right": 0.6661,
+    "below": 0.8635,
+    "diff": 0.3317,
+    "drop": 0.1342
+  },
+  {
+    "handle": "d2102s71lb1773",
+    "mediaId": "gid://shopify/MediaImage/56552889844077",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177055140.jpg?v=1792568398",
+    "left": 0.3287,
+    "right": 0.0012,
+    "below": 0.5323,
+    "diff": 0.3275,
+    "drop": -0.2036
+  },
+  {
+    "handle": "rag162m100006",
+    "mediaId": "gid://shopify/MediaImage/56552930771309",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/rag162m100006-11.jpg?v=1792568532",
+    "left": 0.3299,
+    "right": 0.0036,
+    "below": 0.1917,
+    "diff": 0.3263,
+    "drop": 0.1382
+  },
+  {
+    "handle": "mmm435s35wb0079",
+    "mediaId": "gid://shopify/MediaImage/56528866541933",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0144912541.jpg?v=1792514911",
+    "left": 0.5223,
+    "right": 0.1961,
+    "below": 0.9487,
+    "diff": 0.3262,
+    "drop": -0.4263
+  },
+  {
+    "handle": "mmm235s51la0128",
+    "mediaId": "gid://shopify/MediaImage/56552943386989",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0128-12.jpg?v=1792568569",
+    "left": 0.8321,
+    "right": 0.51,
+    "below": 0.8427,
+    "diff": 0.3222,
+    "drop": -0.0106
+  },
+  {
+    "handle": "mmm206s51la0138",
+    "mediaId": "gid://shopify/MediaImage/56529113809261",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm206s51la0138-5.jpg?v=1792515058",
+    "left": 0.4765,
+    "right": 0.1552,
+    "below": 0.5927,
+    "diff": 0.3213,
+    "drop": -0.1162
+  },
+  {
+    "handle": "oke465okmg6st7-bk",
+    "mediaId": "gid://shopify/MediaImage/56553035694445",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/oke465okmg6st7-7.jpg?v=1792568790",
+    "left": 1,
+    "right": 0.6793,
+    "below": 1,
+    "diff": 0.3207,
+    "drop": 0
+  },
+  {
+    "handle": "mmm135s50bn0318",
+    "mediaId": "gid://shopify/MediaImage/56528857530733",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s50bn0318-12.jpg?v=1792514904",
+    "left": 0.3201,
+    "right": 0,
+    "below": 0.179,
+    "diff": 0.3201,
+    "drop": 0.1411
+  },
+  {
+    "handle": "monc2281a00087",
+    "mediaId": "gid://shopify/MediaImage/56552902590829",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/1a00087-02.jpg?v=1792568442",
+    "left": 0.6109,
+    "right": 0.2973,
+    "below": 0.7561,
+    "diff": 0.3135,
+    "drop": -0.1452
+  },
+  {
+    "handle": "mmm435sb1wg0017-tk",
+    "mediaId": "gid://shopify/MediaImage/56528885317997",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb1wg0017k-0006.jpg?v=1792514918",
+    "left": 0.7638,
+    "right": 0.4522,
+    "below": 0.7341,
+    "diff": 0.3116,
+    "drop": 0.0298
+  },
+  {
+    "handle": "mmm135s57ws0465",
+    "mediaId": "gid://shopify/MediaImage/56529114693997",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0129594033.jpg?v=1792515061",
+    "left": 0.3116,
+    "right": 0,
+    "below": 0.4625,
+    "diff": 0.3116,
+    "drop": -0.1509
+  },
+  {
+    "handle": "mm6435s52tc0068",
+    "mediaId": "gid://shopify/MediaImage/56552906359149",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s52tc0068-05.jpg?v=1792568455",
+    "left": 1,
+    "right": 0.6884,
+    "below": 1,
+    "diff": 0.3116,
+    "drop": 0
+  },
+  {
+    "handle": "mmm435sb2zh0003",
+    "mediaId": "gid://shopify/MediaImage/56528934240621",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sb2zh0003-10.jpg?v=1792514943",
+    "left": 0.9089,
+    "right": 0.5982,
+    "below": 0.9882,
+    "diff": 0.3107,
+    "drop": -0.0793
+  },
+  {
+    "handle": "marn155cuju0396",
+    "mediaId": "gid://shopify/MediaImage/56552878342509",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/cuju0396-07.jpg?v=1792568368",
+    "left": 0.5185,
+    "right": 0.2079,
+    "below": 0.5171,
+    "diff": 0.3106,
+    "drop": 0.0013
+  },
+  {
+    "handle": "mmy272k17bl771",
+    "mediaId": "gid://shopify/MediaImage/56552936276333",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177574885.jpg?v=1792568549",
+    "left": 0.5327,
+    "right": 0.2226,
+    "below": 0.1103,
+    "diff": 0.3101,
+    "drop": 0.4225
+  },
+  {
+    "handle": "sea126mcka0096-br",
+    "mediaId": "gid://shopify/MediaImage/56552979792237",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-br10.jpg?v=1792568673",
+    "left": 0.9982,
+    "right": 0.6906,
+    "below": 0.9817,
+    "diff": 0.3076,
+    "drop": 0.0165
+  },
+  {
+    "handle": "st10121071074",
+    "mediaId": "gid://shopify/MediaImage/56553095889261",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0134291215.jpg?v=1792568925",
+    "left": 0.3074,
+    "right": 0,
+    "below": 0.8251,
+    "diff": 0.3074,
+    "drop": -0.5177
+  },
+  {
+    "handle": "mm6435sm6uy0049",
+    "mediaId": "gid://shopify/MediaImage/56553087205741",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0175066819.jpg?v=1792568899",
+    "left": 0.3064,
+    "right": 0,
+    "below": 0.9112,
+    "diff": 0.3064,
+    "drop": -0.6048
+  },
+  {
+    "handle": "bob133074761132-lb",
+    "mediaId": "gid://shopify/MediaImage/56552997945709",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bob133074761132-lb33.jpg?v=1792568717",
+    "left": 0.7161,
+    "right": 0.4113,
+    "below": 0.9982,
+    "diff": 0.3048,
+    "drop": -0.2821
+  },
+  {
+    "handle": "mmm535s56ui0110-t8049",
+    "mediaId": "gid://shopify/MediaImage/56529073668461",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0146661439.jpg?v=1792515026",
+    "left": 0.8207,
+    "right": 0.517,
+    "below": 0.3888,
+    "diff": 0.3037,
+    "drop": 0.4318
+  },
+  {
+    "handle": "mmm135s56ui0143-b",
+    "mediaId": "gid://shopify/MediaImage/56553039102317",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56ui0143b-07.jpg?v=1792568796",
+    "left": 0.3036,
+    "right": 0,
+    "below": 0.8988,
+    "diff": 0.3036,
+    "drop": -0.5952
+  },
+  {
+    "handle": "dei162rennimm",
+    "mediaId": "gid://shopify/MediaImage/56552992080237",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/dei162rennimm-6.jpg?v=1792568707",
+    "left": 0.8115,
+    "right": 0.51,
+    "below": 0.5214,
+    "diff": 0.3015,
+    "drop": 0.29
+  },
+  {
+    "handle": "pmd12262059047",
+    "mediaId": "gid://shopify/MediaImage/56552951349613",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059047-6.jpg?v=1792568595",
+    "left": 1,
+    "right": 0.6993,
+    "below": 1,
+    "diff": 0.3007,
+    "drop": 0
+  },
+  {
+    "handle": "bark26722bd9021-bk",
+    "mediaId": "gid://shopify/MediaImage/56552940863853",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bark26722bd9021-bk10.jpg?v=1792568562",
+    "left": 1,
+    "right": 0.7001,
+    "below": 1,
+    "diff": 0.2999,
+    "drop": 0
+  },
+  {
+    "handle": "pmd12262059092",
+    "mediaId": "gid://shopify/MediaImage/56553010004333",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059092-7.jpg?v=1792568735",
+    "left": 1,
+    "right": 0.7015,
+    "below": 1,
+    "diff": 0.2985,
+    "drop": 0
+  },
+  {
+    "handle": "be12262290050",
+    "mediaId": "gid://shopify/MediaImage/56552958656877",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/be12262290050-6.jpg?v=1792568622",
+    "left": 0.2967,
+    "right": 0,
+    "below": 0.6567,
+    "diff": 0.2967,
+    "drop": -0.36
+  },
+  {
+    "handle": "mmm235s51la0051",
+    "mediaId": "gid://shopify/MediaImage/56552921989485",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0051-11.jpg?v=1792568509",
+    "left": 0.2952,
+    "right": 0,
+    "below": 0.4371,
+    "diff": 0.2952,
+    "drop": -0.1418
+  },
+  {
+    "handle": "mmm235s51la0051",
+    "mediaId": "gid://shopify/MediaImage/56552921923949",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0051-9.jpg?v=1792568508",
+    "left": 0.2921,
+    "right": 0,
+    "below": 0.4396,
+    "diff": 0.2921,
+    "drop": -0.1475
+  },
+  {
+    "handle": "fdl1705pant3a24",
+    "mediaId": "gid://shopify/MediaImage/56552879685997",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/fdl1705pant3a24-7.jpg?v=1792568362",
+    "left": 0.2973,
+    "right": 0.0088,
+    "below": 0.4213,
+    "diff": 0.2885,
+    "drop": -0.124
+  },
+  {
+    "handle": "mmm435sb2zh0003",
+    "mediaId": "gid://shopify/MediaImage/56528934437229",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sb2zh0003-8.jpg?v=1792514943",
+    "left": 0.3259,
+    "right": 0.0387,
+    "below": 0.8597,
+    "diff": 0.2872,
+    "drop": -0.5338
+  },
+  {
+    "handle": "mmm435sm1uy0037-s",
+    "mediaId": "gid://shopify/MediaImage/56529118822765",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0120192051.jpg?v=1792515068",
+    "left": 0.8371,
+    "right": 0.5528,
+    "below": 0.8969,
+    "diff": 0.2842,
+    "drop": -0.0598
+  },
+  {
+    "handle": "mmm435sa2vz0008",
+    "mediaId": "gid://shopify/MediaImage/56529040441709",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa2yz0008-09.jpg?v=1792515014",
+    "left": 0.2839,
+    "right": 0,
+    "below": 0.3185,
+    "diff": 0.2839,
+    "drop": -0.0345
+  },
+  {
+    "handle": "mmm435sb2wg0011",
+    "mediaId": "gid://shopify/MediaImage/56528903602541",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sb2wg0011-30.jpg?v=1792514926",
+    "left": 0.9534,
+    "right": 0.6696,
+    "below": 0.9722,
+    "diff": 0.2838,
+    "drop": -0.0188
+  },
+  {
+    "handle": "nina256pt501703",
+    "mediaId": "gid://shopify/MediaImage/56552870838637",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/nina256pt501703-8.jpg?v=1792568331",
+    "left": 0.2833,
+    "right": 0,
+    "below": 0.7129,
+    "diff": 0.2833,
+    "drop": -0.4296
+  },
+  {
+    "handle": "mmm135s51gp0226",
+    "mediaId": "gid://shopify/MediaImage/56528944759149",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s51gp0226-9.jpg?v=1792514950",
+    "left": 0.2818,
+    "right": 0,
+    "below": 0.4754,
+    "diff": 0.2818,
+    "drop": -0.1936
+  },
+  {
+    "handle": "rag262w04124r",
+    "mediaId": "gid://shopify/MediaImage/56552919302509",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/rag262w04124r-10.jpg?v=1792568497",
+    "left": 0.4324,
+    "right": 0.1506,
+    "below": 0.6229,
+    "diff": 0.2818,
+    "drop": -0.1905
+  },
+  {
+    "handle": "mmm435sa3vx0005-bk",
+    "mediaId": "gid://shopify/MediaImage/56529206509933",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/vx0005-05.jpg?v=1792515140",
+    "left": 0.6086,
+    "right": 0.328,
+    "below": 0.9259,
+    "diff": 0.2807,
+    "drop": -0.3173
+  },
+  {
+    "handle": "mmm235s51la0051-b",
+    "mediaId": "gid://shopify/MediaImage/56552938635629",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0051-b-6.jpg?v=1792568554",
+    "left": 0.2801,
+    "right": 0,
+    "below": 0.9493,
+    "diff": 0.2801,
+    "drop": -0.6692
+  },
+  {
+    "handle": "monc2288g00034",
+    "mediaId": "gid://shopify/MediaImage/56552905572717",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/monc2288g00034-6.jpg?v=1792568451",
+    "left": 0.9641,
+    "right": 0.6845,
+    "below": 0.6305,
+    "diff": 0.2796,
+    "drop": 0.3336
+  },
+  {
+    "handle": "dru183461nd18",
+    "mediaId": "gid://shopify/MediaImage/56552892858733",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/4.jpg?v=1792568408",
+    "left": 0.95,
+    "right": 0.6722,
+    "below": 0.9638,
+    "diff": 0.2778,
+    "drop": -0.0138
+  },
+  {
+    "handle": "pmd12262059047",
+    "mediaId": "gid://shopify/MediaImage/56552951382381",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059047-7.jpg?v=1792568594",
+    "left": 1,
+    "right": 0.7231,
+    "below": 1,
+    "diff": 0.2769,
+    "drop": 0
+  },
+  {
+    "handle": "mm6435sb5wg0038",
+    "mediaId": "gid://shopify/MediaImage/56553084125549",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6435sb5wg0038-11.jpg?v=1792568890",
+    "left": 1,
+    "right": 0.7235,
+    "below": 0.9996,
+    "diff": 0.2765,
+    "drop": 0.0004
+  },
+  {
+    "handle": "sea226lcka0129-m",
+    "mediaId": "gid://shopify/MediaImage/56552914518381",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-m11.jpg?v=1792568482",
+    "left": 0.7092,
+    "right": 0.4345,
+    "below": 0.5821,
+    "diff": 0.2747,
+    "drop": 0.1271
+  },
+  {
+    "handle": "sea126mcka0096-m",
+    "mediaId": "gid://shopify/MediaImage/56552971272557",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-m11_d39a912b-836a-4c58-85f1-6cdf0ba7802b.jpg?v=1792568654",
+    "left": 0.7092,
+    "right": 0.4345,
+    "below": 0.5821,
+    "diff": 0.2747,
+    "drop": 0.1271
+  },
+  {
+    "handle": "monc2288g00034",
+    "mediaId": "gid://shopify/MediaImage/56552905539949",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/monc2288g00034-5.jpg?v=1792568452",
+    "left": 0.3641,
+    "right": 0.0908,
+    "below": 0.2966,
+    "diff": 0.2734,
+    "drop": 0.0676
+  },
+  {
+    "handle": "kos183kclxs737",
+    "mediaId": "gid://shopify/MediaImage/56553112207725",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/kclxs737-12.jpg?v=1792568985",
+    "left": 0.2744,
+    "right": 0.001,
+    "below": 0.0284,
+    "diff": 0.2734,
+    "drop": 0.246
+  },
+  {
+    "handle": "mmy572a14fw703",
+    "mediaId": "gid://shopify/MediaImage/56553031926125",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy572a14fw703-10.jpg?v=1792568782",
+    "left": 0.3055,
+    "right": 0.0345,
+    "below": 0.3717,
+    "diff": 0.271,
+    "drop": -0.0662
+  },
+  {
+    "handle": "mm6135sh2la0039",
+    "mediaId": "gid://shopify/MediaImage/56552976515437",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6135sh2la0039-11.jpg?v=1792568665",
+    "left": 0.2707,
+    "right": 0,
+    "below": 0.686,
+    "diff": 0.2707,
+    "drop": -0.4153
+  },
+  {
+    "handle": "mmm235s51la0128",
+    "mediaId": "gid://shopify/MediaImage/56552943255917",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0128-7.jpg?v=1792568568",
+    "left": 0.444,
+    "right": 0.1747,
+    "below": 0.464,
+    "diff": 0.2693,
+    "drop": -0.0199
+  },
+  {
+    "handle": "mmm135s50hl0021",
+    "mediaId": "gid://shopify/MediaImage/56528960225645",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s50hl0021-14.jpg?v=1792514965",
+    "left": 0.5747,
+    "right": 0.3061,
+    "below": 0.979,
+    "diff": 0.2686,
+    "drop": -0.4043
+  },
+  {
+    "handle": "rag262w04048",
+    "mediaId": "gid://shopify/MediaImage/56552935391597",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04048-04.jpg?v=1792568544",
+    "left": 0.306,
+    "right": 0.0378,
+    "below": 0.5345,
+    "diff": 0.2682,
+    "drop": -0.2286
+  },
+  {
+    "handle": "crl12262030027",
+    "mediaId": "gid://shopify/MediaImage/56552953545069",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/crl12262030027-8.jpg?v=1792568602",
+    "left": 0.276,
+    "right": 0.0083,
+    "below": 0.4446,
+    "diff": 0.2677,
+    "drop": -0.1686
+  },
+  {
+    "handle": "nina256pl601703",
+    "mediaId": "gid://shopify/MediaImage/56552872444269",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/nina256pl601703-11.jpg?v=1792568336",
+    "left": 0.2665,
+    "right": 0,
+    "below": 0.1981,
+    "diff": 0.2665,
+    "drop": 0.0685
+  },
+  {
+    "handle": "rag262w04118r",
+    "mediaId": "gid://shopify/MediaImage/56552915403117",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04118r-05.jpg?v=1792568486",
+    "left": 0.2659,
+    "right": 0,
+    "below": 0.532,
+    "diff": 0.2659,
+    "drop": -0.2661
+  },
+  {
+    "handle": "mmm135si1th0001-bk",
+    "mediaId": "gid://shopify/MediaImage/56529036935533",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/si1th0001b-07.jpg?v=1792515007",
+    "left": 0.8664,
+    "right": 0.6037,
+    "below": 0.999,
+    "diff": 0.2626,
+    "drop": -0.1326
+  },
+  {
+    "handle": "bob133074761710",
+    "mediaId": "gid://shopify/MediaImage/56553011806573",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bob133074761710-11.jpg?v=1792568739",
+    "left": 0.3176,
+    "right": 0.0557,
+    "below": 0.3631,
+    "diff": 0.2619,
+    "drop": -0.0455
+  },
+  {
+    "handle": "cic170a537901",
+    "mediaId": "gid://shopify/MediaImage/56552880636269",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/a537901-04.jpg?v=1792568366",
+    "left": 0.2674,
+    "right": 0.0061,
+    "below": 0.1158,
+    "diff": 0.2613,
+    "drop": 0.1516
+  },
+  {
+    "handle": "pmd12262059069",
+    "mediaId": "gid://shopify/MediaImage/56552969535853",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059069-4.jpg?v=1792568650",
+    "left": 0.4004,
+    "right": 0.1396,
+    "below": 0.5533,
+    "diff": 0.2609,
+    "drop": -0.1528
+  },
+  {
+    "handle": "mmm206s51la0138",
+    "mediaId": "gid://shopify/MediaImage/56529113874797",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm206s51la0138-7.jpg?v=1792515059",
+    "left": 0.9365,
+    "right": 0.6769,
+    "below": 0.857,
+    "diff": 0.2595,
+    "drop": 0.0795
+  },
+  {
+    "handle": "bark16722bb004-b",
+    "mediaId": "gid://shopify/MediaImage/56552977564013",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bb004b-08.jpg?v=1792568668",
+    "left": 0.6479,
+    "right": 0.389,
+    "below": 0.508,
+    "diff": 0.2589,
+    "drop": 0.1399
+  },
+  {
+    "handle": "mmm435s55ui0280",
+    "mediaId": "gid://shopify/MediaImage/56529145790829",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435s55ui0280-4.jpg?v=1792515084",
+    "left": 0.5027,
+    "right": 0.2478,
+    "below": 0.6391,
+    "diff": 0.2549,
+    "drop": -0.1365
+  },
+  {
+    "handle": "mmm235s51la0052",
+    "mediaId": "gid://shopify/MediaImage/56552895218029",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0052-8.jpg?v=1792568417",
+    "left": 0.5552,
+    "right": 0.3007,
+    "below": 0.6022,
+    "diff": 0.2545,
+    "drop": -0.047
+  },
+  {
+    "handle": "devo18302w2627-h",
+    "mediaId": "gid://shopify/MediaImage/56552910455149",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0178581120.jpg?v=1792568468",
+    "left": 0.6162,
+    "right": 0.3635,
+    "below": 0.0872,
+    "diff": 0.2527,
+    "drop": 0.529
+  },
+  {
+    "handle": "bark16722b8001",
+    "mediaId": "gid://shopify/MediaImage/56553010856301",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/22b8001-03.jpg?v=1792568738",
+    "left": 0.8121,
+    "right": 0.5598,
+    "below": 0.971,
+    "diff": 0.2522,
+    "drop": -0.1589
+  },
+  {
+    "handle": "mmy172j17bl751",
+    "mediaId": "gid://shopify/MediaImage/56552973042029",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177533453.jpg?v=1792568659",
+    "left": 0.2741,
+    "right": 0.022,
+    "below": 0.0381,
+    "diff": 0.2521,
+    "drop": 0.236
+  },
+  {
+    "handle": "pat256je2709995",
+    "mediaId": "gid://shopify/MediaImage/56552917926253",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177044245.jpg?v=1792568491",
+    "left": 1,
+    "right": 0.7488,
+    "below": 1,
+    "diff": 0.2512,
+    "drop": 0
+  },
+  {
+    "handle": "pmd12262059039",
+    "mediaId": "gid://shopify/MediaImage/56553008857453",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059039-5.jpg?v=1792568732",
+    "left": 0.4228,
+    "right": 0.1728,
+    "below": 0.7217,
+    "diff": 0.25,
+    "drop": -0.299
+  },
+  {
+    "handle": "mmy572a15fw702",
+    "mediaId": "gid://shopify/MediaImage/56552883356013",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/a15fw702-08.jpg?v=1792568377",
+    "left": 0.6609,
+    "right": 0.4113,
+    "below": 1,
+    "diff": 0.2496,
+    "drop": -0.3391
+  },
+  {
+    "handle": "alw183bd509341",
+    "mediaId": "gid://shopify/MediaImage/56552968552813",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509341-6.jpg?v=1792568647",
+    "left": 0.5548,
+    "right": 0.3064,
+    "below": 0.3537,
+    "diff": 0.2484,
+    "drop": 0.201
+  },
+  {
+    "handle": "mmm135s50gu0181",
+    "mediaId": "gid://shopify/MediaImage/56529184031085",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s50gu0181-06.jpg?v=1792515122",
+    "left": 0.3497,
+    "right": 0.1031,
+    "below": 0.5811,
+    "diff": 0.2466,
+    "drop": -0.2314
+  },
+  {
+    "handle": "mmm435s56ui0223-bl",
+    "mediaId": "gid://shopify/MediaImage/56529205723501",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0116165286.jpg?v=1792515134",
+    "left": 0.883,
+    "right": 0.6371,
+    "below": 0.874,
+    "diff": 0.246,
+    "drop": 0.0091
+  },
+  {
+    "handle": "st10110071258",
+    "mediaId": "gid://shopify/MediaImage/56553110831469",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0120904577.jpg?v=1792568978",
+    "left": 0.2448,
+    "right": 0,
+    "below": 0.4446,
+    "diff": 0.2448,
+    "drop": -0.1999
+  },
+  {
+    "handle": "pat256kn0688045",
+    "mediaId": "gid://shopify/MediaImage/56552939585901",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176524916.jpg?v=1792568559",
+    "left": 0.3202,
+    "right": 0.0765,
+    "below": 0.5204,
+    "diff": 0.2437,
+    "drop": -0.2001
+  },
+  {
+    "handle": "cic1704540604",
+    "mediaId": "gid://shopify/MediaImage/56552996929901",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/4540604-06.jpg?v=1792568714",
+    "left": 0.254,
+    "right": 0.0121,
+    "below": 0.6449,
+    "diff": 0.242,
+    "drop": -0.3909
+  },
+  {
+    "handle": "mmm235sa3ui0008-bk",
+    "mediaId": "gid://shopify/MediaImage/56528950853997",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm-k-8.jpg?v=1792514958",
+    "left": 0.8137,
+    "right": 0.5741,
+    "below": 0.7983,
+    "diff": 0.2397,
+    "drop": 0.0154
+  },
+  {
+    "handle": "mmm135s51gp0226",
+    "mediaId": "gid://shopify/MediaImage/56528944693613",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s51gp0226-7.jpg?v=1792514950",
+    "left": 0.2387,
+    "right": 0,
+    "below": 0.8844,
+    "diff": 0.2387,
+    "drop": -0.6457
+  },
+  {
+    "handle": "alw183bd509341",
+    "mediaId": "gid://shopify/MediaImage/56552968683885",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509341-10.jpg?v=1792568648",
+    "left": 0.4768,
+    "right": 0.2382,
+    "below": 0.4955,
+    "diff": 0.2385,
+    "drop": -0.0187
+  },
+  {
+    "handle": "alw183it319341",
+    "mediaId": "gid://shopify/MediaImage/56553015574893",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509341-10_541f43bb-b6e5-44fd-a74e-88bfe1a6c67f.jpg?v=1792568749",
+    "left": 0.4768,
+    "right": 0.2382,
+    "below": 0.4955,
+    "diff": 0.2385,
+    "drop": -0.0187
+  },
+  {
+    "handle": "mmm435sb2wg0008",
+    "mediaId": "gid://shopify/MediaImage/56528902979949",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0130582328.jpg?v=1792514924",
+    "left": 0.2379,
+    "right": 0,
+    "below": 0.8717,
+    "diff": 0.2379,
+    "drop": -0.6338
+  },
+  {
+    "handle": "rag262w04048",
+    "mediaId": "gid://shopify/MediaImage/56552935555437",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04048-07.jpg?v=1792568545",
+    "left": 0.8905,
+    "right": 0.6531,
+    "below": 0.8973,
+    "diff": 0.2374,
+    "drop": -0.0068
+  },
+  {
+    "handle": "mmm135sh1wr0006",
+    "mediaId": "gid://shopify/MediaImage/56529044046189",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0163823735.jpg?v=1792515015",
+    "left": 0.875,
+    "right": 0.6387,
+    "below": 0.9835,
+    "diff": 0.2363,
+    "drop": -0.1085
+  },
+  {
+    "handle": "monc1282a00044",
+    "mediaId": "gid://shopify/MediaImage/56552985756013",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/2a00044-10.jpg?v=1792568690",
+    "left": 0.6074,
+    "right": 0.3729,
+    "below": 0.4945,
+    "diff": 0.2345,
+    "drop": 0.1129
+  },
+  {
+    "handle": "sea126mcka0133-lg",
+    "mediaId": "gid://shopify/MediaImage/56552883650925",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-lg26.jpg?v=1792568380",
+    "left": 0.5811,
+    "right": 0.3472,
+    "below": 0.2339,
+    "diff": 0.2339,
+    "drop": 0.3472
+  },
+  {
+    "handle": "dei162rennifanm",
+    "mediaId": "gid://shopify/MediaImage/56552978219373",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/dei162rennifanm-3.jpg?v=1792568674",
+    "left": 0.7734,
+    "right": 0.5402,
+    "below": 0.733,
+    "diff": 0.2332,
+    "drop": 0.0403
+  },
+  {
+    "handle": "pat25626akn370",
+    "mediaId": "gid://shopify/MediaImage/56552895775085",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176324000.jpg?v=1792568420",
+    "left": 0.9963,
+    "right": 0.7634,
+    "below": 0.9722,
+    "diff": 0.2329,
+    "drop": 0.0241
+  },
+  {
+    "handle": "mmm535s51am0531",
+    "mediaId": "gid://shopify/MediaImage/56528862806381",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0166975504.jpg?v=1792514910",
+    "left": 0.3671,
+    "right": 0.1351,
+    "below": 0.4353,
+    "diff": 0.232,
+    "drop": -0.0682
+  },
+  {
+    "handle": "alw183bd509340",
+    "mediaId": "gid://shopify/MediaImage/56552988442989",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509340-3.jpg?v=1792568696",
+    "left": 0.5665,
+    "right": 0.3351,
+    "below": 0.5256,
+    "diff": 0.2314,
+    "drop": 0.0409
+  },
+  {
+    "handle": "pmd12262059018",
+    "mediaId": "gid://shopify/MediaImage/56552952955245",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059018-5.jpg?v=1792568599",
+    "left": 0.2347,
+    "right": 0.0037,
+    "below": 0.3054,
+    "diff": 0.231,
+    "drop": -0.0707
+  },
+  {
+    "handle": "oke465okmg6st6-nv",
+    "mediaId": "gid://shopify/MediaImage/56553074065773",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/oke465okmg6st7-n8.jpg?v=1792568871",
+    "left": 0.9963,
+    "right": 0.7662,
+    "below": 0.9932,
+    "diff": 0.2301,
+    "drop": 0.0031
+  },
+  {
+    "handle": "mmm535s51hl0011",
+    "mediaId": "gid://shopify/MediaImage/56528906191213",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0133945138.jpg?v=1792514931",
+    "left": 0.969,
+    "right": 0.7396,
+    "below": 0.7838,
+    "diff": 0.2295,
+    "drop": 0.1853
+  },
+  {
+    "handle": "mmm235s51la0106",
+    "mediaId": "gid://shopify/MediaImage/56552943780205",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0143013918.jpg?v=1792568571",
+    "left": 0.2993,
+    "right": 0.0701,
+    "below": 0.1077,
+    "diff": 0.2292,
+    "drop": 0.1915
+  },
+  {
+    "handle": "sea126mcka0133-lg",
+    "mediaId": "gid://shopify/MediaImage/56552883716461",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-lg30.jpg?v=1792568380",
+    "left": 0.2731,
+    "right": 0.0442,
+    "below": 0.4574,
+    "diff": 0.2289,
+    "drop": -0.1844
+  },
+  {
+    "handle": "rag162m100006",
+    "mediaId": "gid://shopify/MediaImage/56552930705773",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/rag162m100006-7.jpg?v=1792568532",
+    "left": 0.2338,
+    "right": 0.0049,
+    "below": 0.4574,
+    "diff": 0.2289,
+    "drop": -0.2237
+  },
+  {
+    "handle": "mmm206s51aa0293",
+    "mediaId": "gid://shopify/MediaImage/56529295212909",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s51aa0293-07.jpg?v=1792515227",
+    "left": 0.3371,
+    "right": 0.1085,
+    "below": 0.5156,
+    "diff": 0.2286,
+    "drop": -0.1786
+  },
+  {
+    "handle": "mmm535s67tb0001",
+    "mediaId": "gid://shopify/MediaImage/56529177739629",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s67tb0001-08.jpg?v=1792515122",
+    "left": 1,
+    "right": 0.7743,
+    "below": 1,
+    "diff": 0.2257,
+    "drop": 0
+  },
+  {
+    "handle": "sea226lcka0129-m",
+    "mediaId": "gid://shopify/MediaImage/56552914452845",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-m9.jpg?v=1792568482",
+    "left": 0.7951,
+    "right": 0.5711,
+    "below": 0.7583,
+    "diff": 0.224,
+    "drop": 0.0368
+  },
+  {
+    "handle": "sea126mcka0096-m",
+    "mediaId": "gid://shopify/MediaImage/56552971207021",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-m9_67db4ee1-3bdb-4b8b-ae0b-54469eac90b8.jpg?v=1792568655",
+    "left": 0.7951,
+    "right": 0.5711,
+    "below": 0.7583,
+    "diff": 0.224,
+    "drop": 0.0368
+  },
+  {
+    "handle": "cic170495102",
+    "mediaId": "gid://shopify/MediaImage/56553028026733",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0154270410.jpg?v=1792568775",
+    "left": 0.8269,
+    "right": 0.603,
+    "below": 1,
+    "diff": 0.224,
+    "drop": -0.1731
+  },
+  {
+    "handle": "mmm435sb3wg0025",
+    "mediaId": "gid://shopify/MediaImage/56528905306477",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0128739506.jpg?v=1792514930",
+    "left": 0.2741,
+    "right": 0.0507,
+    "below": 0.3138,
+    "diff": 0.2234,
+    "drop": -0.0397
+  },
+  {
+    "handle": "blav241q4419103",
+    "mediaId": "gid://shopify/MediaImage/56552899314029",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/4419103-04.jpg?v=1792568436",
+    "left": 0.2214,
+    "right": 0,
+    "below": 0.7813,
+    "diff": 0.2214,
+    "drop": -0.5598
+  },
+  {
+    "handle": "pmd12262059045",
+    "mediaId": "gid://shopify/MediaImage/56552965833069",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059045-4.jpg?v=1792568643",
+    "left": 0.2214,
+    "right": 0,
+    "below": 0.6466,
+    "diff": 0.2214,
+    "drop": -0.4251
+  },
+  {
+    "handle": "monc2288g00034",
+    "mediaId": "gid://shopify/MediaImage/56552905671021",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/monc2288g00034-9.jpg?v=1792568453",
+    "left": 0.5952,
+    "right": 0.3754,
+    "below": 0.6626,
+    "diff": 0.2198,
+    "drop": -0.0674
+  },
+  {
+    "handle": "mmm235s51la0128",
+    "mediaId": "gid://shopify/MediaImage/56552943354221",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0128-11.jpg?v=1792568568",
+    "left": 0.6574,
+    "right": 0.4388,
+    "below": 0.5493,
+    "diff": 0.2186,
+    "drop": 0.1082
+  },
+  {
+    "handle": "pat256kn0688045",
+    "mediaId": "gid://shopify/MediaImage/56552939553133",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176634825.jpg?v=1792568557",
+    "left": 1,
+    "right": 0.7819,
+    "below": 1,
+    "diff": 0.2181,
+    "drop": 0
+  },
+  {
+    "handle": "monc2289b00019",
+    "mediaId": "gid://shopify/MediaImage/56552928543085",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/9b00019-06.jpg?v=1792568528",
+    "left": 1,
+    "right": 0.782,
+    "below": 1,
+    "diff": 0.218,
+    "drop": 0
+  },
+  {
+    "handle": "mmy572a17fw732",
+    "mediaId": "gid://shopify/MediaImage/56552949088621",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy572a17fw732-5.jpg?v=1792568587",
+    "left": 0.2177,
+    "right": 0,
+    "below": 0.6088,
+    "diff": 0.2177,
+    "drop": -0.3911
+  },
+  {
+    "handle": "mmm535s56wg0082-ama",
+    "mediaId": "gid://shopify/MediaImage/56528820470125",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0144884794.jpg?v=1792514881",
+    "left": 0.3613,
+    "right": 0.144,
+    "below": 0.4432,
+    "diff": 0.2173,
+    "drop": -0.0818
+  },
+  {
+    "handle": "sea226lcka0108",
+    "mediaId": "gid://shopify/MediaImage/56552888009069",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0108-8.jpg?v=1792568390",
+    "left": 1,
+    "right": 0.7827,
+    "below": 1,
+    "diff": 0.2173,
+    "drop": 0
+  },
+  {
+    "handle": "mm6235s52dd0104",
+    "mediaId": "gid://shopify/MediaImage/56552906981741",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6235s52dd0104-4.jpg?v=1792568457",
+    "left": 1,
+    "right": 0.785,
+    "below": 1,
+    "diff": 0.215,
+    "drop": 0
+  },
+  {
+    "handle": "mmm235s51la0190",
+    "mediaId": "gid://shopify/MediaImage/56552876966253",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0173853195.jpg?v=1792568351",
+    "left": 0.2457,
+    "right": 0.032,
+    "below": 0.7649,
+    "diff": 0.2137,
+    "drop": -0.5192
+  },
+  {
+    "handle": "rag262w04047",
+    "mediaId": "gid://shopify/MediaImage/56552921137517",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04047-03.jpg?v=1792568506",
+    "left": 0.2128,
+    "right": 0,
+    "below": 0.4031,
+    "diff": 0.2128,
+    "drop": -0.1903
+  },
+  {
+    "handle": "rag262w04105",
+    "mediaId": "gid://shopify/MediaImage/56552919761261",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04105-05.jpg?v=1792568503",
+    "left": 0.7449,
+    "right": 0.5342,
+    "below": 0.7299,
+    "diff": 0.2107,
+    "drop": 0.015
+  },
+  {
+    "handle": "mm6135sh0gu0052",
+    "mediaId": "gid://shopify/MediaImage/56552972255597",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sh0gu0052-08.jpg?v=1792568658",
+    "left": 0.9887,
+    "right": 0.7783,
+    "below": 1,
+    "diff": 0.2104,
+    "drop": -0.0113
+  },
+  {
+    "handle": "monc1281a00095",
+    "mediaId": "gid://shopify/MediaImage/56553019670893",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/1a00095-04.jpg?v=1792568758",
+    "left": 0.5345,
+    "right": 0.3247,
+    "below": 0.4342,
+    "diff": 0.2098,
+    "drop": 0.1003
+  },
+  {
+    "handle": "mmm435sb1wa0004",
+    "mediaId": "gid://shopify/MediaImage/56528827515245",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sb1wa0004-tt.jpg?v=1792514888",
+    "left": 0.2079,
+    "right": 0,
+    "below": 0.0911,
+    "diff": 0.2079,
+    "drop": 0.1169
+  },
+  {
+    "handle": "sea126mcka0133",
+    "mediaId": "gid://shopify/MediaImage/56552989720941",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-4.jpg?v=1792568698",
+    "left": 0.9854,
+    "right": 0.7789,
+    "below": 0.9838,
+    "diff": 0.2065,
+    "drop": 0.0016
+  },
+  {
+    "handle": "sea226lcka0129-m",
+    "mediaId": "gid://shopify/MediaImage/56552914387309",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-m7.jpg?v=1792568483",
+    "left": 0.5007,
+    "right": 0.296,
+    "below": 0.5354,
+    "diff": 0.2048,
+    "drop": -0.0347
+  },
+  {
+    "handle": "crl12262030027",
+    "mediaId": "gid://shopify/MediaImage/56552953446765",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/crl12262030027-5.jpg?v=1792568603",
+    "left": 0.4036,
+    "right": 0.1988,
+    "below": 0.5213,
+    "diff": 0.2048,
+    "drop": -0.1177
+  },
+  {
+    "handle": "sea126mcka0096-m",
+    "mediaId": "gid://shopify/MediaImage/56552971141485",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-m7_8f974de1-f8f6-4937-aabf-7c3dc1776179.jpg?v=1792568655",
+    "left": 0.5007,
+    "right": 0.296,
+    "below": 0.5354,
+    "diff": 0.2048,
+    "drop": -0.0347
+  },
+  {
+    "handle": "mmm135s50gc0684-24ss",
+    "mediaId": "gid://shopify/MediaImage/56529115218285",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0136404161.jpg?v=1792515061",
+    "left": 0.2164,
+    "right": 0.0153,
+    "below": 0.2804,
+    "diff": 0.201,
+    "drop": -0.064
+  },
+  {
+    "handle": "pmd12262059039",
+    "mediaId": "gid://shopify/MediaImage/56553008988525",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059039-9.jpg?v=1792568735",
+    "left": 0.7784,
+    "right": 0.5792,
+    "below": 1,
+    "diff": 0.1993,
+    "drop": -0.2216
+  },
+  {
+    "handle": "mmm135s50gu0202",
+    "mediaId": "gid://shopify/MediaImage/56528986079597",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0133361648.jpg?v=1792514971",
+    "left": 0.8639,
+    "right": 0.6647,
+    "below": 0.7881,
+    "diff": 0.1992,
+    "drop": 0.0758
+  },
+  {
+    "handle": "mmm235s51la0052",
+    "mediaId": "gid://shopify/MediaImage/56552895381869",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0052-13.jpg?v=1792568417",
+    "left": 0.1988,
+    "right": 0,
+    "below": 0.5966,
+    "diff": 0.1988,
+    "drop": -0.3978
+  },
+  {
+    "handle": "mm6435s52tc0068",
+    "mediaId": "gid://shopify/MediaImage/56552906326381",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s52tc0068-04.jpg?v=1792568454",
+    "left": 0.9996,
+    "right": 0.8009,
+    "below": 1,
+    "diff": 0.1987,
+    "drop": -0.0004
+  },
+  {
+    "handle": "pmd12262059016",
+    "mediaId": "gid://shopify/MediaImage/56552891253101",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059016-9.jpg?v=1792568404",
+    "left": 0.5923,
+    "right": 0.3943,
+    "below": 0.0024,
+    "diff": 0.1979,
+    "drop": 0.5899
+  },
+  {
+    "handle": "mmm435sb1wc0024",
+    "mediaId": "gid://shopify/MediaImage/56528832987501",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sb1wc0024-5.jpg?v=1792514889",
+    "left": 0.2387,
+    "right": 0.0435,
+    "below": 0.293,
+    "diff": 0.1952,
+    "drop": -0.0543
+  },
+  {
+    "handle": "marn155cuju0396",
+    "mediaId": "gid://shopify/MediaImage/56552878211437",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/cuju0396-03.jpg?v=1792568358",
+    "left": 0.5033,
+    "right": 0.3082,
+    "below": 0.764,
+    "diff": 0.1951,
+    "drop": -0.2607
+  },
+  {
+    "handle": "mmm435s58ws0109",
+    "mediaId": "gid://shopify/MediaImage/56529113252205",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0134141416.jpg?v=1792515054",
+    "left": 0.996,
+    "right": 0.801,
+    "below": 0.997,
+    "diff": 0.195,
+    "drop": -0.001
+  },
+  {
+    "handle": "rag262w04047",
+    "mediaId": "gid://shopify/MediaImage/56552921170285",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04047-04.jpg?v=1792568506",
+    "left": 0.3661,
+    "right": 0.172,
+    "below": 0.6951,
+    "diff": 0.194,
+    "drop": -0.329
+  },
+  {
+    "handle": "mmm43535ui0447r-dgr",
+    "mediaId": "gid://shopify/MediaImage/56529207591277",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmmdgr-1.jpg?v=1792515144",
+    "left": 0.1915,
+    "right": 0,
+    "below": 0.1234,
+    "diff": 0.1915,
+    "drop": 0.0681
+  },
+  {
+    "handle": "pmd12262059039",
+    "mediaId": "gid://shopify/MediaImage/56553008922989",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059039-7.jpg?v=1792568735",
+    "left": 0.8071,
+    "right": 0.6165,
+    "below": 0.6789,
+    "diff": 0.1906,
+    "drop": 0.1283
+  },
+  {
+    "handle": "mmy272k17sk382",
+    "mediaId": "gid://shopify/MediaImage/56552933753197",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177771715.jpg?v=1792568540",
+    "left": 0.1905,
+    "right": 0,
+    "below": 0.8464,
+    "diff": 0.1905,
+    "drop": -0.656
+  },
+  {
+    "handle": "mmm535s56wg0082-t8031",
+    "mediaId": "gid://shopify/MediaImage/56528813228397",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0146664809.jpg?v=1792514875",
+    "left": 0.2353,
+    "right": 0.0466,
+    "below": 0.3202,
+    "diff": 0.1887,
+    "drop": -0.085
+  },
+  {
+    "handle": "mmm435sa1ui0023",
+    "mediaId": "gid://shopify/MediaImage/56553050669421",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sa1ui0023-8.jpg?v=1792568825",
+    "left": 1,
+    "right": 0.8126,
+    "below": 1,
+    "diff": 0.1874,
+    "drop": 0
+  },
+  {
+    "handle": "mmy472c17fw705",
+    "mediaId": "gid://shopify/MediaImage/56552882176365",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy472c17fw705-10.jpg?v=1792568371",
+    "left": 0.9869,
+    "right": 0.8004,
+    "below": 1,
+    "diff": 0.1865,
+    "drop": -0.0131
+  },
+  {
+    "handle": "mmm535s56wg0082-blk",
+    "mediaId": "gid://shopify/MediaImage/56528808804717",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56wg0082blk-11.jpg?v=1792514869",
+    "left": 0.3091,
+    "right": 0.1246,
+    "below": 0.3139,
+    "diff": 0.1845,
+    "drop": -0.0048
+  },
+  {
+    "handle": "cic1702538902",
+    "mediaId": "gid://shopify/MediaImage/56552962392429",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/cic1702538902-10.jpg?v=1792568632",
+    "left": 0.1838,
+    "right": 0.0018,
+    "below": 0.407,
+    "diff": 0.182,
+    "drop": -0.2232
+  },
+  {
+    "handle": "mmm435sa2ui0006-bk",
+    "mediaId": "gid://shopify/MediaImage/56553037562221",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa2ui0006y-12.jpg?v=1792568793",
+    "left": 0.181,
+    "right": 0,
+    "below": 0.3264,
+    "diff": 0.181,
+    "drop": -0.1454
+  },
+  {
+    "handle": "mm6235s52dd0104",
+    "mediaId": "gid://shopify/MediaImage/56552907080045",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6235s52dd0104-7.jpg?v=1792568458",
+    "left": 0.1801,
+    "right": 0,
+    "below": 1,
+    "diff": 0.1801,
+    "drop": -0.8199
+  },
+  {
+    "handle": "bob133074761132-lb",
+    "mediaId": "gid://shopify/MediaImage/56552997978477",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bob133074761132-lb34.jpg?v=1792568717",
+    "left": 0.7042,
+    "right": 0.5246,
+    "below": 0.742,
+    "diff": 0.1796,
+    "drop": -0.0378
+  },
+  {
+    "handle": "mmm135s50hl0021",
+    "mediaId": "gid://shopify/MediaImage/56528960291181",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s50hl0021-11.jpg?v=1792514965",
+    "left": 0.9957,
+    "right": 0.817,
+    "below": 0.9918,
+    "diff": 0.1787,
+    "drop": 0.0039
+  },
+  {
+    "handle": "pat456ac1558101",
+    "mediaId": "gid://shopify/MediaImage/56553048211821",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176487340.jpg?v=1792568818",
+    "left": 0.3838,
+    "right": 0.2057,
+    "below": 0.4098,
+    "diff": 0.1781,
+    "drop": -0.026
+  },
+  {
+    "handle": "mmm535s56wg0082-gc",
+    "mediaId": "gid://shopify/MediaImage/56528809296237",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/wg0082gc-12.jpg?v=1792514871",
+    "left": 0.4083,
+    "right": 0.2307,
+    "below": 0.332,
+    "diff": 0.1777,
+    "drop": 0.0763
+  },
+  {
+    "handle": "d2102s71dm0860",
+    "mediaId": "gid://shopify/MediaImage/56552984510829",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177050581.jpg?v=1792568686",
+    "left": 0.9999,
+    "right": 0.8237,
+    "below": 0.9052,
+    "diff": 0.1762,
+    "drop": 0.0946
+  },
+  {
+    "handle": "mmm435sb1wc0024",
+    "mediaId": "gid://shopify/MediaImage/56528832921965",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sb1wc0024-10.jpg?v=1792514888",
+    "left": 0.3737,
+    "right": 0.1984,
+    "below": 0.8881,
+    "diff": 0.1753,
+    "drop": -0.5144
+  },
+  {
+    "handle": "mmm435sa2ui0006-p",
+    "mediaId": "gid://shopify/MediaImage/56529085071725",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa2ui0006p-05.jpg?v=1792515041",
+    "left": 0.175,
+    "right": 0,
+    "below": 0.1693,
+    "diff": 0.175,
+    "drop": 0.0057
+  },
+  {
+    "handle": "mmm135s50gu0181",
+    "mediaId": "gid://shopify/MediaImage/56529183801709",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s50gu0181-08.jpg?v=1792515122",
+    "left": 0.6272,
+    "right": 0.4527,
+    "below": 0.4115,
+    "diff": 0.1746,
+    "drop": 0.2158
+  },
+  {
+    "handle": "mmm535s56ui0110-aq",
+    "mediaId": "gid://shopify/MediaImage/56529048076653",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56ui0110aq-06.jpg?v=1792515017",
+    "left": 0.1743,
+    "right": 0,
+    "below": 0.2531,
+    "diff": 0.1743,
+    "drop": -0.0789
+  },
+  {
+    "handle": "rag262w04048",
+    "mediaId": "gid://shopify/MediaImage/56552935489901",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04048-05.jpg?v=1792568545",
+    "left": 0.174,
+    "right": 0,
+    "below": 0.546,
+    "diff": 0.174,
+    "drop": -0.372
+  },
+  {
+    "handle": "mmm535si0th0001",
+    "mediaId": "gid://shopify/MediaImage/56529035133293",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0132552465.jpg?v=1792515002",
+    "left": 0.1724,
+    "right": 0,
+    "below": 0.1992,
+    "diff": 0.1724,
+    "drop": -0.0268
+  },
+  {
+    "handle": "mmm135s50gc0684-24ss",
+    "mediaId": "gid://shopify/MediaImage/56529115185517",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0137525041.jpg?v=1792515061",
+    "left": 0.1712,
+    "right": 0,
+    "below": 0.4607,
+    "diff": 0.1712,
+    "drop": -0.2895
+  },
+  {
+    "handle": "mmm435sb1wg0042",
+    "mediaId": "gid://shopify/MediaImage/56528899047789",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0133109428.jpg?v=1792514921",
+    "left": 0.9738,
+    "right": 0.8036,
+    "below": 0.9986,
+    "diff": 0.1702,
+    "drop": -0.0248
+  },
+  {
+    "handle": "mmm435sa2ui0006-le",
+    "mediaId": "gid://shopify/MediaImage/56529081500013",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sa2ui0006-le-1.jpg?v=1792515039",
+    "left": 0.1696,
+    "right": 0,
+    "below": 0.0929,
+    "diff": 0.1696,
+    "drop": 0.0768
+  },
+  {
+    "handle": "blav241q4419103",
+    "mediaId": "gid://shopify/MediaImage/56552899379565",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/4419103-06.jpg?v=1792568432",
+    "left": 1,
+    "right": 0.8305,
+    "below": 1,
+    "diff": 0.1695,
+    "drop": 0
+  },
+  {
+    "handle": "mmm435sb2wf0008",
+    "mediaId": "gid://shopify/MediaImage/56529035624813",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb2wf0008-top.jpg?v=1792515006",
+    "left": 0.1685,
+    "right": 0,
+    "below": 0.2861,
+    "diff": 0.1685,
+    "drop": -0.1177
+  },
+  {
+    "handle": "bob133074761132-w",
+    "mediaId": "gid://shopify/MediaImage/56553014460781",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bob133074761132-w9.jpg?v=1792568745",
+    "left": 0.168,
+    "right": 0,
+    "below": 0.3339,
+    "diff": 0.168,
+    "drop": -0.1659
+  },
+  {
+    "handle": "monc4286f00002",
+    "mediaId": "gid://shopify/MediaImage/56552912126317",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/6f00002-07.jpg?v=1792568474",
+    "left": 0.7335,
+    "right": 0.5662,
+    "below": 0.6909,
+    "diff": 0.1673,
+    "drop": 0.0426
+  },
+  {
+    "handle": "mmm535s51gc0523",
+    "mediaId": "gid://shopify/MediaImage/56529146511725",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm535s51gc0523-t.jpg?v=1792515090",
+    "left": 0.1655,
+    "right": 0,
+    "below": 0.0609,
+    "diff": 0.1655,
+    "drop": 0.1046
+  },
+  {
+    "handle": "sea226lcka0129-w",
+    "mediaId": "gid://shopify/MediaImage/56552904360301",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-w10.jpg?v=1792568449",
+    "left": 0.1695,
+    "right": 0.0046,
+    "below": 0.3397,
+    "diff": 0.1649,
+    "drop": -0.1702
+  },
+  {
+    "handle": "sea126mcka0096-w",
+    "mediaId": "gid://shopify/MediaImage/56552945844589",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-w10_bdeb6bc3-2b93-468b-a35c-bf28048f9079.jpg?v=1792568577",
+    "left": 0.1695,
+    "right": 0.0046,
+    "below": 0.3397,
+    "diff": 0.1649,
+    "drop": -0.1702
+  },
+  {
+    "handle": "mmm235sb1wg0084",
+    "mediaId": "gid://shopify/MediaImage/56528816701805",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb1wg0084-top.jpg?v=1792514877",
+    "left": 0.1647,
+    "right": 0,
+    "below": 0.3645,
+    "diff": 0.1647,
+    "drop": -0.1998
+  },
+  {
+    "handle": "mmm135s56ui0110-bk",
+    "mediaId": "gid://shopify/MediaImage/56529077207405",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s56ui0110-bk-1.jpg?v=1792515032",
+    "left": 0.1647,
+    "right": 0,
+    "below": 0.0804,
+    "diff": 0.1647,
+    "drop": 0.0843
+  },
+  {
+    "handle": "mmm435sb2zh0003",
+    "mediaId": "gid://shopify/MediaImage/56528934338925",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0172343601.jpg?v=1792514942",
+    "left": 0.3424,
+    "right": 0.1826,
+    "below": 0.3406,
+    "diff": 0.1598,
+    "drop": 0.0018
+  },
+  {
+    "handle": "sea126mcka0133-lg",
+    "mediaId": "gid://shopify/MediaImage/56552883749229",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-lg25.jpg?v=1792568380",
+    "left": 0.3824,
+    "right": 0.2229,
+    "below": 0.3356,
+    "diff": 0.1595,
+    "drop": 0.0469
+  },
+  {
+    "handle": "mmm235s51la0189",
+    "mediaId": "gid://shopify/MediaImage/56552875721069",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0173877458.jpg?v=1792568350",
+    "left": 0.1592,
+    "right": 0,
+    "below": 0.3039,
+    "diff": 0.1592,
+    "drop": -0.1446
+  },
+  {
+    "handle": "mmm135s51gc0519",
+    "mediaId": "gid://shopify/MediaImage/56529173873005",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s51gc0519-10.jpg?v=1792515112",
+    "left": 0.7155,
+    "right": 0.5579,
+    "below": 0.8376,
+    "diff": 0.1576,
+    "drop": -0.1222
+  },
+  {
+    "handle": "mm6135sh2dt0062",
+    "mediaId": "gid://shopify/MediaImage/56552967471469",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6135sh2dt0062-3.jpg?v=1792568645",
+    "left": 0.1576,
+    "right": 0,
+    "below": 0.0824,
+    "diff": 0.1576,
+    "drop": 0.0751
+  },
+  {
+    "handle": "over12262269075",
+    "mediaId": "gid://shopify/MediaImage/56553021112685",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/over12262269075-8.jpg?v=1792568762",
+    "left": 0.1564,
+    "right": 0,
+    "below": 0.5885,
+    "diff": 0.1564,
+    "drop": -0.4321
+  },
+  {
+    "handle": "rag262w04047",
+    "mediaId": "gid://shopify/MediaImage/56552921235821",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04047-06.jpg?v=1792568507",
+    "left": 0.1557,
+    "right": 0,
+    "below": 0.5225,
+    "diff": 0.1557,
+    "drop": -0.3668
+  },
+  {
+    "handle": "bark16722b8001",
+    "mediaId": "gid://shopify/MediaImage/56553010954605",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/22b8001-09.jpg?v=1792568737",
+    "left": 0.7885,
+    "right": 0.6335,
+    "below": 0.9339,
+    "diff": 0.1551,
+    "drop": -0.1454
+  },
+  {
+    "handle": "mmm135s97wq0052",
+    "mediaId": "gid://shopify/MediaImage/56528914678125",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0114696885.jpg?v=1792514937",
+    "left": 0.1545,
+    "right": 0,
+    "below": 0.956,
+    "diff": 0.1545,
+    "drop": -0.8015
+  },
+  {
+    "handle": "rag262w04009",
+    "mediaId": "gid://shopify/MediaImage/56552916222317",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/rag262w04009-8.jpg?v=1792568487",
+    "left": 0.8542,
+    "right": 0.7021,
+    "below": 0.8692,
+    "diff": 0.1521,
+    "drop": -0.015
+  },
+  {
+    "handle": "mmm135s51gp0226",
+    "mediaId": "gid://shopify/MediaImage/56528944791917",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s51gp0226-15.jpg?v=1792514949",
+    "left": 0.2871,
+    "right": 0.1354,
+    "below": 0.0629,
+    "diff": 0.1516,
+    "drop": 0.2241
+  },
+  {
+    "handle": "kos183kseww458",
+    "mediaId": "gid://shopify/MediaImage/56552888435053",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177530621.jpg?v=1792568392",
+    "left": 0.9253,
+    "right": 0.774,
+    "below": 0.95,
+    "diff": 0.1513,
+    "drop": -0.0247
+  },
+  {
+    "handle": "blav241q4419103",
+    "mediaId": "gid://shopify/MediaImage/56552899346797",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/4419103-05.jpg?v=1792568431",
+    "left": 0.1512,
+    "right": 0,
+    "below": 0.7774,
+    "diff": 0.1512,
+    "drop": -0.6262
+  },
+  {
+    "handle": "pmd12262059045",
+    "mediaId": "gid://shopify/MediaImage/56552965898605",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059045-16.jpg?v=1792568642",
+    "left": 1,
+    "right": 0.8493,
+    "below": 0.9926,
+    "diff": 0.1507,
+    "drop": 0.0074
+  },
+  {
+    "handle": "mmm235sa3ui0008-amanda",
+    "mediaId": "gid://shopify/MediaImage/56528950591853",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0142803520.jpg?v=1792514956",
+    "left": 0.1759,
+    "right": 0.026,
+    "below": 0.1915,
+    "diff": 0.1499,
+    "drop": -0.0156
+  },
+  {
+    "handle": "sea126mcka0133-lg",
+    "mediaId": "gid://shopify/MediaImage/56552883585389",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-lg23.jpg?v=1792568380",
+    "left": 0.2616,
+    "right": 0.1121,
+    "below": 0.5092,
+    "diff": 0.1496,
+    "drop": -0.2476
+  },
+  {
+    "handle": "pat256kn1108013-bk",
+    "mediaId": "gid://shopify/MediaImage/56552937652589",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176519956.jpg?v=1792568553",
+    "left": 0.4875,
+    "right": 0.3393,
+    "below": 0.4993,
+    "diff": 0.1482,
+    "drop": -0.0118
+  },
+  {
+    "handle": "mmm535s50gc0687",
+    "mediaId": "gid://shopify/MediaImage/56529112826221",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0129523446.jpg?v=1792515052",
+    "left": 0.1476,
+    "right": 0,
+    "below": 0.0885,
+    "diff": 0.1476,
+    "drop": 0.0591
+  },
+  {
+    "handle": "mmm235s51ha1082",
+    "mediaId": "gid://shopify/MediaImage/56529145069933",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0087305869.jpg?v=1792515082",
+    "left": 0.2824,
+    "right": 0.135,
+    "below": 0.9427,
+    "diff": 0.1475,
+    "drop": -0.6603
+  },
+  {
+    "handle": "pat256kn0688045",
+    "mediaId": "gid://shopify/MediaImage/56552939618669",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176524917.jpg?v=1792568557",
+    "left": 0.1473,
+    "right": 0,
+    "below": 0.8323,
+    "diff": 0.1473,
+    "drop": -0.685
+  },
+  {
+    "handle": "mmm435saui0023",
+    "mediaId": "gid://shopify/MediaImage/56553040281965",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa1ui0023bk-09.jpg?v=1792568799",
+    "left": 0.1472,
+    "right": 0,
+    "below": 1,
+    "diff": 0.1472,
+    "drop": -0.8528
+  },
+  {
+    "handle": "pmd12262059039",
+    "mediaId": "gid://shopify/MediaImage/56553008890221",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059039-6.jpg?v=1792568732",
+    "left": 0.8228,
+    "right": 0.6756,
+    "below": 0.7545,
+    "diff": 0.1472,
+    "drop": 0.0683
+  },
+  {
+    "handle": "bob133074761126",
+    "mediaId": "gid://shopify/MediaImage/56552963178861",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0178810555.jpg?v=1792568636",
+    "left": 1,
+    "right": 0.855,
+    "below": 1,
+    "diff": 0.145,
+    "drop": 0
+  },
+  {
+    "handle": "crl12262030028",
+    "mediaId": "gid://shopify/MediaImage/56552954790253",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/crl12262030028-5.jpg?v=1792568607",
+    "left": 0.835,
+    "right": 0.6903,
+    "below": 0.911,
+    "diff": 0.1446,
+    "drop": -0.076
+  },
+  {
+    "handle": "marn155puju0136",
+    "mediaId": "gid://shopify/MediaImage/56552893710701",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/marn155puju0136-10.jpg?v=1792568411",
+    "left": 0.4882,
+    "right": 0.344,
+    "below": 0.4421,
+    "diff": 0.1442,
+    "drop": 0.0461
+  },
+  {
+    "handle": "dei162rennimm",
+    "mediaId": "gid://shopify/MediaImage/56552992047469",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/dei162rennimm-5.jpg?v=1792568703",
+    "left": 0.8225,
+    "right": 0.6783,
+    "below": 0.8235,
+    "diff": 0.1442,
+    "drop": -0.001
+  },
+  {
+    "handle": "mmm135s50gu0181",
+    "mediaId": "gid://shopify/MediaImage/56529183867245",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s50gu0181-09.jpg?v=1792515122",
+    "left": 0.1454,
+    "right": 0.0027,
+    "below": 0.2147,
+    "diff": 0.1427,
+    "drop": -0.0693
+  },
+  {
+    "handle": "mmm435sa3vx0005-bk",
+    "mediaId": "gid://shopify/MediaImage/56529206673773",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sa3vx0005-bkt.jpg?v=1792515140",
+    "left": 0.1423,
+    "right": 0,
+    "below": 0.3871,
+    "diff": 0.1423,
+    "drop": -0.2448
+  },
+  {
+    "handle": "mmm535s51am0531",
+    "mediaId": "gid://shopify/MediaImage/56528862675309",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0166964299.jpg?v=1792514910",
+    "left": 0.1421,
+    "right": 0,
+    "below": 0.301,
+    "diff": 0.1421,
+    "drop": -0.1589
+  },
+  {
+    "handle": "mmm435s55ui0197",
+    "mediaId": "gid://shopify/MediaImage/56529168957805",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0116847552.jpg?v=1792515100",
+    "left": 0.8812,
+    "right": 0.7403,
+    "below": 0.9598,
+    "diff": 0.1409,
+    "drop": -0.0786
+  },
+  {
+    "handle": "crl12262030027",
+    "mediaId": "gid://shopify/MediaImage/56552953610605",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/crl12262030027-10.jpg?v=1792568602",
+    "left": 0.1394,
+    "right": 0,
+    "below": 0.2196,
+    "diff": 0.1394,
+    "drop": -0.0802
+  },
+  {
+    "handle": "rag262w04117r",
+    "mediaId": "gid://shopify/MediaImage/56552911372653",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04117r-04.jpg?v=1792568471",
+    "left": 0.1393,
+    "right": 0,
+    "below": 0.5772,
+    "diff": 0.1393,
+    "drop": -0.4379
+  },
+  {
+    "handle": "mmm535s56wg0082-t8031",
+    "mediaId": "gid://shopify/MediaImage/56528813425005",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0146664781.jpg?v=1792514876",
+    "left": 0.9161,
+    "right": 0.7814,
+    "below": 0.9253,
+    "diff": 0.1347,
+    "drop": -0.0092
+  },
+  {
+    "handle": "be12262290050",
+    "mediaId": "gid://shopify/MediaImage/56552958820717",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/be12262290050-11.jpg?v=1792568622",
+    "left": 0.8763,
+    "right": 0.7424,
+    "below": 0.6424,
+    "diff": 0.1339,
+    "drop": 0.2339
+  },
+  {
+    "handle": "bob133074761132-w",
+    "mediaId": "gid://shopify/MediaImage/56553014395245",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bob133074761132-w7.jpg?v=1792568745",
+    "left": 0.247,
+    "right": 0.1131,
+    "below": 0.1351,
+    "diff": 0.1339,
+    "drop": 0.1119
+  },
+  {
+    "handle": "mmm435s56ui0148dbr",
+    "mediaId": "gid://shopify/MediaImage/56529099260269",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0116163016.jpg?v=1792515045",
+    "left": 0.6137,
+    "right": 0.4804,
+    "below": 0.7976,
+    "diff": 0.1333,
+    "drop": -0.1839
+  },
+  {
+    "handle": "bob133074761126",
+    "mediaId": "gid://shopify/MediaImage/56552963211629",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0178810556.jpg?v=1792568634",
+    "left": 1,
+    "right": 0.8671,
+    "below": 1,
+    "diff": 0.1329,
+    "drop": 0
+  },
+  {
+    "handle": "sea226lcka0102",
+    "mediaId": "gid://shopify/MediaImage/56552907932013",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0102-11.jpg?v=1792568459",
+    "left": 0.3423,
+    "right": 0.21,
+    "below": 0.6874,
+    "diff": 0.1323,
+    "drop": -0.3451
+  },
+  {
+    "handle": "monc1288g00058",
+    "mediaId": "gid://shopify/MediaImage/56553025700205",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/8g00058-11.jpg?v=1792568769",
+    "left": 0.135,
+    "right": 0.0027,
+    "below": 0.325,
+    "diff": 0.1323,
+    "drop": -0.19
+  },
+  {
+    "handle": "mm6435sb6wg0024-b",
+    "mediaId": "gid://shopify/MediaImage/56553092514157",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb6wg0024-22.jpg?v=1792568917",
+    "left": 0.9991,
+    "right": 0.8668,
+    "below": 1,
+    "diff": 0.1323,
+    "drop": -0.0009
+  },
+  {
+    "handle": "mm6435s52tc0070",
+    "mediaId": "gid://shopify/MediaImage/56552891810157",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0173803155.jpg?v=1792568416",
+    "left": 0.8915,
+    "right": 0.7598,
+    "below": 0.9463,
+    "diff": 0.1317,
+    "drop": -0.0548
+  },
+  {
+    "handle": "mmm135s50gu0202",
+    "mediaId": "gid://shopify/MediaImage/56528985784685",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s50gu0202w-08.jpg?v=1792514971",
+    "left": 0.1296,
+    "right": 0,
+    "below": 0.26,
+    "diff": 0.1296,
+    "drop": -0.1304
+  },
+  {
+    "handle": "mmm435sb1wg0086",
+    "mediaId": "gid://shopify/MediaImage/56529286988141",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0165838011.jpg?v=1792515224",
+    "left": 0.139,
+    "right": 0.0097,
+    "below": 0.318,
+    "diff": 0.1293,
+    "drop": -0.179
+  },
+  {
+    "handle": "d2102s71lb1773",
+    "mediaId": "gid://shopify/MediaImage/56552889975149",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177055144.jpg?v=1792568397",
+    "left": 0.5016,
+    "right": 0.3723,
+    "below": 0.5783,
+    "diff": 0.1293,
+    "drop": -0.0766
+  },
+  {
+    "handle": "mmm435sb2wg0008",
+    "mediaId": "gid://shopify/MediaImage/56528902783341",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0130582327.jpg?v=1792514926",
+    "left": 0.2296,
+    "right": 0.1013,
+    "below": 0.1146,
+    "diff": 0.1283,
+    "drop": 0.115
+  },
+  {
+    "handle": "be12262290028",
+    "mediaId": "gid://shopify/MediaImage/56552956395885",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/be12262290028-6.jpg?v=1792568614",
+    "left": 0.1423,
+    "right": 0.0152,
+    "below": 0.2591,
+    "diff": 0.1271,
+    "drop": -0.1168
+  },
+  {
+    "handle": "sea226lcka0108",
+    "mediaId": "gid://shopify/MediaImage/56552888041837",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0108-43.jpg?v=1792568389",
+    "left": 0.1265,
+    "right": 0,
+    "below": 0.1906,
+    "diff": 0.1265,
+    "drop": -0.0641
+  },
+  {
+    "handle": "pmd12262059016",
+    "mediaId": "gid://shopify/MediaImage/56552891187565",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059016-7.jpg?v=1792568404",
+    "left": 0.6814,
+    "right": 0.5555,
+    "below": 0.7519,
+    "diff": 0.1259,
+    "drop": -0.0705
+  },
+  {
+    "handle": "mmm535s56wg0082-aq",
+    "mediaId": "gid://shopify/MediaImage/56528821584237",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56wg0082b-06.jpg?v=1792514884",
+    "left": 0.2,
+    "right": 0.0754,
+    "below": 0.1899,
+    "diff": 0.1246,
+    "drop": 0.0101
+  },
+  {
+    "handle": "mmm535s51hl0011",
+    "mediaId": "gid://shopify/MediaImage/56528906387821",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0133945140.jpg?v=1792514932",
+    "left": 0.2097,
+    "right": 0.0854,
+    "below": 0.5449,
+    "diff": 0.1243,
+    "drop": -0.3353
+  },
+  {
+    "handle": "mmm435sb1wd0058",
+    "mediaId": "gid://shopify/MediaImage/56528840786285",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0163071660.jpg?v=1792514893",
+    "left": 0.5942,
+    "right": 0.4702,
+    "below": 0.7698,
+    "diff": 0.124,
+    "drop": -0.1756
+  },
+  {
+    "handle": "sea226lcka0134-lg",
+    "mediaId": "gid://shopify/MediaImage/56552902295917",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0134-lg5.jpg?v=1792568439",
+    "left": 0.2673,
+    "right": 0.1455,
+    "below": 0.3391,
+    "diff": 0.1217,
+    "drop": -0.0719
+  },
+  {
+    "handle": "mmm435sb3wg0025",
+    "mediaId": "gid://shopify/MediaImage/56528905503085",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0128739510.jpg?v=1792514928",
+    "left": 0.1957,
+    "right": 0.075,
+    "below": 0.7,
+    "diff": 0.1207,
+    "drop": -0.5043
+  },
+  {
+    "handle": "gaa10170130002",
+    "mediaId": "gid://shopify/MediaImage/56552981725549",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/gaa10170130002-7.jpg?v=1792568679",
+    "left": 0.583,
+    "right": 0.4638,
+    "below": 0.7876,
+    "diff": 0.1192,
+    "drop": -0.2046
+  },
+  {
+    "handle": "mmm135s51gp0226",
+    "mediaId": "gid://shopify/MediaImage/56528944726381",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s51gp0226-12.jpg?v=1792514951",
+    "left": 0.1262,
+    "right": 0.0115,
+    "below": 0.7265,
+    "diff": 0.1147,
+    "drop": -0.6003
+  },
+  {
+    "handle": "d2402s82wam0085",
+    "mediaId": "gid://shopify/MediaImage/56553052864877",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176070688.jpg?v=1792568830",
+    "left": 0.1598,
+    "right": 0.0451,
+    "below": 0.2415,
+    "diff": 0.1147,
+    "drop": -0.0817
+  },
+  {
+    "handle": "pmd12262059068",
+    "mediaId": "gid://shopify/MediaImage/56552974352749",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0175644257.jpg?v=1792568662",
+    "left": 1,
+    "right": 0.8863,
+    "below": 0.9735,
+    "diff": 0.1137,
+    "drop": 0.0265
+  },
+  {
+    "handle": "mmm435sb1wg0018-n",
+    "mediaId": "gid://shopify/MediaImage/56528899899757",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0133446700.jpg?v=1792514922",
+    "left": 0.1133,
+    "right": 0,
+    "below": 0.2141,
+    "diff": 0.1133,
+    "drop": -0.1008
+  },
+  {
+    "handle": "rag262w04105",
+    "mediaId": "gid://shopify/MediaImage/56552919892333",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04105-09.jpg?v=1792568500",
+    "left": 0.7891,
+    "right": 0.6759,
+    "below": 0.8667,
+    "diff": 0.1132,
+    "drop": -0.0775
+  },
+  {
+    "handle": "d2102s71lb1773",
+    "mediaId": "gid://shopify/MediaImage/56552889876845",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177055141.jpg?v=1792568397",
+    "left": 0.1116,
+    "right": 0,
+    "below": 0.3443,
+    "diff": 0.1116,
+    "drop": -0.2327
+  },
+  {
+    "handle": "abr167abpt15",
+    "mediaId": "gid://shopify/MediaImage/56553104867693",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/abpt15-09.jpg?v=1792568959",
+    "left": 0.1115,
+    "right": 0,
+    "below": 0.9406,
+    "diff": 0.1115,
+    "drop": -0.8292
+  },
+  {
+    "handle": "mmm435sb1wa0004",
+    "mediaId": "gid://shopify/MediaImage/56528827711853",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb1wa0004-13.jpg?v=1792514886",
+    "left": 0.9771,
+    "right": 0.8662,
+    "below": 0.9818,
+    "diff": 0.1109,
+    "drop": -0.0048
+  },
+  {
+    "handle": "mmm235sa3ui0008-bk",
+    "mediaId": "gid://shopify/MediaImage/56528950886765",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa3ui0008bk-04.jpg?v=1792514958",
+    "left": 0.9555,
+    "right": 0.8458,
+    "below": 0.9802,
+    "diff": 0.1097,
+    "drop": -0.0247
+  },
+  {
+    "handle": "pmd12262059069",
+    "mediaId": "gid://shopify/MediaImage/56552969634157",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059069-17.jpg?v=1792568650",
+    "left": 0.993,
+    "right": 0.8836,
+    "below": 0.9929,
+    "diff": 0.1094,
+    "drop": 0.0001
+  },
+  {
+    "handle": "bob133074761710",
+    "mediaId": "gid://shopify/MediaImage/56553011544429",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bob133074761710-3.jpg?v=1792568740",
+    "left": 0.1091,
+    "right": 0.0006,
+    "below": 0.2658,
+    "diff": 0.1085,
+    "drop": -0.1567
+  },
+  {
+    "handle": "bark16722bb004-b",
+    "mediaId": "gid://shopify/MediaImage/56552977400173",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bb004b-03.jpg?v=1792568668",
+    "left": 1,
+    "right": 0.892,
+    "below": 1,
+    "diff": 0.108,
+    "drop": 0
+  },
+  {
+    "handle": "sbt10171310003",
+    "mediaId": "gid://shopify/MediaImage/56552885420397",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/71310003-09.jpg?v=1792568385",
+    "left": 0.1079,
+    "right": 0,
+    "below": 0.0609,
+    "diff": 0.1079,
+    "drop": 0.047
+  },
+  {
+    "handle": "d2102s71lb1774",
+    "mediaId": "gid://shopify/MediaImage/56552885911917",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s71lb1774-08.jpg?v=1792568387",
+    "left": 0.9135,
+    "right": 0.8061,
+    "below": 0.9171,
+    "diff": 0.1074,
+    "drop": -0.0036
+  },
+  {
+    "handle": "pmd12262059047",
+    "mediaId": "gid://shopify/MediaImage/56552951480685",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/leo-2026-0825-02.jpg?v=1792568595",
+    "left": 0.1313,
+    "right": 0.0238,
+    "below": 0.244,
+    "diff": 0.1074,
+    "drop": -0.1128
+  },
+  {
+    "handle": "pmd12262059045",
+    "mediaId": "gid://shopify/MediaImage/56552966062445",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/leo-2026-0825-02_c40fee26-1fd0-462f-8d73-003929964207.jpg?v=1792568642",
+    "left": 0.1313,
+    "right": 0.0238,
+    "below": 0.244,
+    "diff": 0.1074,
+    "drop": -0.1128
+  },
+  {
+    "handle": "pat256je2629999",
+    "mediaId": "gid://shopify/MediaImage/56552917664109",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177018935.jpg?v=1792568490",
+    "left": 0.7463,
+    "right": 0.6397,
+    "below": 0.7021,
+    "diff": 0.1065,
+    "drop": 0.0442
+  },
+  {
+    "handle": "cic1702538902",
+    "mediaId": "gid://shopify/MediaImage/56552962294125",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/cic1702538902-6.jpg?v=1792568632",
+    "left": 0.1161,
+    "right": 0.01,
+    "below": 0.0004,
+    "diff": 0.1061,
+    "drop": 0.1156
+  },
+  {
+    "handle": "bark16722b8001-wh",
+    "mediaId": "gid://shopify/MediaImage/56553018327405",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/22b8001wh-11.jpg?v=1792568754",
+    "left": 0.2711,
+    "right": 0.165,
+    "below": 0.0909,
+    "diff": 0.1061,
+    "drop": 0.1802
+  },
+  {
+    "handle": "bob133074761126",
+    "mediaId": "gid://shopify/MediaImage/56552963047789",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0178810504.jpg?v=1792568634",
+    "left": 0.8318,
+    "right": 0.7259,
+    "below": 0.594,
+    "diff": 0.106,
+    "drop": 0.2378
+  },
+  {
+    "handle": "rag262w04105",
+    "mediaId": "gid://shopify/MediaImage/56552919957869",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04105-11.jpg?v=1792568500",
+    "left": 0.3195,
+    "right": 0.215,
+    "below": 0.3692,
+    "diff": 0.1045,
+    "drop": -0.0497
+  },
+  {
+    "handle": "mmm235s52m10007",
+    "mediaId": "gid://shopify/MediaImage/56529125081453",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0134888067.jpg?v=1792515071",
+    "left": 0.1091,
+    "right": 0.0051,
+    "below": 0.1625,
+    "diff": 0.104,
+    "drop": -0.0534
+  },
+  {
+    "handle": "mmm135s57ws0413",
+    "mediaId": "gid://shopify/MediaImage/56529147265389",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0131688092.jpg?v=1792515091",
+    "left": 0.103,
+    "right": 0,
+    "below": 0.2869,
+    "diff": 0.103,
+    "drop": -0.1839
+  },
+  {
+    "handle": "monc2288g00034",
+    "mediaId": "gid://shopify/MediaImage/56552905736557",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/monc2288g00034-10.jpg?v=1792568452",
+    "left": 0.2717,
+    "right": 0.1692,
+    "below": 0.4219,
+    "diff": 0.1025,
+    "drop": -0.1501
+  },
+  {
+    "handle": "mmm135si1th0001",
+    "mediaId": "gid://shopify/MediaImage/56529074028909",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/si1th0001-007.jpg?v=1792515029",
+    "left": 0.8513,
+    "right": 0.749,
+    "below": 0.9811,
+    "diff": 0.1024,
+    "drop": -0.1298
+  },
+  {
+    "handle": "mmm206s51la0139",
+    "mediaId": "gid://shopify/MediaImage/56529144349037",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm206s51la0139-11.jpg?v=1792515079",
+    "left": 0.1071,
+    "right": 0.0048,
+    "below": 0.0009,
+    "diff": 0.1024,
+    "drop": 0.1062
+  },
+  {
+    "handle": "mm6235s51la0133",
+    "mediaId": "gid://shopify/MediaImage/56552937324909",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s51la0133-07.jpg?v=1792568549",
+    "left": 0.9485,
+    "right": 0.8475,
+    "below": 0.9844,
+    "diff": 0.101,
+    "drop": -0.0359
+  },
+  {
+    "handle": "mmm435sa2ui0006-p",
+    "mediaId": "gid://shopify/MediaImage/56529085006189",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa2ui0006p-11.jpg?v=1792515041",
+    "left": 0.1004,
+    "right": 0,
+    "below": 0.081,
+    "diff": 0.1004,
+    "drop": 0.0194
+  },
+  {
+    "handle": "sea226lcka0102-m",
+    "mediaId": "gid://shopify/MediaImage/56552913600877",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0102-m9.jpg?v=1792568479",
+    "left": 0.1619,
+    "right": 0.0618,
+    "below": 0.1557,
+    "diff": 0.1001,
+    "drop": 0.0063
+  },
+  {
+    "handle": "sea126mcka0133-w",
+    "mediaId": "gid://shopify/MediaImage/56552882504045",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-w5.jpg?v=1792568374",
+    "left": 0.3296,
+    "right": 0.2296,
+    "below": 0.1366,
+    "diff": 0.1,
+    "drop": 0.193
+  },
+  {
+    "handle": "crl12262030027",
+    "mediaId": "gid://shopify/MediaImage/56552953479533",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/crl12262030027-6.jpg?v=1792568604",
+    "left": 1,
+    "right": 0.9003,
+    "below": 0.9376,
+    "diff": 0.0997,
+    "drop": 0.0624
+  },
+  {
+    "handle": "mmm535s51am0531",
+    "mediaId": "gid://shopify/MediaImage/56528862642541",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0166975554.jpg?v=1792514910",
+    "left": 0.2058,
+    "right": 0.1067,
+    "below": 0.1516,
+    "diff": 0.0991,
+    "drop": 0.0542
+  },
+  {
+    "handle": "mmy472c17fw705",
+    "mediaId": "gid://shopify/MediaImage/56552882012525",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy472c17fw705-5.jpg?v=1792568371",
+    "left": 0.0991,
+    "right": 0,
+    "below": 0.2121,
+    "diff": 0.0991,
+    "drop": -0.1129
+  },
+  {
+    "handle": "mmm206s51la0139",
+    "mediaId": "gid://shopify/MediaImage/56529144316269",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm206s51la0139-7.jpg?v=1792515077",
+    "left": 0.0988,
+    "right": 0.0001,
+    "below": 0.0973,
+    "diff": 0.0987,
+    "drop": 0.0015
+  },
+  {
+    "handle": "st10110071258",
+    "mediaId": "gid://shopify/MediaImage/56553110864237",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0120904578.jpg?v=1792568978",
+    "left": 0.6006,
+    "right": 0.5027,
+    "below": 0.6613,
+    "diff": 0.0979,
+    "drop": -0.0607
+  },
+  {
+    "handle": "mmm435sb1wd0058",
+    "mediaId": "gid://shopify/MediaImage/56528840819053",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0163071659.jpg?v=1792514890",
+    "left": 0.4129,
+    "right": 0.3162,
+    "below": 0.3312,
+    "diff": 0.0967,
+    "drop": 0.0817
+  },
+  {
+    "handle": "bark16722bb004",
+    "mediaId": "gid://shopify/MediaImage/56552965308781",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bb004-08.jpg?v=1792568640",
+    "left": 0.0966,
+    "right": 0,
+    "below": 0.2344,
+    "diff": 0.0966,
+    "drop": -0.1378
+  },
+  {
+    "handle": "mm6435sb5zh0032-tp",
+    "mediaId": "gid://shopify/MediaImage/56553070461293",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb5zh0032t-09.jpg?v=1792568863",
+    "left": 0.0957,
+    "right": 0,
+    "below": 0.2952,
+    "diff": 0.0957,
+    "drop": -0.1996
+  },
+  {
+    "handle": "d2102s74lb2002",
+    "mediaId": "gid://shopify/MediaImage/56552897151341",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s74lb2002-09.jpg?v=1792568432",
+    "left": 0.0949,
+    "right": 0,
+    "below": 0.4911,
+    "diff": 0.0949,
+    "drop": -0.3961
+  },
+  {
+    "handle": "alw183bd529306",
+    "mediaId": "gid://shopify/MediaImage/56553026748781",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw1833bd529306-8.jpg?v=1792568772",
+    "left": 0.5375,
+    "right": 0.4427,
+    "below": 0.4618,
+    "diff": 0.0948,
+    "drop": 0.0757
+  },
+  {
+    "handle": "mmm135sa3ui0010-wh",
+    "mediaId": "gid://shopify/MediaImage/56529141105005",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa3ui0010wh-08.jpg?v=1792515076",
+    "left": 0.1113,
+    "right": 0.0168,
+    "below": 0.1079,
+    "diff": 0.0945,
+    "drop": 0.0034
+  },
+  {
+    "handle": "mm6435sb6wg0024-b",
+    "mediaId": "gid://shopify/MediaImage/56553092579693",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb6wg0024-21.jpg?v=1792568914",
+    "left": 0.0942,
+    "right": 0,
+    "below": 0.1686,
+    "diff": 0.0942,
+    "drop": -0.0744
+  },
+  {
+    "handle": "sbt10162671006",
+    "mediaId": "gid://shopify/MediaImage/56553097429357",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/62671006-07.jpg?v=1792568930",
+    "left": 0.0942,
+    "right": 0,
+    "below": 0.6958,
+    "diff": 0.0942,
+    "drop": -0.6016
+  },
+  {
+    "handle": "mmy572a14fw703-bbk",
+    "mediaId": "gid://shopify/MediaImage/56552955543917",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/a14fw703bbk-04.jpg?v=1792568611",
+    "left": 0.0932,
+    "right": 0,
+    "below": 0.5878,
+    "diff": 0.0932,
+    "drop": -0.4946
+  },
+  {
+    "handle": "sea226lcka0107",
+    "mediaId": "gid://shopify/MediaImage/56552909701485",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0107-6.jpg?v=1792568466",
+    "left": 1,
+    "right": 0.9097,
+    "below": 1,
+    "diff": 0.0903,
+    "drop": 0
+  },
+  {
+    "handle": "mmy172j17vt752-w",
+    "mediaId": "gid://shopify/MediaImage/56553029828973",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy172j17vt752-w8.jpg?v=1792568779",
+    "left": 0.1481,
+    "right": 0.0589,
+    "below": 0.0759,
+    "diff": 0.0891,
+    "drop": 0.0722
+  },
+  {
+    "handle": "alw183it319340",
+    "mediaId": "gid://shopify/MediaImage/56552884633965",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509340-6.jpg?v=1792568382",
+    "left": 0.5348,
+    "right": 0.4467,
+    "below": 0.5376,
+    "diff": 0.0881,
+    "drop": -0.0028
+  },
+  {
+    "handle": "alw183bd509340",
+    "mediaId": "gid://shopify/MediaImage/56552988541293",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509340-6_d962fdaa-a09d-42f3-b639-d849333de9dc.jpg?v=1792568699",
+    "left": 0.5348,
+    "right": 0.4467,
+    "below": 0.5376,
+    "diff": 0.0881,
+    "drop": -0.0028
+  },
+  {
+    "handle": "mmm135s50bn0318",
+    "mediaId": "gid://shopify/MediaImage/56528857563501",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s50bn0318-13.jpg?v=1792514905",
+    "left": 0.0872,
+    "right": 0,
+    "below": 0.1943,
+    "diff": 0.0872,
+    "drop": -0.1071
+  },
+  {
+    "handle": "st10121071074",
+    "mediaId": "gid://shopify/MediaImage/56553095987565",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0134291218.jpg?v=1792568924",
+    "left": 0.3135,
+    "right": 0.2268,
+    "below": 0.9571,
+    "diff": 0.0868,
+    "drop": -0.6436
+  },
+  {
+    "handle": "bark16722bb004",
+    "mediaId": "gid://shopify/MediaImage/56552965144941",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bb004-03.jpg?v=1792568640",
+    "left": 0.0869,
+    "right": 0.0009,
+    "below": 0.2927,
+    "diff": 0.086,
+    "drop": -0.2058
+  },
+  {
+    "handle": "sea226lcka0108",
+    "mediaId": "gid://shopify/MediaImage/56552887910765",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0108-5.jpg?v=1792568390",
+    "left": 0.0856,
+    "right": 0,
+    "below": 0.8387,
+    "diff": 0.0856,
+    "drop": -0.7531
+  },
+  {
+    "handle": "d2102s71lb1773",
+    "mediaId": "gid://shopify/MediaImage/56552889909613",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177055142.jpg?v=1792568398",
+    "left": 0.9863,
+    "right": 0.9007,
+    "below": 0.9845,
+    "diff": 0.0856,
+    "drop": 0.0018
+  },
+  {
+    "handle": "mmy572a15fw702",
+    "mediaId": "gid://shopify/MediaImage/56552883159405",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/a15fw702-03.jpg?v=1792568376",
+    "left": 0.0853,
+    "right": 0,
+    "below": 0.5689,
+    "diff": 0.0853,
+    "drop": -0.4836
+  },
+  {
+    "handle": "pat25626akn370",
+    "mediaId": "gid://shopify/MediaImage/56552895807853",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176324020.jpg?v=1792568419",
+    "left": 0.1171,
+    "right": 0.0329,
+    "below": 0.6708,
+    "diff": 0.0842,
+    "drop": -0.5537
+  },
+  {
+    "handle": "mmm235sa3ui0008-amanda",
+    "mediaId": "gid://shopify/MediaImage/56528950690157",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0158312907.jpg?v=1792514956",
+    "left": 0.0829,
+    "right": 0,
+    "below": 0.0605,
+    "diff": 0.0829,
+    "drop": 0.0224
+  },
+  {
+    "handle": "mmm535s67tb0001",
+    "mediaId": "gid://shopify/MediaImage/56529177608557",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s67tb0001-06.jpg?v=1792515120",
+    "left": 0.9981,
+    "right": 0.9161,
+    "below": 0.9987,
+    "diff": 0.082,
+    "drop": -0.0006
+  },
+  {
+    "handle": "monc1284g00100",
+    "mediaId": "gid://shopify/MediaImage/56553121481069",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/monc1284g00100-13.jpg?v=1792569069",
+    "left": 0.1324,
+    "right": 0.0512,
+    "below": 0.3967,
+    "diff": 0.0813,
+    "drop": -0.2643
+  },
+  {
+    "handle": "mmy572a17fw732-w",
+    "mediaId": "gid://shopify/MediaImage/56552952168813",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy572a17fw732-w7.jpg?v=1792568597",
+    "left": 0.0811,
+    "right": 0,
+    "below": 0.1473,
+    "diff": 0.0811,
+    "drop": -0.0662
+  },
+  {
+    "handle": "mmm535s51hl0011",
+    "mediaId": "gid://shopify/MediaImage/56528906322285",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0133945142.jpg?v=1792514931",
+    "left": 0.9911,
+    "right": 0.9104,
+    "below": 0.8359,
+    "diff": 0.0807,
+    "drop": 0.1552
+  },
+  {
+    "handle": "mmm535s51hl0011",
+    "mediaId": "gid://shopify/MediaImage/56528906223981",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm535s51hl0011-t.jpg?v=1792514934",
+    "left": 0.0802,
+    "right": 0,
+    "below": 0.321,
+    "diff": 0.0802,
+    "drop": -0.2409
+  },
+  {
+    "handle": "alw183bd509341",
+    "mediaId": "gid://shopify/MediaImage/56552968585581",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509341-7.jpg?v=1792568647",
+    "left": 0.4771,
+    "right": 0.3969,
+    "below": 0.3119,
+    "diff": 0.0802,
+    "drop": 0.1652
+  },
+  {
+    "handle": "alw183it319341",
+    "mediaId": "gid://shopify/MediaImage/56553015476589",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw183bd509341-7_211fc0e4-bb57-4202-b42b-34ca06874f46.jpg?v=1792568748",
+    "left": 0.4771,
+    "right": 0.3969,
+    "below": 0.3119,
+    "diff": 0.0802,
+    "drop": 0.1652
+  },
+  {
+    "handle": "mmy572a17fw730-bk",
+    "mediaId": "gid://shopify/MediaImage/56552949875053",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/a17fw730bk-06.jpg?v=1792568590",
+    "left": 0.0795,
+    "right": 0,
+    "below": 0.0027,
+    "diff": 0.0795,
+    "drop": 0.0768
+  },
+  {
+    "handle": "mmm135s50gc0684-24ss",
+    "mediaId": "gid://shopify/MediaImage/56529115054445",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0133951799.jpg?v=1792515061",
+    "left": 0.9945,
+    "right": 0.9155,
+    "below": 0.914,
+    "diff": 0.079,
+    "drop": 0.0805
+  },
+  {
+    "handle": "mmm435saui0023-f",
+    "mediaId": "gid://shopify/MediaImage/56529115677037",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0165834304.jpg?v=1792515065",
+    "left": 0.607,
+    "right": 0.5283,
+    "below": 0.9207,
+    "diff": 0.0787,
+    "drop": -0.3137
+  },
+  {
+    "handle": "pmd12262059047",
+    "mediaId": "gid://shopify/MediaImage/56552951316845",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059047-5.jpg?v=1792568596",
+    "left": 0.0786,
+    "right": 0,
+    "below": 0.5448,
+    "diff": 0.0786,
+    "drop": -0.4662
+  },
+  {
+    "handle": "d2102s71ha1438",
+    "mediaId": "gid://shopify/MediaImage/56552897380717",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s71ha1438-06.jpg?v=1792568426",
+    "left": 0.0784,
+    "right": 0,
+    "below": 0.0009,
+    "diff": 0.0784,
+    "drop": 0.0775
+  },
+  {
+    "handle": "dei162rennidm",
+    "mediaId": "gid://shopify/MediaImage/56552995422573",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/dei162rennidm-7.jpg?v=1792568711",
+    "left": 0.3927,
+    "right": 0.3168,
+    "below": 0.7493,
+    "diff": 0.0759,
+    "drop": -0.3565
+  },
+  {
+    "handle": "alw183bd529306",
+    "mediaId": "gid://shopify/MediaImage/56553026617709",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/alw1833bd529306-4.jpg?v=1792568772",
+    "left": 0.581,
+    "right": 0.5057,
+    "below": 0.6875,
+    "diff": 0.0753,
+    "drop": -0.1065
+  },
+  {
+    "handle": "mmy572a15fw702",
+    "mediaId": "gid://shopify/MediaImage/56552883224941",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/a15fw702-05.jpg?v=1792568378",
+    "left": 0.2119,
+    "right": 0.1385,
+    "below": 0.1254,
+    "diff": 0.0734,
+    "drop": 0.0865
+  },
+  {
+    "handle": "be12262290050",
+    "mediaId": "gid://shopify/MediaImage/56552958787949",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/be12262290050-10.jpg?v=1792568621",
+    "left": 0.0716,
+    "right": 0,
+    "below": 0.4966,
+    "diff": 0.0716,
+    "drop": -0.425
+  },
+  {
+    "handle": "mmm435sa1ui0022",
+    "mediaId": "gid://shopify/MediaImage/56529173414253",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa1ui0022-07.jpg?v=1792515110",
+    "left": 1,
+    "right": 0.9324,
+    "below": 1,
+    "diff": 0.0676,
+    "drop": 0
   },
   {
     "handle": "mmm535s50gc0687",
     "mediaId": "gid://shopify/MediaImage/56529112957293",
-    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0129523448.jpg?v=1792515053"
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0129523448.jpg?v=1792515053",
+    "left": 0.1469,
+    "right": 0.0799,
+    "below": 0.1368,
+    "diff": 0.067,
+    "drop": 0.0101
+  },
+  {
+    "handle": "mmm235sa3ui0009",
+    "mediaId": "gid://shopify/MediaImage/56529039753581",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa3ui0009-36.jpg?v=1792515012",
+    "left": 0.1128,
+    "right": 0.0466,
+    "below": 0.2458,
+    "diff": 0.0662,
+    "drop": -0.133
+  },
+  {
+    "handle": "mmm135s50bn0318",
+    "mediaId": "gid://shopify/MediaImage/56528857629037",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s50bn0318-06.jpg?v=1792514904",
+    "left": 0.0984,
+    "right": 0.0327,
+    "below": 1,
+    "diff": 0.0656,
+    "drop": -0.9016
+  },
+  {
+    "handle": "pat456ac1558101",
+    "mediaId": "gid://shopify/MediaImage/56553048179053",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176487339.jpg?v=1792568819",
+    "left": 0.0646,
+    "right": 0,
+    "below": 0.2479,
+    "diff": 0.0646,
+    "drop": -0.1833
+  },
+  {
+    "handle": "sea126mcka0133-lg",
+    "mediaId": "gid://shopify/MediaImage/56552883781997",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0133-lg29.jpg?v=1792568379",
+    "left": 0.3765,
+    "right": 0.3125,
+    "below": 0.2107,
+    "diff": 0.064,
+    "drop": 0.1658
+  },
+  {
+    "handle": "mmm435sa2ui0006-w",
+    "mediaId": "gid://shopify/MediaImage/56529090085229",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa2ui0006w-13.jpg?v=1792515045",
+    "left": 0.4819,
+    "right": 0.4183,
+    "below": 0.4893,
+    "diff": 0.0637,
+    "drop": -0.0073
+  },
+  {
+    "handle": "mmy172j17vt752-w",
+    "mediaId": "gid://shopify/MediaImage/56553029763437",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmy172j17vt752-w5.jpg?v=1792568779",
+    "left": 0.0637,
+    "right": 0,
+    "below": 0.0304,
+    "diff": 0.0637,
+    "drop": 0.0333
+  },
+  {
+    "handle": "mmm435s56ui0206-b",
+    "mediaId": "gid://shopify/MediaImage/56529207001453",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0123158662.jpg?v=1792515142",
+    "left": 0.0686,
+    "right": 0.0052,
+    "below": 0.1652,
+    "diff": 0.0634,
+    "drop": -0.0966
+  },
+  {
+    "handle": "mmm235s51la0051",
+    "mediaId": "gid://shopify/MediaImage/56552921956717",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0051-10.jpg?v=1792568511",
+    "left": 0.0624,
+    "right": 0,
+    "below": 0.2399,
+    "diff": 0.0624,
+    "drop": -0.1775
+  },
+  {
+    "handle": "mmm535s50gc0678",
+    "mediaId": "gid://shopify/MediaImage/56529111089517",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0128583835.jpg?v=1792515050",
+    "left": 0.1411,
+    "right": 0.079,
+    "below": 0.1292,
+    "diff": 0.0621,
+    "drop": 0.0119
+  },
+  {
+    "handle": "mmm435s56ui0148dbr",
+    "mediaId": "gid://shopify/MediaImage/56529099161965",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0116163020.jpg?v=1792515046",
+    "left": 0.1077,
+    "right": 0.0464,
+    "below": 0.2594,
+    "diff": 0.0613,
+    "drop": -0.1516
+  },
+  {
+    "handle": "mm6235s62lb0226",
+    "mediaId": "gid://shopify/MediaImage/56552871657837",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6235s62lb0226-9.jpg?v=1792568333",
+    "left": 0.0613,
+    "right": 0,
+    "below": 0.2097,
+    "diff": 0.0613,
+    "drop": -0.1484
+  },
+  {
+    "handle": "dei162rennifanm",
+    "mediaId": "gid://shopify/MediaImage/56552978284909",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/dei162rennifanm-5.jpg?v=1792568671",
+    "left": 0.8964,
+    "right": 0.836,
+    "below": 0.8887,
+    "diff": 0.0604,
+    "drop": 0.0077
+  },
+  {
+    "handle": "pat256kn0688045",
+    "mediaId": "gid://shopify/MediaImage/56552939520365",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176524915.jpg?v=1792568557",
+    "left": 0.4202,
+    "right": 0.3603,
+    "below": 0.2921,
+    "diff": 0.06,
+    "drop": 0.1281
+  },
+  {
+    "handle": "mmy572a17fw730",
+    "mediaId": "gid://shopify/MediaImage/56553034645869",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/a17fw730-09.jpg?v=1792568788",
+    "left": 0.0591,
+    "right": 0.0007,
+    "below": 0.1058,
+    "diff": 0.0583,
+    "drop": -0.0467
+  },
+  {
+    "handle": "oke465okmg6st6-nv",
+    "mediaId": "gid://shopify/MediaImage/56553073901933",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/oke465okmg6st7-n3.jpg?v=1792568871",
+    "left": 0.2025,
+    "right": 0.1446,
+    "below": 0.3095,
+    "diff": 0.0579,
+    "drop": -0.107
+  },
+  {
+    "handle": "mmm235s51gu0111",
+    "mediaId": "gid://shopify/MediaImage/56529192517997",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0128208529.jpg?v=1792515124",
+    "left": 0.7189,
+    "right": 0.6612,
+    "below": 0.8783,
+    "diff": 0.0577,
+    "drop": -0.1594
+  },
+  {
+    "handle": "sea226lcka0108",
+    "mediaId": "gid://shopify/MediaImage/56552887976301",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0108-7.jpg?v=1792568391",
+    "left": 0.0577,
+    "right": 0,
+    "below": 0.4918,
+    "diff": 0.0577,
+    "drop": -0.4341
+  },
+  {
+    "handle": "mmm206s51la0138",
+    "mediaId": "gid://shopify/MediaImage/56529114005869",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm206s51la0138-15.jpg?v=1792515057",
+    "left": 0.2112,
+    "right": 0.1537,
+    "below": 0.2416,
+    "diff": 0.0575,
+    "drop": -0.0304
+  },
+  {
+    "handle": "mmm206s51la0139",
+    "mediaId": "gid://shopify/MediaImage/56529144381805",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm206s51la0139-5.jpg?v=1792515077",
+    "left": 0.0573,
+    "right": 0,
+    "below": 0.1759,
+    "diff": 0.0573,
+    "drop": -0.1186
+  },
+  {
+    "handle": "mmm235s51ha1082",
+    "mediaId": "gid://shopify/MediaImage/56529145004397",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0087305866.jpg?v=1792515081",
+    "left": 0.5015,
+    "right": 0.4446,
+    "below": 0.5463,
+    "diff": 0.0568,
+    "drop": -0.0448
+  },
+  {
+    "handle": "dei162rennimm",
+    "mediaId": "gid://shopify/MediaImage/56552991981933",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/dei162rennimm-3.jpg?v=1792568703",
+    "left": 0.0964,
+    "right": 0.0396,
+    "below": 0.606,
+    "diff": 0.0568,
+    "drop": -0.5095
+  },
+  {
+    "handle": "mmy572a17fw730-bk",
+    "mediaId": "gid://shopify/MediaImage/56552949907821",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/a17fw730bk-07.jpg?v=1792568589",
+    "left": 0.0891,
+    "right": 0.0333,
+    "below": 0.5405,
+    "diff": 0.0558,
+    "drop": -0.4513
+  },
+  {
+    "handle": "mmm435sb1wg0042",
+    "mediaId": "gid://shopify/MediaImage/56528899146093",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sb1wg0042-2.jpg?v=1792514920",
+    "left": 0.0869,
+    "right": 0.0313,
+    "below": 0.0857,
+    "diff": 0.0557,
+    "drop": 0.0012
+  },
+  {
+    "handle": "mmm45sb1wg0087",
+    "mediaId": "gid://shopify/MediaImage/56553076490605",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sb1wg0087-7.jpg?v=1792568875",
+    "left": 1,
+    "right": 0.9443,
+    "below": 1,
+    "diff": 0.0557,
+    "drop": 0
+  },
+  {
+    "handle": "mmm235s51la0106",
+    "mediaId": "gid://shopify/MediaImage/56552943714669",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0143013914.jpg?v=1792568573",
+    "left": 0.0555,
+    "right": 0,
+    "below": 0.0347,
+    "diff": 0.0555,
+    "drop": 0.0208
+  },
+  {
+    "handle": "mm6535sh2gu0035",
+    "mediaId": "gid://shopify/MediaImage/56552970649965",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sh2gu0035-07.jpg?v=1792568653",
+    "left": 0.9604,
+    "right": 0.9052,
+    "below": 0.9994,
+    "diff": 0.0552,
+    "drop": -0.039
+  },
+  {
+    "handle": "rag262w04105",
+    "mediaId": "gid://shopify/MediaImage/56552919728493",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/w04105-03.jpg?v=1792568501",
+    "left": 0.947,
+    "right": 0.8926,
+    "below": 0.7421,
+    "diff": 0.0545,
+    "drop": 0.2049
+  },
+  {
+    "handle": "mmm235sa3ui0008-amanda",
+    "mediaId": "gid://shopify/MediaImage/56528950526317",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0142803521.jpg?v=1792514955",
+    "left": 0.1073,
+    "right": 0.0537,
+    "below": 0.1036,
+    "diff": 0.0536,
+    "drop": 0.0037
+  },
+  {
+    "handle": "mmm235s51la0052",
+    "mediaId": "gid://shopify/MediaImage/56552895283565",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0052-10.jpg?v=1792568417",
+    "left": 0.6504,
+    "right": 0.5969,
+    "below": 0.9022,
+    "diff": 0.0536,
+    "drop": -0.2518
+  },
+  {
+    "handle": "mmm235s51la0052",
+    "mediaId": "gid://shopify/MediaImage/56552895250797",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0052-9.jpg?v=1792568417",
+    "left": 0.3821,
+    "right": 0.3287,
+    "below": 0.4369,
+    "diff": 0.0534,
+    "drop": -0.0548
+  },
+  {
+    "handle": "mmm206s51aa0293",
+    "mediaId": "gid://shopify/MediaImage/56529295114605",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s51aa0293-18.jpg?v=1792515229",
+    "left": 0.0632,
+    "right": 0.0106,
+    "below": 0.072,
+    "diff": 0.0527,
+    "drop": -0.0088
+  },
+  {
+    "handle": "mmm435b2wf0007",
+    "mediaId": "gid://shopify/MediaImage/56528853500269",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435b2wf0007-25.jpg?v=1792514902",
+    "left": 0.0525,
+    "right": 0,
+    "below": 0.6278,
+    "diff": 0.0525,
+    "drop": -0.5753
+  },
+  {
+    "handle": "pmd12262059016",
+    "mediaId": "gid://shopify/MediaImage/56552891056493",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059016-3.jpg?v=1792568403",
+    "left": 0.0525,
+    "right": 0,
+    "below": 0.1933,
+    "diff": 0.0525,
+    "drop": -0.1408
+  },
+  {
+    "handle": "mm6435sb5zh0032",
+    "mediaId": "gid://shopify/MediaImage/56553085501805",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sb5zh0032t-13.jpg?v=1792568894",
+    "left": 0.0563,
+    "right": 0.0039,
+    "below": 0.1921,
+    "diff": 0.0524,
+    "drop": -0.1359
+  },
+  {
+    "handle": "mmm435sa2vz0008",
+    "mediaId": "gid://shopify/MediaImage/56529040671085",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa2yz0008-06.jpg?v=1792515014",
+    "left": 0.0522,
+    "right": 0,
+    "below": 0.0592,
+    "diff": 0.0522,
+    "drop": -0.007
+  },
+  {
+    "handle": "be12262290050",
+    "mediaId": "gid://shopify/MediaImage/56552958558573",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/be12262290050-3.jpg?v=1792568622",
+    "left": 0.0512,
+    "right": 0,
+    "below": 0.1479,
+    "diff": 0.0512,
+    "drop": -0.0967
+  },
+  {
+    "handle": "mmm435sa2vz0008",
+    "mediaId": "gid://shopify/MediaImage/56529040540013",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa2yz0008-01.jpg?v=1792515014",
+    "left": 0.0646,
+    "right": 0.0144,
+    "below": 0.1116,
+    "diff": 0.0501,
+    "drop": -0.047
+  },
+  {
+    "handle": "mmm206s51la0138",
+    "mediaId": "gid://shopify/MediaImage/56529113940333",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm206s51la0138-13.jpg?v=1792515057",
+    "left": 0.2164,
+    "right": 0.1664,
+    "below": 0.2981,
+    "diff": 0.0501,
+    "drop": -0.0817
+  },
+  {
+    "handle": "be12262290028",
+    "mediaId": "gid://shopify/MediaImage/56552956526957",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/be12262290028-10.jpg?v=1792568613",
+    "left": 0.1676,
+    "right": 0.1176,
+    "below": 0.1749,
+    "diff": 0.05,
+    "drop": -0.0073
+  },
+  {
+    "handle": "mm6135sh2dt0062",
+    "mediaId": "gid://shopify/MediaImage/56552967504237",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6135sh2dt0062-4.jpg?v=1792568646",
+    "left": 0.8375,
+    "right": 0.7875,
+    "below": 0.1437,
+    "diff": 0.05,
+    "drop": 0.6938
+  },
+  {
+    "handle": "rag162m100004",
+    "mediaId": "gid://shopify/MediaImage/56552920220013",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/rag162m100004-5.jpg?v=1792568503",
+    "left": 0.0496,
+    "right": 0,
+    "below": 0.0001,
+    "diff": 0.0496,
+    "drop": 0.0494
+  },
+  {
+    "handle": "mmm435sb1wg0017",
+    "mediaId": "gid://shopify/MediaImage/56528892985709",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435sb1wg0017-6.jpg?v=1792514919",
+    "left": 0.8926,
+    "right": 0.8442,
+    "below": 0.989,
+    "diff": 0.0484,
+    "drop": -0.0964
+  },
+  {
+    "handle": "sea126mcka0096-lg",
+    "mediaId": "gid://shopify/MediaImage/56553017049453",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea126mcka0096-lg-8.jpg?v=1792568751",
+    "left": 0.1757,
+    "right": 0.1275,
+    "below": 0.1257,
+    "diff": 0.0482,
+    "drop": 0.05
+  },
+  {
+    "handle": "pat256kn1108013-bk",
+    "mediaId": "gid://shopify/MediaImage/56552937881965",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0176519925.jpg?v=1792568551",
+    "left": 0.5999,
+    "right": 0.5527,
+    "below": 0.3993,
+    "diff": 0.0472,
+    "drop": 0.2006
+  },
+  {
+    "handle": "mmm235sa3ui0008-bk",
+    "mediaId": "gid://shopify/MediaImage/56528950919533",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sa3ui0008bk-02.jpg?v=1792514958",
+    "left": 1,
+    "right": 0.9533,
+    "below": 1,
+    "diff": 0.0467,
+    "drop": 0
+  },
+  {
+    "handle": "mmm435b2wf0007",
+    "mediaId": "gid://shopify/MediaImage/56528853303661",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm435b2wf0007-28.jpg?v=1792514900",
+    "left": 0.0466,
+    "right": 0,
+    "below": 0.6643,
+    "diff": 0.0466,
+    "drop": -0.6177
+  },
+  {
+    "handle": "over12262269075",
+    "mediaId": "gid://shopify/MediaImage/56553021178221",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/over12262269075-10.jpg?v=1792568761",
+    "left": 0.0461,
+    "right": 0,
+    "below": 0.0644,
+    "diff": 0.0461,
+    "drop": -0.0183
+  },
+  {
+    "handle": "be12262290028",
+    "mediaId": "gid://shopify/MediaImage/56552956330349",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/be12262290028-4.jpg?v=1792568613",
+    "left": 0.0496,
+    "right": 0.0036,
+    "below": 0.1435,
+    "diff": 0.046,
+    "drop": -0.0939
+  },
+  {
+    "handle": "mmm235sa3ui0008-st",
+    "mediaId": "gid://shopify/MediaImage/56528953704813",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0167926134.jpg?v=1792514962",
+    "left": 0.4845,
+    "right": 0.4391,
+    "below": 0.3996,
+    "diff": 0.0454,
+    "drop": 0.085
+  },
+  {
+    "handle": "mmm535s51hl0011",
+    "mediaId": "gid://shopify/MediaImage/56528906125677",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0133945127.jpg?v=1792514932",
+    "left": 0.9948,
+    "right": 0.9501,
+    "below": 0.9704,
+    "diff": 0.0446,
+    "drop": 0.0244
+  },
+  {
+    "handle": "mm6235s62lb0226",
+    "mediaId": "gid://shopify/MediaImage/56552871526765",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6235s62lb0226-5.jpg?v=1792568333",
+    "left": 0.0445,
+    "right": 0,
+    "below": 0.4137,
+    "diff": 0.0445,
+    "drop": -0.3692
+  },
+  {
+    "handle": "mmm235sa3ui0008-amanda",
+    "mediaId": "gid://shopify/MediaImage/56528950657389",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0142803518.jpg?v=1792514957",
+    "left": 0.0442,
+    "right": 0,
+    "below": 0.019,
+    "diff": 0.0442,
+    "drop": 0.0251
+  },
+  {
+    "handle": "monc1282a00044",
+    "mediaId": "gid://shopify/MediaImage/56552985723245",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/2a00044-07.jpg?v=1792568690",
+    "left": 0.0437,
+    "right": 0,
+    "below": 0.451,
+    "diff": 0.0437,
+    "drop": -0.4073
+  },
+  {
+    "handle": "d2102s71ha1438",
+    "mediaId": "gid://shopify/MediaImage/56552897511789",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s71ha1438-11.jpg?v=1792568426",
+    "left": 0.0436,
+    "right": 0.0001,
+    "below": 0.0982,
+    "diff": 0.0435,
+    "drop": -0.0546
+  },
+  {
+    "handle": "pat256je2709995",
+    "mediaId": "gid://shopify/MediaImage/56552917860717",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177044243.jpg?v=1792568491",
+    "left": 0.9326,
+    "right": 0.8891,
+    "below": 1,
+    "diff": 0.0435,
+    "drop": -0.0674
+  },
+  {
+    "handle": "mmy272k17bl771",
+    "mediaId": "gid://shopify/MediaImage/56552936178029",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177574769.jpg?v=1792568548",
+    "left": 0.0435,
+    "right": 0,
+    "below": 0,
+    "diff": 0.0435,
+    "drop": 0.0435
+  },
+  {
+    "handle": "sea226lcka0107",
+    "mediaId": "gid://shopify/MediaImage/56552909668717",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/sea226lcka0107-5.jpg?v=1792568466",
+    "left": 0.0433,
+    "right": 0,
+    "below": 0.6381,
+    "diff": 0.0433,
+    "drop": -0.5948
+  },
+  {
+    "handle": "dei162rennimm",
+    "mediaId": "gid://shopify/MediaImage/56552992178541",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/dei162rennimm-10.jpg?v=1792568703",
+    "left": 0.804,
+    "right": 0.7612,
+    "below": 0.8915,
+    "diff": 0.0429,
+    "drop": -0.0875
+  },
+  {
+    "handle": "mmm135s51gp0226",
+    "mediaId": "gid://shopify/MediaImage/56528944660845",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm135s51gp0226-3.jpg?v=1792514949",
+    "left": 0.047,
+    "right": 0.0043,
+    "below": 0.1402,
+    "diff": 0.0427,
+    "drop": -0.0932
+  },
+  {
+    "handle": "mmm235s51la0128",
+    "mediaId": "gid://shopify/MediaImage/56552943288685",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0128-8.jpg?v=1792568568",
+    "left": 0.2664,
+    "right": 0.224,
+    "below": 0.6065,
+    "diff": 0.0424,
+    "drop": -0.3402
+  },
+  {
+    "handle": "pmd12262059092",
+    "mediaId": "gid://shopify/MediaImage/56553009938797",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059092-5.jpg?v=1792568734",
+    "left": 0.0818,
+    "right": 0.0394,
+    "below": 0.2347,
+    "diff": 0.0424,
+    "drop": -0.1528
+  },
+  {
+    "handle": "bark16722bb004",
+    "mediaId": "gid://shopify/MediaImage/56552965243245",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/bb004-07.jpg?v=1792568640",
+    "left": 0.3565,
+    "right": 0.3143,
+    "below": 0.374,
+    "diff": 0.0423,
+    "drop": -0.0174
+  },
+  {
+    "handle": "pmd12262059016",
+    "mediaId": "gid://shopify/MediaImage/56552891089261",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/pmd12262059016-4.jpg?v=1792568404",
+    "left": 0.3699,
+    "right": 0.3278,
+    "below": 0.1649,
+    "diff": 0.0421,
+    "drop": 0.2051
+  },
+  {
+    "handle": "mmm235s51la0051-i",
+    "mediaId": "gid://shopify/MediaImage/56528992141677",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mmm235s51la0051-i40.jpg?v=1792514975",
+    "left": 0.0411,
+    "right": 0,
+    "below": 0.0372,
+    "diff": 0.0411,
+    "drop": 0.0039
+  },
+  {
+    "handle": "kos183kclxs737",
+    "mediaId": "gid://shopify/MediaImage/56553112240493",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/kclxs737-11.jpg?v=1792568985",
+    "left": 0.0411,
+    "right": 0,
+    "below": 0.0356,
+    "diff": 0.0411,
+    "drop": 0.0055
+  },
+  {
+    "handle": "d2102s71dm0860",
+    "mediaId": "gid://shopify/MediaImage/56552984478061",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0177050580.jpg?v=1792568687",
+    "left": 1,
+    "right": 0.9597,
+    "below": 1,
+    "diff": 0.0403,
+    "drop": 0
+  },
+  {
+    "handle": "mmm435sb1wg0003",
+    "mediaId": "gid://shopify/MediaImage/56552941617517",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0174466730.jpg?v=1792568564",
+    "left": 0.8948,
+    "right": 0.8546,
+    "below": 1,
+    "diff": 0.0402,
+    "drop": -0.1052
+  },
+  {
+    "handle": "mmm135s50hl0021",
+    "mediaId": "gid://shopify/MediaImage/56528960061805",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s50hl0021-10.jpg?v=1792514965",
+    "left": 0.9911,
+    "right": 0.9513,
+    "below": 0.9924,
+    "diff": 0.0397,
+    "drop": -0.0013
+  },
+  {
+    "handle": "mmm135s51gc0519",
+    "mediaId": "gid://shopify/MediaImage/56529173905773",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s51gc0135-0001.jpg?v=1792515112",
+    "left": 0.9563,
+    "right": 0.9174,
+    "below": 0.8408,
+    "diff": 0.0388,
+    "drop": 0.1155
+  },
+  {
+    "handle": "mmm135s51gc0519",
+    "mediaId": "gid://shopify/MediaImage/56529173840237",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s51gc0519-06.jpg?v=1792515111",
+    "left": 0.9906,
+    "right": 0.9519,
+    "below": 0.9952,
+    "diff": 0.0387,
+    "drop": -0.0046
+  },
+  {
+    "handle": "mmm135s51gc0519",
+    "mediaId": "gid://shopify/MediaImage/56529173807469",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s51gc0519-12.jpg?v=1792515111",
+    "left": 0.0516,
+    "right": 0.0132,
+    "below": 0.0158,
+    "diff": 0.0384,
+    "drop": 0.0359
+  },
+  {
+    "handle": "mm6135sh2la0039",
+    "mediaId": "gid://shopify/MediaImage/56552976482669",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/mm6135sh2la0039-10.jpg?v=1792568665",
+    "left": 0.8982,
+    "right": 0.8622,
+    "below": 0.9314,
+    "diff": 0.036,
+    "drop": -0.0332
+  },
+  {
+    "handle": "mmm535si0th0001",
+    "mediaId": "gid://shopify/MediaImage/56529035166061",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/imgrc0128202999.jpg?v=1792515002",
+    "left": 0.435,
+    "right": 0.3994,
+    "below": 0.2677,
+    "diff": 0.0356,
+    "drop": 0.1673
+  },
+  {
+    "handle": "mmm535s56wg0082-aq",
+    "mediaId": "gid://shopify/MediaImage/56528821617005",
+    "url": "https://cdn.shopify.com/s/files/1/1004/0862/3469/files/s56wg0082t-14.jpg?v=1792514883",
+    "left": 0.0748,
+    "right": 0.0397,
+    "below": 0.0627,
+    "diff": 0.0351,
+    "drop": 0.0121
   }
 ]

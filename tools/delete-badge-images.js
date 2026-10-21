@@ -22,8 +22,14 @@ const COUNT = `
   query($handle: String!) {
     productByIdentifier(identifier: { handle: $handle }) {
       id
+      status
       media(first: 30) { nodes { ... on MediaImage { id } } }
     }
+  }`;
+
+const DRAFT = `
+  mutation($input: ProductUpdateInput!) {
+    productUpdate(product: $input) { product { status } userErrors { message } }
   }`;
 
 const DELETE = `
@@ -79,12 +85,11 @@ async function main() {
     }
     const total = p.media.nodes.filter(Boolean).length;
     const ids = list.map(c => c.mediaId);
-    if (total - ids.length < 1) {
-      skipped.push(`${handle} 残りが0枚になるため見送り`);
-      continue;
-    }
+    // 画像が無くなっても削除は必ず行う。SALE等の表示を残すほうが重大なため。
+    // そのかわり、無画像のまま公開しないよう下書きへ落とす。
+    const willBeEmpty = total - ids.length < 1;
     if (dryRun) {
-      removed.push({ handle, count: ids.length, remain: total - ids.length });
+      removed.push({ handle, count: ids.length, remain: total - ids.length, willBeEmpty });
       continue;
     }
     const r = await gql(DELETE, { productId: p.id, mediaIds: ids });
@@ -94,6 +99,15 @@ async function main() {
       continue;
     }
     removed.push({ handle, count: r.productDeleteMedia.deletedMediaIds.length, remain: total - ids.length });
+    if (willBeEmpty && p.status === 'ACTIVE') {
+      const u = await gql(DRAFT, { input: { id: p.id, status: 'DRAFT' } });
+      const ue = u.productUpdate.userErrors || [];
+      skipped.push(
+        ue.length
+          ? `${handle} 下書き化に失敗 ${ue.map(e => e.message).join(', ')}`
+          : `${handle} 画像が無くなったため下書きにした`
+      );
+    }
   }
 
   if (!dryRun) {
