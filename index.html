@@ -727,7 +727,8 @@
   .news-head .news-nav { display: none; }
   .news-card:hover { transform: translateY(-3px); }
   .news-card .nc-visual {
-    aspect-ratio: 16/10;
+    /* 記事写真は縦位置が多いため、切り落としの少ない比率にする */
+    aspect-ratio: 4/5;
     overflow: hidden;
     background: var(--bg-2);
     margin-bottom: 16px;
