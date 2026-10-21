@@ -59,7 +59,31 @@
   .pu-item-brand{font-family:var(--font-sans);font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;letter-spacing:0.04em;}
   .pu-item-info .pu-item-note{font-size:14px;line-height:2;color:var(--ink-2);font-weight:300;}
 
-  .back-cta{text-align:center;padding:20px 20px 80px;}
+  .back-cta{text-align:center;padding:20px 20px 80px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  /* 画面の左右中央に置く前後ボタン。記事どうしを行き来する */
+  .pu-nav{
+    position:fixed; top:50%; transform:translateY(-50%);
+    z-index:120;
+    width:48px; height:48px;
+    display:flex; align-items:center; justify-content:center;
+    border:1px solid var(--line);
+    border-radius:50%;
+    background:rgba(247,245,239,0.94);
+    color:var(--ink);
+    font-size:24px; line-height:1;
+    text-decoration:none;
+    box-shadow:0 4px 14px rgba(17,32,59,0.16);
+    transition:background .3s var(--ease), color .3s var(--ease), opacity .25s ease;
+  }
+  .pu-nav:hover{background:var(--navy); color:var(--surface);}
+  .pu-nav-prev{left:16px;}
+  .pu-nav-next{right:16px;}
+  body.is-scrolling .pu-nav{opacity:0.22;}
+  @media (max-width:760px){
+    .pu-nav{width:42px; height:42px; font-size:21px;}
+    .pu-nav-prev{left:10px;}
+    .pu-nav-next{right:10px;}
+  }
   .back-cta a{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;padding:14px 28px;border:1px solid var(--ink);color:var(--ink);font-weight:500;transition:all .4s var(--ease);}
   .back-cta a:hover{background:var(--navy);color:var(--surface);border-color:var(--navy);}
 
@@ -116,7 +140,11 @@
   <div class="pu-items-list" data-items></div>
 </section>
 
+<a class="pu-nav pu-nav-prev" data-prev href="#" aria-label="前のコーディネート" hidden>‹</a>
+<a class="pu-nav pu-nav-next" data-next href="#" aria-label="次のコーディネート" hidden>›</a>
+
 <div class="back-cta">
+  <a href="pickups.html">Pick Up をすべて見る <span>→</span></a>
   <a href="index.html">Back to Home <span>→</span></a>
 </div>
 
@@ -139,6 +167,28 @@ const $=(s,r=document)=>r.querySelector(s);
   $('[data-hero-img]').alt=p.title;
   $('[data-story]').innerHTML=(p.story||[]).map(par=>`<p>${par}</p>`).join('')+(p.story?'<div class="divider"></div>':'');
   // 商品写真とEC販売ページへの導線。url が無いものは従来どおり文字だけで出す。
+  // 前後の記事。日付の新しい順に並んでいるので、左が新しい側になる
+  const list = all.slice().sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+  const at = list.findIndex(x=>x.id===id);
+  const setNav=(sel, target)=>{
+    const el=$(sel);
+    if(!el) return;
+    if(!target){ el.hidden=true; return; }
+    el.href='pickup.html?id='+encodeURIComponent(target.id);
+    el.title=target.title||'';
+    el.hidden=false;
+  };
+  setNav('[data-prev]', at>0 ? list[at-1] : null);
+  setNav('[data-next]', at>-1 && at<list.length-1 ? list[at+1] : null);
+
+  // スクロール中は薄くする
+  let navTimer=null;
+  window.addEventListener('scroll',()=>{
+    document.body.classList.add('is-scrolling');
+    clearTimeout(navTimer);
+    navTimer=setTimeout(()=>document.body.classList.remove('is-scrolling'),220);
+  },{passive:true});
+
   $('[data-items]').innerHTML=(p.items||[]).map(it=>{
     const tag=it.url?'a':'div';
     const attrs=it.url?` href="${it.url}" target="_blank" rel="noopener"`:'';
