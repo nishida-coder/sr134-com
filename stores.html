@@ -131,7 +131,57 @@
     font-size: 14px;
     letter-spacing: 0.14em;
     color: var(--ink-soft);
-    margin-bottom: 30px;
+    margin-bottom: 6px;
+  }
+  .sb-theme {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--gold-deep);
+    margin: 0 0 30px;
+  }
+  /* ---- 店舗ごとの営業カレンダー ---- */
+  .sb-calendar { margin-top: 26px; }
+  .fc-months { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .fc-month-title {
+    font-family: var(--font-sans);
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    text-align: center; margin-bottom: 12px;
+    color: var(--gold-deep); font-weight: 500;
+  }
+  .fc-grid {
+    display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px;
+    font-family: var(--font-sans); font-size: 11px;
+  }
+  .fc-dow {
+    text-align: center;
+    font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-soft); font-weight: 500; padding-bottom: 5px;
+  }
+  .fc-dow.sun { color: #C24A4A; }
+  .fc-dow.sat { color: #3F73C4; }
+  .fc-day {
+    aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+    border-radius: 2px;
+  }
+  .fc-day.empty { opacity: 0; }
+  .fc-day.sun { color: #C24A4A; }
+  .fc-day.sat { color: #3F73C4; }
+  .fc-day.closed {
+    background: rgba(194,74,74,0.16); color: #C24A4A; font-weight: 600;
+  }
+  .fc-day.today { outline: 1px solid var(--gold); color: var(--gold-deep); }
+  .fc-day.closed.today { outline-color: #C24A4A; }
+  .fc-legend {
+    font-size: 11px; letter-spacing: 0.06em; color: var(--ink-soft); margin-top: 14px;
+  }
+  .fc-legend .fc-swatch {
+    display: inline-block; width: 10px; height: 10px;
+    background: rgba(194,74,74,0.5); vertical-align: middle;
+    margin-right: 6px; border-radius: 2px;
+  }
+  @media (max-width: 720px) {
+    .fc-months { grid-template-columns: 1fr; gap: 22px; }
   }
   .sb-details {
     border-top: 1px solid var(--line);
@@ -196,29 +246,23 @@
   <a class="ig-link" href="https://www.instagram.com/studio_route134_official/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram @studio_route134_official"><svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" fill="none" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg></a>
 </header>
 
-<section class="page-hero">
-  <div class="eyebrow">Our Stores</div>
-  <h1>Three Stores,<br><em>One Coastline.</em></h1>
-  <p>Hayama, Aoyama, Enoshima. Studio Route134 の直営3店舗。</p>
-</section>
-
 <section class="stores-list">
 
   <div class="store-block">
     <div class="sb-visual">
       <img src="photos/hayama-storefront.jpg" alt="Studio Route134 Hayama">
-      <span class="tag">Flagship</span>
     </div>
     <div class="sb-info">
-      <div class="eyebrow">Est. 2007 · Shonan</div>
       <h2>Hayama</h2>
-      <div class="jp">湘南・葉山店</div>
+      <div class="jp">葉山店</div>
+      <p class="sb-theme">1号店の誇り</p>
       <dl class="sb-details">
         <dt>Address</dt><dd>神奈川県葉山町堀内 997-19</dd>
         <dt>Hours</dt><dd>11:30 – 20:00</dd>
         <dt>Closed</dt><dd>火曜</dd>
         <dt>Tel</dt><dd><a href="tel:0468747434">046 874 7434</a></dd>
       </dl>
+      <div class="sb-calendar" data-store-calendar="hayama"></div>
       <a href="https://maps.google.com/?q=神奈川県葉山町堀内997-19" target="_blank" rel="noopener" class="sb-map">
         <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
         Google Maps で見る
@@ -229,18 +273,18 @@
   <div class="store-block">
     <div class="sb-visual">
       <img src="photos/aoyama-storefront.jpg" alt="Studio Route134 Aoyama">
-      <span class="tag">Concept</span>
     </div>
     <div class="sb-info">
-      <div class="eyebrow">Concept · Tokyo</div>
       <h2>Aoyama</h2>
-      <div class="jp">東京・青山店</div>
+      <div class="jp">青山店</div>
+      <p class="sb-theme">都会の中にある海辺の店</p>
       <dl class="sb-details">
         <dt>Address</dt><dd>東京都港区南青山 6-6-20</dd>
         <dt>Hours</dt><dd>11:30 – 20:00</dd>
         <dt>Closed</dt><dd>不定休</dd>
         <dt>Tel</dt><dd><a href="tel:0367125134">03 6712 5134</a></dd>
       </dl>
+      <div class="sb-calendar" data-store-calendar="aoyama"></div>
       <a href="https://maps.google.com/?q=東京都港区南青山6-6-20" target="_blank" rel="noopener" class="sb-map">
         <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
         Google Maps で見る
@@ -251,18 +295,18 @@
   <div class="store-block">
     <div class="sb-visual">
       <img src="photos/enoshima-storefront.jpg" alt="Studio Route134 Enoshima">
-      <span class="tag">Seaside</span>
     </div>
     <div class="sb-info">
-      <div class="eyebrow">Seaside · Shonan</div>
       <h2>Enoshima</h2>
-      <div class="jp">湘南・江ノ島店</div>
+      <div class="jp">江ノ島店</div>
+      <p class="sb-theme">THE FLAGSHIP</p>
       <dl class="sb-details">
         <dt>Address</dt><dd>神奈川県藤沢市鵠沼海岸 4-4-1</dd>
         <dt>Hours</dt><dd>11:00 – 19:30</dd>
         <dt>Closed</dt><dd>火曜</dd>
         <dt>Tel</dt><dd><a href="tel:0466960506">0466 96 0506</a></dd>
       </dl>
+      <div class="sb-calendar" data-store-calendar="enoshima"></div>
       <a href="https://maps.google.com/?q=神奈川県藤沢市鵠沼海岸4-4-1" target="_blank" rel="noopener" class="sb-map">
         <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
         Google Maps で見る
@@ -273,6 +317,70 @@
 </section>
 
 <footer>© 2026 Studio Route134 / Office T3 Inc.</footer>
+
+<script>
+// 店舗ごとの営業カレンダー。休業日は store-calendar.json で管理する。
+(async function () {
+  const slots = document.querySelectorAll('[data-store-calendar]');
+  if (!slots.length) return;
+
+  const MONTH_JA = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+  const DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const MONTHS_SHOWN = 2;
+  const today = new Date();
+  const iso = (y, m, d) =>
+    `${y}-${String(m + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+
+  function isClosed(cfg, y, m, d) {
+    const key = iso(y, m, d);
+    if ((cfg.openDates || []).includes(key)) return false;
+    if ((cfg.closedDates || []).includes(key)) return true;
+    return (cfg.weeklyClosed || []).includes(new Date(y, m, d).getDay());
+  }
+
+  function buildMonth(cfg, year, month) {
+    const first = new Date(year, month, 1).getDay();
+    const days = new Date(year, month + 1, 0).getDate();
+    const out = [`<div class="fc-month-title">${year}年 ${MONTH_JA[month]}</div>`, '<div class="fc-grid">'];
+    DOW.forEach((d, i) => {
+      out.push(`<div class="fc-dow ${i === 0 ? 'sun' : i === 6 ? 'sat' : ''}">${d}</div>`);
+    });
+    for (let i = 0; i < first; i++) out.push('<div class="fc-day empty"></div>');
+    for (let d = 1; d <= days; d++) {
+      const dow = new Date(year, month, d).getDay();
+      const cls = [
+        isClosed(cfg, year, month, d) ? 'closed' : '',
+        dow === 0 ? 'sun' : '',
+        dow === 6 ? 'sat' : '',
+        year === today.getFullYear() && month === today.getMonth() && d === today.getDate() ? 'today' : '',
+      ].filter(Boolean).join(' ');
+      out.push(`<div class="fc-day ${cls}">${d}</div>`);
+    }
+    out.push('</div>');
+    return `<div class="fc-month">${out.join('')}</div>`;
+  }
+
+  let data;
+  try {
+    data = await (await fetch('store-calendar.json?v=' + Date.now())).json();
+  } catch (e) {
+    return; // 取得できないときはカレンダーを出さない
+  }
+
+  slots.forEach(slot => {
+    const cfg = (data.stores || {})[slot.getAttribute('data-store-calendar')];
+    if (!cfg) return;
+    const months = [];
+    for (let i = 0; i < MONTHS_SHOWN; i++) {
+      const base = new Date(today.getFullYear(), today.getMonth() + i, 1);
+      months.push(buildMonth(cfg, base.getFullYear(), base.getMonth()));
+    }
+    slot.innerHTML =
+      `<div class="fc-months">${months.join('')}</div>` +
+      `<div class="fc-legend"><span class="fc-swatch"></span>${cfg.legend || ''}</div>`;
+  });
+})();
+</script>
 
 </body>
 </html>

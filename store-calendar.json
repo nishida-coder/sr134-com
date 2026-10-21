@@ -1,0 +1,27 @@
+{
+  "updated": "2026-10-21",
+  "note": "weeklyClosed は曜日番号（0=日曜 … 6=土曜）。closedDates は臨時休業、openDates は定休日だが営業する日。いずれも YYYY-MM-DD。",
+  "stores": {
+    "hayama": {
+      "name": "葉山店",
+      "weeklyClosed": [2],
+      "closedDates": [],
+      "openDates": [],
+      "legend": "定休日（毎週火曜）"
+    },
+    "aoyama": {
+      "name": "青山店",
+      "weeklyClosed": [],
+      "closedDates": [],
+      "openDates": [],
+      "legend": "不定休。休業日が決まり次第ここに反映します"
+    },
+    "enoshima": {
+      "name": "江ノ島店",
+      "weeklyClosed": [2],
+      "closedDates": [],
+      "openDates": [],
+      "legend": "定休日（毎週火曜）"
+    }
+  }
+}

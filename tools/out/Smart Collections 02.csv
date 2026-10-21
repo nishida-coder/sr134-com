@@ -1,42 +1,98 @@
 ﻿Handle,Title,Body HTML,Sort Order,Published,Published Scope,Image Src,Image Alt Text,Must Match,Rule: Product Column,Rule: Relation,Rule: Condition
-mai-mai-j,MAI MAI J,"<p>イタリア・ボローニャ。歴史あるニットウェア産地エミリア・ロマーニャで誕生した MAI MAI J（メイメイジェイ） は、上質な素材と軽やかなエレガンスを追求するイタリアンラグジュアリーブランドである。ブランド名には私らしさという意味が込められ、トレンドに左右されることなく、自分らしく美しく装う女性のためのコレクションを提案している。</p>
+mai-mai-j,MAI MAI J,"<div style=""display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;text-align:left;"">
+<div style=""flex:1 1 380px;min-width:0;"">
+<p>イタリア・ボローニャ。歴史あるニットウェア産地エミリア・ロマーニャで誕生した MAI MAI J（メイメイジェイ） は、上質な素材と軽やかなエレガンスを追求するイタリアンラグジュアリーブランドである。ブランド名には私らしさという意味が込められ、トレンドに左右されることなく、自分らしく美しく装う女性のためのコレクションを提案している。</p>
 <p>ブランドを象徴するのは、卓越したニットづくり。最高級のメリノウールやカシミヤ、シルク、コットンを厳選し、イタリア国内の熟練した工房で丁寧に編み上げられる。驚くほど軽く柔らかな肌触りと、身体を美しく見せる立体的なシルエットは、日常着でありながらラグジュアリーを感じさせる完成度を誇る。</p>
 <p>コレクションはニットだけでなく、ブラウス、ワンピース、セットアップ、アウターまで幅広く展開。無駄を削ぎ落としたミニマルなデザインに、絶妙なカラーリングや異素材使いを加えることで、オンにもオフにも寄り添う洗練されたスタイルを生み出している。肩の力を抜いた自然体のエレガンスは、大人の女性が永く愛せる魅力でもある。</p>
-<p>華やかさを誇示するのではなく、素材の美しさと着心地で語る贅沢。MAI MAI Jは、イタリアのクラフトマンシップを静かに纏う、知性あるコンテンポラリーラグジュアリーを体現するブランドである。</p>",best-selling,TRUE,global,https://sr134.com/photos/brands/mai-mai-j.jpg,MAI MAI J ブランドイメージ,all conditions,Vendor,Equals,MAI MAI J
-maison-margiela,Maison Margiela,"<p>1988年、パリ。ベルギー人デザイナー マルタン・マルジェラ が創設した Maison Margiela（メゾン マルジェラ） は、モードの帝王と称される、世界で最も影響力のあるメゾンのひとつである。ロゴではなく匿名性を、装飾ではなく構造美を追求するという哲学は、30年以上にわたりファッションの価値観そのものを書き換えてきた。</p>
+<p>華やかさを誇示するのではなく、素材の美しさと着心地で語る贅沢。MAI MAI Jは、イタリアのクラフトマンシップを静かに纏う、知性あるコンテンポラリーラグジュアリーを体現するブランドである。</p>
+</div>
+<div style=""flex:0 1 340px;min-width:240px;"">
+<img src=""https://sr134.com/photos/brands/mai-mai-j.jpg"" alt=""MAI MAI J"" style=""width:100%;height:auto;display:block;"">
+</div>
+</div>",best-selling,TRUE,global,https://sr134.com/photos/brands/mai-mai-j.jpg,MAI MAI J ブランドイメージ,all conditions,Vendor,Equals,MAI MAI J
+maison-margiela,Maison Margiela,"<div style=""display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;text-align:left;"">
+<div style=""flex:1 1 380px;min-width:0;"">
+<p>1988年、パリ。ベルギー人デザイナー マルタン・マルジェラ が創設した Maison Margiela（メゾン マルジェラ） は、モードの帝王と称される、世界で最も影響力のあるメゾンのひとつである。ロゴではなく匿名性を、装飾ではなく構造美を追求するという哲学は、30年以上にわたりファッションの価値観そのものを書き換えてきた。</p>
 <p>ブランドを象徴する4本の白いステッチは、もともとロゴではなかった。初期のコレクションでは、ブランド名のない真っ白なタグを仮留めするためのしつけ糸として付けられ、購入者が簡単に外し、ブランドネームではなく服そのものを纏うことを意図していたのである。やがて、その匿名性の思想こそが世界中で支持され、皮肉にも4本のステッチ自体がメゾンを象徴するアイコンとなった。</p>
 <p>1997年にはカレンダータグが誕生。0から23まで並ぶ数字は各コレクションラインを表し、丸で囲まれた番号がそのアイテムの所属を示す。ブランド名を記さず、数字だけで世界観を語るこの発想も、マルジェラならではの美学である。</p>
 <p>2014年からはジョン・ガリアーノがクリエイティブ・ディレクターに就任し、Artisanalを世界最高峰のクチュールへと昇華。そして2025年、新たな時代を託されたのが グレン・マーティンス。創設者と同じアントワープ王立芸術アカデミー出身である彼は、革新的な素材表現と構築美によって、メゾンのDNAを未来へと受け継いでいる。</p>
-<p>5ACバッグ、Tabiシューズ、そして彫刻のようなテーラード。Maison Margielaは、流行ではなく思想を纏うという贅沢を体現する、モードの頂点に君臨するメゾンである。</p>",best-selling,TRUE,global,https://sr134.com/photos/brands/maison-margiela.jpg,Maison Margiela ブランドイメージ,all conditions,Vendor,Equals,Maison Margiela
-maison-mihara-yasuhiro,Maison MIHARA YASUHIRO,"<p>1997年、東京。Maison MIHARA YASUHIRO（メゾン ミハラヤスヒロ） は、デザイナー 三原康裕 が生み出す、日本を代表するラグジュアリーメゾンである。独学で靴づくりを学んだ三原は、2007年よりパリ・ファッションウィークを舞台にコレクションを発表。デビューコレクションは詩が聞こえる服と絶賛され、以来、パリコレ屈指のクリエイションとして世界中のバイヤーやメディアから高い評価を受け続けている。</p>
+<p>5ACバッグ、Tabiシューズ、そして彫刻のようなテーラード。Maison Margielaは、流行ではなく思想を纏うという贅沢を体現する、モードの頂点に君臨するメゾンである。</p>
+</div>
+<div style=""flex:0 1 340px;min-width:240px;"">
+<img src=""https://sr134.com/photos/brands/maison-margiela.jpg"" alt=""Maison Margiela"" style=""width:100%;height:auto;display:block;"">
+</div>
+</div>",best-selling,TRUE,global,https://sr134.com/photos/brands/maison-margiela.jpg,Maison Margiela ブランドイメージ,all conditions,Vendor,Equals,Maison Margiela
+maison-mihara-yasuhiro,Maison MIHARA YASUHIRO,"<div style=""display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;text-align:left;"">
+<div style=""flex:1 1 380px;min-width:0;"">
+<p>1997年、東京。Maison MIHARA YASUHIRO（メゾン ミハラヤスヒロ） は、デザイナー 三原康裕 が生み出す、日本を代表するラグジュアリーメゾンである。独学で靴づくりを学んだ三原は、2007年よりパリ・ファッションウィークを舞台にコレクションを発表。デビューコレクションは詩が聞こえる服と絶賛され、以来、パリコレ屈指のクリエイションとして世界中のバイヤーやメディアから高い評価を受け続けている。</p>
 <p>ブランドを象徴するのは、世界的アイコンとなった Original Sole（オリジナルソール） シリーズ。粘土で手作業の原型を作り、その歪みや揺らぎをそのままソールへ落とし込むという革新的な製法は、スニーカーを履物ではなく彫刻作品へと昇華させた。ヴィンテージやミリタリー、ワークウェアを再構築する独創的なアプローチも、メゾンの核となる美学である。</p>
 <p>三原康裕自身は11歳から波に乗り続ける生粋のサーファー。その自由な精神はクリエイションにも色濃く反映され、リラックスしたシルエットやレイヤード、色褪せたデニム、自然体の空気感には海辺で育まれた感性が息づいている。力の抜けた佇まいの中に、緻密なパターンワークと高度なテーラリングが共存するのも、ミハラヤスヒロならではの魅力だ。</p>
-<p>アート、クラフト、そしてサーフカルチャー。相反する要素を自然に融合させながら、常に普通を覆す服を生み出すこと。それこそが、Maison MIHARA YASUHIROが世界のモードシーンで特別な存在であり続ける理由なのである。</p>",best-selling,TRUE,global,https://sr134.com/photos/brands/maison-mihara-yasuhiro.jpg,Maison MIHARA YASUHIRO ブランドイメージ,all conditions,Vendor,Equals,Maison MIHARA YASUHIRO
-marni,MARNI,"<p>1994年、ミラノ。コンスエロ・カスティリオーニによって創設された MARNI（マルニ） は、イタリアンラグジュアリーに知性と遊び心という新たな価値をもたらしたメゾンである。ファーアトリエをルーツに持つ卓越したクラフトマンシップを礎に、色彩、素材、フォルムを自由な感性で再構築。その芸術的なクリエイションは、世界中のクリエイターやファッションラバーを魅了し続けている。</p>
+<p>アート、クラフト、そしてサーフカルチャー。相反する要素を自然に融合させながら、常に普通を覆す服を生み出すこと。それこそが、Maison MIHARA YASUHIROが世界のモードシーンで特別な存在であり続ける理由なのである。</p>
+</div>
+<div style=""flex:0 1 340px;min-width:240px;"">
+<img src=""https://sr134.com/photos/brands/maison-mihara-yasuhiro.jpg"" alt=""Maison MIHARA YASUHIRO"" style=""width:100%;height:auto;display:block;"">
+</div>
+</div>",best-selling,TRUE,global,https://sr134.com/photos/brands/maison-mihara-yasuhiro.jpg,Maison MIHARA YASUHIRO ブランドイメージ,all conditions,Vendor,Equals,Maison MIHARA YASUHIRO
+marni,MARNI,"<div style=""display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;text-align:left;"">
+<div style=""flex:1 1 380px;min-width:0;"">
+<p>1994年、ミラノ。コンスエロ・カスティリオーニによって創設された MARNI（マルニ） は、イタリアンラグジュアリーに知性と遊び心という新たな価値をもたらしたメゾンである。ファーアトリエをルーツに持つ卓越したクラフトマンシップを礎に、色彩、素材、フォルムを自由な感性で再構築。その芸術的なクリエイションは、世界中のクリエイターやファッションラバーを魅了し続けている。</p>
 <p>ブランドを語るうえで欠かせない名作が、トロピカルウールのセットアップ。軽量で通気性に優れた上質なトロピカルウールを採用し、イタリア仕立てならではの柔らかな構築とリラックスしたシルエットによって、スーツでありながら驚くほど軽快な着心地を実現した。ビジネスからリゾートまで自在に着こなせるこの一着は、マルニを代表するアイコンとして高い評価を受けている。</p>
 <p>もうひとつ世界的な人気を誇るのが、ラフィア素材のTROPICALIA（トロピカリア）サマーバッグ。伝統的なバスケットバッグを現代的に再解釈したデザインは、ナチュラルな素材感とレザーの上品さを融合させ、夏のラグジュアリーを象徴する存在となった。リゾートはもちろん、都会のスタイリングにも映える普遍的な美しさが、多くのファッションアイコンに愛される理由である。</p>
-<p>2025年からはベルギー出身の メリル・ロッゲ がクリエイティブ・ディレクターに就任し、創設者コンスエロが築いたアート性と日常性を現代へ継承している。流行ではなく感性を纏う。それこそが、MARNIというメゾンの本質なのである。</p>",best-selling,TRUE,global,https://sr134.com/photos/brands/marni.jpg,MARNI ブランドイメージ,all conditions,Vendor,Equals,MARNI
+<p>2025年からはベルギー出身の メリル・ロッゲ がクリエイティブ・ディレクターに就任し、創設者コンスエロが築いたアート性と日常性を現代へ継承している。流行ではなく感性を纏う。それこそが、MARNIというメゾンの本質なのである。</p>
+</div>
+<div style=""flex:0 1 340px;min-width:240px;"">
+<img src=""https://sr134.com/photos/brands/marni.jpg"" alt=""MARNI"" style=""width:100%;height:auto;display:block;"">
+</div>
+</div>",best-selling,TRUE,global,https://sr134.com/photos/brands/marni.jpg,MARNI ブランドイメージ,all conditions,Vendor,Equals,MARNI
 miami-beach-hotel-1955,MIAMI BEACH HOTEL 1955,"<p>1955年、フロリダ・マイアミビーチ。アールデコの余韻と、モダン建築が最も華やかに花開いたリゾート黄金時代を象徴するこの年に着想を得て誕生した MIAMI BEACH HOTEL 1955 は、海辺のラグジュアリーライフを現代へ映し出すイタリアンブランドである。ブランド名は、エデンロックやフォンテーヌブローをはじめとする名門ホテルが並び、世界中のセレブリティが集った1955年のマイアミビーチへのオマージュでもある。</p>
 <p>コレクションの核にあるのは、素材への徹底したこだわり。内モンゴル産の最高級カシミヤや上質なコットンを厳選し、軽さと柔らかさと美しい発色を追求したニットウェアは、袖を通した瞬間に違いを実感できる完成度を誇る。ブランドネームタグまでもカシミヤ糸によるインターシャ編みで仕上げるなど、肌に触れる細部にまで妥協のないものづくりが息づいている。</p>
 <p>シルエットは、肩の力を抜いたリラックスフィット。リゾートの開放感とイタリアの洗練を絶妙なバランスで融合させ、デニムやリネントラウザーズと合わせるだけで、自然体のエレガンスを演出する。</p>
 <p>華美なロゴではなく、質感で語る贅沢。MIAMI BEACH HOTEL 1955は、1955年のマイアミが放っていた陽光、海風、そしてラグジュアリーホテルの優雅な時間を、一着に閉じ込めたブランドなのである。</p>",best-selling,TRUE,global,,,all conditions,Vendor,Equals,MIAMI BEACH HOTEL 1955
-mm6-maison-margiela,MM6 Maison Margiela,"<p>1997年、パリ。MM6 Maison Margiela（エムエム6 メゾン マルジェラ） は、Maison Margielaが掲げる前衛的な美学を、より日常へと落とし込むコンテンポラリーラインとして誕生した。メゾンの哲学であるデコンストラクション（脱構築）や匿名性を受け継ぎながら、自由で実用的なワードローブを提案し、モードとリアルクローズの境界を軽やかに越えている。</p>
+mm6-maison-margiela,MM6 Maison Margiela,"<div style=""display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;text-align:left;"">
+<div style=""flex:1 1 380px;min-width:0;"">
+<p>1997年、パリ。MM6 Maison Margiela（エムエム6 メゾン マルジェラ） は、Maison Margielaが掲げる前衛的な美学を、より日常へと落とし込むコンテンポラリーラインとして誕生した。メゾンの哲学であるデコンストラクション（脱構築）や匿名性を受け継ぎながら、自由で実用的なワードローブを提案し、モードとリアルクローズの境界を軽やかに越えている。</p>
 <p>ブランドを象徴するのは、オーバーサイズのシルエットや反転した縫製、ユニセックスなパターンなど、常識を少しだけ裏切るデザイン。シンプルでありながら一目でMM6とわかる存在感は、着る人の個性を引き立てる静かなモードを生み出している。バックに施された1本の水平ステッチは、Maison Margielaの4本ステッチを継承したMM6だけのシグネチャーディテールでもある。</p>
 <p>近年はブランドを代表するJapanese Bag（ジャパニーズバッグ）が世界的アイコンとなり、日本の折り紙と風呂敷から着想を得た三角形のフォルムは、ミニマルでありながら機能性と造形美を兼ね備えた名作として高い評価を獲得。また、Salomonとのコラボレーションをはじめ、スポーツとモードを融合した革新的なクリエイションも注目を集めている。</p>
-<p>2025年からはMaison Margielaのクリエイティブ・ディレクターにグレン・マーティンスが就任し、MM6も新たな時代へ。アヴァンギャルドを日常に変えるという思想は、これからもブランドの核であり続ける。</p>",best-selling,TRUE,global,https://sr134.com/photos/brands/mm6-maison-margiela.jpg,MM6 Maison Margiela ブランドイメージ,all conditions,Vendor,Equals,MM6 Maison Margiela
-moncler,MONCLER,"<p>1952年、フランス・アルプスの麓 Monestier-de-Clermont（モネスティエ・ド・クレルモン）。ブランド名 MONCLER は、この小さな山岳村の名を縮めて生まれた。創業者ルネ・ラミヨンは、極寒の環境で働く工場作業員のために軽く暖かなダウンウェアを開発し、その一着がラグジュアリー史を変える原点となった。</p>
+<p>2025年からはMaison Margielaのクリエイティブ・ディレクターにグレン・マーティンスが就任し、MM6も新たな時代へ。アヴァンギャルドを日常に変えるという思想は、これからもブランドの核であり続ける。</p>
+</div>
+<div style=""flex:0 1 340px;min-width:240px;"">
+<img src=""https://sr134.com/photos/brands/mm6-maison-margiela.jpg"" alt=""MM6 Maison Margiela"" style=""width:100%;height:auto;display:block;"">
+</div>
+</div>",best-selling,TRUE,global,https://sr134.com/photos/brands/mm6-maison-margiela.jpg,MM6 Maison Margiela ブランドイメージ,all conditions,Vendor,Equals,MM6 Maison Margiela
+moncler,MONCLER,"<div style=""display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;text-align:left;"">
+<div style=""flex:1 1 380px;min-width:0;"">
+<p>1952年、フランス・アルプスの麓 Monestier-de-Clermont（モネスティエ・ド・クレルモン）。ブランド名 MONCLER は、この小さな山岳村の名を縮めて生まれた。創業者ルネ・ラミヨンは、極寒の環境で働く工場作業員のために軽く暖かなダウンウェアを開発し、その一着がラグジュアリー史を変える原点となった。</p>
 <p>モンクレールのDNAは、ファッションではなく本物の機能にある。1954年にはイタリアK2登山隊の公式装備に採用され、世界第二の高峰制覇を支えた。その後もマカルー遠征や1968年グルノーブル冬季五輪フランス代表の公式ウェアを手掛け、極限環境で証明された品質は世界最高峰のダウンブランドとして揺るぎない評価を築いている。</p>
 <p>2003年、イタリア人実業家 レモ・ルッフィーニ がブランドを継承すると、アルパインウェアはミラノの洗練と融合し、現代ラグジュアリーへと進化。Born in the Mountains, Living in the City を哲学に掲げ、ダウンジャケットだけでなく、テーラードコート、ニット、カットソー、パンツまでコレクションを拡充。都市で美しく着るための軽さと立体的なシルエットは、モンクレールならではの美学である。</p>
-<p>最高品質のダウン、卓越したパターンメイキング、そしてアルプスで育まれた機能美。MONCLERは、アウトドアとラグジュアリーという二つの世界を最も美しく結びつけた、現代を代表するメゾンである。</p>",best-selling,TRUE,global,https://sr134.com/photos/brands/moncler.jpg,MONCLER ブランドイメージ,all conditions,Vendor,Equals,MONCLER
+<p>最高品質のダウン、卓越したパターンメイキング、そしてアルプスで育まれた機能美。MONCLERは、アウトドアとラグジュアリーという二つの世界を最も美しく結びつけた、現代を代表するメゾンである。</p>
+</div>
+<div style=""flex:0 1 340px;min-width:240px;"">
+<img src=""https://sr134.com/photos/brands/moncler.jpg"" alt=""MONCLER"" style=""width:100%;height:auto;display:block;"">
+</div>
+</div>",best-selling,TRUE,global,https://sr134.com/photos/brands/moncler.jpg,MONCLER ブランドイメージ,all conditions,Vendor,Equals,MONCLER
 plan-c,PLAN C,"<p>2018年、ミラノ。PLAN C（プラン シー） は、MARNIを築き上げた創設者コンスエロ・カスティリオーニの娘 カロリーナ・カスティリオーニ が立ち上げたラグジュアリーブランドである。幼い頃からメゾンのものづくりに触れて育った彼女は、イタリアンテーラリングの確かな技術を受け継ぎながら、より自由で現代的な女性像を描き出している。</p>
 <p>ブランドの魅力は、引き算によって生まれる美しさ。上質なコットンやウール、カシミヤを贅沢に用い、立体的なパターンと余白を活かしたシルエットが、肩の力を抜いたエレガンスを生み出す。ミニマルでありながら、どこか温かみのある色彩や絶妙な配色は、ミラノらしい知性と遊び心を静かに感じさせる。</p>
 <p>PLAN Cを代表する名作が、ブランドのアイコンでもあるTシャツコレクション。滑らかな最高級コットンを使用したボディに、娘たちが描いたイラストから生まれた Pili や Bianca のグラフィックをあしらい、大人のカジュアルにアートのような個性を添えている。ジャケットのインナーとしても映える一枚は、世界中で高い人気を誇るシグネチャーピースだ。</p>
 <p>トレンドを追いかけるのではなく、永く愛せる日常着を美しく仕立てること。PLAN Cは、ミラノのクラフトマンシップと家族の物語から生まれた、新時代のイタリアンラグジュアリーを体現するブランドである。</p>",best-selling,TRUE,global,,,all conditions,Vendor,Equals,PLAN C
-pmds,P.M.D.S.,"<p>イタリア・ナポリ。歴史ある街並みと地中海の陽光が交差するこの土地で生まれた P.M.D.S.（Premium Mood Denim Superior） は、デニムを原点に、現代のラグジュアリーカジュアルを再構築するブランドである。ブランド名が掲げる Premium Mood とは、肩の力を抜きながら上質を愉しむ、イタリア人ならではの豊かな美意識を表している。</p>
+pmds,P.M.D.S.,"<div style=""display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;text-align:left;"">
+<div style=""flex:1 1 380px;min-width:0;"">
+<p>イタリア・ナポリ。歴史ある街並みと地中海の陽光が交差するこの土地で生まれた P.M.D.S.（Premium Mood Denim Superior） は、デニムを原点に、現代のラグジュアリーカジュアルを再構築するブランドである。ブランド名が掲げる Premium Mood とは、肩の力を抜きながら上質を愉しむ、イタリア人ならではの豊かな美意識を表している。</p>
 <p>コレクションの核にあるのは、卓越した素材選びと高度な加工技術。厳選されたデニムやジャージー、テクニカルファブリックにガーメントダイやヴィンテージウォッシュを施し、新品でありながら長年愛用したような柔らかな風合いと奥行きのある表情を生み出している。その軽快な着心地と美しいシルエットは、ブランドを象徴する大きな魅力だ。</p>
 <p>近年、とりわけ高い評価を集めているのがセットアップコレクション。伸縮性に優れた上質なファブリックと、ナポリらしい立体的なパターンを融合させることで、ジャケットの品格とスポーツウェアの快適さを両立している。旅やビジネス、週末のリラックスした時間まで、あらゆるシーンをシームレスにつなぐ存在として支持を集めている。</p>
-<p>華美な装飾ではなく、素材の質感と絶妙なバランスで個性を語る一着。P.M.D.S.は、デニムカルチャーとイタリアンテーラリングが出会うことで生まれた、新時代のイタリアンラグジュアリーを体現するブランドである。</p>",best-selling,TRUE,global,https://sr134.com/photos/brands/pmds.jpg,P.M.D.S. ブランドイメージ,all conditions,Vendor,Equals,P.M.D.S.
-rag-and-bone,rag & bone,"<p>2002年、ニューヨーク。rag &amp; bone（ラグ アンド ボーン） は、英国仕立てのクラフトマンシップと、ニューヨークの洗練されたリアルクローズを融合させたアーバンラグジュアリーブランドである。流行を追うのではなく、毎日着たくなる服を追求するという哲学のもと、デニムとテーラリングとミリタリーを現代的なワードローブへと昇華してきた。</p>
+<p>華美な装飾ではなく、素材の質感と絶妙なバランスで個性を語る一着。P.M.D.S.は、デニムカルチャーとイタリアンテーラリングが出会うことで生まれた、新時代のイタリアンラグジュアリーを体現するブランドである。</p>
+</div>
+<div style=""flex:0 1 340px;min-width:240px;"">
+<img src=""https://sr134.com/photos/brands/pmds.jpg"" alt=""P.M.D.S."" style=""width:100%;height:auto;display:block;"">
+</div>
+</div>",best-selling,TRUE,global,https://sr134.com/photos/brands/pmds.jpg,P.M.D.S. ブランドイメージ,all conditions,Vendor,Equals,P.M.D.S.
+rag-and-bone,rag & bone,"<div style=""display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;text-align:left;"">
+<div style=""flex:1 1 380px;min-width:0;"">
+<p>2002年、ニューヨーク。rag &amp; bone（ラグ アンド ボーン） は、英国仕立てのクラフトマンシップと、ニューヨークの洗練されたリアルクローズを融合させたアーバンラグジュアリーブランドである。流行を追うのではなく、毎日着たくなる服を追求するという哲学のもと、デニムとテーラリングとミリタリーを現代的なワードローブへと昇華してきた。</p>
 <p>ブランドを代表するのは、世界的ベストセラーとなった Miramar（ミラマー）シリーズ。見た目はヴィンテージデニムでありながら、実際はスウェットを採用。独自のプリント技術によって騙し絵のようにデニムの色落ちやステッチまでリアルに表現し、驚異的な快適さと美しいシルエットを両立した革新的なコレクションとしてとても高い人気を誇っている。</p>
 <p>もうひとつのアイコンが、Classic Henley。映画『007 ノー・タイム・トゥ・ダイ』では、ダニエル・クレイグ演じるジェームズ・ボンドが劇中を通して着用し、その無骨さと色気を象徴する一着として世界中で話題となった。GQも、ジェームズ・ボンドがヘンリーネックを再び主役にした、と評したほど、rag &amp; boneを代表する名作である。</p>
-<p>華美なロゴではなく、素材と着心地と完成されたシルエットで魅せること。rag &amp; boneは、ニューヨークの日常に寄り添いながら、本物だけが持つ静かな品格を表現し続けるブランドなのである。</p>",best-selling,TRUE,global,https://sr134.com/photos/brands/rag-and-bone.jpg,rag & bone ブランドイメージ,all conditions,Vendor,Equals,rag & bone
+<p>華美なロゴではなく、素材と着心地と完成されたシルエットで魅せること。rag &amp; boneは、ニューヨークの日常に寄り添いながら、本物だけが持つ静かな品格を表現し続けるブランドなのである。</p>
+</div>
+<div style=""flex:0 1 340px;min-width:240px;"">
+<img src=""https://sr134.com/photos/brands/rag-and-bone.jpg"" alt=""rag &amp; bone"" style=""width:100%;height:auto;display:block;"">
+</div>
+</div>",best-selling,TRUE,global,https://sr134.com/photos/brands/rag-and-bone.jpg,rag & bone ブランドイメージ,all conditions,Vendor,Equals,rag & bone

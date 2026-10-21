@@ -31,8 +31,24 @@ function bodyHtml(brand) {
   const paragraphs = [brand.lead, ...(brand.body || [])]
     .map(t => (t || '').trim())
     .filter(Boolean)
-    .map(t => `<p>${escapeHtml(t)}</p>`);
-  return paragraphs.join('\n');
+    .map(t => `<p>${escapeHtml(t)}</p>`)
+    .join('\n');
+
+  const hero = imageUrl(brand);
+  if (!hero) return paragraphs;
+
+  // テーマのコレクション画像設定が使えないあいだ、説明文の中で
+  // 文章を左、ブランド写真を右に並べる。狭い画面では縦に折り返す。
+  return [
+    '<div style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;text-align:left;">',
+    '<div style="flex:1 1 380px;min-width:0;">',
+    paragraphs,
+    '</div>',
+    '<div style="flex:0 1 340px;min-width:240px;">',
+    `<img src="${hero}" alt="${escapeHtml(brand.name)}" style="width:100%;height:auto;display:block;">`,
+    '</div>',
+    '</div>',
+  ].join('\n');
 }
 
 function escapeHtml(s) {

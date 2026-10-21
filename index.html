@@ -815,9 +815,26 @@
   .gallery .section-head { margin-bottom: 24px; }
   .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
   }
+  .gallery-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+  }
+  .gallery-more a {
+    font-size: 11px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 6px;
+    transition: color .3s var(--ease), border-color .3s var(--ease);
+  }
+  .gallery-more a:hover { color: var(--gold-deep); border-color: var(--gold-deep); }
   .gallery-cell {
     position: relative;
     display: block;
@@ -851,7 +868,7 @@
     font-size: 15px; line-height: 1.35; font-weight: 500;
   }
   @media (max-width: 720px) {
-    .gallery-grid { gap: 8px; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     .gallery-label { transform: translateY(0); opacity: 1; padding: 12px 12px 10px; }
     .g-title { font-size: 12.5px; }
   }
@@ -2603,6 +2620,7 @@
     <div class="eyebrow">Gallery</div>
   </div>
   <div class="gallery-grid stagger" data-gallery></div>
+  <div class="gallery-more" data-gallery-more hidden><a href="gallery.html">Show More</a></div>
 </section>
 
 <!-- ============ STORES (3-image split → /stores.html) ============ -->
@@ -2613,28 +2631,20 @@
   <div class="store-teaser-strip">
     <a href="stores.html#hayama" class="st-cell st-zoom">
       <img src="photos/hayama-storefront.jpg" alt="Hayama">
-      <div class="st-label"><div class="st-city">Hayama</div><div class="st-jp">湘南・葉山店</div></div>
+      <div class="st-label"><div class="st-city">Hayama</div><div class="st-jp">葉山店</div></div>
     </a>
     <a href="stores.html#aoyama" class="st-cell">
       <img src="photos/aoyama-storefront.jpg" alt="Aoyama">
-      <div class="st-label"><div class="st-city">Aoyama</div><div class="st-jp">東京・青山店</div></div>
+      <div class="st-label"><div class="st-city">Aoyama</div><div class="st-jp">青山店</div></div>
     </a>
     <a href="stores.html#enoshima" class="st-cell">
       <img src="photos/enoshima-storefront.jpg" alt="Enoshima">
-      <div class="st-label"><div class="st-city">Enoshima</div><div class="st-jp">湘南・江ノ島店</div></div>
+      <div class="st-label"><div class="st-city">Enoshima</div><div class="st-jp">江ノ島店</div></div>
     </a>
   </div>
 </section>
 
-<!-- ============ NEWSLETTER ============ -->
-<section class="newsletter reveal">
-  <div class="eyebrow">Newsletter</div>
-  <h2>Letters from <em>the coast.</em></h2>
-  <form onsubmit="event.preventDefault(); alert('デモ版です');">
-    <input type="email" placeholder="your@email.com" required>
-    <button type="submit">Sign Up →</button>
-  </form>
-</section>
+<!-- NEWSLETTER セクションは削除（2026-10-21 しもんさん指示） -->
 
 <!-- ============ Business Calendar (before footer, beige bg) ============ -->
 <section class="calendar-section" id="calendar">
@@ -3071,12 +3081,16 @@
     wrap.classList.add('visible');
   })();
 
-  // === Gallery (merged Journal) — 6 cards from journal.json ===
+  // === Gallery (merged Journal) — 可視領域は3列×3段の9枚まで。残りは gallery.html ===
   (async function renderGallery() {
     const grid = $('[data-gallery]');
     if (!grid) return;
+    const VISIBLE = 9;
     try {
-      const items = await (await fetch('journal.json?v=' + SR134_REV)).json();
+      const all = await (await fetch('journal.json?v=' + SR134_REV)).json();
+      const items = all.slice(0, VISIBLE);
+      const more = $('[data-gallery-more]');
+      if (more && all.length > VISIBLE) more.hidden = false;
       grid.innerHTML = items.map(it => `
         <a href="journal.html?id=${it.id}" class="gallery-cell">
           <img src="${it.image}" alt="${it.title}" loading="lazy">

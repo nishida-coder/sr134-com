@@ -17,13 +17,23 @@ const path = require('path');
 const BASE = 'https://tshop.r10s.jp/studio-route134/cabinet';
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36';
-const WAIT_MS = 400; // 相手先に負荷をかけない
+const WAIT_MS = 1500; // 相手先に負荷をかけない。短いと弾かれる
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function fetchOrder(url) {
-  const res = await fetch(url, { headers: { 'User-Agent': UA } });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  // 連続アクセスで弾かれることがあるため、間隔を空けて数回試す
+  let res = null;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    try {
+      res = await fetch(url, { headers: { 'User-Agent': UA } });
+      if (res.ok) break;
+    } catch (e) {
+      res = null;
+    }
+    await sleep(3000 * (attempt + 1));
+  }
+  if (!res || !res.ok) throw new Error(res ? `HTTP ${res.status}` : '接続できない');
   const html = await res.text();
   const block = html.match(/"images"\s*:\s*\[(.*?)\]/s);
   if (!block) return [];
@@ -48,15 +58,29 @@ async function main() {
   const targets = all.filter(p => p.brand === brand && p.rakuten).slice(0, limit);
   console.log(`${brand} ${targets.length} 件の画像順を取得します`);
 
-  const out = {};
+  // 途中で弾かれても再実行で続きから取れるようにする
+  const dirEarly = path.join(__dirname, 'out');
+  const fileEarly = path.join(
+    dirEarly,
+    `rakuten-images-${brand.replace(/\s+/g, '-').toLowerCase()}.json`
+  );
+  const out = fs.existsSync(fileEarly) ? JSON.parse(fs.readFileSync(fileEarly, 'utf8')) : {};
+  const done = Object.keys(out).length;
+  if (done) console.log(`取得済み ${done} 件はとばします`);
+
   const failed = [];
   for (let i = 0; i < targets.length; i++) {
     const p = targets[i];
+    if (out[p.id] && out[p.id].length) continue;
     try {
       const order = await fetchOrder(p.rakuten);
       if (!order.length) throw new Error('画像リストが見つからない');
       out[p.id] = order;
-      if ((i + 1) % 20 === 0) console.log(`  ${i + 1} / ${targets.length}`);
+      if ((i + 1) % 10 === 0) {
+        fs.mkdirSync(dirEarly, { recursive: true });
+        fs.writeFileSync(fileEarly, JSON.stringify(out, null, 2) + '\n', 'utf8');
+        console.log(`  ${i + 1} / ${targets.length}`);
+      }
     } catch (e) {
       failed.push(`${p.id} -> ${e.message}`);
     }
