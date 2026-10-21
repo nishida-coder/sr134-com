@@ -16,7 +16,7 @@ const SHOP = process.env.SHOPIFY_SHOP || 'gp9g0i-sk.myshopify.com';
 const API_VERSION = process.env.SHOPIFY_API_VERSION || '2026-10';
 const TOKEN = process.env.SHOPIFY_TOKEN;
 const ENDPOINT = `https://${SHOP}/admin/api/${API_VERSION}/graphql.json`;
-const PUBLIC_BASE = 'https://libun.co.jp/sr134-preview';
+const PUBLIC_BASE = 'https://sr134.com/preview';
 
 const FILE_CREATE = `
   mutation($files: [FileCreateInput!]!) {
