@@ -1457,6 +1457,33 @@
   .brand-pop ul { list-style: none; display: flex; flex-direction: column; gap: 4px; max-height: 60vh; overflow-y: auto; }
   .brand-pop li a { display: flex; flex-direction: column; padding: 6px 0; color: var(--ink-2); text-decoration: none; transition: color .2s; }
   .brand-pop li a:hover .b-name { color: var(--gold-deep); }
+  @media (max-width: 760px) {
+    /* 狭い画面では文字に重ねず、画面中央に出す。端で見切れないようにする */
+    .brand-pop,
+    .brand-pop.pop-edge-left,
+    .brand-pop.pop-edge-right {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      right: auto;
+      transform: translate(-50%, -50%);
+      width: min(92vw, 380px);
+      min-width: 0;
+      max-width: none;
+      max-height: 76vh;
+      overflow-y: auto;
+      z-index: 220;
+    }
+    .brand-alpha-cell:hover .brand-pop,
+    .brand-alpha-cell.open .brand-pop,
+    .brand-alpha-cell:hover .brand-pop.pop-edge-right {
+      transform: translate(-50%, -50%);
+    }
+    .brand-pop::before,
+    .brand-pop.pop-edge-left::before,
+    .brand-pop.pop-edge-right::before { display: none; }
+    .brand-pop ul { max-height: none; }
+  }
   .brand-pop .b-yomi { font-size: 10px; color: var(--ink-soft); letter-spacing: 0.06em; margin-bottom: 2px; }
   .brand-pop .b-row { display: flex; align-items: center; gap: 8px; flex-wrap: nowrap; white-space: nowrap; }
   .brand-pop .b-name { font-size: 13.5px; letter-spacing: 0.04em; color: var(--ink); font-weight: 500; }
