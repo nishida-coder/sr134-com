@@ -726,20 +726,28 @@
   }
   .news-head .news-nav { display: none; }
   .news-card:hover { transform: translateY(-3px); }
+  /* 記事写真は縦位置。横長の枠に全体を収め、余りは同じ写真をぼかして埋める */
   .news-card .nc-visual {
-    /* 記事写真は縦位置が多いため、切り落としの少ない比率にする */
-    aspect-ratio: 4/5;
+    position: relative;
+    aspect-ratio: 2/1;
     overflow: hidden;
     background: var(--bg-2);
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
-  .news-card .nc-visual img {
+  .news-card .nc-visual .nc-bg {
+    position: absolute; inset: 0;
     width: 100%; height: 100%;
     object-fit: cover;
-    object-position: center;
+    filter: blur(22px) saturate(1.08);
+    transform: scale(1.18);
+  }
+  .news-card .nc-visual .nc-fg {
+    position: relative;
+    width: 100%; height: 100%;
+    object-fit: contain;
     transition: transform 1.4s var(--ease);
   }
-  .news-card:hover .nc-visual img { transform: scale(1.04); }
+  .news-card:hover .nc-visual .nc-fg { transform: scale(1.04); }
   .news-card.nc-product .nc-visual { background: var(--surface); }
   .news-card.nc-product .nc-visual img {
     object-fit: contain;
@@ -2285,15 +2293,11 @@
       <span class="logo logo-leon">LEON</span>
       <span class="logo logo-oceans">OCEANS</span>
       <span class="logo logo-very">VERY</span>
-      <span class="logo logo-story">STORY</span>
-      <span class="logo logo-precious">Precious</span>
       <span class="logo logo-vogue">VOGUE</span>
       <span class="logo logo-safari">Safari</span>
       <span class="logo logo-leon">LEON</span>
       <span class="logo logo-oceans">OCEANS</span>
       <span class="logo logo-very">VERY</span>
-      <span class="logo logo-story">STORY</span>
-      <span class="logo logo-precious">Precious</span>
       <span class="logo logo-vogue">VOGUE</span>
     </div>
   </div>
@@ -2945,7 +2949,10 @@
       if (!items.length) return;
       track.innerHTML = items.map(n => `
         <a class="news-card" href="news.html?id=${encodeURIComponent(n.id)}">
-          <div class="nc-visual"><img src="${n.image}" alt="${n.title}"${n.focus ? ` style="object-position:${n.focus}"` : ''}></div>
+          <div class="nc-visual">
+            <img class="nc-bg" src="${n.image}" alt="" aria-hidden="true">
+            <img class="nc-fg" src="${n.image}" alt="${n.title}"${n.focus ? ` style="object-position:${n.focus}"` : ''}>
+          </div>
           <div class="nc-date">${n.date}${n.brand ? ' — ' + n.brand : ''}</div>
           <div class="nc-title">${n.title}</div>
         </a>`).join('');
