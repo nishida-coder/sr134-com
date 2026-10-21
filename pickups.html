@@ -30,14 +30,12 @@
   .logo{font-family:'Bodoni Moda',serif; font-size:20px; letter-spacing:0.08em; text-decoration:none;}
   .back{font-size:11px; letter-spacing:0.24em; text-transform:uppercase; text-decoration:none; color:var(--ink-soft);}
   .back:hover{color:var(--gold-deep);}
-  .head{padding:clamp(40px,5vw,72px) 0 30px;}
-  .eyebrow{
-    font-size:11px; letter-spacing:0.3em; text-transform:uppercase;
-    color:var(--gold-deep); font-weight:500; margin-bottom:14px;
-  }
+  .head{padding:clamp(40px,5vw,72px) 0 28px;}
+  /* TOPのセクション見出しと同じ表情に揃える */
   .head h1{
-    font-family:'Bodoni Moda',serif; font-weight:700;
-    font-size:clamp(34px,4vw+10px,64px); line-height:1.08; margin:0;
+    font-family:var(--font-sans);
+    font-size:11px; letter-spacing:0.3em; text-transform:uppercase;
+    color:var(--gold-deep); font-weight:500; margin:0;
   }
   .list{display:grid; grid-template-columns:repeat(2,1fr); gap:36px; padding-bottom:clamp(56px,6vw,96px);}
   .card{display:flex; flex-direction:column; gap:18px; text-decoration:none; color:inherit;}
@@ -63,7 +61,6 @@
 
 <div class="wrap">
   <div class="head">
-    <div class="eyebrow">Pick Up</div>
     <h1>Pick Up</h1>
   </div>
   <div class="list" data-list></div>
