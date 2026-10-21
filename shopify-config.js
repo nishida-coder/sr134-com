@@ -197,9 +197,9 @@ window.sr134RecentVendors = async function (limit = 50) {
     if (!nodes || !nodes.length) return null;
     const shape = SHAPERS[type];
     if (!shape) return null;
+    // 日付の新しい順。左ほど最近、右へ行くほど過去になる
     return nodes
-      .slice()
-      .sort((a, b) => String(b.updatedAt).localeCompare(String(a.updatedAt)))
-      .map(shape);
+      .map(shape)
+      .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
   };
 })();

@@ -3014,9 +3014,11 @@
     const track = $('[data-news-track]');
     if (!track) return;
     try {
-      const items = (window.sr134Content && await window.sr134Content('news'))
+      const raw = (window.sr134Content && await window.sr134Content('news'))
         || await (await fetch('news.json?v=' + SR134_REV)).json();
-      if (!items.length) return;
+      if (!raw.length) return;
+      // 左ほど最近、右へ行くほど過去
+      const items = raw.slice().sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
       track.innerHTML = items.map(n => `
         <a class="news-card" href="news.html?id=${encodeURIComponent(n.id)}">
           <div class="nc-visual">
@@ -3034,9 +3036,10 @@
     const pickup = $('[data-pickup]');
     if (!pickup) return;
     try {
-      const all = (window.sr134Content && await window.sr134Content('pickup'))
+      const fetched = (window.sr134Content && await window.sr134Content('pickup'))
         || await (await fetch('pickup.json?v=' + SR134_REV)).json();
-      if (!all.length) return;
+      if (!fetched.length) return;
+      const all = fetched.slice().sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
       const VISIBLE = 2;
       const feats = all.slice(0, VISIBLE);
       const more = $('[data-pickup-more]');
