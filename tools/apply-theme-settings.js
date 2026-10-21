@@ -40,7 +40,8 @@ const COLOR_SCHEMES = {
 const OVERRIDES = {
   logo: 'shopify://shop_images/sr134_logo.png',
   logo_width: 150,
-  type_header_font: 'playfair_display_n4',
+  // 見出しと本文は同じ書体に揃える。装飾的なセリフ体は数字が崩れるため使わない。
+  type_header_font: 'inter_n4',
   type_body_font: 'inter_n4',
   heading_scale: 100,
   body_scale: 100,
