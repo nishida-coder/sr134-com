@@ -824,17 +824,15 @@
     margin-top: 28px;
   }
   .gallery-more a {
-    font-size: 11px;
-    letter-spacing: 0.26em;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: var(--ink);
-    text-decoration: none;
-    border-bottom: 1px solid var(--gold);
-    padding-bottom: 6px;
-    transition: color .3s var(--ease), border-color .3s var(--ease);
+    display: inline-flex; align-items: center; gap: 14px;
+    font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink); padding: 14px 32px; text-decoration: none;
+    border: 1px solid var(--ink); font-weight: 500;
+    transition: all .4s var(--ease);
   }
-  .gallery-more a:hover { color: var(--gold-deep); border-color: var(--gold-deep); }
+  .gallery-more a span { transition: transform .4s var(--ease); }
+  .gallery-more a:hover { background: var(--navy); color: var(--surface); border-color: var(--navy); }
+  .gallery-more a:hover span { transform: translateX(6px); }
   .gallery-cell {
     position: relative;
     display: block;
@@ -925,14 +923,17 @@
     display: inline-block;
   }
   .pu-row:hover .pu-more { color: var(--gold-deep); border-color: var(--gold-deep); }
-  .pickup-more { display: flex; justify-content: center; margin-top: 34px; }
+  .pickup-more { display: flex; justify-content: center; margin-top: 44px; }
   .pickup-more a {
-    font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase;
-    font-weight: 500; color: var(--ink); text-decoration: none;
-    border-bottom: 1px solid var(--gold); padding-bottom: 6px;
-    transition: color .3s var(--ease), border-color .3s var(--ease);
+    display: inline-flex; align-items: center; gap: 14px;
+    font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink); padding: 14px 32px; text-decoration: none;
+    border: 1px solid var(--ink); font-weight: 500;
+    transition: all .4s var(--ease);
   }
-  .pickup-more a:hover { color: var(--gold-deep); border-color: var(--gold-deep); }
+  .pickup-more a span { transition: transform .4s var(--ease); }
+  .pickup-more a:hover { background: var(--navy); color: var(--surface); border-color: var(--navy); }
+  .pickup-more a:hover span { transform: translateX(6px); }
   @media (max-width: 760px) {
     .pickup-list { grid-template-columns: 1fr; gap: 28px; }
     .pu-body { padding: 0; }
@@ -2431,7 +2432,7 @@
     <div class="eyebrow">Pick Up</div>
   </div>
   <div class="pickup-list stagger" data-pickup></div>
-  <div class="pickup-more" data-pickup-more hidden><a href="pickups.html">Show More</a></div>
+  <div class="pickup-more" data-pickup-more hidden><a href="pickups.html">Show More <span>→</span></a></div>
 </section>
 
 
@@ -2565,7 +2566,7 @@
     <div class="eyebrow">Gallery</div>
   </div>
   <div class="gallery-grid stagger" data-gallery></div>
-  <div class="gallery-more" data-gallery-more hidden><a href="gallery.html">Show All</a></div>
+  <div class="gallery-more" data-gallery-more hidden><a href="gallery.html">Show All <span>→</span></a></div>
 </section>
 
 <!-- ============ STORES (3-image split → /stores.html) ============ -->
